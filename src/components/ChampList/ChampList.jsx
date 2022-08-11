@@ -6,7 +6,9 @@ const ChampList = () => {
     return (
         <div>
             {champList.map((champ) =>
-                <ChampCard champ={champ} />
+                <div key={champ.id}>
+                    <ChampCard champ={champ} />
+                </div>
             )}
         </div>
     );

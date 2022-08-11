@@ -3,7 +3,7 @@ export const champList = [
         name: 'Kaisa',
         world: 'classique',
         id: 1,
-        damages_type: 'AD',
+        damages_type: "AD",
         post: "ADC",
     },
     {
