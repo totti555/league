@@ -4,14 +4,14 @@ export const champList = [
         world: 'classique',
         id: 1,
         damages_type: "AD",
-        post: "ADC",
+        role: "ADC",
     },
     {
         name: 'Yone',
         world: 'classique',
         id: '2ab',
         damages_type: 'AP',
-        post: 'Mid',
+        role: 'Mid',
     },
 
     {
@@ -19,14 +19,14 @@ export const champList = [
         world: 'classique',
         id: '3sd',
         damages_type: 'AD',
-        post: 'Mid',
+        role: 'Top',
     },
     {
         name: 'garen',
         world: 'classique',
         id: '4kk',
         damages_type: 'AD',
-        post: 'Mid',
+        role: 'Mid',
 
     },
     {
@@ -34,7 +34,7 @@ export const champList = [
         world: 'extérieur',
         id: '5pl',
         damages_type: 'AD',
-        post: 'Mid',
+        role: 'Top',
     },
 
     {
@@ -42,21 +42,21 @@ export const champList = [
         world: 'plante grasse',
         id: '8fp',
         damages_type: 'AD',
-        post: 'Mid',
+        role: 'Support',
     },
     {
         name: 'Leblanc',
         world: 'extérieur',
         id: '7ie',
         damages_type: 'AP',
-        post: 'Mid',
+        role: 'Mid',
     },
     {
         name: 'Rammus',
         world: 'plante grasse',
         id: '9vn',
         damages_type: 'AD',
-        post: 'Mid',
+        role: 'Jungle',
     },
 
     {
@@ -64,6 +64,6 @@ export const champList = [
         world: 'extérieur',
         id: '6uo',
         damages_type: 'AP',
-        post: 'Mid',
+        role: 'Top',
     }
 ]

@@ -1,3 +1,7 @@
+/* TODO : Update CSS here  */
+
 .champ-card {
-    border: solid 1px black
+    border: solid 1px black;
+    width: 120px;
+    height: 220px;
 }
