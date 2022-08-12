@@ -16,8 +16,9 @@ const ChampMemo = ({ champ }) => {
     return (
         <div>
             {/* TODO : Update memo */}
-            <p>Type : {champ.damages_type === "AD" ? 'oui' : 'non'}</p>
-            <p>Role : {champ.post}</p>
+            <p>Type : {champ.damages_type === "AD" ? 'AD' : 'AP'}</p>
+            <p>Role : {champ.role}</p>
+            <p>World : {champ.world}</p>
         </div>
     )
 }

@@ -1,14 +1,14 @@
 export const champList = [
     {
         name: 'Kaisa',
-        world: 'classique',
+        world: 'Demacia',
         id: 1,
         damages_type: "AD",
         role: "ADC",
     },
     {
         name: 'Yone',
-        world: 'classique',
+        world: 'Demacia',
         id: '2ab',
         damages_type: 'AP',
         role: 'Mid',
@@ -16,14 +16,14 @@ export const champList = [
 
     {
         name: 'Irelia',
-        world: 'classique',
+        world: 'Demacia',
         id: '3sd',
         damages_type: 'AD',
         role: 'Top',
     },
     {
         name: 'garen',
-        world: 'classique',
+        world: 'Demacia',
         id: '4kk',
         damages_type: 'AD',
         role: 'Mid',
@@ -31,7 +31,7 @@ export const champList = [
     },
     {
         name: 'Darius',
-        world: 'extérieur',
+        world: 'Shurima',
         id: '5pl',
         damages_type: 'AD',
         role: 'Top',
@@ -39,7 +39,7 @@ export const champList = [
 
     {
         name: 'Pyke',
-        world: 'plante grasse',
+        world: 'Ionia',
         id: '8fp',
         damages_type: 'AD',
         role: 'Support',
@@ -53,7 +53,7 @@ export const champList = [
     },
     {
         name: 'Rammus',
-        world: 'plante grasse',
+        world: 'Ionia',
         id: '9vn',
         damages_type: 'AD',
         role: 'Jungle',
@@ -61,7 +61,7 @@ export const champList = [
 
     {
         name: 'Vayne',
-        world: 'extérieur',
+        world: 'Piltover',
         id: '6uo',
         damages_type: 'AP',
         role: 'Top',

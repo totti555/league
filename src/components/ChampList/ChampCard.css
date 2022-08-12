@@ -5,3 +5,12 @@
     width: 120px;
     height: 220px;
 }
+
+.champ-content {
+    z-index: 2
+}
+
+.no-champ-find {
+    position: absolute;
+    z-index: 1
+}
