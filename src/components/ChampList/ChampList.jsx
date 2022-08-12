@@ -6,8 +6,7 @@ import React from 'react';
 
 const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld }) => {
     const ifNoChampSelected = () => {
-        const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world))
-        console.log(champIsFind);
+        const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
         return champIsFind ? false : true
     }
     const isCheckedRole = (role) => {

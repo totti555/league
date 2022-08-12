@@ -1,8 +1,4 @@
-const Types = ({ type, updateType, checked, setChecked }) => {
-    // TODO : Inserer les logos de type
-    // function handleClickType(type) {
-    //     updateType(type);
-    // }
+const Types = ({ type, updateType, checked, setChecked, types }) => {
 
     const handleChangeType = (event) => {
         var updatedTypeList = [...checked];
@@ -20,17 +16,28 @@ const Types = ({ type, updateType, checked, setChecked }) => {
         setChecked(updatedTypeList);
     };
 
+    function handleDeleteType() {
+        setChecked([]);
+    }
+
 
     return (
+
         <div>
-            {/* <button onClick={() => handleClickType(type)}> {type}</button> */}
-            <label key={type}>
-                <input type="checkbox" value={type}
-                    onChange={handleChangeType} />
-                {type}
-            </label>
+            {types.map((type) =>
+                <div key={type}>
+                    {/* <button onClick={() => handleClickType(type)}> {type}</button> */}
+                    <label key={type}>
+                        <input type="checkbox" value={type}
+                            onChange={handleChangeType} />
+                        {type}
+                    </label>
+                </div>
+            )}
+            <button onClick={() => handleDeleteType()}>Supprimer type</button>
+            {/* TODO : CSS here */}
         </div>
-    );
+    )
 };
 
 export default Types

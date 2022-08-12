@@ -1,10 +1,9 @@
+import { useState } from "react";
 
 
-const Roles = ({ role, updateRole, checked, setChecked }) => {
-    // TODO : Inserer les images de role
-    // function handleClickRole(role) {
-    //     updateRole(role);
-    // }
+const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
+
+    let isChecked = useState(false);
 
     const handleChangeRole = (event) => {
         var updatedRoleList = [...checked];
@@ -21,6 +20,10 @@ const Roles = ({ role, updateRole, checked, setChecked }) => {
         }
         setChecked(updatedRoleList);
     };
+
+    function handleDeleteRole() {
+        setChecked([]);
+    }
 
 
     return (
@@ -39,11 +42,24 @@ const Roles = ({ role, updateRole, checked, setChecked }) => {
 
             {/* <button onClick={() => handleClickRole(role)}> {role}</button> */}
 
-            <label key={role}>
-                <input type="checkbox" value={role}
-                    onChange={handleChangeRole} />
-                {role}
-            </label>
+            <div>
+
+                {roles.map((role) =>
+                    <div key={role}>
+                        <label key={role}>
+                            <input type="checkbox" value={role}
+                                onChange={handleChangeRole} />
+                            {role}
+                        </label>
+                    </div>
+                )}
+                <button onClick={() => handleDeleteRole()}>Supprimer role</button>
+
+
+                {/* TODO : CSS here */}
+            </div>
+
+
 
 
         </div>
