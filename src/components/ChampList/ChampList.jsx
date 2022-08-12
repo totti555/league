@@ -4,12 +4,26 @@ import './ChampCard.css'
 import ChampCard from "./ChampCard"
 import React from 'react';
 
-const ChampList = ({ role, type, world }) => {
+const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld }) => {
     const ifNoChampSelected = () => {
         const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world))
         console.log(champIsFind);
         return champIsFind ? false : true
     }
+    const isCheckedRole = (role) => {
+        return checkedRole.find((c) => c === role) ? true : false
+    }
+
+    const isCheckedType = (type) => {
+        return checkedType.find((c) => c === type) ? true : false
+    }
+
+    const isCheckedWorld = (world) => {
+        return checkedWorld.find((c) => c === world) ? true : false
+    }
+
+
+
     return (
         <div>
             <h1>Coming soon</h1>
@@ -18,7 +32,7 @@ const ChampList = ({ role, type, world }) => {
                     {champList.map((champ) =>
                         <React.Fragment key={champ.id}>
                             {
-                                ((role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world)) ? (
+                                ((isCheckedRole(champ.role) || !checkedRole.length) && (isCheckedType(champ.damages_type) || !checkedType.length) && (isCheckedWorld(champ.world) || !checkedWorld.length)) ? (
                                     <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card" >
                                         <ChampCard champ={champ} />
                                     </div>) : null

@@ -2,42 +2,42 @@ import Badge from 'react-bootstrap/Badge';
 import CloseButton from 'react-bootstrap/CloseButton';
 
 
-const FiltersRecap = ({ updateRole, updateWorld, updateType, world, type, role }) => {
+const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, setCheckedWorld, setCheckedType }) => {
     function resetFilters() {
-        updateRole('');
-        updateType('');
-        updateWorld('');
+        setCheckedRole([]);
+        setCheckedType([]);
+        setCheckedWorld([]);
     }
     return (
         <div className='d-flex justify-content-between'>
 
             {/* World tag */}
-            {world ? (
+            {checkedWorld.length ? (
                 <div>
                     <Badge bg="warning" text="dark">
-                        {world}
-                        <CloseButton onClick={() => updateWorld('')} />
+                        {checkedWorld}
+                        <CloseButton onClick={() => setCheckedWorld([])} />
                     </Badge>{' '}
 
                 </div>)
                 : null}
 
             {/* Type tag */}
-            {type ? (
+            {checkedType.length ? (
                 <div>
                     <Badge bg="warning" text="dark">
-                        {type}
-                        <CloseButton onClick={() => updateType('')} />
+                        {checkedType}
+                        <CloseButton onClick={() => setCheckedType([])} />
                     </Badge>{' '}
                 </div>)
                 : null}
 
             {/* Role tag */}
-            {role ? (
+            {checkedRole.length ? (
                 <div>
                     <Badge bg="warning" text="dark">
-                        {role}
-                        <CloseButton onClick={() => updateRole('')} />
+                        {checkedRole}
+                        <CloseButton onClick={() => setCheckedRole([])} />
                     </Badge>{' '}
 
                 </div>)

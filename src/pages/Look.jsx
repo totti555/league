@@ -8,6 +8,9 @@ const Look = () => {
     const [role, updateRole] = useState('')
     const [type, updateType] = useState('')
     const [world, updateWorld] = useState('')
+    const [checkedRole, setCheckedRole] = useState([]);
+    const [checkedWorld, setCheckedWorld] = useState([]);
+    const [checkedType, setCheckedType] = useState([]);
     const rolesList = champList.reduce(
         (acc, champ) =>
             acc.includes(champ.role) ? acc : acc.concat(champ.role),
@@ -31,12 +34,21 @@ const Look = () => {
             <div className="col-4">
                 <h2>FILTERS</h2>
                 <hr />
-                <FiltersRecap updateRole={updateRole} updateType={updateType} updateWorld={updateWorld} world={world} type={type} role={role} />
+                <FiltersRecap
+                    checkedRole={checkedRole}
+                    setCheckedRole={setCheckedRole} checkedType={checkedType}
+                    setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                    setCheckedWorld={setCheckedWorld} />
                 <hr />
-                <FiltersList roles={rolesList} updateRole={updateRole} types={typesList} updateType={updateType} worlds={worldList} updateWorld={updateWorld} />
+                <FiltersList
+                    roles={rolesList} updateRole={updateRole} types={typesList}
+                    updateType={updateType} worlds={worldList} updateWorld={updateWorld} checkedRole={checkedRole}
+                    setCheckedRole={setCheckedRole} checkedType={checkedType}
+                    setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                    setCheckedWorld={setCheckedWorld} />
             </div>
             <div className="col-8">
-                <ChampList role={role} type={type} world={world} />
+                <ChampList role={role} type={type} world={world} checkedRole={checkedRole} checkedType={checkedType} checkedWorld={checkedWorld} />
             </div>
         </div>
     );
