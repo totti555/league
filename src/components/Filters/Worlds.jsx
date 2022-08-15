@@ -26,11 +26,21 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
         <div>
             {worlds.map((world) =>
                 <div key={world}>
-                    <label key={world}>
-                        <input type="checkbox" value={world}
+                    {/* <label key={world} >
+                        <input type="checkbox" className='hide-checkbox' value={world}
                             onChange={handleChangeWorld} />
-                        {world}
+                        <span class="entity">{world}</span>
+
+                    </label> */}
+
+                    <label class="toggle" key={world}>
+                        <input class="toggle__input" type="checkbox" value={world} onChange={handleChangeWorld} />
+                        <span class="toggle__label">
+                            <span class="toggle__text">{world}</span>
+                        </span>
                     </label>
+
+
                 </div>
             )}
             <button onClick={() => handleDeleteWorld()}>Supprimer world</button>
