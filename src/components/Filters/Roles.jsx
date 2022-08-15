@@ -1,3 +1,5 @@
+import './Filters.scss'
+
 
 const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 

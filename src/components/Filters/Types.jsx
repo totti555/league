@@ -1,3 +1,6 @@
+import './Filters.scss'
+
+
 const Types = ({ type, updateType, checked, setChecked, types }) => {
 
     const handleChangeType = (event) => {

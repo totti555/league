@@ -3,6 +3,7 @@ import FiltersList from "../components/Filters/FiltersList";
 import FiltersRecap from "../components/Filters/FiltersRecap";
 import { champList } from "../datas/lolChamp";
 import { useState } from 'react'
+import '../style/Look.scss'
 
 const Look = (props) => {
     const [searchResult, setChampName] = useState('');
@@ -32,9 +33,9 @@ const Look = (props) => {
 
     return (
         <div className='row'>
-            <div className="col-4">
+            <div className="col-4 filters">
                 <div className="ms-2">
-                    <h2>FILTERS</h2>
+                    <h2 className="text-white">FILTERS</h2>
                     <hr />
                     <FiltersRecap
                         checkedRole={checkedRole}

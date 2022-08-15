@@ -1,3 +1,6 @@
+import './Filters.scss'
+
+
 const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
     // TODO : Inserer les logos de world
     // function handleClickworld(world) {

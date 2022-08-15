@@ -1,4 +1,4 @@
-.div3 {
+.filters-list-type {
     position: relative;
     animation-name: example;
     animation-duration: 1s;
@@ -10,7 +10,7 @@
 .post-filters {
     position: relative;
     z-index: 5;
-    background-color: white;
+    /* background-color: white; */
 }
 
 @keyframes example {

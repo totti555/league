@@ -22,7 +22,7 @@ export const champList = [
         role: 'Top',
     },
     {
-        name: 'garen',
+        name: 'Garen',
         world: 'Demacia',
         id: '4kk',
         damages_type: 'AD',

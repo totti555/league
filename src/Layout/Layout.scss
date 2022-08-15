@@ -1,0 +1,69 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    height: 100px;
+    background-color: black;
+    border-bottom: 2px solid #ECB823;
+}
+
+.logo {
+    float: left;
+
+
+
+}
+
+.nav-button {
+    animation-name: nav-displayed;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    position: relative;
+    width: 200px;
+    height: 95px;
+    background-color: black;
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 40px 50px 40px 50px;
+
+    }
+}
+
+.nav-button:hover {
+    animation-name: select-nav;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    background-color: #433F3F;
+}
+
+
+@keyframes nav-displayed {
+    0% {
+        background-color: #2E2929;
+    }
+
+    100% {
+        background-color: black;
+
+        /* transform-origin: 0% 0% 0px; */
+    }
+}
+
+@keyframes select-nav {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: #2E2929;
+
+        /* transform-origin: 0% 0% 0px; */
+    }
+}
