@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/AboutUs";
 import Look from "./pages/Look";
@@ -13,11 +14,12 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about_us" element={<AboutUs />} />
-            <Route path="look" element={<Look />} />
+            <Route path="look" element={<Look />} exact />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }

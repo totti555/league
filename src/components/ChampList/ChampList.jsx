@@ -4,7 +4,10 @@ import './ChampCard.css'
 import ChampCard from "./ChampCard"
 import React from 'react';
 
-const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld }) => {
+const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, searchResult, setChampName }) => {
+
+    // TODO : utiliser useEffect
+
     const ifNoChampSelected = () => {
         const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
         return champIsFind ? false : true
@@ -21,6 +24,17 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld }
         return checkedWorld.find((c) => c === world) ? true : false
     }
 
+    const isChampionFind = (champName) => {
+        // console.log(champList.map((champ) => champ.name.toLowerCase().includes(searchResult.toLowerCase())));
+        const data = champName.toLowerCase().includes(searchResult.toLowerCase());
+        return data ? true : false;
+    }
+
+
+    // useEffect(() => {
+    //     const element = document.getElementById('champ-card');
+    //     element.classList.toggle("champ-card");
+    // }, [searchResult]);
 
 
     return (
@@ -31,8 +45,9 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld }
                     {champList.map((champ) =>
                         <React.Fragment key={champ.id}>
                             {
-                                ((isCheckedRole(champ.role) || !checkedRole.length) && (isCheckedType(champ.damages_type) || !checkedType.length) && (isCheckedWorld(champ.world) || !checkedWorld.length)) ? (
-                                    <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card" >
+                                ((isCheckedRole(champ.role) || !checkedRole.length) && (isCheckedType(champ.damages_type) || !checkedType.length)
+                                    && (isCheckedWorld(champ.world) || !checkedWorld.length) && (isChampionFind(champ.name) || !searchResult)) ? (
+                                    <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
                                         <ChampCard champ={champ} />
                                     </div>) : null
                             }
@@ -43,7 +58,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld }
 
 
             </div>
-        </div>
+        </div >
     );
 };
 

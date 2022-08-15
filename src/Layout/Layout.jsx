@@ -2,16 +2,21 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import "./Layout.css"
 
-
 function Layout({ children }) {
     return (
         <div>
 
 
             <header>
-                <button><Link to="/">HOME</Link></button>
-                <button><Link to="/about_us">ABOUT US</Link></button>
-                <button><Link to="/look">LOOK</Link></button>
+                <div className="d-flex justify-content-between mx-5">
+                    <div>
+                        <button><Link to="/">HOME</Link></button>
+                        <button><Link to="/about_us">ABOUT US</Link></button>
+                        <button><Link to='/look'>LOOK</Link></button>
+                    </div>
+                    {/* TODO : location state dont work */}
+                    {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch}></input> */}
+                </div>
                 <hr />
             </header>
 

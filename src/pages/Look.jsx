@@ -4,7 +4,8 @@ import FiltersRecap from "../components/Filters/FiltersRecap";
 import { champList } from "../datas/lolChamp";
 import { useState } from 'react'
 
-const Look = () => {
+const Look = (props) => {
+    const [searchResult, setChampName] = useState('');
     const [role, updateRole] = useState('')
     const [type, updateType] = useState('')
     const [world, updateWorld] = useState('')
@@ -46,11 +47,11 @@ const Look = () => {
                         updateType={updateType} worlds={worldList} updateWorld={updateWorld} checkedRole={checkedRole}
                         setCheckedRole={setCheckedRole} checkedType={checkedType}
                         setCheckedType={setCheckedType} checkedWorld={checkedWorld}
-                        setCheckedWorld={setCheckedWorld} />
+                        setCheckedWorld={setCheckedWorld} setChampName={setChampName} searchResult={searchResult} />
                 </div>
             </div>
             <div className="col-8">
-                <ChampList role={role} type={type} world={world} checkedRole={checkedRole} checkedType={checkedType} checkedWorld={checkedWorld} />
+                <ChampList role={role} type={type} world={world} checkedRole={checkedRole} checkedType={checkedType} checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} />
             </div>
         </div>
     );

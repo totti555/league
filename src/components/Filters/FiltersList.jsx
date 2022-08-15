@@ -7,18 +7,25 @@ import { useState } from 'react'
 
 
 
-const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld, checkedRole, setCheckedRole, checkedType, setCheckedType, checkedWorld, setCheckedWorld }) => {
+const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld, checkedRole, setCheckedRole, checkedType, setCheckedType, checkedWorld, setCheckedWorld, searchChamp, setChampName }) => {
     const [displayRoles, handleClickRoles] = useState(false)
 
     function canDisplayRoles() {
         handleClickRoles(!displayRoles);
     }
+
+    function handleChangeSearch(e) {
+        setChampName(e.target.value)
+
+    }
     return (
         <div className="filters-list">
 
-            <p>Poste :</p>
-            <Button name={'Poste'} click={canDisplayRoles} />
-            {displayRoles}
+            <input type="text" placeholder="Search your champ" onChange={handleChangeSearch} value={searchChamp}></input>
+            <div className='post-filters'>
+                <p>Poste :</p>
+                <Button name={'Poste'} click={canDisplayRoles} />
+            </div>
             {displayRoles && (
                 <div className="div3">
                     <Roles setChecked={setCheckedRole} checked={checkedRole} roles={roles} />

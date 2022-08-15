@@ -1,9 +1,19 @@
 /* TODO : Update CSS here  */
 
 .champ-card {
+    position: relative;
     border: solid 1px black;
     width: 120px;
     height: 220px;
+    animation-name: display-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.champ-card:hover {
+    animation-name: zoom-card;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .champ-content {
@@ -13,4 +23,31 @@
 .no-champ-find {
     position: absolute;
     z-index: 1
+}
+
+@keyframes display-card {
+    0% {
+        transform: scale(1.1);
+        /* left: -50px; */
+
+    }
+
+    100% {
+        /* left: 0px; */
+
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom-card {
+    0% {
+        transform: scale(1);
+        /* transform-origin: 0% 0% 0px; */
+        transition: 500ms linear;
+    }
+
+    100% {
+        transform: scale(1.1);
+        /* transform-origin: 0% 0% 0px; */
+    }
 }
