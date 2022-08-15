@@ -32,20 +32,22 @@ const Look = () => {
     return (
         <div className='row'>
             <div className="col-4">
-                <h2>FILTERS</h2>
-                <hr />
-                <FiltersRecap
-                    checkedRole={checkedRole}
-                    setCheckedRole={setCheckedRole} checkedType={checkedType}
-                    setCheckedType={setCheckedType} checkedWorld={checkedWorld}
-                    setCheckedWorld={setCheckedWorld} />
-                <hr />
-                <FiltersList
-                    roles={rolesList} updateRole={updateRole} types={typesList}
-                    updateType={updateType} worlds={worldList} updateWorld={updateWorld} checkedRole={checkedRole}
-                    setCheckedRole={setCheckedRole} checkedType={checkedType}
-                    setCheckedType={setCheckedType} checkedWorld={checkedWorld}
-                    setCheckedWorld={setCheckedWorld} />
+                <div className="ms-2">
+                    <h2>FILTERS</h2>
+                    <hr />
+                    <FiltersRecap
+                        checkedRole={checkedRole}
+                        setCheckedRole={setCheckedRole} checkedType={checkedType}
+                        setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                        setCheckedWorld={setCheckedWorld} />
+                    <hr />
+                    <FiltersList
+                        roles={rolesList} updateRole={updateRole} types={typesList}
+                        updateType={updateType} worlds={worldList} updateWorld={updateWorld} checkedRole={checkedRole}
+                        setCheckedRole={setCheckedRole} checkedType={checkedType}
+                        setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                        setCheckedWorld={setCheckedWorld} />
+                </div>
             </div>
             <div className="col-8">
                 <ChampList role={role} type={type} world={world} checkedRole={checkedRole} checkedType={checkedType} checkedWorld={checkedWorld} />

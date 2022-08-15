@@ -1,9 +1,5 @@
-import { useState } from "react";
-
 
 const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
-
-    let isChecked = useState(false);
 
     const handleChangeRole = (event) => {
         var updatedRoleList = [...checked];
