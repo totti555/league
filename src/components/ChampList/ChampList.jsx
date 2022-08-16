@@ -38,17 +38,17 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
 
     return (
-        <div>
-            <h1>Coming soon</h1>
-            <div className="container m-0">
+        <div className="overflow">
+            <h1 className=" champ-title text-white">Champion</h1>
+            <div className="container">
                 <div className="row champ-content">
                     {champList.map((champ) =>
                         <React.Fragment key={champ.id}>
                             {
                                 ((isCheckedRole(champ.role) || !checkedRole.length) && (isCheckedType(champ.damages_type) || !checkedType.length)
                                     && (isCheckedWorld(champ.world) || !checkedWorld.length) && (isChampionFind(champ.name) || !searchResult)) ? (
-                                        // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
-                                    <div className=" col-2">
+                                    // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
+                                    <div className=" col-12 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
                                         <ChampCard champ={champ} />
                                     </div>) : null
                             }

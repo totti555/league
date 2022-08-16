@@ -1,22 +1,22 @@
-
-
 .filters {
     background-color: #433F3F;
     // opacity: 0.8;
     border-right: 2px solid #ECB823;
+    overflow: hidden;
 }
 
 hr {
     background-color: #ECB823
 }
 
-body{
-    background-image: url("../assets/background-dim3.jpg");
-    background-size: cover;
-   
+body {
+    // background-image: url("../assets/background-dim3.jpg");
+    // background-size: cover;
+    overflow: hidden;
+
 }
 
 .content {
+    padding-left: 0px;
     // min-height: 1200px;
 }
-

@@ -1,14 +1,40 @@
 /* TODO : Update CSS here  */
 .container {
-    min-width:100%;
+    min-width: 100%;
+    height: 700px;
+    overflow-y: auto;
+    padding-left: 100px;
+}
+
+/* scroll :  */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #433F3F;
+    border-radius: 20px;
+    border: 1px solid #ECB823;
+}
+
+
+/* background image */
+.overflow {
+    background-image: url("../../assets/background-dim3.jpg");
+    background-size: cover;
 }
 
 .champ-card {
     /* position: relative; */
     border: solid 1px black;
-    width: 250px;
+    width: 240px;
     height: 400px;
     margin-top: 20px;
+    margin-left: 20px;
     margin-bottom: 20px;
     animation-name: display-card;
     animation-duration: 0.5s;
@@ -22,12 +48,18 @@
 }
 
 .champ-content {
-    z-index: 2
+    z-index: 2;
+
 }
 
 .no-champ-find {
     position: absolute;
     z-index: 1
+}
+
+.champ-title {
+    width: 99%;
+    box-shadow: 10px 5px 5px #ECB823;
 }
 
 @keyframes display-card {
