@@ -1,5 +1,4 @@
 import Badge from '../Utils/Badge';
-import CloseButton from 'react-bootstrap/CloseButton';
 
 
 const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, setCheckedWorld, setCheckedType }) => {
@@ -74,7 +73,11 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
 
             </div>
 
-            <button className="btn-filter" onClick={() => resetFilters()}>Reset Filters</button>
+            <div className='d-flex justify-content-center delete-button'>
+                <div className="wrap">
+                    <button className="button-filter" onClick={() => resetFilters()}>Reset Filters <span className='cross'>❌</span></button>
+                </div>
+            </div>
 
         </div>
 

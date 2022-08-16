@@ -20,6 +20,14 @@
     filter: opacity(0.4) drop-shadow(0 0 0 white);
 }
 
+.nav-chevron-card {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    // filter: opacity(0.4) drop-shadow(0 0 0 #ECB823);
+    filter: invert(88%) sepia(41%) saturate(2527%) hue-rotate(338deg) brightness(95%) contrast(95%);
+}
+
 .nav-chevron-animation-inverse {
     animation-name: rotateIconInverse;
     animation-fill-mode: forwards;
@@ -29,20 +37,20 @@
 
 @keyframes rotateIcon {
     0% {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
     }
 }
 
 @keyframes rotateIconInverse {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
     }
 
     100% {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
     }
 }

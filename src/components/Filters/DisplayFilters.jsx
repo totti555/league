@@ -1,4 +1,4 @@
-import Button from "../Utils/Button";
+
 import FlecheBas from "../../assets/fleche-bas.png"
 import "./DisplayFilters.scss"
 
