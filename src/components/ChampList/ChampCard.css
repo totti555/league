@@ -1,10 +1,15 @@
 /* TODO : Update CSS here  */
+.container {
+    min-width:100%;
+}
 
 .champ-card {
-    position: relative;
+    /* position: relative; */
     border: solid 1px black;
-    width: 120px;
-    height: 220px;
+    width: 250px;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     animation-name: display-card;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
