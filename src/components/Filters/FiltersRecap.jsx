@@ -1,4 +1,4 @@
-import Badge from 'react-bootstrap/Badge';
+import Badge from '../Utils/Badge';
 import CloseButton from 'react-bootstrap/CloseButton';
 
 
@@ -10,6 +10,7 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
     }
 
     function handleCloseType(selectedType) {
+
         const allButNotCurrentData = checkedType.find((types) => selectedType !== types);
         console.log([allButNotCurrentData]);
         allButNotCurrentData ? setCheckedType([allButNotCurrentData])
@@ -26,60 +27,54 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
     }
 
     function handleCloseRole(selectedRole) {
+        console.log(selectedRole);
         const allButNotCurrentData = checkedRole.find((role) => selectedRole !== role);
         console.log([allButNotCurrentData]);
         allButNotCurrentData ? setCheckedRole([allButNotCurrentData])
+
             : setCheckedRole([]);
 
     }
 
     return (
-        <div className='d-flex justify-content-between'>
+        <div>
+            <div className='d-flex justify-content-between'>
 
-            {/* World tag */}
-            {checkedWorld.length ? (
-                <div>
-                    {checkedWorld.map((t) =>
-                    (<Badge bg="warning" text="dark" key={t}>
-                        {t}
-                        <CloseButton onClick={() => handleCloseWorld(t)} />
-                    </Badge>)
-                    )}
+                {/* World tag */}
+                {checkedWorld.length ? (
+                    <div>
+                        {checkedWorld.map((t) =>
+                            (<Badge name={t} handleClose={handleCloseWorld} key={t}></Badge>)
+                        )}
 
 
-                </div>)
-                : null}
+                    </div>)
+                    : null}
 
-            {/* Type tag */}
-            {checkedType.length ? (
-                <div>
-                    {checkedType.map((t) =>
-                    (<Badge bg="warning" text="dark" key={t}>
-                        {t}
-                        <CloseButton onClick={() => handleCloseType(t)} />
-                    </Badge>)
-                    )}
+                {/* Type tag */}
+                {checkedType.length ? (
+                    <div>
+                        {checkedType.map((t) =>
+                            (<Badge name={t} handleClose={handleCloseType} key={t}></Badge>)
+                        )}
 
 
-                </div>)
-                : null}
+                    </div>)
+                    : null}
 
-            {/* Role tag */}
-            {checkedRole.length ? (
-                <div>
-                    {checkedRole.map((t) =>
-                    (<Badge bg="warning" text="dark" key={t}>
-                        {t}
-                        <CloseButton onClick={() => handleCloseRole(t)} />
-                    </Badge>)
-                    )}
+                {/* Role tag */}
+                {checkedRole.length ? (
+                    <div>
+                        {checkedRole.map((t) =>
+                            (<Badge name={t} handleClose={handleCloseRole} key={t}></Badge>)
+                        )}
 
-                </div>)
-                : null}
+                    </div>)
+                    : null}
 
+            </div>
 
-
-            <button onClick={() => resetFilters()}>Reset Filters</button>
+            <button className="btn-filter" onClick={() => resetFilters()}>Reset Filters</button>
 
         </div>
 

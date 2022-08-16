@@ -2,8 +2,10 @@
     background-color: #433F3F;
     // opacity: 0.8;
     border-right: 2px solid #ECB823;
-    overflow: hidden;
+    overflow-y: auto;
     padding-right: 0px;
+    height: 700px;
+    color: white;
 }
 
 hr {

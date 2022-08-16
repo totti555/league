@@ -5,12 +5,16 @@ import "./DisplayFilters.scss"
 const DisplayFilters = (props) => {
     const displayFilters = props.displayFilters;
     const name = props.name;
+    const canDisplay = props.canDisplay;
     return (
         <div className="d-flex justify-content-between filter-title">
             <p className="text-white">{name.toUpperCase()}</p>
             <div>
-                <img className="nav-chevron" onClick={displayFilters} src={FlecheBas} width="30px" height="30px"></img>
-
+                {canDisplay ? (
+                    <img className="nav-chevron nav-chevron-animation" onClick={displayFilters} src={FlecheBas} width="30px" height="30px"></img>
+                ) :
+                    <img className="nav-chevron nav-chevron-animation-inverse" onClick={displayFilters} src={FlecheBas} width="30px" height="30px"></img>
+                }
             </div>
 
             {/* <Button name={name} click={displayFilters} /> */}

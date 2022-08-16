@@ -13,6 +13,16 @@ label {
 //     animation-fill-mode: forwards;
 // }
 
+.btn-filter {
+    position: relative;
+    background-color: black;
+    border: solid 1px #ECB823;
+    color: white;
+    float: right;
+    bottom: -5px;
+
+}
+
 
 
 /*
@@ -20,6 +30,8 @@ label {
 CORE STYLES
 =====
 */
+
+
 
 .toggle {
     --uiToggleSize: var(--toggleSize, 1.25rem);
@@ -47,6 +59,25 @@ CORE STYLES
     padding-left: calc(var(--uiToggleSize) + var(--toggleIndent, .4em));
 }
 
+.toggle__label:hover {
+    animation-name: hoverCheckboxes;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hoverCheckboxes {
+    0% {
+        color: var(--toggleColor, #222);
+    }
+
+    100% {
+        color: #ECB823
+    }
+}
+
+
+
+
 .toggle__input:not(:disabled)~.toggle__label {
     cursor: pointer;
 }
@@ -70,7 +101,15 @@ CORE STYLES
     left: 0;
     top: 0;
     z-index: 2;
+
+    &:hover {
+
+
+        border: 1px solid #ECB823
+    }
 }
+
+
 
 .toggle__input:checked~.toggle__label::after {
     background-color: var(--uiToggleColor);

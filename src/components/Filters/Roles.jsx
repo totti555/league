@@ -44,14 +44,17 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
                 {roles.map((role) =>
                     <div key={role}>
-                        <label key={role}>
-                            <input type="checkbox" value={role}
-                                onChange={handleChangeRole} />
-                            {role}
+
+                        <label className="toggle" key={role}>
+                            <input className="toggle__input" type="checkbox" value={role} onChange={handleChangeRole} />
+                            <span className="toggle__label">
+                                <span className="toggle__text">{role}</span>
+                            </span>
                         </label>
+
                     </div>
                 )}
-                <button onClick={() => handleDeleteRole()}>Supprimer role</button>
+                <button className="btn-filter" onClick={() => handleDeleteRole()}>Supprimer role</button>
 
 
                 {/* TODO : CSS here */}

@@ -43,7 +43,7 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
 
                 </div>
             )}
-            <button onClick={() => handleDeleteWorld()}>Supprimer world</button>
+            <button className="btn-filter" onClick={() => handleDeleteWorld()}>Supprimer world</button>
             {/* TODO : CSS here */}
         </div>
     );

@@ -4,6 +4,7 @@ import FiltersRecap from "../components/Filters/FiltersRecap";
 import { champList } from "../datas/lolChamp";
 import { useState } from 'react'
 import '../style/Look.scss'
+import DisplayFilters from "../components/Filters/DisplayFilters";
 
 const Look = (props) => {
     const [searchResult, setChampName] = useState('');
@@ -13,6 +14,12 @@ const Look = (props) => {
     const [checkedRole, setCheckedRole] = useState([]);
     const [checkedWorld, setCheckedWorld] = useState([]);
     const [checkedType, setCheckedType] = useState([]);
+    const [displayTags, handleClickTags] = useState(false);
+
+    function canDisplayTags() {
+        handleClickTags(!displayTags);
+    }
+
     const rolesList = champList.reduce(
         (acc, champ) =>
             acc.includes(champ.role) ? acc : acc.concat(champ.role),
@@ -31,6 +38,8 @@ const Look = (props) => {
         []
     )
 
+
+
     return (
         <div className='row content'>
             <div className="col-2 filters pe-0">
@@ -38,11 +47,15 @@ const Look = (props) => {
 
                     <h1 className="text-white ps-3 box-shadow champ-title">FILTERS</h1>
                     <hr />
-                    <FiltersRecap
-                        checkedRole={checkedRole}
-                        setCheckedRole={setCheckedRole} checkedType={checkedType}
-                        setCheckedType={setCheckedType} checkedWorld={checkedWorld}
-                        setCheckedWorld={setCheckedWorld} />
+                    <DisplayFilters displayFilters={canDisplayTags} canDisplay={displayTags} name={'Current filters'} />
+                    {displayTags && (
+                        <FiltersRecap
+                            checkedRole={checkedRole}
+                            setCheckedRole={setCheckedRole} checkedType={checkedType}
+                            setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                            setCheckedWorld={setCheckedWorld}
+                        />)}
+
                     <hr />
                     <FiltersList
                         roles={rolesList} updateRole={updateRole} types={typesList}

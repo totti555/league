@@ -39,7 +39,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     return (
         <div className="overflow">
-            <h1 className=" champ-title text-white">Champion</h1>
+            <h1 className=" box-shadow text-white">Champion</h1>
             <div className="container">
                 <div className="row champ-content">
                     {champList.map((champ) =>

@@ -11,6 +11,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
     const [displayRoles, handleClickRoles] = useState(false);
     const [displayTypes, handleClickTypes] = useState(false);
     const [displayWorlds, handleClickWorlds] = useState(false);
+    const [displaySearch, handleClickSearch] = useState(false);
 
     function canDisplayRoles() {
         handleClickRoles(!displayRoles);
@@ -24,6 +25,10 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
         handleClickWorlds(!displayWorlds);
     }
 
+    function canDisplaySearchBar() {
+        handleClickSearch(!displaySearch);
+    }
+
     function handleChangeSearch(e) {
         setChampName(e.target.value)
 
@@ -32,15 +37,18 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
         <div className="filters-list">
 
             {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch} value={searchChamp}></input> */}
-
-            <div className="form__group field">
-                <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
-                <label for="name" className="form__label">Search your champ</label>
-            </div>
+            <DisplayFilters displayFilters={canDisplaySearchBar} canDisplay={displaySearch} name={'Search champ'} />
+            {displaySearch && (
+                <div className="filters-list-type ms-0">
+                    <div className="form__group field">
+                        <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
+                        <label htmlFor="name" className="form__label">Search your champ</label>
+                    </div>
+                </div>)}
             <hr />
 
 
-            <DisplayFilters displayFilters={canDisplayRoles} name={'Poste'} />
+            <DisplayFilters displayFilters={canDisplayRoles} canDisplay={displayRoles} name={'Poste'} />
             {displayRoles && (
                 <div className="filters-list-type">
                     <Roles setChecked={setCheckedRole} checked={checkedRole} roles={roles} />
@@ -51,7 +59,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             <hr />
 
-            <DisplayFilters displayFilters={canDisplayTypes} name={'Type'} />
+            <DisplayFilters displayFilters={canDisplayTypes} canDisplay={displayTypes} name={'Type'} />
             {displayTypes && (
                 <div className="filters-list-type">
                     <Types checked={checkedType} setChecked={setCheckedType} types={types} />
@@ -63,7 +71,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             <hr />
 
-            <DisplayFilters displayFilters={canDisplayWorlds} name={'World'} />
+            <DisplayFilters displayFilters={canDisplayWorlds} canDisplay={displayWorlds} name={'World'} />
             {displayWorlds && (
                 <div className="filters-list-type">
                     <Worlds checked={checkedWorld} setChecked={setCheckedWorld} worlds={worlds} />

@@ -29,15 +29,16 @@ const Types = ({ type, updateType, checked, setChecked, types }) => {
         <div>
             {types.map((type) =>
                 <div key={type}>
-                    {/* <button onClick={() => handleClickType(type)}> {type}</button> */}
-                    <label key={type}>
-                        <input type="checkbox" value={type}
-                            onChange={handleChangeType} />
-                        {type}
+                    <label className="toggle" key={type}>
+                        <input className="toggle__input" type="checkbox" value={type} onChange={handleChangeType} />
+                        <span className="toggle__label">
+                            <span className="toggle__text">{type}</span>
+                        </span>
                     </label>
+                    {/* <button onClick={() => handleClickType(type)}> {type}</button> */}
                 </div>
             )}
-            <button onClick={() => handleDeleteType()}>Supprimer type</button>
+            <button className="btn-filter" onClick={() => handleDeleteType()}>Supprimer type</button>
             {/* TODO : CSS here */}
         </div>
     )

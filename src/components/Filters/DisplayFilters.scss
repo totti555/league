@@ -10,8 +10,39 @@
     box-shadow: 0 9px 6px -6px #ECB823;
 }
 
+.nav-chevron-animation {
+    animation-name: rotateIcon;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
 .nav-chevron {
-
     filter: opacity(0.4) drop-shadow(0 0 0 white);
+}
 
+.nav-chevron-animation-inverse {
+    animation-name: rotateIconInverse;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotateIconInverse {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
 }
