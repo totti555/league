@@ -33,9 +33,10 @@ const Look = (props) => {
 
     return (
         <div className='row content'>
-            <div className="col-2 filters">
-                <div className="ms-2">
-                    <h2 className="text-white">FILTERS</h2>
+            <div className="col-2 filters pe-0">
+                <div>
+
+                    <h1 className="text-white ps-3 box-shadow champ-title">FILTERS</h1>
                     <hr />
                     <FiltersRecap
                         checkedRole={checkedRole}
@@ -49,9 +50,10 @@ const Look = (props) => {
                         setCheckedRole={setCheckedRole} checkedType={checkedType}
                         setCheckedType={setCheckedType} checkedWorld={checkedWorld}
                         setCheckedWorld={setCheckedWorld} setChampName={setChampName} searchResult={searchResult} />
+
                 </div>
             </div>
-            <div className="col-10 champs-list">
+            <div className="col-10 champs-list ps-0">
                 <ChampList role={role} type={type} world={world} checkedRole={checkedRole} checkedType={checkedType} checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} />
             </div>
         </div>

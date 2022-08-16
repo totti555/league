@@ -3,6 +3,7 @@
     // opacity: 0.8;
     border-right: 2px solid #ECB823;
     overflow: hidden;
+    padding-right: 0px;
 }
 
 hr {
@@ -19,4 +20,15 @@ body {
 .content {
     padding-left: 0px;
     // min-height: 1200px;
+}
+
+
+.box-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px #ECB823;
+    -moz-box-shadow: 0 8px 6px -6px #ECB823;
+    box-shadow: 0 9px 6px -6px #ECB823;
+}
+
+.champs-list {
+    padding-left: 0px;
 }

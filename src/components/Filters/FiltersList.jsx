@@ -1,7 +1,7 @@
 import Roles from "./Roles";
 import Types from "./Types";
 import Worlds from "./Worlds";
-import './FiltersList.css'
+import './FiltersList.scss'
 import { useState } from 'react'
 import DisplayFilters from "./DisplayFilters";
 
@@ -31,7 +31,12 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
     return (
         <div className="filters-list">
 
-            <input type="text" placeholder="Search your champ" onChange={handleChangeSearch} value={searchChamp}></input>
+            {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch} value={searchChamp}></input> */}
+
+            <div className="form__group field">
+                <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
+                <label for="name" className="form__label">Search your champ</label>
+            </div>
             <hr />
 
 

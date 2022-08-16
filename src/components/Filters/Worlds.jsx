@@ -33,10 +33,10 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
 
                     </label> */}
 
-                    <label class="toggle" key={world}>
-                        <input class="toggle__input" type="checkbox" value={world} onChange={handleChangeWorld} />
-                        <span class="toggle__label">
-                            <span class="toggle__text">{world}</span>
+                    <label className="toggle" key={world}>
+                        <input className="toggle__input" type="checkbox" value={world} onChange={handleChangeWorld} />
+                        <span className="toggle__label">
+                            <span className="toggle__text">{world}</span>
                         </span>
                     </label>
 
