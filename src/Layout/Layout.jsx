@@ -9,13 +9,13 @@ function Layout({ children }) {
 
             <header className="d-flex align-items-center justify-content-between">
 
-                <div className="logo ms-5">List of legends</div>
+                <div className="logo ms-5 text-white">List of legends</div>
                 <div>
                     <button className="nav-button"><Link to="/">HOME</Link></button>
                     <button className="nav-button"><Link to="/about_us">ABOUT US</Link></button>
                     <button className="nav-button"><Link to='/look'>LOOK</Link></button>
                 </div>
-                <div className="me-5"> Bonjour</div>
+                <div className="me-5 text-white"> Welcome, Thomas !</div>
 
                 {/* TODO : location state dont work */}
                 {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch}></input> */}

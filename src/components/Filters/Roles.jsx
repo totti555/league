@@ -56,8 +56,8 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
                 )}
             </div>
             <div className='d-flex justify-content-center delete-button'>
-                <div class="wrap">
-                    <button class="button-filter" onClick={() => handleDeleteRole()}>Delete Roles <span className='cross'>❌</span></button>
+                <div className="wrap">
+                    <button className="button-filter" onClick={() => handleDeleteRole()}>Delete Roles <span className='cross'>❌</span></button>
                 </div>
             </div>
         </div>

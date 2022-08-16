@@ -45,7 +45,7 @@ const Look = (props) => {
             <div className="col-2 filters pe-0">
                 <div>
                     <div className="box-shadow ps-3">
-                        <h1><span class="title">FILTERS</span></h1>
+                        <h1><span className="title">FILTERS</span></h1>
                     </div>
                     <hr />
                     <DisplayFilters displayFilters={canDisplayTags} canDisplay={displayTags} name={'Current filters'} />

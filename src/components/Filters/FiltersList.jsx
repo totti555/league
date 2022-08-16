@@ -4,6 +4,9 @@ import Worlds from "./Worlds";
 import './FiltersList.scss'
 import { useState } from 'react'
 import DisplayFilters from "./DisplayFilters";
+import Search from "../../assets/search.svg"
+import Okay from "../../assets/okay.png"
+
 
 
 
@@ -44,6 +47,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                         <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
                         <label htmlFor="name" className="form__label">Search your champ</label>
                     </div>
+                    <img src={Search} className="search-icon"></img>
                 </div>)}
             <hr />
 
@@ -77,6 +81,9 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                     <Worlds checked={checkedWorld} setChecked={setCheckedWorld} worlds={worlds} />
                 </div>
             )}
+            <div className="d-flex justify-content-center">
+                <img src={Okay} width="140px" height="140px"></img>
+            </div>
 
 
         </div>

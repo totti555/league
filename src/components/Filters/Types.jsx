@@ -41,8 +41,8 @@ const Types = ({ type, updateType, checked, setChecked, types }) => {
                 {/* TODO : CSS here */}
             </div>
             <div className='d-flex justify-content-center delete-button'>
-                <div class="wrap">
-                    <button class="button-filter" onClick={() => handleDeleteType()}>Delete Types <span className='cross'>❌</span></button>
+                <div className="wrap">
+                    <button className="button-filter" onClick={() => handleDeleteType()}>Delete Types <span className='cross'>❌</span></button>
                 </div>
             </div>
 

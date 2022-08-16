@@ -47,8 +47,8 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
                 {/* TODO : CSS here */}
             </div>
             <div className='d-flex justify-content-center delete-button'>
-                <div class="wrap">
-                    <button class="button-filter" onClick={() => handleDeleteWorld()}>Delete Worlds <span className='cross'>❌</span></button>
+                <div className="wrap">
+                    <button className="button-filter" onClick={() => handleDeleteWorld()}>Delete Worlds <span className='cross'>❌</span></button>
                 </div>
                 {/* <button className="btn-filter" onClick={() => handleDeleteWorld()}>DELETE WORLDS <span className='cross'>❌</span></button> */}
             </div>

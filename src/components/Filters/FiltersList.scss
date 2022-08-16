@@ -29,7 +29,17 @@
 
 
 
+
+
 // Input design
+
+
+.search-icon {
+    position: absolute;
+    top: 32px;
+    right: 16px;
+    rotate: 90deg;
+}
 
 
 $primary: #11998e;
@@ -49,7 +59,7 @@ $gold: #ECB823;
 
 .form__field {
     font-family: inherit;
-    // width: 100%;
+    width: 80%;
     border: 0;
     border-bottom: 2px solid $gold;
     outline: 0;
@@ -88,12 +98,12 @@ $gold: #ECB823;
         transition: 0.2s;
         font-size: 1rem;
         font-weight: 700;
-        background: -webkit-linear-gradient(0.5turn, $gold, $black);
+        background: -webkit-linear-gradient(0.5turn, $gold, $white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
-    width: 200px;
+    width: 170px;
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
