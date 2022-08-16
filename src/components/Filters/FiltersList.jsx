@@ -50,7 +50,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             <DisplayFilters displayFilters={canDisplayRoles} canDisplay={displayRoles} name={'Poste'} />
             {displayRoles && (
-                <div className="filters-list-type">
+                <div>
                     <Roles setChecked={setCheckedRole} checked={checkedRole} roles={roles} />
                 </div>
             )}
@@ -61,7 +61,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             <DisplayFilters displayFilters={canDisplayTypes} canDisplay={displayTypes} name={'Type'} />
             {displayTypes && (
-                <div className="filters-list-type">
+                <div>
                     <Types checked={checkedType} setChecked={setCheckedType} types={types} />
                 </div>
             )}
@@ -73,7 +73,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             <DisplayFilters displayFilters={canDisplayWorlds} canDisplay={displayWorlds} name={'World'} />
             {displayWorlds && (
-                <div className="filters-list-type">
+                <div>
                     <Worlds checked={checkedWorld} setChecked={setCheckedWorld} worlds={worlds} />
                 </div>
             )}

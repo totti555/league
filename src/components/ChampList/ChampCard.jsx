@@ -1,9 +1,9 @@
-import './ChampCard.css'
+import './ChampCard.scss'
 
 const ChampCard = ({ champ }) => {
- 
+
     return (
-        <div className='champ-card' style={{backgroundImage: `url(${champ.image})`, backgroundSize:"cover"}}>
+        <div className='champ-card' style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
             {/* TODO : Insert img */}
             {/* <img src={champ.photo}></img> */}
             <ChampMemo champ={champ} />

@@ -24,27 +24,34 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
 
     return (
         <div>
-            {worlds.map((world) =>
-                <div key={world}>
-                    {/* <label key={world} >
+            <div className="filters-list-type">
+                {worlds.map((world) =>
+                    <div key={world}>
+                        {/* <label key={world} >
                         <input type="checkbox" className='hide-checkbox' value={world}
                             onChange={handleChangeWorld} />
                         <span class="entity">{world}</span>
 
                     </label> */}
 
-                    <label className="toggle" key={world}>
-                        <input className="toggle__input" type="checkbox" value={world} onChange={handleChangeWorld} />
-                        <span className="toggle__label">
-                            <span className="toggle__text">{world}</span>
-                        </span>
-                    </label>
+                        <label className="toggle" key={world}>
+                            <input className="toggle__input" type="checkbox" value={world} onChange={handleChangeWorld} />
+                            <span className="toggle__label">
+                                <span className="toggle__text">{world}</span>
+                            </span>
+                        </label>
 
 
+                    </div>
+                )}
+                {/* TODO : CSS here */}
+            </div>
+            <div className='d-flex justify-content-center delete-button'>
+                <div class="wrap">
+                    <button class="button-filter" onClick={() => handleDeleteWorld()}>Delete Worlds <span className='cross'>❌</span></button>
                 </div>
-            )}
-            <button className="btn-filter" onClick={() => handleDeleteWorld()}>Supprimer world</button>
-            {/* TODO : CSS here */}
+                {/* <button className="btn-filter" onClick={() => handleDeleteWorld()}>DELETE WORLDS <span className='cross'>❌</span></button> */}
+            </div>
         </div>
     );
 };

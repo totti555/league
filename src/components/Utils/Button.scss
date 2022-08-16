@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif');
 
 $button-color: black;
-$transition-time: 750ms;
+$transition-time: 500ms;
 
 
 
@@ -11,11 +11,11 @@ $transition-time: 750ms;
     text-decoration: none;
     color: #fff;
     background-color: lighten($button-color, 10%);
-    padding-left: 2rem;
+    padding-left: 2.6rem;
     overflow: hidden;
     z-index: 1;
     align-items: center;
-    box-shadow: 0px 3px 4px -4px rgba(240, 238, 238, 0.75);
+    // box-shadow: 0px 3px 4px -4px rgba(240, 238, 238, 0.75);
 
     &::before {
         content: '';

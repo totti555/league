@@ -1,6 +1,6 @@
 
 import { champList } from "../../datas/lolChamp";
-import './ChampCard.css'
+import './ChampCard.scss'
 import ChampCard from "./ChampCard"
 import React from 'react';
 
@@ -39,7 +39,9 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     return (
         <div className="overflow">
-            <h1 className=" box-shadow text-white">Champion</h1>
+            <div className="box-shadow ps-3">
+                <h1 className="champ-title"><span class="title">CHAMPIONS</span></h1>
+            </div>
             <div className="container">
                 <div className="row champ-content">
                     {champList.map((champ) =>

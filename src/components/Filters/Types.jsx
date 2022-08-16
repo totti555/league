@@ -25,21 +25,27 @@ const Types = ({ type, updateType, checked, setChecked, types }) => {
 
 
     return (
-
         <div>
-            {types.map((type) =>
-                <div key={type}>
-                    <label className="toggle" key={type}>
-                        <input className="toggle__input" type="checkbox" value={type} onChange={handleChangeType} />
-                        <span className="toggle__label">
-                            <span className="toggle__text">{type}</span>
-                        </span>
-                    </label>
-                    {/* <button onClick={() => handleClickType(type)}> {type}</button> */}
+            <div className="filters-list-type">
+                {types.map((type) =>
+                    <div key={type}>
+                        <label className="toggle" key={type}>
+                            <input className="toggle__input" type="checkbox" value={type} onChange={handleChangeType} />
+                            <span className="toggle__label">
+                                <span className="toggle__text">{type}</span>
+                            </span>
+                        </label>
+                        {/* <button onClick={() => handleClickType(type)}> {type}</button> */}
+                    </div>
+                )}
+                {/* TODO : CSS here */}
+            </div>
+            <div className='d-flex justify-content-center delete-button'>
+                <div class="wrap">
+                    <button class="button-filter" onClick={() => handleDeleteType()}>Delete Types <span className='cross'>❌</span></button>
                 </div>
-            )}
-            <button className="btn-filter" onClick={() => handleDeleteType()}>Supprimer type</button>
-            {/* TODO : CSS here */}
+            </div>
+
         </div>
     )
 };

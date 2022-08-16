@@ -44,8 +44,9 @@ const Look = (props) => {
         <div className='row content'>
             <div className="col-2 filters pe-0">
                 <div>
-
-                    <h1 className="text-white ps-3 box-shadow champ-title">FILTERS</h1>
+                    <div className="box-shadow ps-3">
+                        <h1><span class="title">FILTERS</span></h1>
+                    </div>
                     <hr />
                     <DisplayFilters displayFilters={canDisplayTags} canDisplay={displayTags} name={'Current filters'} />
                     {displayTags && (

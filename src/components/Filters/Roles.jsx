@@ -25,7 +25,7 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
 
     return (
-        <div>
+        <div >
 
             {/* {role === "Mid" ?
                 <div>Mid</div> :
@@ -40,7 +40,7 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
             {/* <button onClick={() => handleClickRole(role)}> {role}</button> */}
 
-            <div>
+            <div className="filters-list-type">
 
                 {roles.map((role) =>
                     <div key={role}>
@@ -54,15 +54,12 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
                     </div>
                 )}
-                <button className="btn-filter" onClick={() => handleDeleteRole()}>Supprimer role</button>
-
-
-                {/* TODO : CSS here */}
             </div>
-
-
-
-
+            <div className='d-flex justify-content-center delete-button'>
+                <div class="wrap">
+                    <button class="button-filter" onClick={() => handleDeleteRole()}>Delete Roles <span className='cross'>❌</span></button>
+                </div>
+            </div>
         </div>
     );
 };
