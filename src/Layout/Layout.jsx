@@ -9,7 +9,7 @@ function Layout({ children }) {
 
             <header className="d-flex align-items-center justify-content-between">
 
-                <div className="logo ms-5 text-white">List of legends</div>
+                <div className="logo ms-3 text-white"><h1 className="champ-title"><span className="title">LIST OF LEGENDS</span></h1></div>
                 <div>
                     <button className="nav-button"><Link to="/">HOME</Link></button>
                     <button className="nav-button"><Link to="/about_us">ABOUT US</Link></button>

@@ -44,7 +44,7 @@ const Look = (props) => {
         <div className='row content'>
             <div className="col-2 filters pe-0">
                 <div>
-                    <div className="box-shadow ps-3">
+                    <div className="box-shadow ps-3 filters-title">
                         <h1><span className="title">FILTERS</span></h1>
                     </div>
                     <hr />
