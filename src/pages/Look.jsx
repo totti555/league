@@ -20,17 +20,36 @@ const Look = (props) => {
         handleClickTags(!displayTags);
     }
 
-    const rolesList = champList.reduce(
-        (acc, champ) =>
-            acc.includes(champ.role) ? acc : acc.concat(champ.role),
-        []
-    )
+    function flatten(arr) {
+        return arr.reduce(function (flat, toFlatten) {
+            return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+        }, []);
+    }
 
-    const typesList = champList.reduce(
-        (acc, champ) =>
-            acc.includes(champ.damages_type) ? acc : acc.concat(champ.damages_type),
-        []
-    )
+    const rolesList = () => {
+        const toto = champList.map((champ) => champ.role);
+        const tata = Array.prototype.concat.apply([], toto);
+        const uniqueArr = [...new Set(tata)]
+        // const tata = toto.
+        // reduce(
+        //     (acc, champ) =>
+        //         acc.includes(champ) ? acc : acc.concat(champ),
+        //     []
+        // )
+        // {role:"toto"},{role:"toto"}
+        // {name:'role'},{name:role}
+        // const tata = flatten(toto);
+        return uniqueArr;
+    }
+
+    const typesList = () => {
+        const tata = champList.reduce(
+            (acc, champ) =>
+                acc.includes(champ.damages_type) ? acc : acc.concat(champ.damages_type),
+            []
+        )
+
+    }
 
     const worldList = champList.reduce(
         (acc, champ) =>
@@ -59,7 +78,7 @@ const Look = (props) => {
 
                     <hr />
                     <FiltersList
-                        roles={rolesList} updateRole={updateRole} types={typesList}
+                        roles={rolesList()} updateRole={updateRole} types={typesList}
                         updateType={updateType} worlds={worldList} updateWorld={updateWorld} checkedRole={checkedRole}
                         setCheckedRole={setCheckedRole} checkedType={checkedType}
                         setCheckedType={setCheckedType} checkedWorld={checkedWorld}

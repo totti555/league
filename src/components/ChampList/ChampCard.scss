@@ -21,7 +21,35 @@ $gold: #ECB823;
     right: 5px;
     top: 30px;
     text-align: right;
+    background-color: black;
 
+}
+
+.display-world-animation {
+    p {
+        opacity: 0;
+        margin-left: -20px
+    }
+}
+
+.display-world-animation:hover {
+    p {
+        animation-name: display-entity;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes display-entity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        /* left: 0px; */
+        margin-left: 0px;
+        opacity: 1;
+    }
 }
 
 

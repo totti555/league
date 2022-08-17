@@ -9,9 +9,7 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
     }
 
     function handleCloseType(selectedType) {
-
         const allButNotCurrentData = checkedType.find((types) => selectedType !== types);
-        console.log([allButNotCurrentData]);
         allButNotCurrentData ? setCheckedType([allButNotCurrentData])
             : setCheckedType([]);
 
@@ -19,16 +17,13 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
 
     function handleCloseWorld(selectedWorld) {
         const allButNotCurrentData = checkedWorld.find((world) => selectedWorld !== world);
-        console.log([allButNotCurrentData]);
         allButNotCurrentData ? setCheckedWorld([allButNotCurrentData])
             : setCheckedWorld([]);
 
     }
 
     function handleCloseRole(selectedRole) {
-        console.log(selectedRole);
         const allButNotCurrentData = checkedRole.find((role) => selectedRole !== role);
-        console.log([allButNotCurrentData]);
         allButNotCurrentData ? setCheckedRole([allButNotCurrentData])
 
             : setCheckedRole([]);

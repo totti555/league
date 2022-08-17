@@ -1,12 +1,13 @@
-import Kaisa  from "../assets/Champ/Kaisa.jpg"
-import  Yone  from "../assets/Champ/Yone.jpg"
-import  Garen  from "../assets/Champ/Garen.jpg"
-import  Irelia  from "../assets/Champ/Irelia.jpg"
-import  Rammus  from "../assets/Champ/Rammus.jpg"
-import  Darius  from "../assets/Champ/Darius.jpg"
-import  Pyke  from "../assets/Champ/Pyke.jpg"
-import  LeBlanc  from "../assets/Champ/LeBlanc.jpg"
-import  Vayne  from "../assets/Champ/Vayne.jpg"
+import Kaisa from "../assets/Champ/Kaisa.jpg"
+import Yasuo from "../assets/Champ/Yasuo.jpg"
+import Yone from "../assets/Champ/Yone.jpg"
+import Garen from "../assets/Champ/Garen.jpg"
+import Irelia from "../assets/Champ/Irelia.jpg"
+import Rammus from "../assets/Champ/Rammus.jpg"
+import Darius from "../assets/Champ/Darius.jpg"
+import Pyke from "../assets/Champ/Pyke.jpg"
+import LeBlanc from "../assets/Champ/LeBlanc.jpg"
+import Vayne from "../assets/Champ/Vayne.jpg"
 import Aatrox from "../assets/Champ/Aatrox.jpg"
 import Ahri from "../assets/Champ/Ahri.jpg"
 import Akali from "../assets/Champ/Akali.jpg"
@@ -58,439 +59,450 @@ export const champList = [
         world: 'Runeterra',
         id: 1,
         damages_type: "AD",
-        role: "Top",
+        role: ["Top"],
         image: Aatrox,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Ahri',
         world: 'Ionia',
         id: 2,
         damages_type: "AP",
-        role: "Mid",
+        role: ['Mid', 'Support'],
         image: Ahri,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Akali',
         world: 'Ionia',
         id: 3,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid", "Top"],
         image: Akali,
-        type: "assassin"
+        type: ["assassin"]
     },
     {
         name: 'Akshan',
         world: 'Shurima',
         id: 4,
         damages_type: "AD",
-        role: "Mid",
+        role: ["Mid", "Top", "ADC"],
         image: Akshan,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'Alistar',
         world: 'Runeterra',
         id: 5,
         damages_type: "AD",
-        role: "Support",
+        role: ["Support", 'Top'],
         image: Alistar,
-        type: "tank"
+        type: ["tank", "support"]
     },
     {
         name: 'Amumu',
         world: 'Shurima',
-        id: 5,
+        id: 6,
         damages_type: "AP",
-        role: "Jungle",
+        role: ["Jungle", "Support"],
         image: Amumu,
-        type: "tank"
+        type: ["tank"]
     },
     {
         name: 'Anivia',
         world: 'Freljord',
-        id: 6,
+        id: 7,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid", "Support"],
         image: Anivia,
-        type: "mage"
+        type: ["mage", "support"]
     },
     {
         name: 'Annie',
         world: 'Runeterra',
-        id: 7,
+        id: 8,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: Annie,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Aphelios',
         world: 'Runeterra',
-        id: 8,
+        id: 9,
         damages_type: "AD",
-        role: "ADC",
+        role: ["ADC"],
         image: Aphelios,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'Ashe',
         world: 'Freljord',
-        id: 9,
+        id: 10,
         damages_type: "AD",
-        role: "ADC",
+        role: ["ADC", "Supp"],
         image: Ashe,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'AurelionSol',
         world: 'Runeterra',
-        id: 10,
+        id: 11,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: AurelionSol,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Azir',
         world: 'Shurima',
-        id: 11,
+        id: 12,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: Azir,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Bard',
         world: 'Runeterra',
-        id: 12,
+        id: 13,
         damages_type: "AP",
-        role: "Support",
+        role: ["Support"],
         image: Bard,
-        type: "support"
+        type: ["support"]
     },
     {
         name: 'Belveth',
         world: 'Void',
-        id: 13,
+        id: 14,
         damages_type: "AD",
-        role: "Jungle",
+        role: ["Jungle"],
         image: Belveth,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Blitzcrank',
         world: 'Zaun',
-        id: 14,
+        id: 15,
         damages_type: "AP",
-        role: "Support",
+        role: ["Support"],
         image: Blitzcrank,
-        type: "tank"
+        type: ["tank"]
     },
     {
         name: 'Brand',
         world: 'Runeterra',
-        id: 15,
+        id: 16,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid", "Support"],
         image: Brand,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Braum',
         world: 'Freljord',
-        id: 16,
+        id: 17,
         damages_type: "AD",
-        role: "Support",
+        role: ["Support"],
         image: Braum,
-        type: "support"
+        type: ["support"]
     },
     {
         name: 'Caitlyn',
         world: 'Piltover',
-        id: 17,
+        id: 18,
         damages_type: "AD",
-        role: "ADC",
+        role: ["ADC"],
         image: Caitlyn,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'Camille',
         world: 'Piltover',
-        id: 18,
+        id: 19,
         damages_type: "AD",
-        role: "Top",
+        role: ["Top"],
         image: Camille,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Cassiopeia',
         world: 'Noxus',
-        id: 19,
+        id: 20,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: Cassiopeia,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Chogath',
         world: 'Void',
-        id: 20,
+        id: 21,
         damages_type: "AP",
-        role: "Top",
+        role: ["Top"],
         image: Chogath,
-        type: "tank"
+        type: ["tank"]
     },
     {
         name: 'Corki',
         world: 'Bandle city',
-        id: 21,
+        id: 22,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: Corki,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'Darius',
         world: 'Noxus',
-        id: 22,
+        id: 23,
         damages_type: 'AD',
-        role: 'Top',
-        image: Darius
+        role: ['Top'],
+        image: Darius,
+        type: ["fighter"]
     },
     {
         name: 'Diana',
         world: 'Targon',
-        id: 23,
+        id: 24,
         damages_type: "AP",
-        role: "Jungle",
+        role: ["Jungle", "Mid"],
         image: Diana,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Draven',
         world: 'Noxus',
-        id: 24,
+        id: 25,
         damages_type: "AD",
-        role: "ADC",
+        role: ["ADC"],
         image: Draven,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'DrMundo',
         world: 'Zaun',
-        id: 25,
+        id: 26,
         damages_type: "AP",
-        role: "Top",
+        role: ["Top", "Jungle"],
         image: DrMundo,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Ekko',
         world: 'Zaun',
-        id: 26,
+        id: 27,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid", "Jungle"],
         image: Ekko,
-        type: "assassin"
+        type: ["assassin"]
     },
     {
         name: 'Elise',
         world: 'Shadow Isles',
-        id: 27,
+        id: 28,
         damages_type: "AP",
-        role: "Jungle",
+        role: ["Jungle"],
         image: Elise,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Evelynn',
         world: 'Runeterra',
-        id: 28,
+        id: 29,
         damages_type: "AP",
-        role: "Jungle",
+        role: ["Jungle"],
         image: Evelynn,
-        type: "assassin"
+        type: ["assassin"]
     },
     {
         name: 'Ezreal',
         world: 'Piltover',
-        id: 29,
+        id: 30,
         damages_type: "AD",
-        role: "ADC",
+        role: ["ADC"],
         image: Ezreal,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'Fiddlesticks',
         world: 'Runeterra',
-        id: 30,
+        id: 31,
         damages_type: "AP",
-        role: "Jungle",
+        role: ["Jungle"],
         image: Fiddlesticks,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Fiora',
         world: 'Demacia',
-        id: 31,
+        id: 32,
         damages_type: "AD",
-        role: "Top",
+        role: ["Top"],
         image: Fiora,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Fizz',
         world: 'Runeterra',
-        id: 32,
+        id: 33,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: Fizz,
-        type: "assassin"
+        type: ["assassin"]
     },
     {
         name: 'Galio',
         world: 'Demacia',
-        id: 33,
+        id: 34,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid"],
         image: Galio,
-        type: "tank"
+        type: ["tank"]
     },
     {
         name: 'Gangplank',
         world: 'Bilgewater',
-        id: 34,
+        id: 35,
         damages_type: "AD",
-        role: "Top",
+        role: ["Top"],
         image: Gangplank,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Garen',
         world: 'Demacia',
-        id: 35,
+        id: 36,
         damages_type: 'AD',
-        role: 'Top',
-        image: Garen
+        role: ['Top'],
+        image: Garen,
+        type: ["fighter"]
     },
     {
         name: 'Gnar',
         world: 'Freljord',
-        id: 36,
+        id: 37,
         damages_type: "AD",
-        role: "Top",
+        role: ["Top"],
         image: Gnar,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Gragas',
         world: 'Freljord',
-        id: 37,
+        id: 38,
         damages_type: "AP",
-        role: "Top",
+        role: ["Top", "Mid"],
         image: Gragas,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Graves',
         world: 'Bilgewater',
-        id: 38,
+        id: 39,
         damages_type: "AD",
-        role: "Top",
+        role: ["Top"],
         image: Graves,
-        type: "marksman"
+        type: ["marksman"]
     },
     {
         name: 'Gwen',
         world: 'Shadow Isles',
-        id: 39,
+        id: 40,
         damages_type: "AP",
-        role: "Top",
+        role: ["Top"],
         image: Gwen,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Hecarim',
         world: 'Shadow Isles',
-        id: 40,
+        id: 41,
         damages_type: "AD",
-        role: "Jungle",
+        role: ["Jungle"],
         image: Hecarim,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Heimerdinger',
         world: 'Piltover',
-        id: 41,
+        id: 42,
         damages_type: "AP",
-        role: "Mid",
+        role: ["Mid", "Top", "Supp"],
         image: Heimerdinger,
-        type: "mage"
+        type: ["mage"]
     },
     {
         name: 'Irelia',
         world: 'Ionia',
-        id: 44,
+        id: 43,
         damages_type: 'AD',
-        role: 'Top',
+        role: ['Top', "Mid"],
         image: Irelia,
-        type: "fighter"
+        type: ["fighter"]
     },
     {
         name: 'Kaisa',
         world: 'Void',
         id: 52,
         damages_type: "AD",
-        role: "ADC",
+        role: ["ADC", "Mid"],
         image: Kaisa,
-        type: "marksman"
-       
+        type: ["marksman"]
+
     },
     {
         name: 'Leblanc',
         world: 'Noxus',
         id: 65,
         damages_type: 'AP',
-        role: 'Mid',
+        role: ['Mid'],
         image: LeBlanc,
-        type: "mage"
+        type: ["mage", "assassin"]
     },
     {
         name: 'Pyke',
         world: 'Bilgewater',
         id: 93,
         damages_type: 'AD',
-        role: 'Support',
+        role: ['Support', "Mid"],
         image: Pyke,
-        type: "support"
+        type: ["support"]
     },
     {
         name: 'Rammus',
         world: 'Shurima',
         id: 97,
         damages_type: 'AP',
-        role: 'Jungle',
+        role: ['Jungle'],
         image: Rammus,
-        type: "tank"
+        type: ["tank"]
     },
     {
         name: 'Vayne',
         world: 'Demacia',
         id: 137,
         damages_type: 'AD',
-        role: 'Top',
+        role: ['Top', "ADC"],
         image: Vayne,
-        type: "marksman"
+        type: ["marksman"]
+    },
+    {
+        name: 'Yasuo',
+        world: 'Ionia',
+        id: 150,
+        damages_type: 'AD',
+        role: ['Mid', "Top", "ADC"],
+        image: Yasuo,
+        type: ["assassin"]
     },
     {
         name: 'Yone',
         world: 'Ionia',
         id: 152,
         damages_type: 'AD',
-        role: 'Mid',
+        role: ['Mid', "Top"],
         image: Yone,
-        type: "assassin"
+        type: ["assassin"]
     },
 ]

@@ -13,7 +13,10 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         return champIsFind ? false : true
     }
     const isCheckedRole = (role) => {
-        return checkedRole.find((c) => c === role) ? true : false
+        //TODO : Afficher uniquement pour les 2 filtres, et pas les 2 categories
+        // Maybe with => const  intersections = array1.filter(e => array2.indexOf(e) !== -1);
+        const intersection = checkedRole.filter(element => role.includes(element));
+        return intersection.length ? true : false;
     }
 
     const isCheckedType = (type) => {

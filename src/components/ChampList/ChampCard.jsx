@@ -7,7 +7,6 @@ const ChampCard = ({ champ }) => {
     const [displayAttributes, handleClickAttributes] = useState(false);
 
     function canDisplayAttributes() {
-        console.log('toto');
         handleClickAttributes(!displayAttributes);
     }
 
@@ -32,16 +31,29 @@ const ChampCard = ({ champ }) => {
     )
 }
 
-const ChampMemo = ({ champ, displayAttributes }) => {
+const ChampMemo = ({ champ }) => {
+
+    // const [displayWorld, handleClickWorld] = useState(false);
+
+    // function canDisplayWorld() {
+    //     handleClickWorld(!displayWorld);
+    // }
+
 
     return (
 
         <div className="filters-list-type">
             <div className='champ-memo '>
-                {/* TODO : Update memo */}
+                {/* TODO : Image for damages_types*/}
                 <p>{champ.damages_type === "AD" ? 'AD' : 'AP'}</p>
-                <p>{champ.role}</p>
-                <p>{champ.world}</p>
+                {/* TODO : Image for roles*/}
+                {champ.role.map((role) => (
+                    <p key={role}>{role}</p>
+                ))}
+                <div className='display-world-animation d-flex justify-content-end'>
+                    <p className='title'>{champ.world}</p>
+                    <img src={require(`../../assets/Region/${champ.world}.png`)}></img>
+                </div>
             </div>
         </div>
 

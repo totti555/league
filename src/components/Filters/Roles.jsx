@@ -5,8 +5,6 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
     const handleChangeRole = (event) => {
         var updatedRoleList = [...checked];
-        console.log("updatedRoleList");
-        console.log(updatedRoleList);
         if (event.target.checked) {
             //Fusionne le nouvelelement avec le predecent 
             updatedRoleList = [...checked, event.target.value];
@@ -16,6 +14,7 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
             updatedRoleList.splice(checked.indexOf(event.target.value), 1);
 
         }
+        console.log(updatedRoleList);
         setChecked(updatedRoleList);
     };
 
