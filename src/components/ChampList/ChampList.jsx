@@ -4,7 +4,7 @@ import './ChampCard.scss'
 import ChampCard from "./ChampCard"
 import React from 'react';
 
-const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, searchResult, setChampName }) => {
+const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName }) => {
 
     // TODO : utiliser useEffect
 
@@ -12,6 +12,12 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
         return champIsFind ? false : true
     }
+    const isCheckedChampFunction = (cf) => {
+        //TODO : Afficher uniquement pour les 2 filtres, et pas les 2 categories
+        const intersection = checkedChampFunction.filter(element => cf.includes(element));
+        return intersection.length ? true : false;
+    }
+
     const isCheckedRole = (role) => {
         //TODO : Afficher uniquement pour les 2 filtres, et pas les 2 categories
         // Maybe with => const  intersections = array1.filter(e => array2.indexOf(e) !== -1);
@@ -51,8 +57,11 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                     {champList.map((champ) =>
                         <React.Fragment key={champ.id}>
                             {
-                                ((isCheckedRole(champ.role) || !checkedRole.length) && (isCheckedType(champ.damages_type) || !checkedType.length)
-                                    && (isCheckedWorld(champ.world) || !checkedWorld.length) && (isChampionFind(champ.name) || !searchResult)) ? (
+                                ((isCheckedRole(champ.role) || !checkedRole.length)
+                                    && (isCheckedType(champ.damages_type) || !checkedType.length)
+                                    && (isCheckedWorld(champ.world) || !checkedWorld.length)
+                                    && (isCheckedChampFunction(champ.type) || !checkedChampFunction.length)
+                                    && (isChampionFind(champ.name) || !searchResult)) ? (
                                     // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
                                     <div className=" col-12 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
                                         <ChampCard champ={champ} />

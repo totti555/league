@@ -44,18 +44,50 @@ const ChampMemo = ({ champ }) => {
 
         <div className="filters-list-type">
             <div className='champ-memo'>
+
                 {/* TODO : Image for damages_types*/}
-                <p className='title'>{champ.damages_type === "AD" ? 'AD' : 'AP'}</p>
+                <div className='display-world-animation'>
+                    {champ.damages_type === "AD" ?
+                        (<div>
+                            <img src={require(`../../assets/Damages-Types/long-sword.webp`)} width="30px" height="30px"></img>
+                            <p className='title text-memo'>AD</p>
+                        </div>)
+                        :
+                        (<div>
+                            <img src={require(`../../assets/Damages-Types/amplifying-tome.webp`)} width="30px" height="30px"></img>
+                            <p className='title text-memo'>AP</p>
+                        </div>)
+                    }
+                </div>
+
+                <hr className='hr-color' />
+
                 {/* TODO : Image for roles*/}
-                {champ.role.map((role) => (
-                    <p className="title" key={role}>{role}</p>
-                ))}
+                <div className='display-world-animation'>
+                    {champ.role.map((role) => (
+                        <div key={role}>
+                            <img src={require(`../../assets/Post/${role}.png`)} width="30px" height="30px"></img>
+                            <p className="title text-memo" key={role}>{role}</p>
+                        </div>
+                    ))}
+                </div>
+
                 <hr className='hr-color' />
                 <div className='display-world-animation'>
-                    <img src={require(`../../assets/Region/${champ.world}.png`)}></img>
+                    {champ.type.map((type) => (
+                        <div key={type}>
+                            <img src={require(`../../assets/Type/${type}.png`)} width="30px" height="30px"></img>
+                            <p className='title text-memo'>{type}</p>
+                        </div>
+                    ))}
+                </div>
+                <hr className='hr-color' />
+                <div className='display-world-animation'>
+                    <img src={require(`../../assets/Region/${champ.world}.png`)} width="30px" height="30px"></img>
                     <p className='title text-memo'>{champ.world}</p>
                 </div>
-                <div className='border-bottom'></div>
+                <div className='border-bottom pb-2'></div>
+
             </div>
         </div>
 

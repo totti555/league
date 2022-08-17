@@ -11,8 +11,10 @@ const Look = (props) => {
     const [role, updateRole] = useState('')
     const [type, updateType] = useState('')
     const [world, updateWorld] = useState('')
+    const [champFunction, updateChampFunction] = useState('');
     const [checkedRole, setCheckedRole] = useState([]);
     const [checkedWorld, setCheckedWorld] = useState([]);
+    const [checkedChampFunction, setCheckedChampFunction] = useState([]);
     const [checkedType, setCheckedType] = useState([]);
     const [displayTags, handleClickTags] = useState(false);
 
@@ -42,14 +44,21 @@ const Look = (props) => {
         return uniqueArr;
     }
 
-    const typesList = () => {
-        const tata = champList.reduce(
-            (acc, champ) =>
-                acc.includes(champ.damages_type) ? acc : acc.concat(champ.damages_type),
-            []
-        )
-
+    const champFunctionsList = () => {
+        const champFunctionsList = champList.map((champ) => champ.type);
+        const removeDuplicatesElements = Array.prototype.concat.apply([], champFunctionsList);
+        const uniqueFunctionList = [...new Set(removeDuplicatesElements)];
+        console.log(uniqueFunctionList);
+        return uniqueFunctionList;
     }
+
+    const typesList = champList.reduce(
+        (acc, champ) =>
+            acc.includes(champ.damages_type) ? acc : acc.concat(champ.damages_type),
+        []
+    )
+
+
 
     const worldList = champList.reduce(
         (acc, champ) =>
@@ -78,16 +87,20 @@ const Look = (props) => {
 
                     <hr />
                     <FiltersList
-                        roles={rolesList()} updateRole={updateRole} types={typesList}
+                        roles={rolesList()} updateRole={updateRole} types={typesList} champFunctions={champFunctionsList()}
                         updateType={updateType} worlds={worldList} updateWorld={updateWorld} checkedRole={checkedRole}
                         setCheckedRole={setCheckedRole} checkedType={checkedType}
                         setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                        checkedChampFunction={checkedChampFunction} setCheckedChampFunction={setCheckedChampFunction}
                         setCheckedWorld={setCheckedWorld} setChampName={setChampName} searchResult={searchResult} />
 
                 </div>
             </div>
             <div className="col-10 champs-list ps-0">
-                <ChampList role={role} type={type} world={world} checkedRole={checkedRole} checkedType={checkedType} checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} />
+                <ChampList
+                    role={role} type={type} world={world}
+                    checkedRole={checkedRole} checkedType={checkedType} checkedChampFunction={checkedChampFunction}
+                    checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} />
             </div>
         </div>
     );

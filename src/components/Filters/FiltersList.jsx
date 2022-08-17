@@ -6,15 +6,17 @@ import { useState } from 'react'
 import DisplayFilters from "./DisplayFilters";
 import Search from "../../assets/search.svg"
 import Okay from "../../assets/okay.png"
+import ChampFunctions from "./ChampFunctions";
 
 
 
 
-const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld, checkedRole, setCheckedRole, checkedType, setCheckedType, checkedWorld, setCheckedWorld, searchChamp, setChampName }) => {
+const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld, champFunctions, checkedRole, setCheckedRole, checkedType, setCheckedType, checkedWorld, setCheckedWorld, searchChamp, setChampName, checkedChampFunction, setCheckedChampFunction }) => {
     const [displayRoles, handleClickRoles] = useState(false);
     const [displayTypes, handleClickTypes] = useState(false);
     const [displayWorlds, handleClickWorlds] = useState(false);
     const [displaySearch, handleClickSearch] = useState(false);
+    const [displayChampFunctions, handleClickChampFunctions] = useState(false);
 
     function canDisplayRoles() {
         handleClickRoles(!displayRoles);
@@ -22,6 +24,11 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
     function canDisplayTypes() {
         handleClickTypes(!displayTypes);
+    }
+
+
+    function canDisplayChampFunctions() {
+        handleClickChampFunctions(!displayChampFunctions);
     }
 
     function canDisplayWorlds() {
@@ -70,7 +77,14 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                 </div>
             )}
 
+            <hr />
 
+            <DisplayFilters displayFilters={canDisplayChampFunctions} canDisplay={displayChampFunctions} name={'Functions'} />
+            {displayChampFunctions && (
+                <div>
+                    <ChampFunctions checked={checkedChampFunction} setChecked={setCheckedChampFunction} champFunctions={champFunctions} />
+                </div>
+            )}
 
 
             <hr />

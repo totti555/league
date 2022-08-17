@@ -61,7 +61,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Aatrox,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Ahri',
@@ -70,7 +70,7 @@ export const champList = [
         damages_type: "AP",
         role: ['Mid', 'Support'],
         image: Ahri,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Akali',
@@ -79,7 +79,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Top"],
         image: Akali,
-        type: ["assassin"]
+        type: ["Assassin"]
     },
     {
         name: 'Akshan',
@@ -88,7 +88,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Mid", "Top", "ADC"],
         image: Akshan,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Alistar',
@@ -97,7 +97,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Support", 'Top'],
         image: Alistar,
-        type: ["tank", "support"]
+        type: ["Tank", "Support"]
     },
     {
         name: 'Amumu',
@@ -106,7 +106,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle", "Support"],
         image: Amumu,
-        type: ["tank"]
+        type: ["Tank"]
     },
     {
         name: 'Anivia',
@@ -115,7 +115,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Support"],
         image: Anivia,
-        type: ["mage", "support"]
+        type: ["Mage", "Support"]
     },
     {
         name: 'Annie',
@@ -124,7 +124,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Annie,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Aphelios',
@@ -133,16 +133,16 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Aphelios,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Ashe',
         world: 'Freljord',
         id: 10,
         damages_type: "AD",
-        role: ["ADC", "Supp"],
+        role: ["ADC", "Support"],
         image: Ashe,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'AurelionSol',
@@ -151,7 +151,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: AurelionSol,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Azir',
@@ -160,7 +160,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Azir,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Bard',
@@ -169,7 +169,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Support"],
         image: Bard,
-        type: ["support"]
+        type: ["Support"]
     },
     {
         name: 'Belveth',
@@ -178,7 +178,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Jungle"],
         image: Belveth,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Blitzcrank',
@@ -187,7 +187,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Support"],
         image: Blitzcrank,
-        type: ["tank"]
+        type: ["Tank"]
     },
     {
         name: 'Brand',
@@ -196,7 +196,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Support"],
         image: Brand,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Braum',
@@ -205,7 +205,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Support"],
         image: Braum,
-        type: ["support"]
+        type: ["Support"]
     },
     {
         name: 'Caitlyn',
@@ -214,7 +214,7 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Caitlyn,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Camille',
@@ -223,7 +223,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Camille,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Cassiopeia',
@@ -232,7 +232,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Cassiopeia,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Chogath',
@@ -241,7 +241,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Top"],
         image: Chogath,
-        type: ["tank"]
+        type: ["Tank"]
     },
     {
         name: 'Corki',
@@ -250,7 +250,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Corki,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Darius',
@@ -259,7 +259,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top'],
         image: Darius,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Diana',
@@ -268,7 +268,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle", "Mid"],
         image: Diana,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Draven',
@@ -277,7 +277,7 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Draven,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'DrMundo',
@@ -286,7 +286,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Top", "Jungle"],
         image: DrMundo,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Ekko',
@@ -295,7 +295,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Jungle"],
         image: Ekko,
-        type: ["assassin"]
+        type: ["Assassin"]
     },
     {
         name: 'Elise',
@@ -304,7 +304,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle"],
         image: Elise,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Evelynn',
@@ -313,7 +313,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle"],
         image: Evelynn,
-        type: ["assassin"]
+        type: ["Assassin"]
     },
     {
         name: 'Ezreal',
@@ -322,7 +322,7 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Ezreal,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Fiddlesticks',
@@ -331,7 +331,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle"],
         image: Fiddlesticks,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Fiora',
@@ -340,7 +340,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Fiora,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Fizz',
@@ -349,7 +349,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Fizz,
-        type: ["assassin"]
+        type: ["Assassin"]
     },
     {
         name: 'Galio',
@@ -358,7 +358,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Galio,
-        type: ["tank"]
+        type: ["Tank"]
     },
     {
         name: 'Gangplank',
@@ -367,7 +367,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Gangplank,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Garen',
@@ -376,7 +376,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top'],
         image: Garen,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Gnar',
@@ -385,7 +385,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Gnar,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Gragas',
@@ -394,7 +394,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Top", "Mid"],
         image: Gragas,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Graves',
@@ -403,7 +403,7 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Graves,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Gwen',
@@ -412,7 +412,7 @@ export const champList = [
         damages_type: "AP",
         role: ["Top"],
         image: Gwen,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Hecarim',
@@ -421,16 +421,16 @@ export const champList = [
         damages_type: "AD",
         role: ["Jungle"],
         image: Hecarim,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Heimerdinger',
         world: 'Piltover',
         id: 42,
         damages_type: "AP",
-        role: ["Mid", "Top", "Supp"],
+        role: ["Mid", "Top", "Support"],
         image: Heimerdinger,
-        type: ["mage"]
+        type: ["Mage"]
     },
     {
         name: 'Irelia',
@@ -439,7 +439,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top', "Mid"],
         image: Irelia,
-        type: ["fighter"]
+        type: ["Fighter"]
     },
     {
         name: 'Kaisa',
@@ -448,7 +448,7 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC", "Mid"],
         image: Kaisa,
-        type: ["marksman"]
+        type: ["Marksman"]
 
     },
     {
@@ -458,7 +458,7 @@ export const champList = [
         damages_type: 'AP',
         role: ['Mid'],
         image: LeBlanc,
-        type: ["mage", "assassin"]
+        type: ["Mage", "Assassin"]
     },
     {
         name: 'Pyke',
@@ -467,7 +467,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Support', "Mid"],
         image: Pyke,
-        type: ["support"]
+        type: ["Support"]
     },
     {
         name: 'Rammus',
@@ -476,7 +476,7 @@ export const champList = [
         damages_type: 'AP',
         role: ['Jungle'],
         image: Rammus,
-        type: ["tank"]
+        type: ["Tank"]
     },
     {
         name: 'Vayne',
@@ -485,7 +485,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top', "ADC"],
         image: Vayne,
-        type: ["marksman"]
+        type: ["Marksman"]
     },
     {
         name: 'Yasuo',
@@ -494,7 +494,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Mid', "Top", "ADC"],
         image: Yasuo,
-        type: ["assassin"]
+        type: ["Assassin"]
     },
     {
         name: 'Yone',
@@ -503,6 +503,6 @@ export const champList = [
         damages_type: 'AD',
         role: ['Mid', "Top"],
         image: Yone,
-        type: ["assassin"]
+        type: ["Assassin"]
     },
 ]
