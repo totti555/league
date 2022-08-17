@@ -43,17 +43,19 @@ const ChampMemo = ({ champ }) => {
     return (
 
         <div className="filters-list-type">
-            <div className='champ-memo '>
+            <div className='champ-memo'>
                 {/* TODO : Image for damages_types*/}
-                <p>{champ.damages_type === "AD" ? 'AD' : 'AP'}</p>
+                <p className='title'>{champ.damages_type === "AD" ? 'AD' : 'AP'}</p>
                 {/* TODO : Image for roles*/}
                 {champ.role.map((role) => (
-                    <p key={role}>{role}</p>
+                    <p className="title" key={role}>{role}</p>
                 ))}
-                <div className='display-world-animation d-flex justify-content-end'>
-                    <p className='title'>{champ.world}</p>
+                <hr className='hr-color' />
+                <div className='display-world-animation'>
                     <img src={require(`../../assets/Region/${champ.world}.png`)}></img>
+                    <p className='title text-memo'>{champ.world}</p>
                 </div>
+                <div className='border-bottom'></div>
             </div>
         </div>
 

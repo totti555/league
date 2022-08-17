@@ -21,9 +21,9 @@
 }
 
 .nav-chevron-card {
-    float: right;
-    margin-top: 5px;
-    margin-right: 10px;
+    position: absolute;
+    right: 10px;
+    z-index: 5;
     // filter: opacity(0.4) drop-shadow(0 0 0 #ECB823);
     filter: invert(88%) sepia(41%) saturate(2527%) hue-rotate(338deg) brightness(95%) contrast(95%);
 }
