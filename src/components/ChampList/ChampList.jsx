@@ -3,8 +3,12 @@ import { champList } from "../../datas/lolChamp";
 import './ChampCard.scss'
 import ChampCard from "./ChampCard"
 import React from 'react';
+import { useState } from 'react'
 
 const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName }) => {
+
+    const [currentChamp, setCurrentChamp] = useState('Kaisa');
+    // let background = "../../assets/Background/Kaisa.jpg";
 
     // TODO : utiliser useEffect
 
@@ -47,7 +51,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
 
     return (
-        <div className="background-img">
+        <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL+ `/Background/${currentChamp}.jpg`}` }} className="background-img">
             <div className="box-shadow ps-3">
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
             </div>
@@ -64,7 +68,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                                     && (isChampionFind(champ.name) || !searchResult)) ? (
                                     // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
                                     <div className=" col-12 col-md-4 col-lg-4 col-xl-3 col-xxl-2">
-                                        <ChampCard champ={champ} />
+                                        <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} />
                                     </div>) : null
                             }
                         </React.Fragment>

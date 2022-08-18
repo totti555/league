@@ -2,16 +2,17 @@ import './ChampCard.scss'
 import FlecheBas from "../../assets/fleche-bas.png"
 import { useState } from 'react'
 
-const ChampCard = ({ champ }) => {
+const ChampCard = ({ champ,setCurrentChamp }) => {
 
     const [displayAttributes, handleClickAttributes] = useState(false);
 
-    function canDisplayAttributes() {
+    function canDisplayAttributes(name) {
+        setCurrentChamp(name);
         handleClickAttributes(!displayAttributes);
     }
 
     return (
-        <div className='champ-card text-white' onClick={canDisplayAttributes} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
+        <div className='champ-card text-white' onClick={() => canDisplayAttributes(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
             {/* TODO : Insert img */}
             {/* <img src={champ.photo}></img> */}
             {displayAttributes ? (
@@ -51,37 +52,41 @@ const ChampMemo = ({ champ }) => {
                         (<div>
                             <img src={require(`../../assets/Damages-Types/long-sword.webp`)} width="30px" height="30px"></img>
                             <p className='title text-memo'>AD</p>
+                            <hr className='hr-color' />
                         </div>)
                         :
                         (<div>
                             <img src={require(`../../assets/Damages-Types/amplifying-tome.webp`)} width="30px" height="30px"></img>
                             <p className='title text-memo'>AP</p>
+                            <hr className='hr-color' />
                         </div>)
                     }
                 </div>
 
-                <hr className='hr-color' />
+                {/* <hr className='hr-color' /> */}
 
                 {/* TODO : Image for roles*/}
                 <div className='display-world-animation'>
                     {champ.role.map((role) => (
                         <div key={role}>
-                            <img src={require(`../../assets/Post/${role}.png`)} width="30px" height="30px"></img>
+                            <img src={require(`../../assets/Post/${role}.png`)} width="38px" height="38px"></img>
                             <p className="title text-memo" key={role}>{role}</p>
+                            <hr className='hr-color ' />
                         </div>
                     ))}
                 </div>
 
-                <hr className='hr-color' />
+                {/* <hr className='hr-color' /> */}
                 <div className='display-world-animation'>
                     {champ.type.map((type) => (
                         <div key={type}>
                             <img src={require(`../../assets/Type/${type}.png`)} width="30px" height="30px"></img>
                             <p className='title text-memo'>{type}</p>
+                            <hr className='hr-color hr-bot hr-top' />
                         </div>
                     ))}
                 </div>
-                <hr className='hr-color' />
+                {/* <hr className='hr-color' /> */}
                 <div className='display-world-animation'>
                     <img src={require(`../../assets/Region/${champ.world}.png`)} width="30px" height="30px"></img>
                     <p className='title text-memo'>{champ.world}</p>
