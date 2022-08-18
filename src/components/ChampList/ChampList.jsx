@@ -24,7 +24,16 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     const isCheckedRole = (role) => {
         //TODO : Afficher uniquement pour les 2 filtres, et pas les 2 categories
+        // let names= ["Style","List","Raw"];
+        // let results= names.filter(x => x.toLowerCase().includes("s"));
+        // console.log(results); //["Style", "List"]
+
+
         // Maybe with => const  intersections = array1.filter(e => array2.indexOf(e) !== -1);
+
+
+
+
         const intersection = checkedRole.filter(element => role.includes(element));
         return intersection.length ? true : false;
     }
@@ -51,7 +60,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
 
     return (
-        <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL+ `/Background/${currentChamp}.jpg`}` }} className="background-img">
+        <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} className="background-img">
             <div className="box-shadow ps-3">
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
             </div>
