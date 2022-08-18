@@ -64,6 +64,25 @@ import Katarina from "../assets/Champ/Katarina.jpg"
 import Kayle from "../assets/Champ/Kayle.jpg"
 import Kayn from "../assets/Champ/Kayn.jpg"
 import Kennen from "../assets/Champ/Kennen.jpg"
+import Khazix from "../assets/Champ/Khazix.jpg"
+import Kindred from "../assets/Champ/Kindred.jpg"
+import Kled from "../assets/Champ/Kled.jpg"
+import Kogmaw from "../assets/Champ/Kogmaw.jpg"
+import LeeSin from "../assets/Champ/LeeSin.jpg"
+import Leona from "../assets/Champ/Leona.jpg"
+import Lillia from "../assets/Champ/Lillia.jpg"
+import Lissandra from "../assets/Champ/Lissandra.jpg"
+import Lucian from "../assets/Champ/Lucian.jpg"
+import Lulu from "../assets/Champ/Lulu.jpg"
+import Malphite from "../assets/Champ/Malphite.jpg"
+import Malzahar from "../assets/Champ/Malzahar.jpg"
+import Maokai from "../assets/Champ/Maokai.jpg"
+import Master_Yi from "../assets/Champ/Master_Yi.jpg"
+import Miss_Fortune from "../assets/Champ/Miss_Fortune.jpg"
+import Mordekaiser from "../assets/Champ/Mordekaiser.jpg"
+import Morgana from "../assets/Champ/Morgana.jpg"
+
+
 
 
 
