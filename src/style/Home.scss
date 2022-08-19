@@ -1,3 +1,129 @@
 .home-text {
-    margin-left: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.home-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 755px;
+    font-size: 18px;
+
+    h1 {
+        font-size: 90px;
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+
+    p {
+        color: grey;
+    }
+
+    .home-video {
+        opacity: 0.8;
+    }
+
+    .row {
+        padding-right: 0px;
+    }
+
+    .last-paragraphe {
+        margin-bottom:100px;
+    }
+
+    .first-image {
+        animation-name: zoom-image;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    // .first-image:hover {
+    //    animation-name: zoom-image;
+    //    animation-duration: 0.8s;
+    //    animation-fill-mode: forwards;
+    // }
+
+    .img-vitrine:hover {
+        animation-name: zoom-image-vitrine;
+       animation-duration: 0.8s;
+       animation-fill-mode: forwards;
+    }
+
+    .img-vitrine {
+        animation-name: dezoom-image;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+    }
+
+    li {
+        color:grey;
+    }
+
+    .underline {
+        text-decoration: underline;
+    }
+
+    strong {
+        background: -webkit-linear-gradient(0.5turn, #ECB823, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity:0.5;
+    
+    }
+    hr {
+        color: #ECB823
+    }
+    
+
+
+
+
+}
+
+@keyframes zoom-image {
+    0% {
+        transform: scale(1);
+        /* transform-origin: 0% 0% 0px; */
+        // transition: 500ms linear;
+    }
+
+    50% {
+        transform: scale(1.05);
+        /* transform-origin: 0% 0% 0px; */
+    }
+
+    100% {
+        transform: scale(1);
+        // transition: 500ms linear;
+        /* transform-origin: 0% 0% 0px; */
+    }
+}
+
+@keyframes dezoom-image {
+    0% {
+        transform: scale(1.02);
+        /* transform-origin: 0% 0% 0px; */
+       
+    }
+
+    100% {
+        transform: scale(1);
+        transition: 500ms linear;
+        /* transform-origin: 0% 0% 0px; */
+    }
+}
+
+@keyframes zoom-image-vitrine {
+    0% {
+        transform: scale(1);
+        transition: 500ms linear;
+        /* transform-origin: 0% 0% 0px; */
+       
+    }
+
+    100% {
+        transform: scale(1.02);
+        /* transform-origin: 0% 0% 0px; */
+    }
 }
