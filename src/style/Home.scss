@@ -3,11 +3,38 @@
     margin-right: 300px;
 }
 
-.home-content {
+// .hide-scroll {
+//     height: 100%;
+//     width: 100%;
+//     position: relative;
+//     overflow-y: hidden;
+// }
+
+html {
+    overflow: scroll;
     overflow-x: hidden;
-    overflow-y: scroll;
-    height: 755px;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+// /* Optional: show position indicator in red */
+// ::-webkit-scrollbar-thumb {
+//     background: #FF0000;
+// }
+
+.home-content {
+    
+   
+    // height: 755px;
+    position: fixed;
     font-size: 18px;
+    top:6.063rem;
+    bottom: 5.056rem;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
+
 
     h1 {
         font-size: 90px;
@@ -16,7 +43,7 @@
     }
 
     p {
-        color: grey;
+        color: lightgray;
     }
 
     .home-video {
@@ -57,7 +84,7 @@
     }
 
     li {
-        color: grey;
+        color: darkgray;
     }
 
     .underline {
@@ -68,7 +95,7 @@
         background: -webkit-linear-gradient(0.5turn, #ECB823, white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity: 0.5;
+        opacity: 0.8;
 
     }
 
@@ -76,17 +103,17 @@
         color: #ECB823
     }
 
-    .scroll-page {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-    }
+    // .scroll-page {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     height: 100%;
+    // }
 
-    .scroll-container {
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-    }
+    // .scroll-container {
+    //     overflow-y: scroll;
+    //     scroll-behavior: smooth;
+    // }
 
 
 

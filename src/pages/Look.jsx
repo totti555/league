@@ -69,8 +69,9 @@ const Look = (props) => {
 
 
     return (
-        <div className='row content'>
-            <div className="col-2 filters pe-0">
+        <div className='row content background-img' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/Kaisa.jpg`}` }} >
+            <div>
+            <div className="col-2 filters pe-0 ps-0" >
                 <div>
                     <div className="box-shadow ps-3 filters-title">
                         <h1><span className="title">FILTERS</span></h1>
@@ -101,6 +102,7 @@ const Look = (props) => {
                     role={role} type={type} world={world}
                     checkedRole={checkedRole} checkedType={checkedType} checkedChampFunction={checkedChampFunction}
                     checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} />
+            </div>
             </div>
         </div>
     );

@@ -7,6 +7,7 @@ import Ahri from "../assets/Home/ahri6.jpg";
 
 const Home = () => {
     return (
+        <div className="hide-scroll">
         <div className="home-content bg-black  text-white">
             <div className="Banner">
                 <img className="first-image" alt="Yasuo banner" src={Banner} width="100%"></img>
@@ -95,11 +96,12 @@ const Home = () => {
             </div>
 
             <div className="home-video mb-16 scroll-container">
-                <img className="scroll-page" src={SiteView} alt="Presentation site"></img>
+                <img className="scroll-page" src={SiteView}  width="100%" alt="Presentation site"></img>
             </div>
 
             <hr />
         </div>
+    </div>
     );
 };
 

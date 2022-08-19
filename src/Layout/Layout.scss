@@ -8,10 +8,15 @@ footer {
 }
 
 header {
-    height: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 6.25;
     background-color: black;
-    border-bottom: 2px solid #ECB823;
+    border-bottom: 0.125rem solid #ECB823;
 }
+
 
 .logo {
     float: left;
@@ -22,14 +27,14 @@ header {
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
     position: relative;
-    width: 200px;
-    height: 95px;
+    width: 12.5rem;
+    height: 5.938rem;
     background-color: black;
 
     a {
         color: white;
         text-decoration: none;
-        padding: 40px 50px 40px 50px;
+        padding: 2.5rem 3.125rem 2.5rem 3.125rem;
 
     }
 }

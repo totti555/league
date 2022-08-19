@@ -60,7 +60,8 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
 
     return (
-        <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} className="background-img">
+        // style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} className="background-img"
+        <div>
             <div className="box-shadow ps-3">
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
             </div>

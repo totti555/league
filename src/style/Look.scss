@@ -1,10 +1,14 @@
 .filters {
+    position: fixed;
+    top:6.063rem;
+    bottom: 5.056rem;
+    left: 0;
     background-color: #433F3F;
     // opacity: 0.8;
     border-right: 2px solid #ECB823;
     overflow-y: auto;
-    padding-right: 0px;
-    height: 757px;
+    // padding-right: 0px;
+    // height: 757px;
     color: white;
 }
 
@@ -16,16 +20,22 @@ hr {
     background-color: #ECB823
 }
 
-body {
-    // background-image: url("../assets/background-dim3.jpg");
-    // background-size: cover;
-    overflow: hidden;
-
-}
 
 .content {
     padding-left: 0px;
     // min-height: 1200px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:6.063rem;
+    bottom: 5.056rem;
+}
+
+.background-img {
+        
+    background-size: cover;
+ 
+
 }
 
 
@@ -36,5 +46,11 @@ body {
 }
 
 .champs-list {
-    padding-left: 0px;
+    position: fixed;
+    top:6.063rem;
+    bottom: 5.056rem;
+    right: 0;
+   
+    overflow-y: scroll;
+    
 }
