@@ -28,7 +28,7 @@
     }
 
     .last-paragraphe {
-        margin-bottom:100px;
+        margin-bottom: 100px;
     }
 
     .first-image {
@@ -46,8 +46,8 @@
 
     .img-vitrine:hover {
         animation-name: zoom-image-vitrine;
-       animation-duration: 0.8s;
-       animation-fill-mode: forwards;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
     }
 
     .img-vitrine {
@@ -57,7 +57,7 @@
     }
 
     li {
-        color:grey;
+        color: grey;
     }
 
     .underline {
@@ -68,13 +68,25 @@
         background: -webkit-linear-gradient(0.5turn, #ECB823, white);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        opacity:0.5;
-    
+        opacity: 0.5;
+
     }
+
     hr {
         color: #ECB823
     }
-    
+
+    .scroll-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .scroll-container {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
 
 
 
@@ -104,7 +116,7 @@
     0% {
         transform: scale(1.02);
         /* transform-origin: 0% 0% 0px; */
-       
+
     }
 
     100% {
@@ -119,7 +131,7 @@
         transform: scale(1);
         transition: 500ms linear;
         /* transform-origin: 0% 0% 0px; */
-       
+
     }
 
     100% {

@@ -74,6 +74,7 @@ import Lillia from "../assets/Champ/Lillia.jpg"
 import Lissandra from "../assets/Champ/Lissandra.jpg"
 import Lucian from "../assets/Champ/Lucian.jpg"
 import Lulu from "../assets/Champ/Lulu.jpg"
+import Lux from "../assets/Champ/Lux.jpg"
 import Malphite from "../assets/Champ/Malphite.jpg"
 import Malzahar from "../assets/Champ/Malzahar.jpg"
 import Maokai from "../assets/Champ/Maokai.jpg"
@@ -468,13 +469,85 @@ export const champList = [
         type: ["Mage"]
     },
     {
-        name: 'Irelia',
+        name: 'Illaoi',
         world: 'Ionia',
         id: 43,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Illaoi,
+        type: ["Fighter"]
+    },
+    {
+        name: 'Irelia',
+        world: 'Ionia',
+        id: 44,
         damages_type: 'AD',
         role: ['Top', "Mid"],
         image: Irelia,
         type: ["Fighter"]
+    },
+    {
+        name: 'Ivern',
+        world: 'Ionia',
+        id: 45,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Ivern,
+        type: ["Fighter"]
+    },
+    {
+        name: 'Janna',
+        world: 'Ionia',
+        id: 46,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Janna,
+        type: ["Support"]
+    },
+    {
+        name: 'Jarvan IV',
+        world: 'Ionia',
+        id: 47,
+        damages_type: 'AP',
+        role: ['Jungle'],
+        image: JarvanIV,
+        type: ["Fighter"]
+    },
+    {
+        name: 'Jax',
+        world: 'Ionia',
+        id: 48,
+        damages_type: 'AD',
+        role: ['Jungle', 'Top'],
+        image: Jax,
+        type: ["Fighter"]
+    },
+    {
+        name: 'Jayce',
+        world: 'Piltover',
+        id: 49,
+        damages_type: 'AD',
+        role: ['Mid', 'Top'],
+        image: Jayce,
+        type: ["Fighter"]
+    },
+    {
+        name: 'Jhin',
+        world: 'Piltover',
+        id: 50,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Jhin,
+        type: ["Marksman"]
+    },
+    {
+        name: 'Jinx',
+        world: 'Piltover',
+        id: 51,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Jinx,
+        type: ["Marksman"]
     },
     {
         name: 'Kaisa',
@@ -487,6 +560,115 @@ export const champList = [
 
     },
     {
+        name: 'Kalista',
+        world: 'Void',
+        id: 53,
+        damages_type: "AD",
+        role: ["ADC"],
+        image: Kalista,
+        type: ["Marksman"]
+
+    },
+    {
+        name: 'Karma',
+        world: 'Runeterra',
+        id: 54,
+        damages_type: "AP",
+        role: ["Support"],
+        image: Karma,
+        type: ['Support', 'Mage']
+    },
+    {
+        name: 'Karthus',
+        world: 'Runeterra',
+        id: 55,
+        damages_type: "AP",
+        role: ['Jungle', 'ADC'],
+        image: Karthus,
+        type: ['Fighter']
+    },
+    {
+        name: 'Kassadin',
+        world: 'Void',
+        id: 56,
+        damages_type: "AP",
+        role: ['Mid'],
+        image: Kassadin,
+        type: ['Mage']
+    },
+    {
+        name: 'Katarina',
+        world: 'Runeterra',
+        id: 57,
+        damages_type: "AP",
+        role: ['Mid'],
+        image: Katarina,
+        type: ['Assassin']
+    },
+    {
+        name: 'Kayle',
+        world: 'Runeterra',
+        id: 58,
+        damages_type: "AD",
+        role: ['Top'],
+        image: Kayle,
+        type: ['Fighter']
+    },
+    {
+        name: 'Kayn',
+        world: 'Runeterra',
+        id: 59,
+        damages_type: "AD",
+        role: ['Jungle'],
+        image: Kayn,
+        type: ['Fighter']
+    },
+    {
+        name: 'Kennen',
+        world: 'Runeterra',
+        id: 60,
+        damages_type: "AP",
+        role: ['Top'],
+        image: Kennen,
+        type: ['Marksman']
+    },
+    {
+        name: 'Khazix',
+        world: 'Runeterra',
+        id: 61,
+        damages_type: "AD",
+        role: ['Jungle'],
+        image: Khazix,
+        type: ['Assassin']
+    },
+    {
+        name: 'Kindred',
+        world: 'Runeterra',
+        id: 62,
+        damages_type: "AD",
+        role: ['Jungle'],
+        image: Kindred,
+        type: ['Fighter']
+    },
+    {
+        name: 'Kled',
+        world: 'Runeterra',
+        id: 63,
+        damages_type: "AD",
+        role: ['Top'],
+        image: Kled,
+        type: ['Fighter']
+    },
+    {
+        name: 'Kogmaw',
+        world: 'Runeterra',
+        id: 64,
+        damages_type: "AD",
+        role: ['ADC'],
+        image: Kogmaw,
+        type: ['Marksman']
+    },
+    {
         name: 'Leblanc',
         world: 'Noxus',
         id: 65,
@@ -494,6 +676,132 @@ export const champList = [
         role: ['Mid'],
         image: LeBlanc,
         type: ["Mage", "Assassin"]
+    },
+    {
+        name: 'Lee Sin',
+        world: 'Runeterra',
+        id: 66,
+        damages_type: "AD",
+        role: ['Jungle'],
+        image: LeeSin,
+        type: ['Fighter']
+    },
+    {
+        name: 'Leona',
+        world: 'Runeterra',
+        id: 67,
+        damages_type: "AD",
+        role: ['Support'],
+        image: Leona,
+        type: ['Tank', 'Support']
+    },
+    {
+        name: 'Lillia',
+        world: 'Runeterra',
+        id: 68,
+        damages_type: "AP",
+        role: ['Top'],
+        image: Lillia,
+        type: ['Mage']
+    },
+    {
+        name: 'Lissandra',
+        world: 'Freljord',
+        id: 69,
+        damages_type: "AP",
+        role: ['Mid'],
+        image: Lissandra,
+        type: ['Mage']
+    },
+    {
+        name: 'Lucian',
+        world: 'Runeterra',
+        id: 70,
+        damages_type: "AD",
+        role: ['ADC'],
+        image: Lucian,
+        type: ['Marksman']
+    },
+    {
+        name: 'Lulu',
+        world: 'Runeterra',
+        id: 71,
+        damages_type: "AP",
+        role: ['Support'],
+        image: Lulu,
+        type: ['Support']
+    },
+    {
+        name: 'Lux',
+        world: 'Demacia',
+        id: 72,
+        damages_type: "AP",
+        role: ['Mid', 'Support'],
+        image: Lux,
+        type: ['Mage', 'Support']
+    },
+    {
+        name: 'Malphite',
+        world: 'Demacia',
+        id: 73,
+        damages_type: "AP",
+        role: ['Top', 'Support'],
+        image: Malphite,
+        type: ['Tank']
+    },
+    {
+        name: 'Malzahar',
+        world: 'Void',
+        id: 74,
+        damages_type: "AP",
+        role: ['Mid'],
+        image: Malzahar,
+        type: ['Mage']
+    },
+    {
+        name: 'Maokai',
+        world: 'Runeterra',
+        id: 75,
+        damages_type: "AP",
+        role: ['Support'],
+        image: Maokai,
+        type: ['Tank']
+    },
+    {
+        name: 'Master Yi',
+        world: 'Runeterra',
+        id: 76,
+        damages_type: "AD",
+        role: ['Jungle'],
+        image: Master_Yi,
+        type: ['Assassin']
+    },
+    {
+        name: 'Miss Fortune',
+        world: 'Runeterra',
+        id: 77,
+        damages_type: "AD",
+        role: ['ADC'],
+        image: Miss_Fortune,
+        type: ['Marksman']
+    },
+    {
+        name: 'Mordekaiser',
+        world: 'Bilgewater',
+        id: 78,
+        damages_type: 'AP',
+        role: ['Top'],
+        image: Mordekaiser,
+        type: ["Fighter"]
+    },
+    {
+        name: 'Morgana',
+        world: 'Void',
+        id: 79,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Morgana,
+        type: ['Support', 'Mage']
     },
     {
         name: 'Pyke',
