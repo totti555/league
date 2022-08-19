@@ -157,11 +157,11 @@ html {
 .champ-card {
     /* position: relative; */
     border: solid 1px black;
-    width: 240px;
-    height: 400px;
-    margin-top: 20px;
+    width: 15rem;
+    height: 25rem;
+    margin-top: 1.25rem;
 
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     animation-name: display-card;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -218,3 +218,59 @@ html {
         /* transform-origin: 0% 0% 0px; */
     }
 }
+
+@media (min-width: 1400px) and (max-width : 1800px){
+    .col-mid-3 {
+    //This should work for Normal desktops(15 to 18 inch) only.
+    min-width: 25%;
+}
+}
+
+@media (min-width: 1400px) and (max-width : 2500px){
+    .col-xl-3 {
+    //This should work for Normal desktops(15 to 18 inch) only.
+    min-width: 20%;
+}
+}
+
+@media  (min-width: 1800px) and (max-width : 2200px)  {
+    .col-custom {
+    //This should work for Normal desktops(15 to 18 inch) only.
+    min-width: 16.66% !important;
+}
+}
+
+@media  (min-width: 2200px) and (max-width : 3000px)  {
+    .col-custom-2 {
+    //This should work for Normal desktops(15 to 18 inch) only.
+    min-width: 12.5% !important;
+}
+}
+
+@media  (min-width: 3000px) and (max-width : 3500px)  {
+    .col-custom-3 {
+    //This should work for Normal desktops(15 to 18 inch) only.
+    min-width: 10% !important;
+}
+}
+
+
+
+@media  (min-width: 900px) and (max-width : 1200px)  {
+    .col-mid-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+}
+}
+
+// @media  (min-width: 1400px)  {
+//     .col-xxl-1 {
+//     //This should work for Normal desktops(15 to 18 inch) only.
+//     min-width: 5% !important;
+// }
+// }
+
+
+
+
+
