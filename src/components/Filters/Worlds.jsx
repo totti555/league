@@ -30,7 +30,7 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
                         {/* <label key={world} >
                         <input type="checkbox" className='hide-checkbox' value={world}
                             onChange={handleChangeWorld} />
-                        <span class="entity">{world}</span>
+                        <span className="entity">{world}</span>
 
                     </label> */}
 

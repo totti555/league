@@ -115,9 +115,10 @@ $gold: #ECB823;
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #433F3F;
+    background-color: black;
     border-radius: 20px;
-    border: 1px solid #ECB823;
+    // border: 1px solid #ECB823;
+    opacity:0.5;
 }
 
 
@@ -260,6 +261,13 @@ html {
     .col-mid-4 {
         flex: 0 0 auto;
         width: 33.33333333%;
+}
+}
+
+@media (min-width:576px) and ( max-width: 600px) {
+    .col-custom-6 {
+        flex: 0 0 auto;
+        min-width: 100% !important;
 }
 }
 

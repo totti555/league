@@ -22,5 +22,55 @@ i.sc-gSAPjG.vdkON.fab.fa-instagram {
 }
 
 footer {
+    z-index: 6;
     border-top: 2px solid #ECB823;
+}
+
+.small-format {
+    display: none;
+}
+
+@media (min-width: 350px) and (max-width : 750px){
+    footer {
+        img {
+            width:80px
+        }
+        p {
+            font-size: 10px;
+        }
+        button {
+            width: 20px;
+            height: 20px;
+        }
+        .small-format {
+            display: block;
+        }
+        .big-format {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 100px) and (max-width : 350px){
+    footer {
+        img {
+            width:60px
+        }
+        p {
+            font-size: 10px;
+        }
+        .ZwoEW {
+            display: none;
+        }
+        .small-format {
+            display: block;
+        }
+        .big-format {
+            display: none;
+        }
+        button {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }

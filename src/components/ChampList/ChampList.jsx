@@ -5,9 +5,9 @@ import ChampCard from "./ChampCard"
 import React from 'react';
 import { useState } from 'react'
 
-const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName }) => {
+const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName,setCurrentChamp }) => {
 
-    const [currentChamp, setCurrentChamp] = useState('Kaisa');
+ 
     // let background = "../../assets/Background/Kaisa.jpg";
 
     // TODO : utiliser useEffect
@@ -77,7 +77,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                                     && (isCheckedChampFunction(champ.type) || !checkedChampFunction.length)
                                     && (isChampionFind(champ.name) || !searchResult)) ? (
                                     // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
-                                    <div className=" col-12 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
+                                    <div className=" col-12 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
                                         <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} />
                                     </div>) : null
                             }

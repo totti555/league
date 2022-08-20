@@ -17,6 +17,7 @@ const Look = (props) => {
     const [checkedChampFunction, setCheckedChampFunction] = useState([]);
     const [checkedType, setCheckedType] = useState([]);
     const [displayTags, handleClickTags] = useState(false);
+    const [currentChamp, setCurrentChamp] = useState('Kaisa');
 
     function canDisplayTags() {
         handleClickTags(!displayTags);
@@ -69,9 +70,9 @@ const Look = (props) => {
 
 
     return (
-        <div className='row content background-img' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/Kaisa.jpg`}` }} >
+        <div className='row content background-img' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} >
             <div>
-            <div className="col-2 filters pe-0 ps-0" >
+            <div className="col-2 col-custom-filter filters pe-0 ps-0" >
                
                     <div className="box-shadow ps-3 filters-title">
                         <h1><span className="title">FILTERS</span></h1>
@@ -98,11 +99,11 @@ const Look = (props) => {
 
             </div>
             </div>
-            <div className="col-10 champs-list ps-0">
+            <div className="col-10 col-custom-champion champs-list ps-0">
                 <ChampList
                     role={role} type={type} world={world}
                     checkedRole={checkedRole} checkedType={checkedType} checkedChampFunction={checkedChampFunction}
-                    checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} />
+                    checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName}  setCurrentChamp={setCurrentChamp}/>
             </div>
             </div>
         </div>

@@ -181,7 +181,7 @@ export const champList = [
         type: ["Marksman"]
     },
     {
-        name: 'AurelionSol',
+        name: 'Aurelion Sol',
         world: 'Runeterra',
         id: 11,
         damages_type: "AP",

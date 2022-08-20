@@ -22,7 +22,7 @@ function Footer() {
                     </a>
                 </CDBBox>
                 <CDBBox>
-                    <small className="ml-2 title-footer" >&copy; All rights reserved - Thomas LORTHIOIR</small>
+                    <p className="m-0 title-footer p-0" >&copy; All rights reserved - <span className="big-format">Thomas LORTHIOIR</span ><span className="small-format">TL</span></p>
                 </CDBBox>
                 <CDBBox display="flex">
                     <CDBBtn flat color="dark" className="p-2">
