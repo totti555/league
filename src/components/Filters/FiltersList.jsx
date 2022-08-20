@@ -53,7 +53,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                     <div className="d-flex justify-content-between">
                     <div className="d-flex form__group field">
                         <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
-                        <label htmlFor="name" className="form__label">Search your champ</label>
+                        <label htmlFor="name" className="form__label">Search <span className="label-visible">your champ</span></label>
                     </div>
                     <img src={Search} className="search-icon"></img>
                     </div>
@@ -98,7 +98,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                 </div>
             )}
             <div className="d-flex justify-content-center">
-                <img src={Okay} width="140px" height="140px"></img>
+                <img src={Okay} className="okay-picture" width="140px" height="140px"></img>
             </div>
 
 

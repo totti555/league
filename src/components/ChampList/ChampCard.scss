@@ -193,6 +193,13 @@ html {
 
 }
 
+
+.decreasing {
+    .cross {
+        font-size: 16px;
+    }
+}
+
 @keyframes display-card {
     0% {
         transform: scale(1.1);
@@ -271,12 +278,49 @@ html {
 }
 }
 
+@media (min-width:600px) and ( max-width: 900px) {
+    .col-custom-7 {
+        flex: 0 0 auto;
+        min-width: 50% !important;
+}
+}
+
 // @media  (min-width: 1400px)  {
 //     .col-xxl-1 {
 //     //This should work for Normal desktops(15 to 18 inch) only.
 //     min-width: 5% !important;
 // }
 // }
+
+
+// name in decrease order button
+
+@media (min-width: 800px){
+    .decreasing {
+        width: 11.25rem !important;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 800px){
+    .decreasing {
+        height: 2rem !important;
+        width: 11.25rem !important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 600px){
+    .decreasing {
+        height: auto !important;
+        width: auto !important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px){
+    
+    .display-name {
+        display: none;
+    }
+}
 
 
 

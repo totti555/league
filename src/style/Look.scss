@@ -39,6 +39,78 @@ hr {
 
 }
 
+// CSS display or not filters
+
+.hide-filters {
+ 
+    display: none;
+}
+
+
+
+
+
+.display-filters {
+    position: fixed;
+    animation:display-filters;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    top:50%;
+    z-index:5;
+     background-color: rgba(0, 0, 0, 0.5);
+     border-bottom-right-radius: 110px;  /* 100px of height + 10px of border */
+     border-top-right-radius: 110px; /* 100px of height + 10px of border */
+
+     img {
+        rotate:90deg;
+     }
+}
+
+.nav-chevron-filters {
+    animation:rotate-icon;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    // rotate: -90deg;
+    margin-right: 10px;
+    filter: invert(88%) sepia(41%) saturate(2527%) hue-rotate(338deg) brightness(95%) contrast(95%);
+}
+
+.nav-chevron-filters-inverse {
+    animation:rotate-icon-inverse;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    // rotate: 90deg;
+    margin-right: 10px;
+    filter: invert(88%) sepia(41%) saturate(2527%) hue-rotate(338deg) brightness(95%) contrast(95%);
+}
+
+
+@keyframes rotate-icon-inverse {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate-icon {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+
+
+
+
+///////////////////////////////////////////////////:
+
 
 .box-shadow {
     -webkit-box-shadow: 0 8px 6px -6px #ECB823;
@@ -74,7 +146,7 @@ hr {
     }
 }
 
-@media (min-width: 200px) and (max-width : 600px){
+@media (min-width: 0px) and (max-width : 600px){
     .champs-list {
         top:3rem;
     }
@@ -91,7 +163,7 @@ hr {
 
 
 
-@media (min-width: 50px) and (max-width : 600px){
+@media (min-width: 0px) and (max-width : 600px){
     .content {
         top:3rem;
         bottom:4rem;
@@ -140,7 +212,7 @@ hr {
 }
 
 
-@media  (min-width: 100px) and (max-width : 512px)  {
+@media  (min-width: 0px) and (max-width : 512px)  {
     .col-custom-filter {
     //This should work for Normal desktops(15 to 18 inch) only.
     min-width: 33.33333% !important;

@@ -5,6 +5,7 @@ import { champList } from "../datas/lolChamp";
 import { useState } from 'react'
 import '../style/Look.scss'
 import DisplayFilters from "../components/Filters/DisplayFilters";
+import FlecheBas from "../assets/fleche-bas.png"
 
 const Look = (props) => {
     const [searchResult, setChampName] = useState('');
@@ -18,9 +19,14 @@ const Look = (props) => {
     const [checkedType, setCheckedType] = useState([]);
     const [displayTags, handleClickTags] = useState(false);
     const [currentChamp, setCurrentChamp] = useState('Kaisa');
+    const [displayFilters,setDisplayFilters] = useState(false);
 
     function canDisplayTags() {
         handleClickTags(!displayTags);
+    }
+
+    function showFilters(){
+        setDisplayFilters(!displayFilters);
     }
 
     function flatten(arr) {
@@ -72,7 +78,7 @@ const Look = (props) => {
     return (
         <div className='row content background-img' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} >
             <div>
-            <div className="col-2 col-custom-filter filters pe-0 ps-0" >
+            <div className={displayFilters ? 'hide-filters': 'col-2 col-custom-filter filters pe-0 ps-0'}>
                
                     <div className="box-shadow ps-3 filters-title">
                         <h1><span className="title">FILTERS</span></h1>
@@ -99,7 +105,12 @@ const Look = (props) => {
 
             </div>
             </div>
-            <div className="col-10 col-custom-champion champs-list ps-0">
+            <div className={displayFilters ? 'col-12 champs-list ps-0' : 'col-10 col-custom-champion champs-list ps-0'}>
+                <div className="display-filters" onClick={showFilters}>
+                    {displayFilters ? ( <img className="nav-chevron-filters " src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>)
+                    :(<img className="nav-chevron-filters-inverse" src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>)}
+                   
+                    </div>
                 <ChampList
                     role={role} type={type} world={world}
                     checkedRole={checkedRole} checkedType={checkedType} checkedChampFunction={checkedChampFunction}

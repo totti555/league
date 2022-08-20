@@ -84,7 +84,7 @@ header {
 }
 }
 
-@media (min-width: 100px) and (max-width : 600px){
+@media (min-width: 0px) and (max-width : 600px){
     header{
     //This should work for Normal desktops(15 to 18 inch) only.
     min-height: 3rem;

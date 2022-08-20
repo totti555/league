@@ -4,6 +4,7 @@ import './ChampCard.scss'
 import ChampCard from "./ChampCard"
 import React from 'react';
 import { useState } from 'react'
+import '../Filters/Filters.scss'
 
 const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName,setCurrentChamp }) => {
 
@@ -11,6 +12,8 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
     // let background = "../../assets/Background/Kaisa.jpg";
 
     // TODO : utiliser useEffect
+
+    const [champ,setChampList] = useState(champList);
 
     const ifNoChampSelected = () => {
         const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
@@ -52,6 +55,20 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         return data ? true : false;
     }
 
+    function fetchByNameDecreasing(){
+    //    const toto = champList.map((champ)=>champ.name);
+    //    console.log(toto);
+    //    const tata = toto.sort().reverse();
+    //     console.log(tata);
+    //     const newArray = [...tata,...champList];
+    //     console.log(newArray);
+    if (champList == champ) {
+        let sortedData = champList.slice().sort((a, b) => b.id - a.id);
+        setChampList(sortedData);
+    }
+    else setChampList(champList);
+    }
+
 
     // useEffect(() => {
     //     const element = document.getElementById('champ-card');
@@ -62,13 +79,18 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
     return (
         // style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} className="background-img"
         <div>
-            <div className="box-shadow ps-3">
+            <div className="box-shadow px-3 d-flex justify-content-between ">
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
+                <div className='d-flex justify-content-center delete-button my-0'>
+                    <div className="wrap">
+                        <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" :"↘"} </span></button>
+                    </div>
+                </div>
             </div>
             <br />
             <div className="container">
                 <div className="row champ-content">
-                    {champList.map((champ) =>
+                    {champ.map((champ) =>
                         <React.Fragment key={champ.id}>
                             {
                                 ((isCheckedRole(champ.role) || !checkedRole.length)
@@ -77,7 +99,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                                     && (isCheckedChampFunction(champ.type) || !checkedChampFunction.length)
                                     && (isChampionFind(champ.name) || !searchResult)) ? (
                                     // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
-                                    <div className=" col-12 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
+                                    <div className="d-flex justify-content-center col-12 col-custom-7 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
                                         <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} />
                                     </div>) : null
                             }
