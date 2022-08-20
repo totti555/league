@@ -7,7 +7,7 @@ const DisplayFilters = (props) => {
     const name = props.name;
     const canDisplay = props.canDisplay;
     return (
-        <div className="d-flex justify-content-between filter-title">
+        <div className=" list-inline-item align-middle">
             <p className="text-white">{name.toUpperCase()}</p>
             <div>
                 {canDisplay ? (

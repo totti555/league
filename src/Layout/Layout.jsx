@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import "./Layout.scss"
+import Menu from "../assets/Home/menu.svg"
 
 function Layout({ children }) {
     return (
@@ -15,7 +16,8 @@ function Layout({ children }) {
                     <button className="nav-button"><Link to="/about_us">ABOUT US</Link></button>
                     <button className="nav-button"><Link to='/look'>LOOK</Link></button>
                 </div>
-                <div className="me-5 text-white"> Welcome, Thomas !</div>
+                <div className="me-5 text-white welcome"> Welcome, Thomas !</div>
+                <img src={Menu} className="phone-icon-menu"></img>
 
                 {/* TODO : location state dont work */}
                 {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch}></input> */}

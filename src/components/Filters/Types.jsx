@@ -26,9 +26,9 @@ const Types = ({ type, updateType, checked, setChecked, types }) => {
 
     return (
         <div>
-            <div className="filters-list-type">
+            <div className=" filters-list-type">
                 {types.map((type) =>
-                    <div key={type}>
+                    <div className='d-flex' key={type}>
                         <label className="toggle" key={type}>
                             <input className="toggle__input" type="checkbox" value={type} onChange={handleChangeType} />
                             <span className="toggle__label">

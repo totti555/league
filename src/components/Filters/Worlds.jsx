@@ -24,9 +24,9 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
 
     return (
         <div>
-            <div className="filters-list-type">
+            <div className=" filters-list-type">
                 {worlds.map((world) =>
-                    <div key={world}>
+                    <div className='d-flex' key={world}>
                         {/* <label key={world} >
                         <input type="checkbox" className='hide-checkbox' value={world}
                             onChange={handleChangeWorld} />

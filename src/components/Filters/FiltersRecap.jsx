@@ -32,7 +32,8 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
 
     return (
         <div>
-            <div className='d-flex justify-content-between'>
+        <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-between px-1'>
 
                 {/* World tag */}
                 {checkedWorld.length ? (
@@ -66,6 +67,7 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
                     </div>)
                     : null}
 
+            </div>
             </div>
 
             <div className='d-flex justify-content-center delete-button'>

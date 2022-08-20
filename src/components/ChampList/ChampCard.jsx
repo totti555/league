@@ -43,7 +43,7 @@ const ChampMemo = ({ champ }) => {
 
     return (
 
-        <div className="filters-list-type">
+        <div className=" filters-list-type">
             <div className='champ-memo'>
 
                 {/* TODO : Image for damages_types*/}

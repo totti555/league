@@ -4,10 +4,18 @@ import SiteView from "../assets/Home/site-view2.png";
 import Right from "../assets/Home/Yasuo-Yone-2-right.jpg";
 import Left from "../assets/Home/Yasuo-Yone-2-left.jpg";
 import Ahri from "../assets/Home/ahri6.jpg";
+import { useRef} from 'react';
 
 const Home = () => {
+    const bottomRef = useRef(null);
+    function scrollToBottom(){
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+        // console.log("cc");
+        // console.log(document.body.scrollHeight);
+        // window.scrollTo(0, document.body.scrollHeight);
+    }
     return (
-        <div className="hide-scroll">
+        <div className="hide-scroll" id="div-body">
         <div className="home-content bg-black  text-white">
             <div className="Banner">
                 <img className="first-image" alt="Yasuo banner" src={Banner} width="100%"></img>
@@ -55,7 +63,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="home-video">Video</div>
+            <div className="home-video"></div>
 
             <div className="home-text" data-aos="fade-right">
                 <h1>Content</h1>
@@ -63,7 +71,7 @@ const Home = () => {
                 <p>
                     Et ouais, tu vas pouvoir customiser tes filtres pour trouver les
                     champions qui t'interressent, et de voir la meta actuelle. Pour ce qui
-                    est des fonctionnalités, regarde <a href="dd"><strong className="underline"> le petit screen ci-dessous !</strong></a>
+                    est des fonctionnalités, regarde <a onClick={()=>scrollToBottom()}><strong className="underline"> le petit screen ci-dessous !</strong></a>
                 </p>
                 <p>
                     Tu peux trier la liste des champions à l'aide de la partie droite, les
@@ -95,7 +103,7 @@ const Home = () => {
 
             </div>
 
-            <div className="home-video mb-16 scroll-container">
+            <div className="home-video mb-16 scroll-container" ref={bottomRef}>
                 <img className="scroll-page" src={SiteView}  width="100%" alt="Presentation site"></img>
             </div>
 

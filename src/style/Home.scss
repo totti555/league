@@ -1,6 +1,6 @@
 .home-text {
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 // .hide-scroll {
@@ -89,6 +89,7 @@ html {
 
     .underline {
         text-decoration: underline;
+        text-decoration-color: white;
     }
 
     strong {
@@ -166,3 +167,22 @@ html {
         /* transform-origin: 0% 0% 0px; */
     }
 }
+
+
+
+@media (min-width: 600px) and (max-width : 800px){
+    .home-content {
+        top:4rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width : 600px){
+    .home-content {
+        top:3rem;
+        h1 {
+            font-size: 40px;
+        }
+    }
+}
+
+

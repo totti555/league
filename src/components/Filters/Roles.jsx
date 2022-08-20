@@ -39,10 +39,10 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
             {/* <button onClick={() => handleClickRole(role)}> {role}</button> */}
 
-            <div className="filters-list-type">
+            <div className=" filters-list-type">
 
                 {roles.map((role) =>
-                    <div key={role}>
+                    <div className='d-flex' key={role}>
 
                         <label className="toggle" key={role}>
                             <input className="toggle__input" type="checkbox" value={role} onChange={handleChangeRole} />

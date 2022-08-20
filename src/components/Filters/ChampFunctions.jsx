@@ -20,10 +20,10 @@ const ChampFunctions = ({ checked, setChecked, champFunctions }) => {
 
     return (
         <div >
-            <div className="filters-list-type">
+            <div className=" filters-list-type">
 
                 {champFunctions.map((champFunction) =>
-                    <div key={champFunction}>
+                    <div className='d-flex' key={champFunction}>
 
                         <label className="toggle" key={champFunction}>
                             <input className="toggle__input" type="checkbox" value={champFunction} onChange={handleChangeChampFunction} />

@@ -72,11 +72,12 @@ const Look = (props) => {
         <div className='row content background-img' style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/Kaisa.jpg`}` }} >
             <div>
             <div className="col-2 filters pe-0 ps-0" >
-                <div>
+               
                     <div className="box-shadow ps-3 filters-title">
                         <h1><span className="title">FILTERS</span></h1>
                     </div>
                     <hr />
+                    <div className="list-inline text-center align-items-center h-100">
                     <DisplayFilters displayFilters={canDisplayTags} canDisplay={displayTags} name={'Current filters'} />
                     {displayTags && (
                         <FiltersRecap
@@ -95,7 +96,7 @@ const Look = (props) => {
                         checkedChampFunction={checkedChampFunction} setCheckedChampFunction={setCheckedChampFunction}
                         setCheckedWorld={setCheckedWorld} setChampName={setChampName} searchResult={searchResult} />
 
-                </div>
+            </div>
             </div>
             <div className="col-10 champs-list ps-0">
                 <ChampList

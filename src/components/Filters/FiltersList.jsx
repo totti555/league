@@ -44,17 +44,19 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
     }
     return (
-        <div className="filters-list">
+        <>
 
             {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch} value={searchChamp}></input> */}
             <DisplayFilters displayFilters={canDisplaySearchBar} canDisplay={displaySearch} name={'Search champ'} />
             {displaySearch && (
-                <div className="filters-list-type ms-0">
-                    <div className="form__group field">
+                <div className=" filters-list-type ms-0">
+                    <div className="d-flex justify-content-between">
+                    <div className="d-flex form__group field">
                         <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
                         <label htmlFor="name" className="form__label">Search your champ</label>
                     </div>
                     <img src={Search} className="search-icon"></img>
+                    </div>
                 </div>)}
             <hr />
 
@@ -100,7 +102,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
             </div>
 
 
-        </div>
+        </>
     )
 }
 
