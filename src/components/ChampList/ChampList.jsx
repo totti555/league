@@ -6,14 +6,14 @@ import React from 'react';
 import { useState } from 'react'
 import '../Filters/Filters.scss'
 
-const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName,setCurrentChamp }) => {
+const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName, setCurrentChamp }) => {
 
- 
+
     // let background = "../../assets/Background/Kaisa.jpg";
 
     // TODO : utiliser useEffect
 
-    const [champ,setChampList] = useState(champList);
+    const [champ, setChampList] = useState(champList);
 
     const ifNoChampSelected = () => {
         const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
@@ -55,12 +55,22 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         return data ? true : false;
     }
 
-    function fetchByNameDecreasing(){
-    if (champList == champ) {
-        let sortedData = champList.slice().sort((a, b) => b.id - a.id);
-        setChampList(sortedData);
+    function fetchByNameDecreasing() {
+        if (champList == champ) {
+            let sortedData = champList.slice().sort((a, b) => b.id - a.id);
+            setChampList(sortedData);
+        }
+        else setChampList(champList);
     }
-    else setChampList(champList);
+
+    // TODO : Order by date (ASC and DESC)
+    function fetchByDate() {
+        const sortedData = champ.sort(function (a, b) {
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(b.release) - new Date(a.release);
+        });
+        setChampList(sortedData);
     }
 
 
@@ -77,7 +87,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
                 <div className='d-flex justify-content-center delete-button my-0'>
                     <div className="wrap">
-                        <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" :"↘"} </span></button>
+                        <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" : "↘"} </span></button>
                     </div>
                 </div>
             </div>

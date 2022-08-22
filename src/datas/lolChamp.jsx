@@ -3,7 +3,6 @@ import Yasuo from "../assets/Champ/Yasuo.jpg"
 import Yone from "../assets/Champ/Yone.jpg"
 import Garen from "../assets/Champ/Garen.jpg"
 import Irelia from "../assets/Champ/Irelia.jpg"
-import Rammus from "../assets/Champ/Rammus.jpg"
 import Darius from "../assets/Champ/Darius.jpg"
 import Pyke from "../assets/Champ/Pyke.jpg"
 import LeBlanc from "../assets/Champ/LeBlanc.jpg"
@@ -82,6 +81,42 @@ import Master_Yi from "../assets/Champ/Master_Yi.jpg"
 import Miss_Fortune from "../assets/Champ/Miss_Fortune.jpg"
 import Mordekaiser from "../assets/Champ/Mordekaiser.jpg"
 import Morgana from "../assets/Champ/Morgana.jpg"
+import Nami from "../assets/Champ/Nami.jpg"
+import Nasus from "../assets/Champ/Nasus.jpg"
+import Nautilus from "../assets/Champ/Nautilus.jpg"
+import Neeko from "../assets/Champ/Neeko.jpg"
+import Nidalee from "../assets/Champ/Nidalee.jpg"
+import Nilah from "../assets/Champ/Nilah.jpg"
+import Nocturne from "../assets/Champ/Nocturne.jpg"
+import Nunu from "../assets/Champ/Nunu&Willump.jpg"
+import Olaf from "../assets/Champ/Olaf.jpg"
+import Orianna from "../assets/Champ/Orianna.jpg"
+import Ornn from "../assets/Champ/Ornn.jpg"
+import Pantheon from "../assets/Champ/Pantheon.jpg"
+import Qiyana from "../assets/Champ/Qiyana.jpg"
+import Poppy from "../assets/Champ/Poppy.jpg"
+import Quinn from "../assets/Champ/Quinn.jpg"
+import Rakan from "../assets/Champ/Rakan.jpg"
+import Rammus from "../assets/Champ/Rammus.jpg"
+import Reksai from "../assets/Champ/Reksai.jpg"
+import Rell from "../assets/Champ/Rell.jpg"
+import Renata from "../assets/Champ/Renata_Glasc.jpg"
+import Renekton from "../assets/Champ/Renekton.jpg"
+import Rengar from "../assets/Champ/Rengar.jpg"
+import Riven from "../assets/Champ/Riven.jpg"
+import Rumble from "../assets/Champ/Rumble.jpg"
+import Ryze from "../assets/Champ/Ryze.jpg"
+import Samira from "../assets/Champ/Samira.jpg"
+import Senna from "../assets/Champ/Senna.jpg"
+import Seraphine from "../assets/Champ/Seraphine.jpg"
+import Shaco from "../assets/Champ/Shaco.jpg"
+import Shen from "../assets/Champ/Shen.jpg"
+import Shyvana from "../assets/Champ/Shyvana.jpg"
+import Singed from "../assets/Champ/Singed.jpg"
+import Sion from "../assets/Champ/Sion.jpg"
+import Skarner from "../assets/Champ/Skarner.jpg"
+import Xerath from "../assets/Champ/Xerath.jpg"
+import Zyra from "../assets/Champ/Zyra.jpg"
 
 
 
@@ -97,7 +132,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Aatrox,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Ahri',
@@ -106,7 +142,8 @@ export const champList = [
         damages_type: "AP",
         role: ['Mid', 'Support'],
         image: Ahri,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Akali',
@@ -115,7 +152,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Top"],
         image: Akali,
-        type: ["Assassin"]
+        type: ["Assassin"],
+        release: '2022-08-22'
     },
     {
         name: 'Akshan',
@@ -124,7 +162,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Mid", "Top", "ADC"],
         image: Akshan,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Alistar',
@@ -133,7 +172,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Support", 'Top'],
         image: Alistar,
-        type: ["Tank", "Support"]
+        type: ["Tank", "Support"],
+        release: '2022-08-22'
     },
     {
         name: 'Amumu',
@@ -142,7 +182,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle", "Support"],
         image: Amumu,
-        type: ["Tank"]
+        type: ["Tank"],
+        release: '2022-08-22'
     },
     {
         name: 'Anivia',
@@ -151,7 +192,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Support"],
         image: Anivia,
-        type: ["Mage", "Support"]
+        type: ["Mage", "Support"],
+        release: '2022-08-22'
     },
     {
         name: 'Annie',
@@ -160,7 +202,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Annie,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Aphelios',
@@ -169,7 +212,8 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Aphelios,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Ashe',
@@ -178,7 +222,8 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC", "Support"],
         image: Ashe,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Aurelion Sol',
@@ -187,7 +232,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: AurelionSol,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Azir',
@@ -196,7 +242,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Azir,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Bard',
@@ -205,7 +252,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Support"],
         image: Bard,
-        type: ["Support"]
+        type: ["Support"],
+        release: '2022-08-22'
     },
     {
         name: 'Belveth',
@@ -214,7 +262,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Jungle"],
         image: Belveth,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Blitzcrank',
@@ -223,7 +272,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Support"],
         image: Blitzcrank,
-        type: ["Tank"]
+        type: ["Tank"],
+        release: '2022-08-22'
     },
     {
         name: 'Brand',
@@ -232,7 +282,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Support"],
         image: Brand,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Braum',
@@ -241,7 +292,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Support"],
         image: Braum,
-        type: ["Support"]
+        type: ["Support"],
+        release: '2022-08-22'
     },
     {
         name: 'Caitlyn',
@@ -250,7 +302,8 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Caitlyn,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Camille',
@@ -259,7 +312,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Camille,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Cassiopeia',
@@ -268,7 +322,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Cassiopeia,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Chogath',
@@ -277,7 +332,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Top"],
         image: Chogath,
-        type: ["Tank"]
+        type: ["Tank"],
+        release: '2022-08-22'
     },
     {
         name: 'Corki',
@@ -286,7 +342,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Corki,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Darius',
@@ -295,7 +352,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top'],
         image: Darius,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Diana',
@@ -304,7 +362,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle", "Mid"],
         image: Diana,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Draven',
@@ -313,7 +372,8 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Draven,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'DrMundo',
@@ -322,7 +382,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Top", "Jungle"],
         image: DrMundo,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Ekko',
@@ -331,7 +392,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Jungle"],
         image: Ekko,
-        type: ["Assassin"]
+        type: ["Assassin"],
+        release: '2022-08-22'
     },
     {
         name: 'Elise',
@@ -340,7 +402,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle"],
         image: Elise,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Evelynn',
@@ -349,7 +412,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle"],
         image: Evelynn,
-        type: ["Assassin"]
+        type: ["Assassin"],
+        release: '2022-08-22'
     },
     {
         name: 'Ezreal',
@@ -358,7 +422,8 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC"],
         image: Ezreal,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Fiddlesticks',
@@ -367,7 +432,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Jungle"],
         image: Fiddlesticks,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Fiora',
@@ -376,7 +442,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Fiora,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Fizz',
@@ -385,7 +452,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Fizz,
-        type: ["Assassin"]
+        type: ["Assassin"],
+        release: '2022-08-22'
     },
     {
         name: 'Galio',
@@ -394,7 +462,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid"],
         image: Galio,
-        type: ["Tank"]
+        type: ["Tank"],
+        release: '2022-08-22'
     },
     {
         name: 'Gangplank',
@@ -403,7 +472,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Gangplank,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Garen',
@@ -412,7 +482,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top'],
         image: Garen,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Gnar',
@@ -421,7 +492,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Gnar,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Gragas',
@@ -430,7 +502,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Top", "Mid"],
         image: Gragas,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Graves',
@@ -439,7 +512,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Top"],
         image: Graves,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Gwen',
@@ -448,7 +522,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Top"],
         image: Gwen,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Hecarim',
@@ -457,7 +532,8 @@ export const champList = [
         damages_type: "AD",
         role: ["Jungle"],
         image: Hecarim,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Heimerdinger',
@@ -466,7 +542,8 @@ export const champList = [
         damages_type: "AP",
         role: ["Mid", "Top", "Support"],
         image: Heimerdinger,
-        type: ["Mage"]
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Illaoi',
@@ -475,7 +552,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top'],
         image: Illaoi,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Irelia',
@@ -484,7 +562,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top', "Mid"],
         image: Irelia,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Ivern',
@@ -493,7 +572,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Jungle'],
         image: Ivern,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Janna',
@@ -502,7 +582,8 @@ export const champList = [
         damages_type: 'AP',
         role: ['Support'],
         image: Janna,
-        type: ["Support"]
+        type: ["Support"],
+        release: '2022-08-22'
     },
     {
         name: 'Jarvan IV',
@@ -511,7 +592,8 @@ export const champList = [
         damages_type: 'AP',
         role: ['Jungle'],
         image: JarvanIV,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Jax',
@@ -520,7 +602,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Jungle', 'Top'],
         image: Jax,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Jayce',
@@ -529,7 +612,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['Mid', 'Top'],
         image: Jayce,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Jhin',
@@ -538,7 +622,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['ADC'],
         image: Jhin,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Jinx',
@@ -547,7 +632,8 @@ export const champList = [
         damages_type: 'AD',
         role: ['ADC'],
         image: Jinx,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
     },
     {
         name: 'Kaisa',
@@ -556,36 +642,39 @@ export const champList = [
         damages_type: "AD",
         role: ["ADC", "Mid"],
         image: Kaisa,
-        type: ["Marksman"]
-
+        type: ["Marksman"],
+        release: '2018-03-07'
     },
     {
         name: 'Kalista',
-        world: 'Void',
+        world: 'Shadow Isles',
         id: 53,
         damages_type: "AD",
         role: ["ADC"],
         image: Kalista,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2014-11-20'
 
     },
     {
         name: 'Karma',
-        world: 'Runeterra',
+        world: 'Ionia',
         id: 54,
         damages_type: "AP",
         role: ["Support"],
         image: Karma,
-        type: ['Support', 'Mage']
+        type: ['Mage', 'Support'],
+        release: '2011-02-01'
     },
     {
         name: 'Karthus',
-        world: 'Runeterra',
+        world: 'Shadow Isles',
         id: 55,
         damages_type: "AP",
         role: ['Jungle', 'ADC'],
         image: Karthus,
-        type: ['Fighter']
+        type: ['Mage'],
+        release: '2009-06-12'
     },
     {
         name: 'Kassadin',
@@ -594,52 +683,58 @@ export const champList = [
         damages_type: "AP",
         role: ['Mid'],
         image: Kassadin,
-        type: ['Mage']
+        type: ['Assassin', 'Mage'],
+        release: '2009-06-12'
     },
     {
         name: 'Katarina',
-        world: 'Runeterra',
+        world: 'Noxus',
         id: 57,
         damages_type: "AP",
         role: ['Mid'],
         image: Katarina,
-        type: ['Assassin']
+        type: ['Assassin', 'Mage'],
+        release: '2009-09-19'
     },
     {
         name: 'Kayle',
-        world: 'Runeterra',
+        world: 'Demacia',
         id: 58,
         damages_type: "AD",
         role: ['Top'],
         image: Kayle,
-        type: ['Fighter']
+        type: ['Fighter', 'Support'],
+        release: '2009-02-21'
     },
     {
         name: 'Kayn',
-        world: 'Runeterra',
+        world: 'Ionia',
         id: 59,
         damages_type: "AD",
         role: ['Jungle'],
         image: Kayn,
-        type: ['Fighter']
+        type: ['Fighter', 'Assassin'],
+        release: '2017-07-12'
     },
     {
         name: 'Kennen',
-        world: 'Runeterra',
+        world: 'Ionia',
         id: 60,
         damages_type: "AP",
         role: ['Top'],
         image: Kennen,
-        type: ['Marksman']
+        type: ['Mage', 'Marksman'],
+        release: '2010-04-08'
     },
     {
         name: 'Khazix',
-        world: 'Runeterra',
+        world: 'Void',
         id: 61,
         damages_type: "AD",
         role: ['Jungle'],
         image: Khazix,
-        type: ['Assassin']
+        type: ['Assassin'],
+        release: '2012-09-27'
     },
     {
         name: 'Kindred',
@@ -648,25 +743,28 @@ export const champList = [
         damages_type: "AD",
         role: ['Jungle'],
         image: Kindred,
-        type: ['Fighter']
+        type: ['Marksman'],
+        release: '2015-10-14'
     },
     {
         name: 'Kled',
-        world: 'Runeterra',
+        world: 'Noxus',
         id: 63,
         damages_type: "AD",
         role: ['Top'],
         image: Kled,
-        type: ['Fighter']
+        type: ['Fighter', 'Tank'],
+        release: '2016-08-10'
     },
     {
         name: 'Kogmaw',
-        world: 'Runeterra',
+        world: 'Void',
         id: 64,
-        damages_type: "AD",
+        damages_type: "AP",
         role: ['ADC'],
         image: Kogmaw,
-        type: ['Marksman']
+        type: ['Marksman', 'Mage'],
+        release: '2010-06-24'
     },
     {
         name: 'Leblanc',
@@ -675,34 +773,38 @@ export const champList = [
         damages_type: 'AP',
         role: ['Mid'],
         image: LeBlanc,
-        type: ["Mage", "Assassin"]
+        type: ["Assassin", "Mage"],
+        release: '2010-11-02'
     },
     {
         name: 'Lee Sin',
-        world: 'Runeterra',
+        world: 'Ionia',
         id: 66,
         damages_type: "AD",
         role: ['Jungle'],
         image: LeeSin,
-        type: ['Fighter']
+        type: ['Fighter', 'Assassin'],
+        release: '2011-04-01'
     },
     {
         name: 'Leona',
-        world: 'Runeterra',
+        world: 'Targon',
         id: 67,
         damages_type: "AD",
         role: ['Support'],
         image: Leona,
-        type: ['Tank', 'Support']
+        type: ['Tank', 'Support'],
+        release: '2011-07-13'
     },
     {
         name: 'Lillia',
-        world: 'Runeterra',
+        world: 'Ionia',
         id: 68,
         damages_type: "AP",
         role: ['Top'],
         image: Lillia,
-        type: ['Mage']
+        type: ['Fighter', 'Mage'],
+        release: '2020-07-22'
     },
     {
         name: 'Lissandra',
@@ -711,7 +813,8 @@ export const champList = [
         damages_type: "AP",
         role: ['Mid'],
         image: Lissandra,
-        type: ['Mage']
+        type: ['Mage'],
+        release: '2013-04-30'
     },
     {
         name: 'Lucian',
@@ -720,16 +823,18 @@ export const champList = [
         damages_type: "AD",
         role: ['ADC'],
         image: Lucian,
-        type: ['Marksman']
+        type: ['Marksman'],
+        release: '2013-08-22'
     },
     {
         name: 'Lulu',
-        world: 'Runeterra',
+        world: 'Bandle City',
         id: 71,
         damages_type: "AP",
         role: ['Support'],
         image: Lulu,
-        type: ['Support']
+        type: ['Support', 'Mage'],
+        release: '2012-03-20'
     },
     {
         name: 'Lux',
@@ -738,16 +843,18 @@ export const champList = [
         damages_type: "AP",
         role: ['Mid', 'Support'],
         image: Lux,
-        type: ['Mage', 'Support']
+        type: ['Mage', 'Support'],
+        release: '2010-10-19'
     },
     {
         name: 'Malphite',
-        world: 'Demacia',
+        world: '???',
         id: 73,
         damages_type: "AP",
         role: ['Top', 'Support'],
         image: Malphite,
-        type: ['Tank']
+        type: ['Tank', 'Fighter'],
+        release: '2009-09-02'
     },
     {
         name: 'Malzahar',
@@ -756,52 +863,188 @@ export const champList = [
         damages_type: "AP",
         role: ['Mid'],
         image: Malzahar,
-        type: ['Mage']
+        type: ['Mage', 'Assassin'],
+        release: '2010-06-01'
     },
     {
         name: 'Maokai',
-        world: 'Runeterra',
+        world: 'Shadow Isles',
         id: 75,
-        damages_type: "AP",
+        damages_type: "???",
         role: ['Support'],
         image: Maokai,
-        type: ['Tank']
+        type: ['Tank', 'Mage'],
+        release: '2011-02-16'
     },
     {
         name: 'Master Yi',
-        world: 'Runeterra',
+        world: 'Ionia',
         id: 76,
         damages_type: "AD",
         role: ['Jungle'],
         image: Master_Yi,
-        type: ['Assassin']
+        type: ['Assassin', 'Fighter'],
+        release: '2009-02-21'
     },
     {
         name: 'Miss Fortune',
-        world: 'Runeterra',
+        world: 'Bilgwater',
         id: 77,
         damages_type: "AD",
         role: ['ADC'],
         image: Miss_Fortune,
-        type: ['Marksman']
+        type: ['Marksman'],
+        release: '2010-09-08'
     },
     {
         name: 'Mordekaiser',
-        world: 'Bilgewater',
+        world: 'Noxus',
         id: 78,
         damages_type: 'AP',
         role: ['Top'],
         image: Mordekaiser,
-        type: ["Fighter"]
+        type: ["Fighter"],
+        release: '2010-02-24'
     },
     {
         name: 'Morgana',
-        world: 'Void',
+        world: 'Demacia',
         id: 79,
         damages_type: 'AP',
         role: ['Support'],
         image: Morgana,
-        type: ['Support', 'Mage']
+        type: ['Mage', 'Support'],
+        release: '2009-02-21'
+    },
+    {
+        name: 'Nami',
+        world: 'Runeterra',
+        id: 80,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Nami,
+        type: ['Support', 'Mage'],
+        release: '2012-12-07'
+    },
+    {
+        name: 'Nasus',
+        world: 'Shurima',
+        id: 81,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Nasus,
+        type: ['Fighter', 'Tank'],
+        release: '2009-10-01'
+    },
+    {
+        name: 'Nautilus',
+        world: 'Bilgewater',
+        id: 82,
+        damages_type: 'AD',
+        role: ['Support'],
+        image: Nautilus,
+        type: ['Tank', 'Fighter'],
+        release: '2012-02-14'
+    },
+    {
+        name: 'Neeko',
+        world: '???',
+        id: 83,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Neeko,
+        type: ['Mage', 'Support'],
+        release: '2018-12-05'
+    },
+    {
+        name: 'Nidalee',
+        world: '???',
+        id: 84,
+        damages_type: 'AP',
+        role: ['Jungle'],
+        image: Nidalee,
+        type: ['Assassin', 'Mage'],
+        release: '2009-12-17'
+    },
+    {
+        name: 'Nilah',
+        world: 'Bilgewater',
+        id: 85,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Nilah,
+        type: ['Marksman'],
+        release: '2022-07-13'
+    },
+    {
+        name: 'Nocturne',
+        world: 'Runeterra',
+        id: 86,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Nocturne,
+        type: ['Assassin', 'Fighter'],
+        release: '2011-03-15'
+    },
+    {
+        name: 'Nunu and Willump',
+        world: 'Freljord',
+        id: 87,
+        damages_type: 'AP',
+        role: ['Jungle'],
+        image: Nunu,
+        type: ['Tank', 'Fighter'],
+        release: '2009-02-21'
+    },
+    {
+        name: 'Olaf',
+        world: 'Freljord',
+        id: 88,
+        damages_type: 'AD',
+        role: ['Fighter', 'Tank'],
+        image: Olaf,
+        type: ['Tank'],
+        release: '2010-06-09'
+    },
+    {
+        name: 'Orianna',
+        world: 'Piltover',
+        id: 89,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Orianna,
+        type: ['Mage', 'Support'],
+        release: '2011-06-01'
+    },
+    {
+        name: 'Freljord',
+        world: 'Void',
+        id: 90,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Ornn,
+        type: ['Tank', 'Fighter'],
+        release: '2017-08-23'
+    },
+    {
+        name: 'Pantheon',
+        world: 'Targon',
+        id: 91,
+        damages_type: 'AD',
+        role: ['Mid', 'Support'],
+        image: Pantheon,
+        type: ['Fighter', 'Assassin'],
+        release: '2010-02-02'
+    },
+    {
+        name: 'Poppy',
+        world: 'Demacia',
+        id: 92,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Poppy,
+        type: ['Tank', 'Fighter'],
+        release: '2010-01-13'
     },
     {
         name: 'Pyke',
@@ -810,7 +1053,38 @@ export const champList = [
         damages_type: 'AD',
         role: ['Support', "Mid"],
         image: Pyke,
-        type: ["Support"]
+        type: ["Support"],
+        release: '2018-05-31'
+    },
+    {
+        name: 'Qiyana',
+        world: 'Runeterra',
+        id: 94,
+        damages_type: 'AD',
+        role: ['Mid'],
+        image: Qiyana,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Quinn',
+        world: 'Runeterra',
+        id: 95,
+        damages_type: '???',
+        role: ['Top'],
+        image: Quinn,
+        type: ["Marksman"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Rakan',
+        world: 'Runeterra',
+        id: 96,
+        damages_type: '???',
+        role: ['Support'],
+        image: Rakan,
+        type: ["Support"],
+        release: '2022-08-22'
     },
     {
         name: 'Rammus',
@@ -819,7 +1093,178 @@ export const champList = [
         damages_type: 'AP',
         role: ['Jungle'],
         image: Rammus,
-        type: ["Tank"]
+        type: ["Tank"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Reksai',
+        world: 'Runeterra',
+        id: 98,
+        damages_type: '???',
+        role: ['Jungle'],
+        image: Reksai,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Rell',
+        world: 'Runeterra',
+        id: 99,
+        damages_type: '???',
+        role: ['Support'],
+        image: Rell,
+        type: ["Support"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Renata Glasc',
+        world: 'Runeterra',
+        id: 100,
+        damages_type: '???',
+        role: ['Support'],
+        image: Renata,
+        type: ["Support"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Renekton',
+        world: 'Shurima',
+        id: 101,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Renekton,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Rengar',
+        world: 'Runeterra',
+        id: 102,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Rengar,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Riven',
+        world: 'Runeterra',
+        id: 103,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Riven,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Rumble',
+        world: 'Runeterra',
+        id: 104,
+        damages_type: '???',
+        role: ['Top'],
+        image: Rumble,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Ryze',
+        world: 'Runeterra',
+        id: 105,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Ryze,
+        type: ["Mage"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Samira',
+        world: 'Bilgewater',
+        id: 106,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Samira,
+        type: ["Marksman"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Senna',
+        world: 'Runeterra',
+        id: 107,
+        damages_type: '???',
+        role: ['Support'],
+        image: Senna,
+        type: ["Mage"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Seraphine',
+        world: 'Runeterra',
+        id: 108,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Seraphine,
+        type: ["Mage"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Shaco',
+        world: 'Runeterra',
+        id: 109,
+        damages_type: 'AP',
+        role: ['Jungle'],
+        image: Shaco,
+        type: ["Mage"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Shen',
+        world: 'Runeterra',
+        id: 110,
+        damages_type: '???',
+        role: ['Top'],
+        image: Shen,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Shyvana',
+        world: 'Runeterra',
+        id: 111,
+        damages_type: 'AP',
+        role: ['Jungle'],
+        image: Shyvana,
+        type: ["Mage"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Singed',
+        world: 'Runeterra',
+        id: 112,
+        damages_type: '???',
+        role: ['Top'],
+        image: Singed,
+        type: ["Fighter"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Sion',
+        world: 'Runeterra',
+        id: 113,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Sion,
+        type: ["Tank"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Skarner',
+        world: 'Runeterra',
+        id: 114,
+        damages_type: '???',
+        role: ['Jungle'],
+        image: Skarner,
+        type: ["Fighter"],
+        release: '2022-08-22'
     },
     {
         name: 'Vayne',
@@ -828,7 +1273,18 @@ export const champList = [
         damages_type: 'AD',
         role: ['Top', "ADC"],
         image: Vayne,
-        type: ["Marksman"]
+        type: ["Marksman"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Xerath',
+        world: 'Runeterra',
+        id: 148,
+        damages_type: 'AP',
+        role: ['Mid', 'Support'],
+        image: Xerath,
+        type: ["Mage"],
+        release: '2022-08-22'
     },
     {
         name: 'Yasuo',
@@ -837,15 +1293,27 @@ export const champList = [
         damages_type: 'AD',
         role: ['Mid', "Top", "ADC"],
         image: Yasuo,
-        type: ["Assassin"]
+        type: ["Assassin"],
+        release: '2022-08-22'
     },
     {
         name: 'Yone',
         world: 'Ionia',
-        id: 152,
+        id: 151,
         damages_type: 'AD',
         role: ['Mid', "Top"],
         image: Yone,
-        type: ["Assassin"]
+        type: ["Assassin"],
+        release: '2022-08-22'
+    },
+    {
+        name: 'Zyra',
+        world: 'Void',
+        id: 157,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Zyra,
+        type: ["Mage"],
+        release: '2022-08-22'
     },
 ]
