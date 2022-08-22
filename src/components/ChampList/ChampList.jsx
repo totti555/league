@@ -56,12 +56,6 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
     }
 
     function fetchByNameDecreasing(){
-    //    const toto = champList.map((champ)=>champ.name);
-    //    console.log(toto);
-    //    const tata = toto.sort().reverse();
-    //     console.log(tata);
-    //     const newArray = [...tata,...champList];
-    //     console.log(newArray);
     if (champList == champ) {
         let sortedData = champList.slice().sort((a, b) => b.id - a.id);
         setChampList(sortedData);
