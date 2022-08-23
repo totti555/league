@@ -65,13 +65,22 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     // TODO : Order by date (ASC and DESC)
     function fetchByDate() {
-        const sortedData = champ.sort(function (a, b) {
+       let sortedData = champ.slice().sort(function (a, b) {
             // Turn your strings into dates, and then subtract them
             // to get a value that is either negative, positive, or zero.
             return new Date(b.release) - new Date(a.release);
         });
         setChampList(sortedData);
     }
+
+    function fetchByDateAscending() {
+        let sortedData = champ.slice().sort(function (a, b) {
+             // Turn your strings into dates, and then subtract them
+             // to get a value that is either negative, positive, or zero.
+             return new Date(a.release) - new Date(b.release);
+         });
+         setChampList(sortedData);
+     }
 
 
     // useEffect(() => {
@@ -88,6 +97,15 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                 <div className='d-flex justify-content-center delete-button my-0'>
                     <div className="wrap">
                         <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" : "↘"} </span></button>
+                        <button className="button-filter decreasing" onClick={fetchByDateAscending} >
+                            <span className="display-name">Date </span>
+                            <span className='cross'>📆↗ </span>
+                        </button>
+
+                        <button className="button-filter decreasing" onClick={fetchByDate} >
+                            <img src={require("../../assets/date-icon.svg")}></img>
+                            <span className='cross'>↘ </span>
+                        </button>
                     </div>
                 </div>
             </div>
