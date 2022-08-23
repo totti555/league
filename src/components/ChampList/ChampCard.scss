@@ -198,6 +198,10 @@ html {
     }
 }
 
+.date-logo {
+    filter: invert(88%) sepia(41%) saturate(2527%) hue-rotate(338deg) brightness(95%) contrast(95%);
+}
+
 @keyframes display-card {
     0% {
         transform: scale(1.1);

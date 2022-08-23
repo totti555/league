@@ -572,38 +572,38 @@ export const champList = [
         damages_type: 'AD',
         role: ['Jungle'],
         image: Ivern,
-        type: ["Fighter"],
-        release: '2022-08-22'
+        type: ['Support','Mage'],
+        release: '2016-10-05'
     },
     {
         name: 'Janna',
-        world: 'Ionia',
+        world: 'Zaun',
         id: 46,
         damages_type: 'AP',
         role: ['Support'],
         image: Janna,
-        type: ["Support"],
-        release: '2022-08-22'
+        type: ["Support",'Mage'],
+        release: '2009-09-02'
     },
     {
         name: 'Jarvan IV',
-        world: 'Ionia',
+        world: 'Demacia',
         id: 47,
-        damages_type: 'AP',
+        damages_type: 'AD',
         role: ['Jungle'],
         image: JarvanIV,
-        type: ["Fighter"],
-        release: '2022-08-22'
+        type: ['Tank',"Fighter"],
+        release: '2011-03-01'
     },
     {
         name: 'Jax',
-        world: 'Ionia',
+        world: 'Runeterra',
         id: 48,
         damages_type: 'AD',
         role: ['Jungle', 'Top'],
         image: Jax,
-        type: ["Fighter"],
-        release: '2022-08-22'
+        type: ["Fighter",'Assassin'],
+        release: '2009-02-21'
     },
     {
         name: 'Jayce',
@@ -612,28 +612,28 @@ export const champList = [
         damages_type: 'AD',
         role: ['Mid', 'Top'],
         image: Jayce,
-        type: ["Fighter"],
-        release: '2022-08-22'
+        type: ["Fighter",'Marksman'],
+        release: '2012-07-07'
     },
     {
         name: 'Jhin',
-        world: 'Piltover',
+        world: 'Ionia',
         id: 50,
         damages_type: 'AD',
         role: ['ADC'],
         image: Jhin,
         type: ["Marksman"],
-        release: '2022-08-22'
+        release: '2016-02-01'
     },
     {
         name: 'Jinx',
-        world: 'Piltover',
+        world: 'Zaun',
         id: 51,
         damages_type: 'AD',
         role: ['ADC'],
         image: Jinx,
         type: ["Marksman"],
-        release: '2022-08-22'
+        release: '2013-10-10'
     },
     {
         name: 'Kaisa',
@@ -848,7 +848,7 @@ export const champList = [
     },
     {
         name: 'Malphite',
-        world: '???',
+        world: 'Ixtal',
         id: 73,
         damages_type: "AP",
         role: ['Top', 'Support'],
@@ -870,8 +870,8 @@ export const champList = [
         name: 'Maokai',
         world: 'Shadow Isles',
         id: 75,
-        damages_type: "???",
-        role: ['Support'],
+        damages_type: "AP",
+        role: ['Support','Top'],
         image: Maokai,
         type: ['Tank', 'Mage'],
         release: '2011-02-16'
@@ -948,7 +948,7 @@ export const champList = [
     },
     {
         name: 'Neeko',
-        world: '???',
+        world: 'Ixtal',
         id: 83,
         damages_type: 'AP',
         role: ['Mid'],
@@ -958,7 +958,7 @@ export const champList = [
     },
     {
         name: 'Nidalee',
-        world: '???',
+        world: 'Ixtal',
         id: 84,
         damages_type: 'AP',
         role: ['Jungle'],
@@ -1058,7 +1058,7 @@ export const champList = [
     },
     {
         name: 'Qiyana',
-        world: '???',
+        world: 'Ixtal',
         id: 94,
         damages_type: 'AD',
         role: ['Mid'],
@@ -1070,7 +1070,7 @@ export const champList = [
         name: 'Quinn',
         world: 'Demacia',
         id: 95,
-        damages_type: '???',
+        damages_type: 'AD',
         role: ['Top'],
         image: Quinn,
         type: ["Marksman", 'Assassin'],
@@ -1080,7 +1080,7 @@ export const champList = [
         name: 'Rakan',
         world: 'Ionia',
         id: 96,
-        damages_type: '???',
+        damages_type: 'AP',
         role: ['Support'],
         image: Rakan,
         type: ["Support"],
@@ -1100,7 +1100,7 @@ export const champList = [
         name: 'Reksai',
         world: 'Void',
         id: 98,
-        damages_type: '???',
+        damages_type: 'AD',
         role: ['Jungle'],
         image: Reksai,
         type: ["Fighter"],
@@ -1110,7 +1110,7 @@ export const champList = [
         name: 'Rell',
         world: 'Noxus',
         id: 99,
-        damages_type: '???',
+        damages_type: 'AP',
         role: ['Support'],
         image: Rell,
         type: ["Tank"],
@@ -1120,7 +1120,7 @@ export const champList = [
         name: 'Renata Glasc',
         world: 'Zaun',
         id: 100,
-        damages_type: '???',
+        damages_type: 'AP',
         role: ['Support'],
         image: Renata,
         type: ["Support"],
@@ -1138,7 +1138,7 @@ export const champList = [
     },
     {
         name: 'Rengar',
-        world: '???',
+        world: 'Ixtal',
         id: 102,
         damages_type: 'AD',
         role: ['Jungle'],
@@ -1160,8 +1160,8 @@ export const champList = [
         name: 'Rumble',
         world: 'Bandle City',
         id: 104,
-        damages_type: '???',
-        role: ['Top'],
+        damages_type: 'AP',
+        role: ['Top','Mid'],
         image: Rumble,
         type: ["Fighter", 'Mage'],
         release: '2011-04-26'
@@ -1190,7 +1190,7 @@ export const champList = [
         name: 'Senna',
         world: 'Runeterra',
         id: 107,
-        damages_type: '???',
+        damages_type: 'AD',
         role: ['Support'],
         image: Senna,
         type: ['Marksman', "Support"],
@@ -1220,7 +1220,7 @@ export const champList = [
         name: 'Shen',
         world: 'Ionia',
         id: 110,
-        damages_type: '???',
+        damages_type: 'AD',
         role: ['Top'],
         image: Shen,
         type: ["Tank"],
@@ -1240,7 +1240,7 @@ export const champList = [
         name: 'Singed',
         world: 'Zaun',
         id: 112,
-        damages_type: '???',
+        damages_type: 'AP',
         role: ['Top'],
         image: Singed,
         type: ["Tank", 'Fighter'],
@@ -1260,7 +1260,7 @@ export const champList = [
         name: 'Skarner',
         world: 'Shurima',
         id: 114,
-        damages_type: '???',
+        damages_type: 'AD',
         role: ['Jungle'],
         image: Skarner,
         type: ["Fighter", 'Tank'],
@@ -1308,7 +1308,7 @@ export const champList = [
     },
     {
         name: 'Zyra',
-        world: '???',
+        world: 'Ixtal',
         id: 157,
         damages_type: 'AP',
         role: ['Support'],

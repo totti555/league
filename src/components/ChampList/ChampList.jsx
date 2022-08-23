@@ -141,14 +141,15 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                 <div className='d-flex justify-content-center delete-button my-0'>
                     <div className="wrap">
                         <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" : "↘"} </span></button>
+                        
                         <button className="button-filter decreasing" onClick={fetchByDateAscending} >
-                            <span className="display-name">Date </span>
-                            <span className='cross'>📆↗ </span>
+                            <img src={require("../../assets/calendar.png")} width="20px" height="20px" className="date-logo"></img>
+                            <span className="cross">  ↗</span>
                         </button>
 
                         <button className="button-filter decreasing" onClick={fetchByDateDecreasing} >
-                            <img src={require("../../assets/date-icon.svg")}></img>
-                            <span className='cross'>↘ </span>
+                            <img src={require("../../assets/calendar.png")} width="20px" height="20px" className="date-logo"></img>
+                            <span className='cross'>  ↘</span>
                         </button>
                     </div>
                 </div>
