@@ -14,15 +14,16 @@ import ChampFunctions from "./ChampFunctions";
 const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld, champFunctions, checkedRole, setCheckedRole, checkedType, setCheckedType, checkedWorld, setCheckedWorld, searchChamp, setChampName, checkedChampFunction, setCheckedChampFunction }) => {
 
     /**
-   * *component to display the filters list (left of the page)
-   * CSS file : FiltersList.scss
-   * !Depreciated : I don't like this !
-   * TODO: 4 components (Roles,Worlds,ChampFunctions,Types) with the same code => One single component Attributes.jsx
-   */
+        * *component to display the filters list (left of the page)
+        * CSS file : FiltersList.scss
+        * Components : Roles, Types, Worlds, ChampFunctions, DisplayFilters
+        * !Depreciated : I don't like this !
+        * TODO: 4 components (Roles,Worlds,ChampFunctions,Types) with the same code => One single component Attributes.jsx
+    */
 
     /**
-   * *states and functions to display the filters attributes by clicking
-   */
+        * *states and functions to display the filters attributes by clicking
+    */
 
     const [displayRoles, handleClickRoles] = useState(false);
     const [displayTypes, handleClickTypes] = useState(false);
@@ -52,8 +53,8 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
     }
 
     /**
-    * *To set a name  in relation to the text that the user entered in the search bar
-    * Then, it will filter the cha;p list by the name entered by the user
+        * *To set a name  in relation to the text that the user entered in the search bar
+        * Then, it will filter the cha;p list by the name entered by the user
     */
 
     function handleChangeSearch(e) {
@@ -153,7 +154,7 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             {
                 /**
-                   Img rammus okay
+                   * *Img rammus okay /assets
                 */
             }
 

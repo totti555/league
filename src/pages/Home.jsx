@@ -7,16 +7,30 @@ import Ahri from "../assets/Home/ahri6.jpg";
 import { useRef } from "react";
 
 const Home = () => {
+
+  /**
+    * *Home Page - View to present the website
+    * CSS file : Home.scss
+  */
+
+  /**
+    * *Scroll to bottom when clicking
+    * Linked to a div with a ref 
+  */
+
   const bottomRef = useRef(null);
   function scrollToBottom() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-    // console.log("cc");
-    // console.log(document.body.scrollHeight);
-    // window.scrollTo(0, document.body.scrollHeight);
   }
+
   return (
     <div className="hide-scroll" id="div-body">
       <div className="home-content bg-black  text-white">
+        {
+          /**
+            * *Banner of the home page - linked with animation
+          */
+        }
         <div className="Banner">
           <img
             className="first-image"
@@ -25,6 +39,14 @@ const Home = () => {
             width="100%"
           ></img>
         </div>
+
+        {
+          /**
+            * *Home part
+            * Context presentation
+          */
+        }
+
         <div className="home-text">
           <h1>Home</h1>
           <hr />
@@ -53,7 +75,12 @@ const Home = () => {
           </p>
           <hr />
         </div>
-
+        {
+          /**
+            * *Img part
+            * ?Maybe carousel ? 
+          */
+        }
         <div>
           <div className="img-vitrine d-flex justify-content-center mb-2">
             <img
@@ -75,12 +102,18 @@ const Home = () => {
         </div>
 
         <div className="home-video"></div>
+        {
+          /**
+            * *Content part
+            * Website explanations
+          */
+        }
         <div className="home-text">
           <h1>Content</h1>
           <hr />
           <p>
-          And yeah, you'll be able to customize your filters to find the
-          champions you're interested in, and see the current meta. As for the features, check out{" "}
+            And yeah, you'll be able to customize your filters to find the
+            champions you're interested in, and see the current meta. As for the features, check out{" "}
             <a onClick={() => scrollToBottom()}>
               <strong className="underline">
                 {" "}
@@ -89,8 +122,8 @@ const Home = () => {
             </a>
           </p>
           <p>
-          You can sort the list of champions using the right-hand side: the 
-            <strong> filters</strong>. You can filter the champions according to : 
+            You can sort the list of champions using the right-hand side: the
+            <strong> filters</strong>. You can filter the champions according to :
           </p>
 
           <ul>
@@ -110,19 +143,29 @@ const Home = () => {
               their <strong>worlds</strong> (you will see, there is more than you think...)
             </li>
             <li>
-            you can also search by the <strong>name</strong> of the champion with the search bar
+              you can also search by the <strong>name</strong> of the champion with the search bar
             </li>
           </ul>
-
+          {
+            /**
+              * *Scroll to bottom when clicking
+              * Linked to a div with a ref 
+            */
+          }
           <p className="last-paragraphe">
-          And above all, don't hesitate to <strong>click</strong> on the champions' cards. To do this, go to the{" "}
+            And above all, don't hesitate to <strong>click</strong> on the champions' cards. To do this, go to the{" "}
             <a href="/Look">
               <strong className="underline"> Look </strong>
             </a>
             page !
           </p>
         </div>
-
+        {
+          /**
+            * *Video presentation
+            * TODO : Video insteead of screen
+          */
+        }
         <div className="home-video mb-16 scroll-container" ref={bottomRef}>
           <img
             className="scroll-page"

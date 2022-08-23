@@ -7,6 +7,7 @@ const ChampCard = ({ champ, setCurrentChamp }) => {
     /**
         * *component to display the champion's cards
         * CSS file : Champcard.scss
+        * Components : ChampMemo
     */
 
     /**

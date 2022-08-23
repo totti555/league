@@ -9,14 +9,16 @@ import '../Filters/Filters.scss'
 const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName, setCurrentChamp }) => {
 
     /**
-       * ! Depreciated
-       * TODO : props and variable
-       * @param props
+        * *To display the list of champions according to filters
+        * CSS file : ChampCard.scss
+        * Components : ChampCard, NoChampFound
+        * ! Depreciated : create a CSS file ChampList.scss instead of ChampCard.scss
+        * TODO : props and variable
+        * @param props
     */
 
     /**
         * *to filter the champions by name or by date
-        * ! Depreciated : create a CSS file ChampList.scss instead of ChampCard.scss
         * SCSS file Champcard.scss
         * @param champ
     */
