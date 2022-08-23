@@ -3,20 +3,34 @@ import './Filters.scss'
 
 const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
 
+    /**
+        * *component to display the role's filters
+        * CSS file : Filters.scss
+        * ? useless props
+    */
+
+
+    /**
+        * *To update the checked roles when the user clicks on it or when the user cancels a selection
+    */
     const handleChangeRole = (event) => {
         var updatedRoleList = [...checked];
         if (event.target.checked) {
-            //Fusionne le nouvelelement avec le predecent 
+            //Fusion
             updatedRoleList = [...checked, event.target.value];
         } else {
-            // On enleve l'element si il etait deja coche en fonction de son id
-            // syntaxe splice(idRemoveElement,1)
+            // Remove the element if it was checked according to id 
+            // syntax : splice(idRemoveElement,1)
             updatedRoleList.splice(checked.indexOf(event.target.value), 1);
 
         }
-        console.log(updatedRoleList);
         setChecked(updatedRoleList);
     };
+
+    /**
+        * *To delete all checked roles 
+        * TODO : It doesnt work, all selected roles are re;oved but they are checked yet
+    */
 
     function handleDeleteRole() {
         setChecked([]);
@@ -26,21 +40,33 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
     return (
         <div >
 
-            {/* {role === "Mid" ?
-                <div>Mid</div> :
-                role === "ADC" ?
-                    <div>ADC</div>
-                    : role === "Supp" ?
-                        <div>Support</div>
-                        : role === "Top" ?
-                            <div>Top</div> : <div>Jungle</div>} */}
+            {
+                /**
+                    * *Img by roles 
+                    * TODO : img for each roles selected ? (same for Worlds,Types and ChampFunctions conponents)
+                    * Use /assets/Post
+                    * example :
+                    {role === "Mid" ?
+                        <div>Mid</div> :
+                            role === "ADC" ?
+                                <div>ADC</div>
+                                    : role === "Supp" ?
+                                        <div>Support</div>
+                                            : role === "Top" ?
+                                                <div>Top</div> : <div>Jungle</div>}
+                */
+            }
 
 
-
-            {/* <button onClick={() => handleClickRole(role)}> {role}</button> */}
+            {
+                /**
+                    * *List of roles with checkbox (input type='checkbox')
+                    * Hover the label text
+                    * TODO : Hover the checkbox like the label
+                */
+            }
 
             <div className=" filters-list-type">
-
                 {roles.map((role) =>
                     <div className='d-flex' key={role}>
 
@@ -54,6 +80,13 @@ const Roles = ({ role, updateRole, checked, setChecked, roles }) => {
                     </div>
                 )}
             </div>
+
+            {
+                /**
+                * *Button for delete roles
+                */
+            }
+
             <div className='d-flex justify-content-center delete-button'>
                 <div className="wrap">
                     <button className="button-filter" onClick={() => handleDeleteRole()}>Delete Roles <span className='cross'>❌</span></button>

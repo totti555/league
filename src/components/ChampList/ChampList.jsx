@@ -8,52 +8,92 @@ import '../Filters/Filters.scss'
 
 const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, checkedChampFunction, searchResult, setChampName, setCurrentChamp }) => {
 
+    /**
+       * ! Depreciated
+       * TODO : props and variable
+       * @param props
+    */
 
-    // let background = "../../assets/Background/Kaisa.jpg";
-
-    // TODO : utiliser useEffect
-
+    /**
+        * *to filter the champions by name or by date
+        * ! Depreciated : create a CSS file ChampList.scss instead of ChampCard.scss
+        * SCSS file Champcard.scss
+        * @param champ
+    */
     const [champ, setChampList] = useState(champList);
 
+
+    /**
+        * *to display a div when no champions are found
+        * TODO : doesn't work currently
+        * ? useEffect to solve the proble; ? 
+        * ?  useEffect(() => {
+        * ?  const element = document.getElementById('champ-card');
+        * ?  element.classList.toggle("champ-card");
+        * ?  }, [searchResult]);
+    */
     const ifNoChampSelected = () => {
         const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
         return champIsFind ? false : true
     }
+
+    /**
+        * *find champions by the functions selected 
+        * can filter for a champion with multiple functions 
+        * TODO : We should display the champ with only the categories selected
+        * Maybe with => const  intersections = array1.filter(e => array2.indexOf(e) !== -1); ? 
+    */
+
     const isCheckedChampFunction = (cf) => {
-        //TODO : Afficher uniquement pour les 2 filtres, et pas les 2 categories
         const intersection = checkedChampFunction.filter(element => cf.includes(element));
         return intersection.length ? true : false;
     }
 
+    /**
+        * *find champions by the roles selected 
+        * can filter for a champion with multiple roles
+        * TODO : We should display the champ with only the categories selected
+        * ? Maybe with => const  intersections = array1.filter(e => array2.indexOf(e) !== -1); ? 
+    */
+
     const isCheckedRole = (role) => {
-        //TODO : Afficher uniquement pour les 2 filtres, et pas les 2 categories
-        // let names= ["Style","List","Raw"];
-        // let results= names.filter(x => x.toLowerCase().includes("s"));
-        // console.log(results); //["Style", "List"]
-
-
-        // Maybe with => const  intersections = array1.filter(e => array2.indexOf(e) !== -1);
-
-
-
-
         const intersection = checkedRole.filter(element => role.includes(element));
         return intersection.length ? true : false;
     }
+
+    /**
+        * *find champions by the type selected 
+        * @param champsList.damages_types
+    */
 
     const isCheckedType = (type) => {
         return checkedType.find((c) => c === type) ? true : false
     }
 
+    /**
+        * *find champions by the world selected 
+        * @param champsList.world
+    */
+
     const isCheckedWorld = (world) => {
         return checkedWorld.find((c) => c === world) ? true : false
     }
 
+    /**
+        * *find champions by name with a search bar
+        * @param champsList.name
+    */
+
     const isChampionFind = (champName) => {
-        // console.log(champList.map((champ) => champ.name.toLowerCase().includes(searchResult.toLowerCase())));
         const data = champName.toLowerCase().includes(searchResult.toLowerCase());
         return data ? true : false;
     }
+
+    /**
+        * *to filter the champions order by name desc
+        * the champList is order by name asc by default
+    */
+
 
     function fetchByNameDecreasing() {
         if (champList == champ) {
@@ -63,34 +103,36 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         else setChampList(champList);
     }
 
-    // TODO : Order by date (ASC and DESC)
-    function fetchByDate() {
-       let sortedData = champ.slice().sort(function (a, b) {
-            // Turn your strings into dates, and then subtract them
-            // to get a value that is either negative, positive, or zero.
+    /**
+        * *to filter the champions order by date desc
+        * @param champsList.release
+    */
+
+    function fetchByDateDecreasing() {
+        let sortedData = champ.slice().sort(function (a, b) {
             return new Date(b.release) - new Date(a.release);
         });
         setChampList(sortedData);
     }
 
+    /**
+        * *to filter the champions order by date asc
+        * ? refacto in one function ? 
+        * @param champsList.release
+    */
+
     function fetchByDateAscending() {
         let sortedData = champ.slice().sort(function (a, b) {
-             // Turn your strings into dates, and then subtract them
-             // to get a value that is either negative, positive, or zero.
-             return new Date(a.release) - new Date(b.release);
-         });
-         setChampList(sortedData);
-     }
+            return new Date(a.release) - new Date(b.release);
+        });
+        setChampList(sortedData);
+    }
 
 
-    // useEffect(() => {
-    //     const element = document.getElementById('champ-card');
-    //     element.classList.toggle("champ-card");
-    // }, [searchResult]);
+
 
 
     return (
-        // style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${currentChamp}.jpg`}` }} className="background-img"
         <div>
             <div className="box-shadow px-3 d-flex justify-content-between ">
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
@@ -102,7 +144,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                             <span className='cross'>📆↗ </span>
                         </button>
 
-                        <button className="button-filter decreasing" onClick={fetchByDate} >
+                        <button className="button-filter decreasing" onClick={fetchByDateDecreasing} >
                             <img src={require("../../assets/date-icon.svg")}></img>
                             <span className='cross'>↘ </span>
                         </button>
@@ -136,11 +178,14 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
     );
 };
 
+/**
+   * TODO : this component should be done where isNoChampSelected will work
+   * TODO : CSS + Responsive
+*/
 
 const NoChampFound = () => {
     return (
         <div>
-            {/* TODO : Design  */}
             <p>Pas de champion trouve</p>
             <p>Reesayez avec d'autres filtres !</p>
         </div>

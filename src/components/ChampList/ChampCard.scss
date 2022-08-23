@@ -52,15 +52,16 @@ $gold: #ECB823;
     border-color: -webkit-linear-gradient(0.5turn, $gold, white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+
 }
 
 .hr-bot {
-        margin-bottom :10px !important;
-    }
+    margin-bottom: 10px !important;
+}
+
 .hr-top {
-        margin-top: 10px !important;
-    }
+    margin-top: 10px !important;
+}
 
 
 .display-world-animation {
@@ -94,9 +95,6 @@ $gold: #ECB823;
 }
 
 
-
-
-/* TODO : Update CSS here  */
 .container {
     min-width: 100%;
     // height: 660px;
@@ -118,13 +116,13 @@ $gold: #ECB823;
     background-color: black;
     border-radius: 20px;
     // border: 1px solid #ECB823;
-    opacity:0.5;
+    opacity: 0.5;
 }
 
 
 /* background image */
 .background-img {
-        
+
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -227,62 +225,62 @@ html {
     }
 }
 
-@media (min-width: 1400px) and (max-width : 1800px){
+@media (min-width: 1400px) and (max-width : 1800px) {
     .col-mid-3 {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 25%;
-}
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 25%;
+    }
 }
 
-@media (min-width: 1400px) and (max-width : 2500px){
+@media (min-width: 1400px) and (max-width : 2500px) {
     .col-xl-3 {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 20%;
-}
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 20%;
+    }
 }
 
-@media  (min-width: 1800px) and (max-width : 2200px)  {
+@media (min-width: 1800px) and (max-width : 2200px) {
     .col-custom {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 16.66% !important;
-}
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 16.66% !important;
+    }
 }
 
-@media  (min-width: 2200px) and (max-width : 3000px)  {
+@media (min-width: 2200px) and (max-width : 3000px) {
     .col-custom-2 {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 12.5% !important;
-}
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 12.5% !important;
+    }
 }
 
-@media  (min-width: 3000px) and (max-width : 3500px)  {
+@media (min-width: 3000px) and (max-width : 3500px) {
     .col-custom-3 {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 10% !important;
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 10% !important;
+    }
 }
-}
 
 
 
-@media  (min-width: 900px) and (max-width : 1200px)  {
+@media (min-width: 900px) and (max-width : 1200px) {
     .col-mid-4 {
         flex: 0 0 auto;
         width: 33.33333333%;
-}
+    }
 }
 
-@media (min-width:576px) and ( max-width: 600px) {
+@media (min-width:576px) and (max-width: 600px) {
     .col-custom-6 {
         flex: 0 0 auto;
         min-width: 100% !important;
-}
+    }
 }
 
-@media (min-width:600px) and ( max-width: 900px) {
+@media (min-width:600px) and (max-width: 900px) {
     .col-custom-7 {
         flex: 0 0 auto;
         min-width: 50% !important;
-}
+    }
 }
 
 // @media  (min-width: 1400px)  {
@@ -295,34 +293,29 @@ html {
 
 // name in decrease order button
 
-@media (min-width: 800px){
+@media (min-width: 800px) {
     .decreasing {
         width: 11.25rem !important;
     }
 }
 
-@media (min-width: 600px) and (max-width: 800px){
+@media (min-width: 600px) and (max-width: 800px) {
     .decreasing {
         height: 2rem !important;
         width: 11.25rem !important;
     }
 }
 
-@media (min-width: 0px) and (max-width: 600px){
+@media (min-width: 0px) and (max-width: 600px) {
     .decreasing {
         height: auto !important;
         width: auto !important;
     }
 }
 
-@media (min-width: 0px) and (max-width: 300px){
-    
+@media (min-width: 0px) and (max-width: 300px) {
+
     .display-name {
         display: none;
     }
 }
-
-
-
-
-

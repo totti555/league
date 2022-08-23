@@ -12,6 +12,18 @@ import ChampFunctions from "./ChampFunctions";
 
 
 const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld, champFunctions, checkedRole, setCheckedRole, checkedType, setCheckedType, checkedWorld, setCheckedWorld, searchChamp, setChampName, checkedChampFunction, setCheckedChampFunction }) => {
+
+    /**
+   * *component to display the filters list (left of the page)
+   * CSS file : FiltersList.scss
+   * !Depreciated : I don't like this !
+   * TODO: 4 components (Roles,Worlds,ChampFunctions,Types) with the same code => One single component Attributes.jsx
+   */
+
+    /**
+   * *states and functions to display the filters attributes by clicking
+   */
+
     const [displayRoles, handleClickRoles] = useState(false);
     const [displayTypes, handleClickTypes] = useState(false);
     const [displayWorlds, handleClickWorlds] = useState(false);
@@ -39,6 +51,11 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
         handleClickSearch(!displaySearch);
     }
 
+    /**
+    * *To set a name  in relation to the text that the user entered in the search bar
+    * Then, it will filter the cha;p list by the name entered by the user
+    */
+
     function handleChangeSearch(e) {
         setChampName(e.target.value)
 
@@ -46,20 +63,35 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
     return (
         <>
 
-            {/* <input type="text" placeholder="Search your champ" onChange={handleChangeSearch} value={searchChamp}></input> */}
+            {
+                /**
+                    * * Filter search bar
+                    * TODO : search-icon is not displayed (black background and black icon),shoulduse CSS filter
+                    * ? : maybe separate the design of the button with the filtersList design in two different files
+                    * @param displaySearch
+                    * @param canDisplaySearchBar
+                */
+            }
             <DisplayFilters displayFilters={canDisplaySearchBar} canDisplay={displaySearch} name={'Search champ'} />
             {displaySearch && (
                 <div className=" filters-list-type ms-0">
                     <div className="d-flex justify-content-between">
-                    <div className="d-flex form__group field">
-                        <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
-                        <label htmlFor="name" className="form__label">Search <span className="label-visible">your champ</span></label>
-                    </div>
-                    <img src={Search} className="search-icon"></img>
+                        <div className="d-flex form__group field">
+                            <input type="input" onChange={handleChangeSearch} value={searchChamp} className="form__field" placeholder="Search your champ" name="name" id='name' />
+                            <label htmlFor="name" className="form__label">Search <span className="label-visible">your champ</span></label>
+                        </div>
+                        <img src={Search} className="search-icon"></img>
                     </div>
                 </div>)}
             <hr />
 
+            {
+                /**
+                    * * Filter by roles
+                    * @param displayRoles
+                    * @param canDisplayRoles
+                */
+            }
 
             <DisplayFilters displayFilters={canDisplayRoles} canDisplay={displayRoles} name={'Poste'} />
             {displayRoles && (
@@ -68,9 +100,15 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                 </div>
             )}
 
-            {/* TODO : CSS here */}
-
             <hr />
+
+            {
+                /**
+                    * * Filter by types
+                    * @param displayTypes
+                    * @param canDisplayTypes
+                */
+            }
 
             <DisplayFilters displayFilters={canDisplayTypes} canDisplay={displayTypes} name={'Type'} />
             {displayTypes && (
@@ -81,6 +119,14 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
 
             <hr />
 
+            {
+                /**
+                    * * Filter by functions
+                    * @param displayChampFunctions
+                    * @param canDisplayChampFunctions
+                */
+            }
+
             <DisplayFilters displayFilters={canDisplayChampFunctions} canDisplay={displayChampFunctions} name={'Functions'} />
             {displayChampFunctions && (
                 <div>
@@ -88,8 +134,15 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                 </div>
             )}
 
-
             <hr />
+
+            {
+                /**
+                    * * Filter by worlds
+                    * @param displayWorlds
+                    * @param canDisplayWorlds
+                */
+            }
 
             <DisplayFilters displayFilters={canDisplayWorlds} canDisplay={displayWorlds} name={'World'} />
             {displayWorlds && (
@@ -97,6 +150,13 @@ const FiltersList = ({ roles, updateRole, types, updateType, worlds, updateWorld
                     <Worlds checked={checkedWorld} setChecked={setCheckedWorld} worlds={worlds} />
                 </div>
             )}
+
+            {
+                /**
+                   Img rammus okay
+                */
+            }
+
             <div className="d-flex justify-content-center">
                 <img src={Okay} className="okay-picture" width="140px" height="140px"></img>
             </div>

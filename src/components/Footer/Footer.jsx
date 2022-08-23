@@ -3,6 +3,11 @@ import { CDBFooter, CDBBtn, CDBIcon, CDBBox } from 'cdbreact';
 import "./Footer.scss"
 
 function Footer() {
+    /**
+        * *Footer of the application
+        * Generated with bootstrap + some modifications for responsive
+        * SCSS file : Footer.css
+    */
     return (
         <CDBFooter className="shadow">
             <CDBBox

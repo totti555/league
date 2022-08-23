@@ -4,6 +4,16 @@ import { useState } from 'react'
 
 const ChampCard = ({ champ, setCurrentChamp }) => {
 
+    /**
+        * *component to display the champion's cards
+        * CSS file : Champcard.scss
+    */
+
+    /**
+        * *to display/hide the champion attributes (role, post, function,...) when clicking on the card 
+        * @param displayAttibutes
+    */
+
     const [displayAttributes, handleClickAttributes] = useState(false);
 
     function canDisplayAttributes(name) {
@@ -11,10 +21,13 @@ const ChampCard = ({ champ, setCurrentChamp }) => {
         handleClickAttributes(!displayAttributes);
     }
 
+
     return (
+        /**
+            * * champ background image
+            * ? text-white class useless ?
+        */
         <div className='champ-card text-white' onClick={() => canDisplayAttributes(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
-            {/* TODO : Insert img */}
-            {/* <img src={champ.photo}></img> */}
             {displayAttributes ? (
                 <img className="nav-chevron-card nav-chevron-animation" src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
             ) : <img className="nav-chevron-card nav-chevron-animation-inverse" src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
@@ -34,19 +47,25 @@ const ChampCard = ({ champ, setCurrentChamp }) => {
 
 const ChampMemo = ({ champ }) => {
 
-    // const [displayWorld, handleClickWorld] = useState(false);
-
-    // function canDisplayWorld() {
-    //     handleClickWorld(!displayWorld);
-    // }
+    /**
+        * *component to display the attributes 
+        * TODO : Use one generic component for all attributes 
+    */
 
 
     return (
 
         <div className=" filters-list-type">
             <div className='champ-memo'>
-
-                {/* TODO : Image for damages_types*/}
+                {
+                    /**
+                        * * Champion damages type part
+                        * Include the img in /assets/Damages-Types
+                        * Animation when hovering with .display-word-animation
+                        * ! Depreciated : bad name for the class, should be change
+                        * @param champ.damages_types
+                    */
+                }
                 <div className='display-world-animation'>
                     {champ.damages_type === "AD" ?
                         (<div>
@@ -63,9 +82,13 @@ const ChampMemo = ({ champ }) => {
                     }
                 </div>
 
-                {/* <hr className='hr-color' /> */}
-
-                {/* TODO : Image for roles*/}
+                {
+                    /**
+                        * * Champion role part
+                        * Include the img in /assets/Post
+                        * @param champ.role
+                    */
+                }
                 <div className='display-world-animation'>
                     {champ.role.map((role) => (
                         <div key={role}>
@@ -76,7 +99,13 @@ const ChampMemo = ({ champ }) => {
                     ))}
                 </div>
 
-                {/* <hr className='hr-color' /> */}
+                {
+                    /**
+                        * * Champion type part
+                        * Include the img in /assets/Type
+                        * @param champ.type
+                    */
+                }
                 <div className='display-world-animation'>
                     {champ.type.map((type) => (
                         <div key={type}>
@@ -86,7 +115,15 @@ const ChampMemo = ({ champ }) => {
                         </div>
                     ))}
                 </div>
-                {/* <hr className='hr-color' /> */}
+
+                {
+                    /**
+                        * * Champion world part
+                        * Include the img in /assets/Region
+                        * !Depreciated : Check div with border-bottom, not like the others attributes
+                        * @param champ.world
+                    */
+                }
                 <div className='display-world-animation'>
                     <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
                     <p className='title text-memo'>{champ.world}</p>
