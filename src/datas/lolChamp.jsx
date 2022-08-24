@@ -572,7 +572,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Jungle'],
         image: Ivern,
-        type: ['Support','Mage'],
+        type: ['Support', 'Mage'],
         release: '2016-10-05'
     },
     {
@@ -582,7 +582,7 @@ export const champList = [
         damages_type: 'AP',
         role: ['Support'],
         image: Janna,
-        type: ["Support",'Mage'],
+        type: ["Support", 'Mage'],
         release: '2009-09-02'
     },
     {
@@ -592,7 +592,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Jungle'],
         image: JarvanIV,
-        type: ['Tank',"Fighter"],
+        type: ['Tank', "Fighter"],
         release: '2011-03-01'
     },
     {
@@ -602,7 +602,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Jungle', 'Top'],
         image: Jax,
-        type: ["Fighter",'Assassin'],
+        type: ["Fighter", 'Assassin'],
         release: '2009-02-21'
     },
     {
@@ -612,7 +612,7 @@ export const champList = [
         damages_type: 'AD',
         role: ['Mid', 'Top'],
         image: Jayce,
-        type: ["Fighter",'Marksman'],
+        type: ["Fighter", 'Marksman'],
         release: '2012-07-07'
     },
     {
@@ -871,7 +871,7 @@ export const champList = [
         world: 'Shadow Isles',
         id: 75,
         damages_type: "AP",
-        role: ['Support','Top'],
+        role: ['Support', 'Top'],
         image: Maokai,
         type: ['Tank', 'Mage'],
         release: '2011-02-16'
@@ -1161,7 +1161,7 @@ export const champList = [
         world: 'Bandle City',
         id: 104,
         damages_type: 'AP',
-        role: ['Top','Mid'],
+        role: ['Top', 'Mid'],
         image: Rumble,
         type: ["Fighter", 'Mage'],
         release: '2011-04-26'
@@ -1267,6 +1267,86 @@ export const champList = [
         release: '2011-08-09'
     },
     {
+        name: 'Sona',
+        world: 'Demacia',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Skarner,
+        type: ["Support", 'Mage'],
+        release: '2010-09-21'
+    },
+    {
+        name: 'Soraka',
+        world: 'Targon',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Skarner,
+        type: ["Support", 'Mage'],
+        release: '2009-02-21'
+    },
+    {
+        name: 'Swain',
+        world: 'Noxus',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Skarner,
+        type: ["Mage", 'Fighter'],
+        release: '2010-10-05'
+    },
+    {
+        name: 'Sylas',
+        world: 'Freljord',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Skarner,
+        type: ["Mage", 'Assassin'],
+        release: '2019-01-25'
+    },
+    {
+        name: 'Syndra',
+        world: 'Ionia',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Skarner,
+        type: ["Mage", 'Support'],
+        release: '2021-09-13'
+    },
+    {
+        name: 'Tahm Kench',
+        world: 'Runeterra',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Top', 'Support'],
+        image: Skarner,
+        type: ["Support", 'Tank'],
+        release: '2015-07-09'
+    },
+    {
+        name: 'Taliyah',
+        world: 'Shurima',
+        id: 114,
+        damages_type: 'AP',
+        role: ['Mid', 'Jungle'],
+        image: Skarner,
+        type: ["Mage", 'Support'],
+        release: '2016-05-18'
+    },
+    {
+        name: 'Talon',
+        world: 'Noxus',
+        id: 114,
+        damages_type: 'AD',
+        role: ['Mid', 'Jungle'],
+        image: Skarner,
+        type: ['Assassin'],
+        release: '2011-08-24'
+    },
+    {
         name: 'Vayne',
         world: 'Demacia',
         id: 137,
@@ -1317,3 +1397,20 @@ export const champList = [
         release: '2012-07-24'
     },
 ]
+
+/*
+TODO : Missing champions
+Taric
+Teemo
+Tresh
+Tristanna
+Trundle
+Tryndamere
+Twisted
+Twitch
+Udyr
+Urgot
+Varus
+...
+Zyra
+*/
