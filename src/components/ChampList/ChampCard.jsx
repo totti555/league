@@ -31,7 +31,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
         const champLinksWith = Object.keys(linksWith[0]);
         // get the duplicates element
         var duplicates = champList.filter(function (c) {
-            return champLinksWith.indexOf(c.name) != -1;
+            return champLinksWith.indexOf(c.name.replaceAll(' ', '_')) != -1;
         });
 
         // concat with the champ selected
