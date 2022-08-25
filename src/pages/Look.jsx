@@ -107,7 +107,6 @@ const Look = (props) => {
         const champFunctionsList = champList.map((champ) => champ.type);
         const removeDuplicatesElements = Array.prototype.concat.apply([], champFunctionsList);
         const uniqueFunctionList = [...new Set(removeDuplicatesElements)];
-        console.log(uniqueFunctionList);
         return uniqueFunctionList;
     }
 

@@ -1,13 +1,15 @@
 import './ChampCard.scss'
 import FlecheBas from "../../assets/fleche-bas.png"
 import { useState } from 'react'
+import { champList } from "../../datas/lolChamp";
 
-const ChampCard = ({ champ, setCurrentChamp }) => {
+const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
 
     /**
         * *component to display the champion's cards
         * CSS file : Champcard.scss
         * Components : ChampMemo
+        * ? props
     */
 
     /**
@@ -20,6 +22,21 @@ const ChampCard = ({ champ, setCurrentChamp }) => {
     function canDisplayAttributes(name) {
         setCurrentChamp(name);
         handleClickAttributes(!displayAttributes);
+    }
+
+    function fetchByChampLinks() {
+        // get the champ links
+        const linksWith = champ.linksWith.map((lw) => lw);
+        // get the name of the champ links
+        const champLinksWith = Object.keys(linksWith[0]);
+        // get the duplicates element
+        var duplicates = champList.filter(function (c) {
+            return champLinksWith.indexOf(c.name) != -1;
+        });
+
+        // concat with the champ selected
+        const result = [champ, ...duplicates];
+        setChampList(result);
     }
 
 
@@ -36,7 +53,7 @@ const ChampCard = ({ champ, setCurrentChamp }) => {
             {displayAttributes && (<ChampMemo champ={champ} display={displayAttributes} />)}
 
 
-
+            <div onClick={fetchByChampLinks}><h3><span className='title'>Click ici</span></h3></div>
             <div className='champ-name'>
                 <h3><span className='title'>{champ.name}</span></h3>
             </div>

@@ -133,7 +133,8 @@ export const champList = [
         role: ["Top"],
         image: Aatrox,
         type: ["Fighter", 'Tank'],
-        release: '2013-06-13'
+        release: '2013-06-13',
+        linksWith: [{ Akshan: 'frere', Yone: 'soeur' }]
     },
     {
         name: 'Ahri',
@@ -1269,7 +1270,7 @@ export const champList = [
     {
         name: 'Sona',
         world: 'Demacia',
-        id: 114,
+        id: 115,
         damages_type: 'AP',
         role: ['Support'],
         image: Skarner,
@@ -1279,7 +1280,7 @@ export const champList = [
     {
         name: 'Soraka',
         world: 'Targon',
-        id: 114,
+        id: 116,
         damages_type: 'AP',
         role: ['Support'],
         image: Skarner,
@@ -1289,7 +1290,7 @@ export const champList = [
     {
         name: 'Swain',
         world: 'Noxus',
-        id: 114,
+        id: 117,
         damages_type: 'AP',
         role: ['Support'],
         image: Skarner,
@@ -1299,7 +1300,7 @@ export const champList = [
     {
         name: 'Sylas',
         world: 'Freljord',
-        id: 114,
+        id: 118,
         damages_type: 'AP',
         role: ['Mid'],
         image: Skarner,
@@ -1309,7 +1310,7 @@ export const champList = [
     {
         name: 'Syndra',
         world: 'Ionia',
-        id: 114,
+        id: 119,
         damages_type: 'AP',
         role: ['Mid'],
         image: Skarner,
@@ -1319,7 +1320,7 @@ export const champList = [
     {
         name: 'Tahm Kench',
         world: 'Runeterra',
-        id: 114,
+        id: 120,
         damages_type: 'AP',
         role: ['Top', 'Support'],
         image: Skarner,
@@ -1329,7 +1330,7 @@ export const champList = [
     {
         name: 'Taliyah',
         world: 'Shurima',
-        id: 114,
+        id: 121,
         damages_type: 'AP',
         role: ['Mid', 'Jungle'],
         image: Skarner,
@@ -1339,12 +1340,132 @@ export const champList = [
     {
         name: 'Talon',
         world: 'Noxus',
-        id: 114,
+        id: 122,
         damages_type: 'AD',
         role: ['Mid', 'Jungle'],
         image: Skarner,
         type: ['Assassin'],
         release: '2011-08-24'
+    },
+    {
+        name: 'Taric',
+        world: 'Targon',
+        id: 123,
+        damages_type: '???',
+        role: ['Support'],
+        image: Skarner,
+        type: ['Support', 'Fighter'],
+        release: '2009-08-19'
+    },
+    {
+        name: 'Teemo',
+        world: 'Bandle City',
+        id: 124,
+        damages_type: 'AP',
+        role: ['Top'],
+        image: Skarner,
+        type: ['Marksman', 'Assassin'],
+        release: '2009-02-21'
+    },
+    {
+        name: 'Thresh',
+        world: 'Shadow Isles',
+        id: 125,
+        damages_type: '???',
+        role: ['Support'],
+        image: Skarner,
+        type: ['Support', 'Fighter'],
+        release: '2013-01-23'
+    },
+    {
+        name: 'Tristanna',
+        world: 'Bandle City',
+        id: 126,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Skarner,
+        type: ['Marksman', 'Assassin'],
+        release: '2009-02-21'
+    },
+    {
+        name: 'Trundle',
+        world: 'Freljord',
+        id: 127,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Vayne,
+        type: ["Fighter", 'Tank'],
+        release: '2010-12-01'
+    },
+    {
+        name: 'Tryndamere',
+        world: 'Freljord',
+        id: 128,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Vayne,
+        type: ["Fighter", 'Assassin'],
+        release: '2009-05-01'
+    },
+    {
+        name: 'Twisted Fate',
+        world: 'Bilgewater',
+        id: 129,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Vayne,
+        type: ["Mage"],
+        release: '2009-02-21'
+    },
+    {
+        name: 'Twitch',
+        world: 'Zaun',
+        id: 130,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Vayne,
+        type: ["Marksman", 'Assassin'],
+        release: '2009-05-01'
+    },
+    {
+        name: 'Udyr',
+        world: 'Freljord',
+        id: 131,
+        damages_type: '???',
+        role: ['Jungle'],
+        image: Vayne,
+        type: ["Fighter", 'Tank'],
+        release: '2009-12-02'
+    },
+    {
+        name: 'Urgot',
+        world: 'Zaun',
+        id: 132,
+        damages_type: '???',
+        role: ['Top'],
+        image: Vayne,
+        type: ["Fighter", 'Tank'],
+        release: '2010-08-24'
+    },
+    {
+        name: 'Varus',
+        world: 'Ionia',
+        id: 133,
+        damages_type: '???',
+        role: ['ADC'],
+        image: Vayne,
+        type: ["Marksman", 'Mage'],
+        release: '2012-05-08'
+    },
+    {
+        name: 'Veigar',
+        world: 'Demacia',
+        id: 134,
+        damages_type: 'AD',
+        role: ['Top', "ADC"],
+        image: Vayne,
+        type: ["Marksman", 'Assassin'],
+        release: '2011-05-10'
     },
     {
         name: 'Vayne',
@@ -1387,6 +1508,36 @@ export const champList = [
         release: '2020-08-06'
     },
     {
+        name: 'Ziggs',
+        world: 'Zaun',
+        id: 154,
+        damages_type: 'AP',
+        role: ['ADC', 'Mid'],
+        image: Zyra,
+        type: ['Mage'],
+        release: '2012-02-01'
+    },
+    {
+        name: 'Zilean',
+        world: 'Runeterra',
+        id: 155,
+        damages_type: 'AP',
+        role: ['Support'],
+        image: Zyra,
+        type: ["Support", 'Mage'],
+        release: '2009-04-18'
+    },
+    {
+        name: 'Zoe',
+        world: 'Targon',
+        id: 156,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Zyra,
+        type: ["Mage", 'Support'],
+        release: '2017-11-21'
+    },
+    {
         name: 'Zyra',
         world: 'Ixtal',
         id: 157,
@@ -1400,17 +1551,27 @@ export const champList = [
 
 /*
 TODO : Missing champions
-Taric
-Teemo
-Tresh
-Tristanna
-Trundle
-Tryndamere
-Twisted
-Twitch
-Udyr
-Urgot
-Varus
-...
+Veigar
+Velkoz
+Vex
+Vi
+Viego
+Viktor
+Vladimir
+Volibear
+Warwick
+Wukong
+Xayah
+Xerath
+Xin Zhao
+Yasuo
+Tone
+Yuumi
+Zac
+Zed
+Zeri
+Ziggs
+Zilean
+Zoe
 Zyra
 */

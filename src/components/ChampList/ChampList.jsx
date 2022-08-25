@@ -96,7 +96,6 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         * the champList is order by name asc by default
     */
 
-
     function fetchByNameDecreasing() {
         if (champList == champ) {
             let sortedData = champList.slice().sort((a, b) => b.id - a.id);
@@ -141,7 +140,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                 <div className='d-flex justify-content-center delete-button my-0'>
                     <div className="wrap">
                         <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" : "↘"} </span></button>
-                        
+
                         <button className="button-filter decreasing" onClick={fetchByDateAscending} >
                             <img src={require("../../assets/calendar.png")} width="20px" height="20px" className="date-logo"></img>
                             <span className="cross">  ↗</span>
@@ -167,7 +166,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                                     && (isChampionFind(champ.name) || !searchResult)) ? (
                                     // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
                                     <div className="d-flex justify-content-center col-12 col-custom-7 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
-                                        <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} />
+                                        <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} setChampList={setChampList} />
                                     </div>) : null
                             }
                         </React.Fragment>
