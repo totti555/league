@@ -23,19 +23,22 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
     /**
        * *to display/hide the champion links when clicking on the links button
        * @param displayLinks
-   */
+    */
 
     const [displayLinks, handleClickLinks] = useState(false);
+
 
 
     function canDisplayAttributes(name) {
         handleClickAttributes(!displayAttributes);
     }
 
-    // const fetchLinks = () => {
-    //     const champLinksWith = Object.keys(linksWith[0]);
-
-    // }
+    /**
+       * *to display the champion links when clicking on the link button
+       * @param champ.linksWith
+       * @param champ setChampList()
+       * @param displayLinks
+    */
 
     function fetchByChampLinks() {
         // get the champ links
@@ -55,6 +58,11 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
 
     }
 
+    /**
+       * *to hind champion links and to reset to the basic list of champions
+       * @param displayLinks
+    */
+
     function resetChampLinks() {
         handleClickLinks(!displayLinks);
         setChampList(champList);
@@ -72,21 +80,33 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
 
             {displayAttributes && (<ChampMemo champ={champ} display={displayAttributes} />)}
 
+            {
 
+                /**
+                    * * Img to display or hide links
+                    * ?Display : Selected or Cross img
+                    * Hide : Family img
+                    * ../assets/Links
+                */
+            }
 
             <div className="family">
                 {
                     displayLinks ?
                         (<img onClick={resetChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>) :
-                        (<img onClick={fetchByChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>)
+                        (
+                            champ.linksWith ?
+                                (<img onClick={fetchByChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>)
+                                : null
+                        )
                 }
 
             </div>
 
             {
                 /**
-                    * * display champLinks
-                    * replace all for name with spaces
+                    * * Img according to links
+                    * ../assets/Links
                 */
             }
 
@@ -123,6 +143,12 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                                                 <img className="card-icon" src={Family} alt="Mentor" width="30px" height="30px"></img>
                                                 <p className='title text-memo'>{linksType}</p>
                                             </div>) : null
+                }
+                {
+                    /**
+                        * * Add "?" Img if it's potential 
+                        * ../assets/Links
+                    */
                 }
                 {
                     /(Potential)+/.test(linksType) ?

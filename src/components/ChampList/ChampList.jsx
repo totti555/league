@@ -10,7 +10,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     /**
         * *To display the list of champions according to filters
-        * CSS file : ChampCard.scss
+        * SCSS file : ChampCard.scss
         * Components : ChampCard, NoChampFound
         * ! Depreciated : create a CSS file ChampList.scss instead of ChampCard.scss
         * TODO : props and variable
@@ -19,11 +19,14 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     /**
         * *to filter the champions by name or by date
-        * SCSS file Champcard.scss
         * @param champ
     */
     const [champ, setChampList] = useState(champList);
 
+    /**
+      * *to filter the champions by links
+      * @param champ
+  */
 
     const [currentChampLinks, setCurrentChampLinks] = useState(null);
 
@@ -134,8 +137,6 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         });
         setChampList(sortedData);
     }
-
-
 
 
 
