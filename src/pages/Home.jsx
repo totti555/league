@@ -137,13 +137,22 @@ const Home = () => {
             </li>
             <li>
               their <strong>functions </strong>(Marksman, Tanks, Assassins, Support,
-              FIghters)
+              Fighters)
             </li>
             <li>
               their <strong>worlds</strong> (you will see, there is more than you think...)
             </li>
             <li>
               you can also search by the <strong>name</strong> of the champion with the search bar
+            </li>
+            <li>
+              you can also filter by<strong> ascending names </strong> or <strong> descending names </strong>
+            </li>
+            <li>
+              you can also filter by<strong> ascending release </strong> or <strong> descending release </strong>
+            </li>
+            <li>
+              you can also filter by the<strong> relationship </strong>of the champ, to see all the<strong> links </strong>between the champions !
             </li>
           </ul>
           {
