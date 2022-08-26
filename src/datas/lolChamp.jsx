@@ -134,7 +134,7 @@ export const champList = [
         image: Aatrox,
         type: ["Fighter", 'Tank'],
         release: '2013-06-13',
-        linksWith: [{ Akshan: 'Frere', Yone: 'Soeur' }]
+        linksWith: [{ Akshan: 'Brother', Yone: 'Sister' }]
     },
     {
         name: 'Ahri',
@@ -156,7 +156,7 @@ export const champList = [
         image: Akali,
         type: ["Assassin"],
         release: '2010-05-11',
-        linksWith: [{ Kennen: 'Friend', Shen:'Friend'}]
+        linksWith: [{ Kennen: 'Friend', Shen: 'Friend' }]
     },
     {
         name: 'Akshan',
@@ -222,7 +222,7 @@ export const champList = [
         image: Aphelios,
         type: ["Marksman"],
         release: '2019-12-11',
-        linksWith: [{ Diana: 'Possible friend', Diana: 'Possible ennemy' }]
+        linksWith: [{ Diana: 'Possible friend', Leona: 'Possible Ennemy' }]
     },
     {
         name: 'Ashe',
@@ -388,7 +388,7 @@ export const champList = [
         image: Diana,
         type: ["Fighter", 'Mage'],
         release: '2012-08-07',
-        linksWith: [{ Nami: 'Allie', Aphelios: 'Potential Allie' }]
+        linksWith: [{ Nami: 'Allie', Aphelios: 'Potential Friends' }]
 
     },
     {

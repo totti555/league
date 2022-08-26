@@ -4,7 +4,7 @@ import Family from "../../assets/family.png"
 import { useState } from 'react'
 import { champList } from "../../datas/lolChamp";
 
-const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
+const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType }) => {
 
     /**
         * *component to display the champion's cards
@@ -20,9 +20,22 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
 
     const [displayAttributes, handleClickAttributes] = useState(false);
 
+    /**
+       * *to display/hide the champion links when clicking on the links button
+       * @param displayLinks
+   */
+
+    const [displayLinks, handleClickLinks] = useState(false);
+
+
     function canDisplayAttributes(name) {
         handleClickAttributes(!displayAttributes);
     }
+
+    // const fetchLinks = () => {
+    //     const champLinksWith = Object.keys(linksWith[0]);
+
+    // }
 
     function fetchByChampLinks() {
         // get the champ links
@@ -31,29 +44,96 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
         const champLinksWith = Object.keys(linksWith[0]);
         // get the duplicates element
         var duplicates = champList.filter(function (c) {
-            return champLinksWith.indexOf(c.name.replaceAll(' ', '_')) != -1;
+            return champLinksWith.indexOf(c.name.replaceAll(' ', '_')) !== -1;
         });
 
         // concat with the champ selected
         const result = [champ, ...duplicates];
         setChampList(result);
+        setCurrentChampLinks(champ.linksWith[0]);
+        handleClickLinks(!displayLinks);
+
     }
 
+    function resetChampLinks() {
+        handleClickLinks(!displayLinks);
+        setChampList(champList);
+    }
 
     return (
         /**
             * * champ background image
             * ? text-white class useless ?
         */
-        <div className='champ-card text-white' onClick={()=>setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
+        <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
             {displayAttributes ? (
-                <img className="nav-chevron-card nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
-            ) : <img className="nav-chevron-card nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
+                <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
+            ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
 
             {displayAttributes && (<ChampMemo champ={champ} display={displayAttributes} />)}
 
 
-            <div onClick={fetchByChampLinks} className="family"><img className="nav-chevron-card" src={Family} alt="Arrow bottom" width="30px" height="30px"></img></div>
+
+            <div className="family">
+                {
+                    displayLinks ?
+                        (<img onClick={resetChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>) :
+                        (<img onClick={fetchByChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>)
+                }
+
+            </div>
+
+            {
+                /**
+                    * * display champLinks
+                    * replace all for name with spaces
+                */
+            }
+
+            {(<div className='links-type'>
+
+                {
+                    /(Friends)+/.test(linksType) ?
+                        (<div className='display-links'>
+                            <img className="card-icon" src={Family} alt="Friend" width="30px" height="30px"></img>
+                            <p className='title text-memo'>{linksType}</p>
+                        </div>) :
+                        /(Allie)+/.test(linksType) ?
+                            (<div className='display-links'>
+                                <img className="card-icon" src={Family} alt="Allie" width="30px" height="30px"></img>
+                                <p className='title text-memo'>{linksType}</p>
+                            </div>) :
+                            /(Ennemy)+/.test(linksType) ?
+                                (<div className='display-links'>
+                                    <img className="card-icon" src={Family} alt="Ennemy" width="30px" height="30px"></img>
+                                    <p className='title text-memo'>{linksType}</p>
+                                </div>) :
+                                /(Family Sister Brother)+/.test(linksType) ?
+                                    (<div className='display-links'>
+                                        <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
+                                        <p className='title text-memo'>{linksType}</p>
+                                    </div>) :
+                                    /(Boyfriend Girlfriend)+/.test(linksType) ?
+                                        (<div className='display-links'>
+                                            <img className="card-icon" src={Family} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
+                                            <p className='title text-memo'>{linksType}</p>
+                                        </div>) :
+                                        /(Mentor)+/.test(linksType) ?
+                                            (<div className='display-links'>
+                                                <img className="card-icon" src={Family} alt="Mentor" width="30px" height="30px"></img>
+                                                <p className='title text-memo'>{linksType}</p>
+                                            </div>) : null
+                }
+                {
+                    /(Potential)+/.test(linksType) ?
+                        (<div className='display-links'>
+                            <img className="card-icon" src={Family} alt="Unknown" width="30px" height="30px"></img>
+                            <p className='title text-memo'>{linksType}</p>
+                        </div>) : null
+
+                }
+            </div>)
+            }
             <div className='champ-name'>
                 <h3><span className='title'>{champ.name}</span></h3>
             </div>

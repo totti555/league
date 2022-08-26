@@ -25,6 +25,8 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
     const [champ, setChampList] = useState(champList);
 
 
+    const [currentChampLinks, setCurrentChampLinks] = useState(null);
+
     /**
         * *to display a div when no champions are found
         * TODO : doesn't work currently
@@ -96,16 +98,16 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
     */
 
     function fetchByNameDecreasing() {
-       
-            let sortedData = champ.slice().sort((a, b) => b.id - a.id);
-            setChampList(sortedData);
-        
+
+        let sortedData = champ.slice().sort((a, b) => b.id - a.id);
+        setChampList(sortedData);
+
     }
 
-    
+
     function fetchByNameAscending() {
-            let sortedData = champ.slice().sort((a, b) => a.id - b.id);
-            setChampList(sortedData);
+        let sortedData = champ.slice().sort((a, b) => a.id - b.id);
+        setChampList(sortedData);
     }
 
     /**
@@ -147,11 +149,11 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                         <button className="button-filter decreasing mx-2" onClick={fetchByNameAscending} ><span className="display-name">Name</span><span className='cross'>↘</span></button>
 
                         <button className="button-filter decreasing mx-2" onClick={fetchByDateAscending} >
-                        <span className="display-name">Date</span><span className='cross'>↗ </span>
+                            <span className="display-name">Date</span><span className='cross'>↗ </span>
                         </button>
 
                         <button className="button-filter decreasing mx-2" onClick={fetchByDateDecreasing} >
-                        <span className="display-name">Date</span><span className='cross'>↘ </span>
+                            <span className="display-name">Date</span><span className='cross'>↘ </span>
                         </button>
                     </div>
                 </div>
@@ -166,11 +168,12 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                                     && (isCheckedType(champ.damages_type) || !checkedType.length)
                                     && (isCheckedWorld(champ.world) || !checkedWorld.length)
                                     && (isCheckedChampFunction(champ.type) || !checkedChampFunction.length)
-                                    && (isChampionFind(champ.name) || !searchResult)) ? (
-                                    // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
-                                    <div className="d-flex justify-content-center col-12 col-custom-7 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
-                                        <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} setChampList={setChampList} />
-                                    </div>) : null
+                                    && (isChampionFind(champ.name) || !searchResult))
+                                    ? (
+                                        // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
+                                        <div className="d-flex justify-content-center col-12 col-custom-7 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
+                                            <ChampCard champ={champ} setCurrentChamp={setCurrentChamp} setChampList={setChampList} currentChampLinks={currentChampLinks} setCurrentChampLinks={setCurrentChampLinks} linksType={currentChampLinks ? currentChampLinks[champ.name] : ''} />
+                                        </div>) : null
                             }
                         </React.Fragment>
                     )}
