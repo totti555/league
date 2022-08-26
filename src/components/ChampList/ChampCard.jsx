@@ -1,5 +1,6 @@
 import './ChampCard.scss'
 import FlecheBas from "../../assets/fleche-bas.png"
+import Family from "../../assets/family.png"
 import { useState } from 'react'
 import { champList } from "../../datas/lolChamp";
 
@@ -20,7 +21,6 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
     const [displayAttributes, handleClickAttributes] = useState(false);
 
     function canDisplayAttributes(name) {
-        setCurrentChamp(name);
         handleClickAttributes(!displayAttributes);
     }
 
@@ -45,15 +45,15 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList }) => {
             * * champ background image
             * ? text-white class useless ?
         */
-        <div className='champ-card text-white' onClick={() => canDisplayAttributes(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
+        <div className='champ-card text-white' onClick={()=>setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
             {displayAttributes ? (
-                <img className="nav-chevron-card nav-chevron-animation" src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
-            ) : <img className="nav-chevron-card nav-chevron-animation-inverse" src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
+                <img className="nav-chevron-card nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
+            ) : <img className="nav-chevron-card nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
 
             {displayAttributes && (<ChampMemo champ={champ} display={displayAttributes} />)}
 
 
-            <div onClick={fetchByChampLinks}><h3><span className='title'>Click ici</span></h3></div>
+            <div onClick={fetchByChampLinks} className="family"><img className="nav-chevron-card" src={Family} alt="Arrow bottom" width="30px" height="30px"></img></div>
             <div className='champ-name'>
                 <h3><span className='title'>{champ.name}</span></h3>
             </div>

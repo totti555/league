@@ -93,15 +93,19 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     /**
         * *to filter the champions order by name desc
-        * the champList is order by name asc by default
     */
 
     function fetchByNameDecreasing() {
-        if (champList == champ) {
-            let sortedData = champList.slice().sort((a, b) => b.id - a.id);
+       
+            let sortedData = champ.slice().sort((a, b) => b.id - a.id);
             setChampList(sortedData);
-        }
-        else setChampList(champList);
+        
+    }
+
+    
+    function fetchByNameAscending() {
+            let sortedData = champ.slice().sort((a, b) => a.id - b.id);
+            setChampList(sortedData);
     }
 
     /**
@@ -139,16 +143,15 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                 <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
                 <div className='d-flex justify-content-center delete-button my-0'>
                     <div className="wrap">
-                        <button className="button-filter decreasing" onClick={fetchByNameDecreasing} ><span className="display-name">Name    </span><span className='cross'>{champList == champ ? "↗" : "↘"} </span></button>
+                        <button className="button-filter decreasing mx-2" onClick={fetchByNameDecreasing} ><span className="display-name">Name</span><span className='cross'>↗ </span></button>
+                        <button className="button-filter decreasing mx-2" onClick={fetchByNameAscending} ><span className="display-name">Name</span><span className='cross'>↘</span></button>
 
-                        <button className="button-filter decreasing" onClick={fetchByDateAscending} >
-                            <img src={require("../../assets/calendar.png")} width="20px" height="20px" className="date-logo"></img>
-                            <span className="cross">  ↗</span>
+                        <button className="button-filter decreasing mx-2" onClick={fetchByDateAscending} >
+                        <span className="display-name">Date</span><span className='cross'>↗ </span>
                         </button>
 
-                        <button className="button-filter decreasing" onClick={fetchByDateDecreasing} >
-                            <img src={require("../../assets/calendar.png")} width="20px" height="20px" className="date-logo"></img>
-                            <span className='cross'>  ↘</span>
+                        <button className="button-filter decreasing mx-2" onClick={fetchByDateDecreasing} >
+                        <span className="display-name">Date</span><span className='cross'>↘ </span>
                         </button>
                     </div>
                 </div>

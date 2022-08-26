@@ -156,8 +156,7 @@ export const champList = [
         image: Akali,
         type: ["Assassin"],
         release: '2010-05-11',
-        linksWith: [{ Kennen: 'Friend', Akali: 'Friend' }]
-
+        linksWith: [{ Kennen: 'Friend', Shen:'Friend'}]
     },
     {
         name: 'Akshan',

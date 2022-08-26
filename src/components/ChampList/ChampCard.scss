@@ -196,6 +196,7 @@ html {
     .cross {
         font-size: 16px;
     }
+    width: 20px;
 }
 
 .date-logo {
@@ -297,16 +298,22 @@ html {
 
 // name in decrease order button
 
+.family {
+    position: absolute;
+    top : 0.313rem;
+    left: 3.2rem;
+}
+
 @media (min-width: 800px) {
     .decreasing {
-        width: 11.25rem !important;
+        width: 4.25rem !important;
     }
 }
 
 @media (min-width: 600px) and (max-width: 800px) {
     .decreasing {
         height: 2rem !important;
-        width: 11.25rem !important;
+        width: 4.25rem !important;
     }
 }
 
@@ -317,7 +324,7 @@ html {
     }
 }
 
-@media (min-width: 0px) and (max-width: 300px) {
+@media (min-width: 0px) and (max-width: 600px) {
 
     .display-name {
         display: none;
