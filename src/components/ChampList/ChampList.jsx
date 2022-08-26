@@ -39,10 +39,10 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         * ?  element.classList.toggle("champ-card");
         * ?  }, [searchResult]);
     */
-    const ifNoChampSelected = () => {
-        const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
-        return champIsFind ? false : true
-    }
+    // const ifNoChampSelected = () => {
+    //     const champIsFind = champList.find((champ) => (role === champ.role || !role) && (type === champ.damages_type || !type) && (world === champ.world || !world));
+    //     return champIsFind ? false : true
+    // }
 
     /**
         * *find champions by the functions selected 
@@ -158,6 +158,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                         </button>
                     </div>
                 </div>
+                <ChampionNumberFound champNumber={champ.length} />
             </div>
             <br />
             <div className="container">
@@ -179,7 +180,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                         </React.Fragment>
                     )}
                 </div>
-                {ifNoChampSelected() ? (<div className="no-champ-find"> <NoChampFound /></div>) : null}
+                {!champ.length ? (<div className="no-champ-find"> <NoChampFound /></div>) : null}
 
 
             </div>
@@ -195,8 +196,17 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 const NoChampFound = () => {
     return (
         <div>
-            <p>Pas de champion trouve</p>
-            <p>Reesayez avec d'autres filtres !</p>
+            <p>No champ found !</p>
+            <p>Retry with others filters or reset it</p>
+        </div>
+    )
+}
+
+const ChampionNumberFound = (props) => {
+    const champNumber = props.champNumber;
+    return (
+        <div>
+            {champNumber} found.
         </div>
     )
 }
