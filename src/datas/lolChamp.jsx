@@ -1,12 +1,3 @@
-import Kaisa from "../assets/Champ/Kaisa.jpg"
-import Yasuo from "../assets/Champ/Yasuo.jpg"
-import Yone from "../assets/Champ/Yone.jpg"
-import Garen from "../assets/Champ/Garen.jpg"
-import Irelia from "../assets/Champ/Irelia.jpg"
-import Darius from "../assets/Champ/Darius.jpg"
-import Pyke from "../assets/Champ/Pyke.jpg"
-import LeBlanc from "../assets/Champ/LeBlanc.jpg"
-import Vayne from "../assets/Champ/Vayne.jpg"
 import Aatrox from "../assets/Champ/Aatrox.jpg"
 import Ahri from "../assets/Champ/Ahri.jpg"
 import Akali from "../assets/Champ/Akali.jpg"
@@ -29,6 +20,7 @@ import Camille from "../assets/Champ/Camille.jpg"
 import Cassiopeia from "../assets/Champ/Cassiopeia.jpg"
 import Chogath from "../assets/Champ/Chogath.jpg"
 import Corki from "../assets/Champ/Corki.jpg"
+import Darius from "../assets/Champ/Darius.jpg"
 import Diana from "../assets/Champ/Diana.jpg"
 import Draven from "../assets/Champ/Draven.jpg"
 import DrMundo from "../assets/Champ/DrMundo.jpg"
@@ -41,6 +33,7 @@ import Fiora from "../assets/Champ/Fiora.jpg"
 import Fizz from "../assets/Champ/Fizz.jpg"
 import Galio from "../assets/Champ/Galio.jpg"
 import Gangplank from "../assets/Champ/Gangplank.jpg"
+import Garen from "../assets/Champ/Garen.jpg"
 import Gnar from "../assets/Champ/Gnar.jpg"
 import Gragas from "../assets/Champ/Gragas.jpg"
 import Graves from "../assets/Champ/Graves.jpg"
@@ -48,6 +41,7 @@ import Gwen from "../assets/Champ/Gwen.jpg"
 import Hecarim from "../assets/Champ/Hecarim.jpg"
 import Heimerdinger from "../assets/Champ/Heimerdinger.jpg"
 import Illaoi from "../assets/Champ/Illaoi.jpg"
+import Irelia from "../assets/Champ/Irelia.jpg"
 import Ivern from "../assets/Champ/Ivern.jpg"
 import Janna from "../assets/Champ/Janna.jpg"
 import JarvanIV from "../assets/Champ/Jarvan_IV.jpg"
@@ -55,6 +49,7 @@ import Jax from "../assets/Champ/Jax.jpg"
 import Jayce from "../assets/Champ/Jayce.jpg"
 import Jhin from "../assets/Champ/Jhin.jpg"
 import Jinx from "../assets/Champ/Jinx.jpg"
+import Kaisa from "../assets/Champ/Kaisa.jpg"
 import Kalista from "../assets/Champ/Kalista.jpg"
 import Karma from "../assets/Champ/Karma.jpg"
 import Karthus from "../assets/Champ/Karthus.jpg"
@@ -67,6 +62,7 @@ import Khazix from "../assets/Champ/Khazix.jpg"
 import Kindred from "../assets/Champ/Kindred.jpg"
 import Kled from "../assets/Champ/Kled.jpg"
 import Kogmaw from "../assets/Champ/Kogmaw.jpg"
+import LeBlanc from "../assets/Champ/LeBlanc.jpg"
 import LeeSin from "../assets/Champ/LeeSin.jpg"
 import Leona from "../assets/Champ/Leona.jpg"
 import Lillia from "../assets/Champ/Lillia.jpg"
@@ -93,8 +89,9 @@ import Olaf from "../assets/Champ/Olaf.jpg"
 import Orianna from "../assets/Champ/Orianna.jpg"
 import Ornn from "../assets/Champ/Ornn.jpg"
 import Pantheon from "../assets/Champ/Pantheon.jpg"
-import Qiyana from "../assets/Champ/Qiyana.jpg"
 import Poppy from "../assets/Champ/Poppy.jpg"
+import Pyke from "../assets/Champ/Pyke.jpg"
+import Qiyana from "../assets/Champ/Qiyana.jpg"
 import Quinn from "../assets/Champ/Quinn.jpg"
 import Rakan from "../assets/Champ/Rakan.jpg"
 import Rammus from "../assets/Champ/Rammus.jpg"
@@ -107,18 +104,61 @@ import Riven from "../assets/Champ/Riven.jpg"
 import Rumble from "../assets/Champ/Rumble.jpg"
 import Ryze from "../assets/Champ/Ryze.jpg"
 import Samira from "../assets/Champ/Samira.jpg"
+import Sejuani from "../assets/Champ/Sejuani.jpg"
 import Senna from "../assets/Champ/Senna.jpg"
 import Seraphine from "../assets/Champ/Seraphine.jpg"
+import Sett from "../assets/Champ/Sett.jpg"
 import Shaco from "../assets/Champ/Shaco.jpg"
 import Shen from "../assets/Champ/Shen.jpg"
 import Shyvana from "../assets/Champ/Shyvana.jpg"
 import Singed from "../assets/Champ/Singed.jpg"
 import Sion from "../assets/Champ/Sion.jpg"
+import Sivir from "../assets/Champ/Sivir.jpg"
 import Skarner from "../assets/Champ/Skarner.jpg"
+import Sona from "../assets/Champ/Sona.jpg"
+import Soraka from "../assets/Champ/Soraka.jpg"
+import Swain from "../assets/Champ/Swain.jpg"
+import Sylas from "../assets/Champ/Sylas.jpg"
+import Syndra from "../assets/Champ/Syndra.jpg"
+import Tahm_Kench from "../assets/Champ/Tahm_Kench.jpg"
+import Taliyah from "../assets/Champ/Taliyah.jpg"
+import Talon from "../assets/Champ/Talon.jpg"
+import Taric from "../assets/Champ/Taric.jpg"
+import Teemo from "../assets/Champ/Teemo.jpg"
+import Thresh from "../assets/Champ/Thresh.jpg"
+import Tristana from "../assets/Champ/Tristana.jpg"
+import Trundle from "../assets/Champ/Trundle.jpg"
+import Tryndamere from "../assets/Champ/Tryndamere.jpg"
+import Twisted_Fate from "../assets/Champ/Twisted_Fate.jpg"
+import Twitch from "../assets/Champ/Twitch.jpg"
+import Udyr from "../assets/Champ/Udyr.jpg"
+import Urgot from "../assets/Champ/Urgot.jpg"
+import Varus from "../assets/Champ/Varus.jpg"
+import Vayne from "../assets/Champ/Vayne.jpg"
+import Veigar from "../assets/Champ/Veigar.jpg"
+import Velkoz from "../assets/Champ/Velkoz.jpg"
+import Vex from "../assets/Champ/Vex.jpg"
+import Vi from "../assets/Champ/Vi.jpg"
+import Viego from "../assets/Champ/Viego.jpg"
+import Viktor from "../assets/Champ/Viktor.jpg"
+import Vladimir from "../assets/Champ/Vladimir.jpg"
+import Volibear from "../assets/Champ/Volibear.jpg"
+import Warwick from "../assets/Champ/Warwick.jpg"
+import Wukong from "../assets/Champ/Wukong.jpg"
+import Xayah from "../assets/Champ/Xayah.jpg"
+import Xin_Zhao from "../assets/Champ/Xin_Zhao.jpg"
 import Xerath from "../assets/Champ/Xerath.jpg"
+import Yasuo from "../assets/Champ/Yasuo.jpg"
+import Yone from "../assets/Champ/Yone.jpg"
+import Yorick from "../assets/Champ/Yorick.jpg"
+import Yuumi from "../assets/Champ/Yuumi.jpg"
+import Zac from "../assets/Champ/Zac.jpg"
+import Zed from "../assets/Champ/Zed.jpg"
+import Zeri from "../assets/Champ/Zeri.jpg"
+import Ziggs from "../assets/Champ/Ziggs.jpg"
+import Zilean from "../assets/Champ/Zilean.jpg"
+import Zoe from "../assets/Champ/Zoe.jpg"
 import Zyra from "../assets/Champ/Zyra.jpg"
-
-
 
 
 
@@ -1296,9 +1336,20 @@ export const champList = [
         linksWith: ['']
     },
     {
+        name: 'Sejuani',
+        world: 'Freljord',
+        id: 107,
+        damages_type: '???',
+        role: ['Jungler'],
+        image: Sejuani,
+        type: ["???"],
+        release: '???',
+        linksWith: ['???']
+    },
+    {
         name: 'Senna',
         world: 'Runeterra',
-        id: 107,
+        id: 108,
         damages_type: 'AD',
         role: ['Support'],
         image: Senna,
@@ -1309,7 +1360,7 @@ export const champList = [
     {
         name: 'Seraphine',
         world: 'Piltover',
-        id: 108,
+        id: 109,
         damages_type: 'AP',
         role: ['Support'],
         image: Seraphine,
@@ -1318,9 +1369,20 @@ export const champList = [
         linksWith: ['']
     },
     {
+        name: 'Sett',
+        world: 'Ionia',
+        id: 110,
+        damages_type: 'AD',
+        role: ['Top'],
+        image: Sett,
+        type: ["Fighter"],
+        release: '2020-01-14',
+        linksWith: ['']
+    },
+    {
         name: 'Shaco',
         world: 'Runeterra',
-        id: 109,
+        id: 111,
         damages_type: 'AP',
         role: ['Jungle'],
         image: Shaco,
@@ -1331,7 +1393,7 @@ export const champList = [
     {
         name: 'Shen',
         world: 'Ionia',
-        id: 110,
+        id: 112,
         damages_type: 'AD',
         role: ['Top'],
         image: Shen,
@@ -1342,7 +1404,7 @@ export const champList = [
     {
         name: 'Shyvana',
         world: 'Demacia',
-        id: 111,
+        id: 113,
         damages_type: 'AP',
         role: ['Jungle'],
         image: Shyvana,
@@ -1353,7 +1415,7 @@ export const champList = [
     {
         name: 'Singed',
         world: 'Zaun',
-        id: 112,
+        id: 114,
         damages_type: 'AP',
         role: ['Top'],
         image: Singed,
@@ -1364,7 +1426,7 @@ export const champList = [
     {
         name: 'Sion',
         world: 'Noxus',
-        id: 113,
+        id: 115,
         damages_type: 'AD',
         role: ['Top'],
         image: Sion,
@@ -1373,9 +1435,20 @@ export const champList = [
         linksWith: [{ Jarvan_IV: 'Ennemy', Karma: 'Ennemy' }]
     },
     {
+        name: 'Sivir',
+        world: 'Shurima',
+        id: 116,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Sivir,
+        type: ['Marksman'],
+        release: '???',
+        linksWith: ['???']
+    },
+    {
         name: 'Skarner',
         world: 'Shurima',
-        id: 114,
+        id: 117,
         damages_type: 'AD',
         role: ['Jungle'],
         image: Skarner,
@@ -1386,10 +1459,10 @@ export const champList = [
     {
         name: 'Sona',
         world: 'Demacia',
-        id: 115,
+        id: 118,
         damages_type: 'AP',
         role: ['Support'],
-        image: Skarner,
+        image: Sona,
         type: ["Support", 'Mage'],
         release: '2010-09-21',
         linksWith: ['']
@@ -1397,10 +1470,10 @@ export const champList = [
     {
         name: 'Soraka',
         world: 'Targon',
-        id: 116,
+        id: 119,
         damages_type: 'AP',
         role: ['Support'],
-        image: Skarner,
+        image: Soraka,
         type: ["Support", 'Mage'],
         release: '2009-02-21',
         linksWith: ['']
@@ -1408,10 +1481,10 @@ export const champList = [
     {
         name: 'Swain',
         world: 'Noxus',
-        id: 117,
+        id: 120,
         damages_type: 'AP',
         role: ['Support'],
-        image: Skarner,
+        image: Swain,
         type: ["Mage", 'Fighter'],
         release: '2010-10-05',
         linksWith: { Darius: 'Allie', Katarina: 'Allie', Talon: 'Allie', Gangplank: 'Ennemy', Leblanc: 'Ennemy', Irelia: 'Ennemy', Urgot: 'Ennemy' }
@@ -1419,10 +1492,10 @@ export const champList = [
     {
         name: 'Sylas',
         world: 'Freljord',
-        id: 118,
+        id: 121,
         damages_type: 'AP',
         role: ['Mid'],
-        image: Skarner,
+        image: Sylas,
         type: ["Mage", 'Assassin'],
         release: '2019-01-25',
         linksWith: [{ Galio: 'Friends', Lux: 'Friends' }]
@@ -1430,10 +1503,10 @@ export const champList = [
     {
         name: 'Syndra',
         world: 'Ionia',
-        id: 119,
+        id: 122,
         damages_type: 'AP',
         role: ['Mid'],
-        image: Skarner,
+        image: Syndra,
         type: ["Mage", 'Support'],
         release: '2021-09-13',
         linksWith: ['']
@@ -1441,10 +1514,10 @@ export const champList = [
     {
         name: 'Tahm Kench',
         world: 'Runeterra',
-        id: 120,
+        id: 123,
         damages_type: 'AP',
         role: ['Top', 'Support'],
-        image: Skarner,
+        image: Tahm_Kench,
         type: ["Support", 'Tank'],
         release: '2015-07-09',
         linksWith: ['']
@@ -1452,10 +1525,10 @@ export const champList = [
     {
         name: 'Taliyah',
         world: 'Shurima',
-        id: 121,
+        id: 124,
         damages_type: 'AP',
         role: ['Mid', 'Jungle'],
-        image: Skarner,
+        image: Taliyah,
         type: ["Mage", 'Support'],
         release: '2016-05-18',
         linksWith: [{ Nasus: 'Friends', Sivir: 'Friends', Yasuo: 'Mentor' }]
@@ -1463,10 +1536,10 @@ export const champList = [
     {
         name: 'Talon',
         world: 'Noxus',
-        id: 122,
+        id: 125,
         damages_type: 'AD',
         role: ['Mid', 'Jungle'],
-        image: Skarner,
+        image: Talon,
         type: ['Assassin'],
         release: '2011-08-24',
         linksWith: [{ Cassiopeia: 'Sister', Katarina: 'Sister', Darius: 'Allie', Swain: 'Allie' }]
@@ -1474,10 +1547,10 @@ export const champList = [
     {
         name: 'Taric',
         world: 'Targon',
-        id: 123,
+        id: 126,
         damages_type: '???',
         role: ['Support'],
-        image: Skarner,
+        image: Taric,
         type: ['Support', 'Fighter'],
         release: '2009-08-19',
         linksWith: ['']
@@ -1485,10 +1558,10 @@ export const champList = [
     {
         name: 'Teemo',
         world: 'Bandle City',
-        id: 124,
+        id: 127,
         damages_type: 'AP',
         role: ['Top'],
-        image: Skarner,
+        image: Teemo,
         type: ['Marksman', 'Assassin'],
         release: '2009-02-21',
         linksWith: [{ Tristanna: 'Potential Girlfriend' }]
@@ -1496,21 +1569,21 @@ export const champList = [
     {
         name: 'Thresh',
         world: 'Shadow Isles',
-        id: 125,
+        id: 128,
         damages_type: '???',
         role: ['Support'],
-        image: Skarner,
+        image: Thresh,
         type: ['Support', 'Fighter'],
         release: '2013-01-23',
         linksWith: [{ Lucian: 'Ennemy', Senna: 'Ennemy' }]
     },
     {
-        name: 'Tristanna',
+        name: 'Tristana',
         world: 'Bandle City',
-        id: 126,
+        id: 129,
         damages_type: 'AD',
         role: ['ADC'],
-        image: Skarner,
+        image: Tristana,
         type: ['Marksman', 'Assassin'],
         release: '2009-02-21',
         linksWith: [{ Teemo: 'Potential Boyfriend', Lulu: 'Friends' }]
@@ -1518,10 +1591,10 @@ export const champList = [
     {
         name: 'Trundle',
         world: 'Freljord',
-        id: 127,
+        id: 130,
         damages_type: 'AD',
         role: ['Top'],
-        image: Vayne,
+        image: Trundle,
         type: ["Fighter", 'Tank'],
         release: '2010-12-01',
         linksWith: [{ Lissandra: 'Friends / Allie' }]
@@ -1529,10 +1602,10 @@ export const champList = [
     {
         name: 'Tryndamere',
         world: 'Freljord',
-        id: 128,
+        id: 131,
         damages_type: 'AD',
         role: ['Top'],
-        image: Vayne,
+        image: Tryndamere,
         type: ["Fighter", 'Assassin'],
         release: '2009-05-01',
         linksWith: [{ Ashe: 'Girlfriend', Aatrox: 'Ennemy' }]
@@ -1540,10 +1613,10 @@ export const champList = [
     {
         name: 'Twisted Fate',
         world: 'Bilgewater',
-        id: 129,
+        id: 132,
         damages_type: 'AP',
         role: ['Mid'],
-        image: Vayne,
+        image: Twisted_Fate,
         type: ["Mage"],
         release: '2009-02-21',
         linksWith: [{ Miss_Fortune: 'Friends', Graves: 'Friends', Gangplank: 'Ennemy' }]
@@ -1551,10 +1624,10 @@ export const champList = [
     {
         name: 'Twitch',
         world: 'Zaun',
-        id: 130,
+        id: 133,
         damages_type: 'AD',
         role: ['ADC'],
-        image: Vayne,
+        image: Twitch,
         type: ["Marksman", 'Assassin'],
         release: '2009-05-01',
         linksWith: ['']
@@ -1562,10 +1635,10 @@ export const champList = [
     {
         name: 'Udyr',
         world: 'Freljord',
-        id: 131,
+        id: 134,
         damages_type: '???',
         role: ['Jungle'],
-        image: Vayne,
+        image: Udyr,
         type: ["Fighter", 'Tank'],
         release: '2009-12-02',
         linksWith: [{ Sejuani: 'Potential Family', Lee_Sin: 'Friends', Volibear: 'Ennemy' }]
@@ -1573,10 +1646,10 @@ export const champList = [
     {
         name: 'Urgot',
         world: 'Zaun',
-        id: 132,
+        id: 135,
         damages_type: '???',
         role: ['Top'],
-        image: Vayne,
+        image: Urgot,
         type: ["Fighter", 'Tank'],
         release: '2010-08-24',
         linksWith: [{ Swain: 'Ennemy' }]
@@ -1584,24 +1657,13 @@ export const champList = [
     {
         name: 'Varus',
         world: 'Ionia',
-        id: 133,
+        id: 136,
         damages_type: '???',
         role: ['ADC'],
-        image: Vayne,
+        image: Varus,
         type: ["Marksman", 'Mage'],
         release: '2012-05-08',
         linksWith: ['']
-    },
-    {
-        name: 'Veigar',
-        world: 'Demacia',
-        id: 134,
-        damages_type: 'AD',
-        role: ['Top', "ADC"],
-        image: Vayne,
-        type: ["Marksman", 'Assassin'],
-        release: '2011-05-10',
-        linksWith: [{ Mordekaiser: 'Apprentice' }]
     },
     {
         name: 'Vayne',
@@ -1615,9 +1677,130 @@ export const champList = [
         linksWith: [{ Evelynn: 'Ennemy' }]
     },
     {
+        name: 'Veigar',
+        world: 'Bandle City',
+        id: 138,
+        damages_type: 'AP',
+        role: ['Mid', "ADC", 'Supp'],
+        image: Veigar,
+        type: ["Mage"],
+        release: '2009-07-24',
+        linksWith: [{ Mordekaiser: 'Apprentice' }]
+    },
+    {
+        name: 'Velkoz',
+        world: 'Bandle City',
+        id: 139,
+        damages_type: 'AP',
+        role: ['Mid', 'Support'],
+        image: Velkoz,
+        type: ["Mage"],
+        release: '2014-02-27',
+        linksWith: ['???']
+    },
+    {
+        name: 'Vex',
+        world: 'Shadow Isles',
+        id: 140,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Vex,
+        type: ["Mage"],
+        release: '2021-09-23',
+        linksWith: ['???']
+    },
+    {
+        name: 'Vi',
+        world: 'Piltover',
+        id: 141,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Vi,
+        type: ["Fighter"],
+        release: '2012-12-19',
+        linksWith: [{ Jinx: 'Sister / Ennemy', Caitlyn: 'Friends', Ekko: 'Potential Friends' }]
+    },
+    {
+        name: 'Viego',
+        world: 'Shadow Isles',
+        id: 142,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Viego,
+        type: ["Assassin"],
+        release: '2021-01-21',
+        linksWith: ['???']
+    },
+    {
+        name: 'Viktor',
+        world: 'Zaun',
+        id: 143,
+        damages_type: 'AP',
+        role: ['Mid'],
+        image: Viktor,
+        type: ['Mage'],
+        release: '2011-12-29',
+        linksWith: [{ Blitzcrank: 'Family', Jayce: 'Ennemy' }]
+    },
+    {
+        name: 'Vladimir',
+        world: 'Noxus',
+        id: 144,
+        damages_type: '???',
+        role: ['Top', 'Mid'],
+        image: Vladimir,
+        type: ["???"],
+        release: '2010-07-27',
+        linksWith: ['???']
+    },
+    {
+        name: 'Volibear',
+        world: 'Freljord',
+        id: 145,
+        damages_type: 'AD',
+        role: ['Top', 'Jungler'],
+        image: Volibear,
+        type: ["Fighter"],
+        release: '2011-11-29',
+        linksWith: ['???']
+    },
+    {
+        name: 'Warwick',
+        world: 'Zaun',
+        id: 146,
+        damages_type: 'AD',
+        role: ['Jungler', 'Top'],
+        image: Warwick,
+        type: ["Fighter"],
+        release: '2009-02-21',
+        linksWith: ['???']
+    },
+    {
+        name: 'Wukong',
+        world: 'Ionia',
+        id: 147,
+        damages_type: 'AD',
+        role: ['Top', 'Jungler'],
+        image: Wukong,
+        type: ["Fighter"],
+        release: '2011-07-26',
+        linksWith: ['???']
+    },
+    {
+        name: 'Xayah',
+        world: 'Ionia',
+        id: 148,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Xayah,
+        type: ["Marksman"],
+        release: '2017-04-19',
+        linksWith: [{ Rakan: 'Boyfriend' }]
+    },
+    {
         name: 'Xerath',
         world: 'Shurima',
-        id: 148,
+        id: 149,
         damages_type: 'AP',
         role: ['Mid', 'Support'],
         image: Xerath,
@@ -1626,9 +1809,20 @@ export const champList = [
         linksWith: [{ Azir: 'Friends / Teacher / Ennemy', Nasus: 'Ennemy', Renekton: 'Ennemy' }]
     },
     {
+        name: 'Xin Zhao',
+        world: 'Demacia',
+        id: 150,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Xin_Zhao,
+        type: ['Fighter'],
+        release: '2010-07-13',
+        linksWith: [{ Garen: 'Friends', Quinn: 'Allie', Jarvan_IV: 'Allie' }]
+    },
+    {
         name: 'Yasuo',
         world: 'Ionia',
-        id: 150,
+        id: 151,
         damages_type: 'AD',
         role: ['Mid', "Top", "ADC"],
         image: Yasuo,
@@ -1639,7 +1833,7 @@ export const champList = [
     {
         name: 'Yone',
         world: 'Ionia',
-        id: 151,
+        id: 152,
         damages_type: 'AD',
         role: ['Mid', "Top"],
         image: Yone,
@@ -1648,12 +1842,67 @@ export const champList = [
         linksWith: [{ Yasuo: 'Brother / Ennemy' }]
     },
     {
-        name: 'Ziggs',
-        world: 'Zaun',
+        name: 'Yorick',
+        world: 'Shadow Isles',
+        id: 153,
+        damages_type: '???',
+        role: ['Top'],
+        image: Yorick,
+        type: ["Fighter"],
+        release: '2011-06-22',
+        linksWith: ['???']
+    },
+    {
+        name: 'Yuumi',
+        world: 'Bandle City',
         id: 154,
         damages_type: 'AP',
+        role: ['Support'],
+        image: Yuumi,
+        type: ["Support"],
+        release: '2019-05-14',
+        linksWith: ['???']
+    },
+    {
+        name: 'Zac',
+        world: 'Zaun',
+        id: 155,
+        damages_type: 'AD',
+        role: ['Jungle'],
+        image: Zac,
+        type: ["Tank"],
+        release: '2013-03-29',
+        linksWith: ['???']
+    },
+    {
+        name: 'Zed',
+        world: 'Ionia',
+        id: 156,
+        damages_type: 'AD',
+        role: ['Jungle', 'Mid'],
+        image: Zed,
+        type: ["Assassin"],
+        release: '2012-11-13',
+        linksWith: ['???']
+    },
+    {
+        name: 'Zeri',
+        world: 'Zaun',
+        id: 157,
+        damages_type: 'AD',
+        role: ['ADC'],
+        image: Zeri,
+        type: ["Marksman"],
+        release: '2022-01-20',
+        linksWith: ['???']
+    },
+    {
+        name: 'Ziggs',
+        world: 'Zaun',
+        id: 158,
+        damages_type: 'AP',
         role: ['ADC', 'Mid'],
-        image: Zyra,
+        image: Ziggs,
         type: ['Mage'],
         release: '2012-02-01',
         linksWith: [{ Jinx: 'Friends', Heimerdinger: 'Friends' }]
@@ -1661,10 +1910,10 @@ export const champList = [
     {
         name: 'Zilean',
         world: 'Runeterra',
-        id: 155,
+        id: 159,
         damages_type: 'AP',
         role: ['Support'],
-        image: Zyra,
+        image: Zilean,
         type: ["Support", 'Mage'],
         release: '2009-04-18',
         linksWith: ['']
@@ -1672,10 +1921,10 @@ export const champList = [
     {
         name: 'Zoe',
         world: 'Targon',
-        id: 156,
+        id: 160,
         damages_type: 'AP',
         role: ['Mid'],
-        image: Zyra,
+        image: Zoe,
         type: ["Mage", 'Support'],
         release: '2017-11-21',
         linksWith: [{ Aatrox: 'Ennemy', Lux: 'Ennemy', Ezreal: 'Potential Boyfriend' }]
@@ -1683,7 +1932,7 @@ export const champList = [
     {
         name: 'Zyra',
         world: 'Ixtal',
-        id: 157,
+        id: 161,
         damages_type: 'AP',
         role: ['Support'],
         image: Zyra,
@@ -1694,28 +1943,7 @@ export const champList = [
 ]
 
 /*
-TODO : Missing champions
-Veigar
-Velkoz
-Vex
-Vi
-Viego
-Viktor
-Vladimir
-Volibear
-Warwick
-Wukong
-Xayah
-Xerath
-Xin Zhao
-Yasuo
-Tone
-Yuumi
-Zac
-Zed
-Zeri
-Ziggs
-Zilean
-Zoe
-Zyra
+TODO : Missing datas
+img : Syndra Sivir Velkoz Xin_Zhao
+for all '???'
 */
