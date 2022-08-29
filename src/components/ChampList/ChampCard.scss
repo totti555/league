@@ -43,6 +43,8 @@ $gold: #ECB823;
     border-image-source: linear-gradient(0.5turn, black, $gold 60%);
 }
 
+
+
 .border-bottom {
     border-bottom: 2px solid;
     border-image-slice: 1;
@@ -88,6 +90,9 @@ $gold: #ECB823;
         animation-fill-mode: forwards;
     }
 }
+
+
+
 
 .display-links {
     p {

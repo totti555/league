@@ -1,6 +1,13 @@
 import './ChampCard.scss'
 import FlecheBas from "../../assets/fleche-bas.png"
-import Family from "../../assets/family.png"
+import Links from "../../assets/family.png"
+import Family from "../../assets/Links/Family.png"
+import Friends from "../../assets/Links/Friends.png"
+import Allie from "../../assets/Links/Allie.png"
+import Ennemy from "../../assets/Links/Ennemy.png"
+import Heart from "../../assets/Links/Heart.png"
+import Cross from "../../assets/Links/Cross.png"
+import Mentor from "../../assets/Links/Mentor.png"
 import { useState } from 'react'
 import { champList } from "../../datas/lolChamp";
 
@@ -93,10 +100,10 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             <div className="family">
                 {
                     displayLinks ?
-                        (<img onClick={resetChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>) :
+                        (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Arrow bottom" width="25px" height="25px"></img>) :
                         (
                             champ.linksWith ?
-                                (<img onClick={fetchByChampLinks} className="icon-gold" src={Family} alt="Arrow bottom" width="30px" height="30px"></img>)
+                                (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Arrow bottom" width="30px" height="30px"></img>)
                                 : null
                         )
                 }
@@ -110,22 +117,22 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                 */
             }
 
-            {(<div className='links-type'>
+            {(<div className='links-type champ-links-memo '>
 
                 {
                     /(Friends)+/.test(linksType) ?
                         (<div className='display-links'>
-                            <img className="card-icon" src={Family} alt="Friend" width="30px" height="30px"></img>
+                            <img className="card-icon" src={Friends} alt="Friend" width="30px" height="30px"></img>
                             <p className='title text-memo'>{linksType}</p>
                         </div>) :
                         /(Allie)+/.test(linksType) ?
                             (<div className='display-links'>
-                                <img className="card-icon" src={Family} alt="Allie" width="30px" height="30px"></img>
+                                <img className="card-icon" src={Allie} alt="Allie" width="30px" height="30px"></img>
                                 <p className='title text-memo'>{linksType}</p>
                             </div>) :
                             /(Ennemy)+/.test(linksType) ?
                                 (<div className='display-links'>
-                                    <img className="card-icon" src={Family} alt="Ennemy" width="30px" height="30px"></img>
+                                    <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
                                     <p className='title text-memo'>{linksType}</p>
                                 </div>) :
                                 /(Family Sister Brother)+/.test(linksType) ?
@@ -135,12 +142,12 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                                     </div>) :
                                     /(Boyfriend Girlfriend)+/.test(linksType) ?
                                         (<div className='display-links'>
-                                            <img className="card-icon" src={Family} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
+                                            <img className="card-icon" src={Heart} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
                                             <p className='title text-memo'>{linksType}</p>
                                         </div>) :
-                                        /(Mentor)+/.test(linksType) ?
+                                        /(Mentor Apprentice)+/.test(linksType) ?
                                             (<div className='display-links'>
-                                                <img className="card-icon" src={Family} alt="Mentor" width="30px" height="30px"></img>
+                                                <img className="card-icon" src={Mentor} alt="Mentor" width="30px" height="30px"></img>
                                                 <p className='title text-memo'>{linksType}</p>
                                             </div>) : null
                 }
