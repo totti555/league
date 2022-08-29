@@ -29,7 +29,7 @@ const Look = (props) => {
     const [role, updateRole] = useState('')
     const [type, updateType] = useState('')
     const [world, updateWorld] = useState('')
-    const [champFunction, updateChampFunction] = useState('');
+    // const [champFunction, updateChampFunction] = useState('');
 
     /**
        * *states to know the checked attributes
@@ -79,11 +79,11 @@ const Look = (props) => {
        * ?to remove ?
     */
 
-    function flatten(arr) {
-        return arr.reduce(function (flat, toFlatten) {
-            return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
-        }, []);
-    }
+    // function flatten(arr) {
+    //     return arr.reduce(function (flat, toFlatten) {
+    //         return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
+    //     }, []);
+    // }
 
     /**
       * *function to get all unique roles of champions
