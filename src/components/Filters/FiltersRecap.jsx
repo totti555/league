@@ -1,7 +1,7 @@
 import Badge from '../Utils/Badge';
 
 
-const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, setCheckedWorld, setCheckedType }) => {
+const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, setCheckedWorld, setCheckedType, setChampName }) => {
 
 
     /**
@@ -24,6 +24,7 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
         setCheckedRole([]);
         setCheckedType([]);
         setCheckedWorld([]);
+        setChampName('');
     }
 
     /**

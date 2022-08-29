@@ -1342,9 +1342,9 @@ export const champList = [
         damages_type: '???',
         role: ['Jungler'],
         image: Sejuani,
-        type: ["???"],
-        release: '???',
-        linksWith: ['???']
+        type: ['Tank'],
+        release: '2012-01-17',
+        linksWith: [{ Udyr: 'Potential Family', Olaf: 'Friends', Ashe: 'Friends / Ennemy', Lissandra: 'Ennemy' }]
     },
     {
         name: 'Senna',
@@ -1399,7 +1399,7 @@ export const champList = [
         image: Shen,
         type: ["Tank"],
         release: '2010-03-24',
-        linksWith: [{ Akali: 'Friends', Shen: 'Friends', Jhin: 'Ennemy', Zed: 'Ennemy' }]
+        linksWith: [{ Zed: 'Family / Ennemy', Akali: 'Friends', Shen: 'Friends', Jhin: 'Ennemy' }]
     },
     {
         name: 'Shyvana',
@@ -1442,8 +1442,8 @@ export const champList = [
         role: ['ADC'],
         image: Sivir,
         type: ['Marksman'],
-        release: '???',
-        linksWith: ['???']
+        release: '2009-02-21',
+        linksWith: [{ Azir: 'Family', Nasus: 'Friends', Renekton: 'Friends', Talliyah: 'Friends', Cassiopeia: 'Ennemy' }]
     },
     {
         name: 'Skarner',
@@ -1696,7 +1696,7 @@ export const champList = [
         image: Velkoz,
         type: ["Mage"],
         release: '2014-02-27',
-        linksWith: ['???']
+        linksWith: [{ Zed: 'Ennemy' }]
     },
     {
         name: 'Vex',
@@ -1729,7 +1729,7 @@ export const champList = [
         image: Viego,
         type: ["Assassin"],
         release: '2021-01-21',
-        linksWith: ['???']
+        linksWith: [{ Hecarim: 'Allie / Ennemy', Kalista: 'Allie / Ennemy', Gwen: 'Ebnnemy', Maokai: 'Ennemy', Yorick: 'Ennemy' }]
     },
     {
         name: 'Viktor',
@@ -1746,12 +1746,12 @@ export const champList = [
         name: 'Vladimir',
         world: 'Noxus',
         id: 144,
-        damages_type: '???',
+        damages_type: 'AP',
         role: ['Top', 'Mid'],
         image: Vladimir,
-        type: ["???"],
+        type: ['Mage'],
         release: '2010-07-27',
-        linksWith: ['???']
+        linksWith: [{ Mordekaiser: 'Ennemy' }]
     },
     {
         name: 'Volibear',
@@ -1762,7 +1762,7 @@ export const champList = [
         image: Volibear,
         type: ["Fighter"],
         release: '2011-11-29',
-        linksWith: ['???']
+        linksWith: [{ Ornn: 'Family / Ennemy', Lissandra: 'Ennemy', Udyr: 'Ennemy' }]
     },
     {
         name: 'Warwick',
@@ -1773,7 +1773,7 @@ export const champList = [
         image: Warwick,
         type: ["Fighter"],
         release: '2009-02-21',
-        linksWith: ['???']
+        linksWith: [{ Singed: 'Ennemy / Mentor' }]
     },
     {
         name: 'Wukong',
@@ -1784,7 +1784,7 @@ export const champList = [
         image: Wukong,
         type: ["Fighter"],
         release: '2011-07-26',
-        linksWith: ['???']
+        linksWith: [{ Master_Yi: 'Mentor' }]
     },
     {
         name: 'Xayah',
@@ -1850,7 +1850,7 @@ export const champList = [
         image: Yorick,
         type: ["Fighter"],
         release: '2011-06-22',
-        linksWith: ['???']
+        linksWith: [{ Gwen: 'Ennemy', Maokai: 'Ennemy', Viego: 'Ennemy' }]
     },
     {
         name: 'Yuumi',
@@ -1861,7 +1861,7 @@ export const champList = [
         image: Yuumi,
         type: ["Support"],
         release: '2019-05-14',
-        linksWith: ['???']
+        linksWith: [{ Braum: 'Friends' }]
     },
     {
         name: 'Zac',
@@ -1872,7 +1872,7 @@ export const champList = [
         image: Zac,
         type: ["Tank"],
         release: '2013-03-29',
-        linksWith: ['???']
+        linksWith: []
     },
     {
         name: 'Zed',
@@ -1883,7 +1883,7 @@ export const champList = [
         image: Zed,
         type: ["Assassin"],
         release: '2012-11-13',
-        linksWith: ['???']
+        linksWith: [{ Shen: 'Family / Ennemy', Velkoz: 'Ennemy', Xayah: 'Ennemy' }]
     },
     {
         name: 'Zeri',
@@ -1894,7 +1894,6 @@ export const champList = [
         image: Zeri,
         type: ["Marksman"],
         release: '2022-01-20',
-        linksWith: ['???']
     },
     {
         name: 'Ziggs',

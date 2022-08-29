@@ -11,7 +11,7 @@ import Mentor from "../../assets/Links/Mentor.png"
 import { useState } from 'react'
 import { champList } from "../../datas/lolChamp";
 
-const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType }) => {
+const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName }) => {
 
     /**
         * *component to display the champion's cards
@@ -48,6 +48,8 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
     */
 
     function fetchByChampLinks() {
+        // reset the research in the search bar
+        setChampName('');
         // get the champ links
         const linksWith = champ.linksWith.map((lw) => lw);
         // get the name of the champ links
@@ -68,10 +70,14 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
     /**
        * *to hind champion links and to reset to the basic list of champions
        * @param displayLinks
+       * TODO : Fix bug when we select another champ for links
+       * TODO : Change this : setChampList(champList), we should get the last state of champ beforee clicking ?
     */
 
     function resetChampLinks() {
-        handleClickLinks(!displayLinks);
+        console.log("A tester : est ce qu'on reset vraiment ?");
+        handleClickLinks(!displayLinks); // ca va juste cacher celui de la carte et pas les autres
+        setCurrentChampLinks(null); // reset champ links
         setChampList(champList);
     }
 
@@ -100,10 +106,10 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             <div className="family">
                 {
                     displayLinks ?
-                        (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Arrow bottom" width="25px" height="25px"></img>) :
+                        (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Cancel" width="25px" height="25px"></img>) :
                         (
                             champ.linksWith ?
-                                (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Arrow bottom" width="30px" height="30px"></img>)
+                                (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Links" width="30px" height="30px"></img>)
                                 : null
                         )
                 }

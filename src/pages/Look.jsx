@@ -165,7 +165,7 @@ const Look = (props) => {
                                 checkedRole={checkedRole}
                                 setCheckedRole={setCheckedRole} checkedType={checkedType}
                                 setCheckedType={setCheckedType} checkedWorld={checkedWorld}
-                                setCheckedWorld={setCheckedWorld}
+                                setCheckedWorld={setCheckedWorld} setChampName={setChampName}
                             />)}
 
                         <hr />
