@@ -166,7 +166,7 @@ import Zyra from "../assets/Champ/Zyra.jpg"
 
 export const champList = [
     {
-        name: 'Aatrox',
+        name: 'AaTrox',
         world: 'Runeterra',
         id: 1,
         key: 266,
@@ -285,7 +285,7 @@ export const champList = [
         linksWith: [{ Tryndamere: 'Boyfriend', Gragas: 'Friends', Sejuani: 'Friends / Ennemy', Lissandra: 'Ennemy' }]
     },
     {
-        name: 'Aurelion Sol',
+        name: 'AurelionSol',
         world: 'Runeterra',
         id: 11,
         key: 136,
@@ -722,7 +722,7 @@ export const champList = [
         linksWith: [{ Ekko: '???' }]
     },
     {
-        name: 'Jarvan IV',
+        name: 'JarvanIV',
         world: 'Demacia',
         id: 47,
         key: 59,
@@ -939,7 +939,7 @@ export const champList = [
         linksWith: [{ Malzahar: 'Friends' }]
     },
     {
-        name: 'Leblanc',
+        name: 'LeBlanc',
         world: 'Noxus',
         id: 65,
         key: 7,
@@ -951,7 +951,7 @@ export const champList = [
         linksWith: [{ Mordekaiser: 'Ennemy', Swain: 'Ennemy', Rell: 'Ennemy' }]
     },
     {
-        name: 'Lee Sin',
+        name: 'LeeSin',
         world: 'Ionia',
         id: 66,
         key: 64,
@@ -1070,7 +1070,7 @@ export const champList = [
         linksWith: [{ Gwen: 'Ennemy', Kartus: 'Ennemy', Viego: 'Ennemy', Yorick: 'Ennemy' }]
     },
     {
-        name: 'Master Yi',
+        name: 'MasterYi',
         world: 'Ionia',
         id: 76,
         key: 11,
@@ -1082,7 +1082,7 @@ export const champList = [
         linksWith: [{ Wukong: 'Mentor' }]
     },
     {
-        name: 'Miss Fortune',
+        name: 'MissFortune',
         world: 'Bilgwater',
         id: 77,
         key: 21,
@@ -1620,7 +1620,7 @@ export const champList = [
         linksWith: ['']
     },
     {
-        name: 'Tahm Kench',
+        name: 'TahmKench',
         world: 'Runeterra',
         id: 123,
         damages_type: 'AP',
@@ -1719,7 +1719,7 @@ export const champList = [
         linksWith: [{ Ashe: 'Girlfriend', Aatrox: 'Ennemy' }]
     },
     {
-        name: 'Twisted Fate',
+        name: 'TwistedFate',
         world: 'Bilgewater',
         id: 132,
         damages_type: 'AP',
@@ -1917,7 +1917,7 @@ export const champList = [
         linksWith: [{ Azir: 'Friends / Teacher / Ennemy', Nasus: 'Ennemy', Renekton: 'Ennemy' }]
     },
     {
-        name: 'Xin Zhao',
+        name: 'XinZhao',
         world: 'Demacia',
         id: 150,
         damages_type: 'AD',

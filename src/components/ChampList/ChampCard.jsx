@@ -83,6 +83,21 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
         setChampList(champList);
     }
 
+    const nameWithSpace = (champName) => {
+        // https://stackoverflow.com/questions/15369566/putting-space-in-camel-case-string-using-regular-expression#:~:text=Requirement%3A%20Split%20a%20camel%20case,not%20incur%20between%20capital%20letters.&text=If%20you%20have%20more%20than,flag%2C%20to%20match%20them%20all.
+        const expetionnalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
+        if (expetionnalName.includes(champName)) {
+            var rex = /([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g;
+            const name = champName.replace(rex, '$1$4\'$2$3$5');
+            return name;
+        }
+        else {
+            var rex = /([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g;
+            const name = champName.replace(rex, '$1$4 $2$3$5');
+            return name;
+        }
+    }
+
     return (
         /**
             * * champ background image
@@ -183,7 +198,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             </div>)
             }
             <div className='champ-name'>
-                <h3><span className='title'>{champ.name}</span></h3>
+                <h3><span className='title'>{nameWithSpace(champ.name)}</span></h3>
             </div>
 
         </div>

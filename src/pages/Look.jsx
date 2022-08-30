@@ -76,7 +76,7 @@ const Look = (props) => {
        * @param currentChamp
     */
 
-    const [currentChamp, setCurrentChamp] = useState('Kaisa');
+    const [currentChamp, setCurrentChamp] = useState('KaiSa');
 
     /**
        * ?to remove ?
