@@ -199,8 +199,8 @@ const ChampMemo = ({ champ }) => {
     */
 
     const navigate = useNavigate();
-    const toComponentB = () => {
-        navigate('/about_us', { state: { id: 1, name: 'sabaoon' } });
+    const toComponentB = (champ) => {
+        navigate('/about_us', { state: { key: champ.key, name: champ.name } });
     }
 
 
@@ -284,7 +284,7 @@ const ChampMemo = ({ champ }) => {
                 <div className='display-world-animation'>
                     <div>
                         <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
-                        <a onClick={() => { toComponentB() }}>Component B</a>
+                        <a onClick={() => { toComponentB(champ) }}>Component B</a>
                     </div>
                     <p className='title text-memo'>{champ.world}</p>
                 </div>

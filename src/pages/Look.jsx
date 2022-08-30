@@ -95,9 +95,9 @@ const Look = (props) => {
    */
 
     const rolesList = () => {
-        const toto = champList.map((champ) => champ.role);
-        const tata = Array.prototype.concat.apply([], toto);
-        const uniqueArr = [...new Set(tata)]
+        const roles = champList.map((champ) => champ.role);
+        const uniqueRoles = Array.prototype.concat.apply([], roles);
+        const uniqueArr = [...new Set(uniqueRoles)]
         return uniqueArr;
     }
 
@@ -183,7 +183,7 @@ const Look = (props) => {
                 // handle success
                 const obj = response.data.data
                 const toto = Object.values(obj);
-                console.log(toto[0].key);
+
             })
             .catch(function (error) {
                 // handle error
@@ -207,7 +207,7 @@ const Look = (props) => {
                         * *Div to for filters (col-2)
                     */
                     /* weeklyChampions() */
-                    champDetails()
+                    {/* champDetails() */ }
                     // difficulte
                     // key
                     // spells : passive / A / Z / E / R
