@@ -45,6 +45,8 @@ const Look = (props) => {
     const [checkedChampFunction, setCheckedChampFunction] = useState([]);
     const [checkedType, setCheckedType] = useState([]);
 
+    const api_key = process.env.API_KEY;
+
     /**
        * *state + function to display the filters tags
        * @param displayTags
@@ -137,8 +139,9 @@ const Look = (props) => {
 
         const axios = require('axios').default;
 
+
         // Make a request for a user with a given ID
-        axios.get('https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-7e0a830a-0b77-42a4-adc7-b50b7c4d70fa')
+        axios.get(`https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=${api_key}`)
             .then(function (response) {
                 // handle success
                 console.log(response);
@@ -154,7 +157,7 @@ const Look = (props) => {
 
     // const allChampsDetails = () => {
     //     const axios = require('axios').default;
-    //     const allChampDatas = axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion.json?api_key=RGAPI-7e0a830a-0b77-42a4-adc7-b50b7c4d70fa`)
+    //     const allChampDatas = axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion.json?api_key=${api_key}`)
     //         .then(function (response) {
     //             // handle success
     //             console.log(response.data.data);
@@ -175,7 +178,7 @@ const Look = (props) => {
         // je click => redirection vers page About 
         const axios2 = require('axios').default;
         const test = 'Senna'
-        axios2.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${test}.json?api_key=RGAPI-7e0a830a-0b77-42a4-adc7-b50b7c4d70fa`)
+        axios2.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${test}.json?api_key=${api_key}`)
             .then(function (response) {
                 // handle success
                 const obj = response.data.data

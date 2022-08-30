@@ -10,6 +10,8 @@ import Cross from "../../assets/Links/Cross.png"
 import Mentor from "../../assets/Links/Mentor.png"
 import { useState } from 'react'
 import { champList } from "../../datas/lolChamp";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+
 
 const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName }) => {
 
@@ -173,7 +175,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                     /(Potential)/.test(linksType) ?
                         (<div className='display-links'>
                             <img className="card-icon" src={Cross} alt="Unknown" width="30px" height="30px"></img>
-                           
+
                         </div>) : null
 
                 }
@@ -195,6 +197,11 @@ const ChampMemo = ({ champ }) => {
         * *component to display the attributes 
         * TODO : Use one generic component for all attributes 
     */
+
+    const navigate = useNavigate();
+    const toComponentB = () => {
+        navigate('/about_us', { state: { id: 1, name: 'sabaoon' } });
+    }
 
 
     return (
@@ -272,6 +279,17 @@ const ChampMemo = ({ champ }) => {
                     <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
                     <p className='title text-memo'>{champ.world}</p>
                 </div>
+
+
+                <div className='display-world-animation'>
+                    <div>
+                        <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
+                        <a onClick={() => { toComponentB() }}>Component B</a>
+                    </div>
+                    <p className='title text-memo'>{champ.world}</p>
+                </div>
+
+
                 <div className='border-bottom pb-2'></div>
 
             </div>
