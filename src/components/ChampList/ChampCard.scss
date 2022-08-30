@@ -39,6 +39,11 @@ $gold: #ECB823;
     border-image-slice: 1;
     border-width: 1px;
     border-image-source: linear-gradient(0.5turn, black, $gold 60%);
+  
+    .border-bottom-links {
+        border-bottom: 1px solid;
+        border-image-source: linear-gradient(to right, black, $gold 90%);
+    }
 }
 
 .border-bottom-links {
@@ -148,14 +153,14 @@ $gold: #ECB823;
 @keyframes display-links {
     0% {
         opacity: 0;
-        line-height: 0.2px;
+        // line-height: 0.2px;
     }
 
     100% {
         /* left: 0px; */
-        margin-left: 0px;
+        // margin-left: 0px;
         opacity: 1;
-        line-height: 1rem;
+        // line-height: 1rem;
     }
 }
 
