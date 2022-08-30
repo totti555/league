@@ -173,26 +173,26 @@ const Look = (props) => {
 
     // }
 
-    const champDetails = () => {
+    // const champDetails = () => {
 
-        // je click => redirection vers page About 
-        const axios2 = require('axios').default;
-        const test = 'Senna'
-        axios2.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${test}.json?api_key=${api_key}`)
-            .then(function (response) {
-                // handle success
-                const obj = response.data.data
-                const toto = Object.values(obj);
+    //     // je click => redirection vers page About 
+    //     const axios2 = require('axios').default;
+    //     const test = 'Senna'
+    //     axios2.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${test}.json?api_key=${api_key}`)
+    //         .then(function (response) {
+    //             // handle success
+    //             const obj = response.data.data
+    //             const toto = Object.values(obj);
 
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
-    }
+    //         })
+    //         .catch(function (error) {
+    //             // handle error
+    //             console.log(error);
+    //         })
+    //         .then(function () {
+    //             // always executed
+    //         });
+    // }
 
 
     return (

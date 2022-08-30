@@ -38,7 +38,7 @@ function AboutUs() {
 
     useEffect(() => {
         champDetails();
-    }, []); // See Note 2
+    }, []);
 
     return (
 
