@@ -7,6 +7,7 @@ import '../style/Look.scss'
 import DisplayFilters from "../components/Filters/DisplayFilters";
 import FlecheBas from "../assets/fleche-bas.png"
 
+
 const Look = (props) => {
 
     /**
@@ -132,6 +133,63 @@ const Look = (props) => {
         []
     )
 
+    const weeklyChampions = () => {
+
+        const axios = require('axios').default;
+
+        // Make a request for a user with a given ID
+        axios.get('https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-7e0a830a-0b77-42a4-adc7-b50b7c4d70fa')
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    }
+
+    // const allChampsDetails = () => {
+    //     const axios = require('axios').default;
+    //     const allChampDatas = axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion.json?api_key=RGAPI-7e0a830a-0b77-42a4-adc7-b50b7c4d70fa`)
+    //         .then(function (response) {
+    //             // handle success
+    //             console.log(response.data.data);
+
+    //         })
+    //         .catch(function (error) {
+    //             // handle error
+    //             console.log(error);
+    //         })
+    //         .then(function () {
+    //             // always executed
+    //         });
+
+    // }
+
+    const champDetails = () => {
+
+        // je click => redirection vers page About 
+        const axios2 = require('axios').default;
+        const test = 'Senna'
+        axios2.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${test}.json?api_key=RGAPI-7e0a830a-0b77-42a4-adc7-b50b7c4d70fa`)
+            .then(function (response) {
+                // handle success
+                const obj = response.data.data
+                const toto = Object.values(obj);
+                console.log(toto[0].key);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    }
 
 
     return (
@@ -145,6 +203,13 @@ const Look = (props) => {
                     /**
                         * *Div to for filters (col-2)
                     */
+                    /* weeklyChampions() */
+                    champDetails()
+                    // difficulte
+                    // key
+                    // spells : passive / A / Z / E / R
+                    // stats
+                    // 
                 }
 
                 <div className={displayFilters ? 'hide-filters' : 'col-2 col-custom-filter filters pe-0 ps-0'}>
