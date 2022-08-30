@@ -207,7 +207,6 @@ const Look = (props) => {
                         * *Div to for filters (col-2)
                     */
                     /* weeklyChampions() */
-                    {/* champDetails() */ }
                     // difficulte
                     // key
                     // spells : passive / A / Z / E / R
