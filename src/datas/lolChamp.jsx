@@ -195,7 +195,7 @@ export const champList = [
         image: Akali,
         type: ["Assassin"],
         release: '2010-05-11',
-        linksWith: [{ Kennen: 'Friend', Shen: 'Friend' }]
+        linksWith: [{ Kennen: 'Friends', Shen: 'Friends' }]
     },
     {
         name: 'Akshan',
@@ -261,7 +261,7 @@ export const champList = [
         image: Aphelios,
         type: ["Marksman"],
         release: '2019-12-11',
-        linksWith: [{ Diana: 'Possible friend', Leona: 'Possible Ennemy' }]
+        linksWith: [{ Diana: 'Possible Friends', Leona: 'Possible Ennemy' }]
     },
     {
         name: 'Ashe',
@@ -294,7 +294,7 @@ export const champList = [
         image: Azir,
         type: ["Mage", 'Marksman'],
         release: '2014-09-16',
-        linksWith: [{ Xerath: 'Friend / Apprentice', Renekton: 'Ennemy' }]
+        linksWith: [{ Xerath: 'Friends / Apprentice', Renekton: 'Ennemy' }]
     },
     {
         name: 'Bard',
@@ -327,7 +327,7 @@ export const champList = [
         image: Blitzcrank,
         type: ["Tank", 'Fighter'],
         release: '2009-09-02',
-        linksWith: [{ Viktor: 'Family', Oriana: 'Allies' }]
+        linksWith: [{ Viktor: 'Family', Oriana: 'Allie' }]
     },
     {
         name: 'Brand',

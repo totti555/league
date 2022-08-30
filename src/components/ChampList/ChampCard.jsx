@@ -126,32 +126,32 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             {(<div className='links-type champ-links-memo '>
 
                 {
-                    /(Friends)+/.test(linksType) ?
+                    /(Friends)/.test(linksType) ?
                         (<div className='display-links'>
                             <img className="card-icon" src={Friends} alt="Friend" width="30px" height="30px"></img>
                             <p className='title text-memo'>{linksType}</p>
                         </div>) :
-                        /(Allie)+/.test(linksType) ?
+                        /(Allie)/.test(linksType) ?
                             (<div className='display-links'>
                                 <img className="card-icon" src={Allie} alt="Allie" width="30px" height="30px"></img>
                                 <p className='title text-memo'>{linksType}</p>
                             </div>) :
-                            /(Ennemy)+/.test(linksType) ?
+                            /(Ennemy)/.test(linksType) ?
                                 (<div className='display-links'>
                                     <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
                                     <p className='title text-memo'>{linksType}</p>
                                 </div>) :
-                                /(Family Sister Brother)+/.test(linksType) ?
+                                /Family|Sister|Brother/.test(linksType) ?
                                     (<div className='display-links'>
                                         <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
-                                        <p className='title text-memo'>{linksType}</p>
+                                        <span className='title text-memo'>{linksType}</span>
                                     </div>) :
-                                    /(Boyfriend Girlfriend)+/.test(linksType) ?
+                                    /Boyfriend|Girlfriend/.test(linksType) ?
                                         (<div className='display-links'>
                                             <img className="card-icon" src={Heart} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
                                             <p className='title text-memo'>{linksType}</p>
                                         </div>) :
-                                        /(Mentor Apprentice)+/.test(linksType) ?
+                                        /Mentor|Apprentice/.test(linksType) ?
                                             (<div className='display-links'>
                                                 <img className="card-icon" src={Mentor} alt="Mentor" width="30px" height="30px"></img>
                                                 <p className='title text-memo'>{linksType}</p>
@@ -164,13 +164,14 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                     */
                 }
                 {
-                    /(Potential)+/.test(linksType) ?
+                    /(Potential)/.test(linksType) ?
                         (<div className='display-links'>
-                            <img className="card-icon" src={Family} alt="Unknown" width="30px" height="30px"></img>
-                            <p className='title text-memo'>{linksType}</p>
+                            <img className="card-icon" src={Cross} alt="Unknown" width="30px" height="30px"></img>
+                           
                         </div>) : null
 
                 }
+                {/* <div class="border-bottom-links"></div> */}
             </div>)
             }
             <div className='champ-name'>
