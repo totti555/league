@@ -91,7 +91,7 @@ const AboutUs = () => {
                                     * TODO : SCSS
                                 */
                             }
-                            {/* <ChampSpells champion={champion} /> */}
+                            <ChampSpells champion={champion} />
 
                             {
                                 /**
@@ -100,16 +100,47 @@ const AboutUs = () => {
                                 */
                             }
 
-                            {/* <ChampStats champion={champion} /> */}
+                            <ChampStats champion={champion} />
 
                             {
                                 /**
                                     * *Champ Items div
-                                    * TODO : SCSS
+                                    * TODO : Component + SCSS
                                 */
                             }
 
                             <ChampItemsList />
+
+                            {
+                                /**
+                                    * *Champ Item div
+                                    * TODO : Component + SCSS
+                                */
+                            }
+
+                            {
+                                /**
+                                    * *Champ Inventory div
+                                    * TODO : Component + SCSS
+                                */
+                            }
+
+                            {
+                                /**
+                                    * *Champ Links div
+                                    * ? this component already exists
+                                    * TODO : Component + SCSS
+                                */
+                            }
+
+                            {
+                                /**
+                                    * *Champ Card div
+                                    * ? this component already exists
+                                    * TODO : Component + SCSS
+                                */
+                            }
+
 
                         </div>
                     )}
