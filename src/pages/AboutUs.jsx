@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
 import ChampStats from "../components/Champ/ChampStats";
+import ChampItemsList from "../components/Champ/ChampItemsList";
 
 
 
@@ -72,6 +73,7 @@ const AboutUs = () => {
                                     * *Champ Name div
                                     * TODO : Include photo + SCSS
                                 */
+                                console.log(champion)
                             }
                             <div className="champ-header">
                                 <div className="d-flex justify-content-start">
@@ -98,7 +100,16 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampStats champion={champion} />
+                            {/* <ChampStats champion={champion} /> */}
+
+                            {
+                                /**
+                                    * *Champ Items div
+                                    * TODO : SCSS
+                                */
+                            }
+
+                            <ChampItemsList />
 
                         </div>
                     )}
