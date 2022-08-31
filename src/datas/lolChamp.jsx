@@ -166,7 +166,7 @@ import Zyra from "../assets/Champ/Zyra.jpg"
 
 export const champList = [
     {
-        name: 'AaTrox',
+        name: 'Aatrox',
         world: 'Runeterra',
         id: 1,
         key: 266,
@@ -405,7 +405,7 @@ export const champList = [
         linksWith: [{ Talon: 'Brother', Katarina: 'Sister', Sivir: 'Ennemy' }]
     },
     {
-        name: 'Chogath',
+        name: 'ChoGath',
         world: 'Void',
         id: 21,
         key: 31,
@@ -489,7 +489,7 @@ export const champList = [
         image: Ekko,
         type: ["Assassin", 'Fighter'],
         release: '2015-05-29',
-        linksWith: [{ Jinx: 'Potential Friend', Vi: 'Potential Friend' }]
+        linksWith: [{ Jinx: 'Potential Friends', Vi: 'Potential Friends' }]
     },
     {
         name: 'Elise',
@@ -783,7 +783,7 @@ export const champList = [
         linksWith: [{ Vi: 'Sister / Ennemy', Ziggs: 'Friend', Caitlyn: 'Ennemy', Ekko: 'Potential friend' }]
     },
     {
-        name: 'Kaisa',
+        name: 'KaiSa',
         world: 'Void',
         id: 52,
         key: 145,
@@ -939,7 +939,7 @@ export const champList = [
         linksWith: [{ Malzahar: 'Friends' }]
     },
     {
-        name: 'LeBlanc',
+        name: 'Leblanc',
         world: 'Noxus',
         id: 65,
         key: 7,

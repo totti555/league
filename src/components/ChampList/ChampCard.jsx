@@ -156,18 +156,18 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                                 <p className='title text-memo'>{linksType}</p>
                                 <div className='border-bottom-links'></div>
                             </div>) :
+                             /Family|Sister|Brother/.test(linksType) ?
+                             (<div className='display-links'>
+                                 <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
+                                 <p className='title text-memo'>{linksType}</p>
+                                 <div className='border-bottom-links'></div>
+                             </div>) :
                             /(Ennemy)/.test(linksType) ?
                                 (<div className='display-links'>
                                     <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
                                     <p className='title text-memo'>{linksType}</p>
                                     <div className='border-bottom-links'></div>
                                 </div>) :
-                                /Family|Sister|Brother/.test(linksType) ?
-                                    (<div className='display-links'>
-                                        <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
-                                        <span className='title text-memo'>{linksType}</span>
-                                        <div className='border-bottom-links'></div>
-                                    </div>) :
                                     /Boyfriend|Girlfriend/.test(linksType) ?
                                         (<div className='display-links'>
                                             <img className="card-icon" src={Heart} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
@@ -187,14 +187,14 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                         * ../assets/Links
                     */
                 }
-                {
+                {/* {
                     /(Potential)/.test(linksType) ?
                         (<div className='display-links'>
                             <img className="card-icon" src={Cross} alt="Unknown" width="30px" height="30px"></img>
 
                         </div>) : null
 
-                }
+                } */}
                 {/* <div class="border-bottom-links"></div> */}
             </div>)
             }

@@ -44,6 +44,10 @@ $gold: #ECB823;
         border-bottom: 1px solid;
         border-image-source: linear-gradient(to right, black, $gold 90%);
     }
+
+    p {
+        display: none;
+    }
 }
 
 .border-bottom-links {
@@ -123,6 +127,9 @@ $gold: #ECB823;
 
 
 .display-links {
+    img {
+        margin-bottom: 5px;
+    }
     p {
         opacity: 0;
     }
@@ -133,6 +140,8 @@ $gold: #ECB823;
         animation-name: display-links;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
+        display: block;
+        
     }
 }
 
@@ -140,6 +149,7 @@ $gold: #ECB823;
     0% {
         opacity: 0;
         line-height: 0.2px;
+       
     }
 
     100% {
@@ -147,12 +157,15 @@ $gold: #ECB823;
         margin-left: 0px;
         opacity: 1;
         line-height: 1rem;
+        
     }
 }
 
 @keyframes display-links {
     0% {
         opacity: 0;
+        line-height: 0.2px;
+        
         // line-height: 0.2px;
     }
 
@@ -160,6 +173,8 @@ $gold: #ECB823;
         /* left: 0px; */
         // margin-left: 0px;
         opacity: 1;
+        line-height: 1rem;
+       
         // line-height: 1rem;
     }
 }
