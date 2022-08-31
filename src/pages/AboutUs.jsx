@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
+import ChampStats from "../components/Champ/ChampStats";
 
 
 
@@ -88,9 +89,16 @@ const AboutUs = () => {
                                     * TODO : SCSS
                                 */
                             }
-                            <ChampSpells champion={champion} />
+                            {/* <ChampSpells champion={champion} /> */}
 
+                            {
+                                /**
+                                    * *Champ Stats div
+                                    * TODO : SCSS
+                                */
+                            }
 
+                            <ChampStats champion={champion} />
 
                         </div>
                     )}
