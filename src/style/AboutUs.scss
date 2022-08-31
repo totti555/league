@@ -8,3 +8,14 @@
     overflow-y: scroll;
     z-index: 2;
 }
+
+.champ-header {
+    p {
+        margin-bottom: 0px;
+    }
+
+    .champ-subtitle {
+        font-size: 12px;
+        color: lightgray
+    }
+}

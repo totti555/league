@@ -64,14 +64,36 @@ const AboutUs = () => {
             <div className="home-content bg-black text-white">
                 <h1 className="text-white">Coming soon</h1>
                 {champion.name &&
-                    (<div>
+                    (
                         <div>
+                            {
+                                /**
+                                    * *Champ Name div
+                                    * TODO : Include photo + SCSS
+                                */
+                            }
+                            <div className="champ-header">
+                                <div className="d-flex justify-content-start">
+                                    <div className="d-flex flex-column">
+                                        <p className="champ-name text-white">{champion.name}</p>
+                                        <p className="champ-subtitle">{champion.title}</p>
+                                    </div>
+                                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='48px'></img>
+                                </div>
+                            </div>
 
-                            {console.log(champion)}
-                            {champion.name}
+                            {
+                                /**
+                                    * *Champ Spells div
+                                    * TODO : SCSS
+                                */
+                            }
+                            <ChampSpells champion={champion} />
+
+
+
                         </div>
-                        <ChampSpells champion={champion} />
-                    </div>)}
+                    )}
             </div>
 
 
