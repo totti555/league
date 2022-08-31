@@ -2,6 +2,7 @@ import "../style/AboutUs.scss";
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
+import ChampSpells from "../components/Champ/ChampSpells";
 
 
 
@@ -15,7 +16,7 @@ const AboutUs = () => {
         let champKey;
         let name;
         const axios = require('axios').default;
-        champKey = location.state ? location.state.key : 34;
+        champKey = location.state ? location.state.key : 145;
         const data = champList.filter((champ) => champ.key == champKey);
         const champSelected = data[0];
 
@@ -66,28 +67,10 @@ const AboutUs = () => {
                     (<div>
                         <div>
 
-
+                            {console.log(champion)}
                             {champion.name}
                         </div>
-                        <div className="champ-spells ">
-                            {
-                                champion.spells.map((s) =>
-                                (
-                                    <div className="d-flex justify-content-start" key={s.id}>
-                                        <div className="spell-img">
-
-                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`}></img>
-                                        </div>
-                                        <div>
-                                            <p className="spell-title font-weight-bold">{s.name}</p>
-                                            <p className="spell-description" dangerouslySetInnerHTML={{ __html: s.description }} />
-                                            {console.log(s)}
-                                        </div>
-                                    </div>
-                                )
-                                )
-                            }
-                        </div>
+                        <ChampSpells champion={champion} />
                     </div>)}
             </div>
 
