@@ -9,13 +9,13 @@ const AboutUs = () => {
 
     const location = useLocation();
     const [champion, setChampion] = useState([]);
+    const api_key = process.env.REACT_APP_API_KEY;
 
     const champDetails = async () => {
-        const api_key = process.env.REACT_APP_API_KEY;
         let champKey;
         let name;
         const axios = require('axios').default;
-        champKey = location.state ? location.state.key : 145;
+        champKey = location.state ? location.state.key : 34;
         const data = champList.filter((champ) => champ.key == champKey);
         const champSelected = data[0];
 
@@ -34,10 +34,6 @@ const AboutUs = () => {
         axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${name}.json?api_key=${api_key}`)
             .then(function (response) {
                 // handle success
-                const toto = Object.values(response.data)
-
-                // setChampion({ Kaisa: Object.values(response.data) });
-                console.log("update du state ?")
                 const obj = response.data.data
                 const data = Object.values(obj);
                 setChampion(data[0]);
@@ -54,20 +50,12 @@ const AboutUs = () => {
             });
     }
 
+
     useEffect(() => {
         champDetails();
     }, []);
 
-    const champSpells = (champion) => {
 
-        console.log("spells");
-        console.log(champion.spells.map((s) => s.name));
-        // const tata = champList.map((champ) => champ.id);
-        // console.log(tata);
-
-
-        // console.log(champion.spells[0]);
-    }
 
     return (
 
@@ -81,21 +69,23 @@ const AboutUs = () => {
 
                             {champion.name}
                         </div>
-                        <div>
-
-
-
+                        <div className="champ-spells ">
                             {
                                 champion.spells.map((s) =>
                                 (
-                                    <div key={s.id}>
-                                        <p>{s.name}</p>
-                                        <p>{s.id}</p>
-                                        <p dangerouslySetInnerHTML={{ __html: s.description }} />
+                                    <div className="d-flex justify-content-start" key={s.id}>
+                                        <div className="spell-img">
+
+                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`}></img>
+                                        </div>
+                                        <div>
+                                            <p className="spell-title font-weight-bold">{s.name}</p>
+                                            <p className="spell-description" dangerouslySetInnerHTML={{ __html: s.description }} />
+                                            {console.log(s)}
+                                        </div>
                                     </div>
                                 )
                                 )
-
                             }
                         </div>
                     </div>)}
