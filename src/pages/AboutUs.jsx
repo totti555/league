@@ -5,7 +5,7 @@ import { champList } from "../datas/lolChamp";
 
 
 
-function AboutUs() {
+const AboutUs = () => {
 
     const location = useLocation();
     const [champion, setChampion] = useState([]);
@@ -34,9 +34,14 @@ function AboutUs() {
         axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${name}.json?api_key=${api_key}`)
             .then(function (response) {
                 // handle success
+                const toto = Object.values(response.data)
+
+                // setChampion({ Kaisa: Object.values(response.data) });
+                console.log("update du state ?")
                 const obj = response.data.data
                 const data = Object.values(obj);
                 setChampion(data[0]);
+
             })
             .catch(function (error) {
                 // handle error
@@ -44,6 +49,8 @@ function AboutUs() {
             })
             .then(function () {
                 // always executed
+                console.log('??')
+                console.log(champion);
             });
     }
 
@@ -51,16 +58,37 @@ function AboutUs() {
         champDetails();
     }, []);
 
+    const champSpells = (champion) => {
+
+        console.log("spells");
+        console.log(champion.spells.map((s) => s.name));
+        // const tata = champList.map((champ) => champ.id);
+        // console.log(tata);
+
+
+        // console.log(champion.spells[0]);
+    }
+
     return (
 
         <>
             <div className="home-content bg-black text-white">
                 <h1 className="text-white">Coming soon</h1>
-                <div>
+                {champion.name && (<div>
+                    <div>
 
-                    {/* {location.state.key ? location.state.key : 145} */}
-                    {champion.name}
-                </div>
+
+                        {champion.name}
+                    </div>
+                    <div>
+
+
+
+                        {
+                            champSpells(champion)
+                        }
+                    </div>
+                </div>)}
             </div>
 
 
