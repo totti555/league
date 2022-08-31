@@ -12,15 +12,17 @@ function AboutUs() {
 
     const champDetails = () => {
         const api_key = process.env.API_KEY;
+        let champKey;
         const axios = require('axios').default;
-
-        const champKey = location.state.key ? location.state.key : 145;
+        champKey = location.state ? location.state.key : 145;
         const data = champList.filter((champ) => champ.key == champKey);
         const champSelected = data[0];
 
+        const champSelectedName = champSelected.name ? champSelected.name : 'Kaisa';
 
 
-        axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${champSelected.name}.json?api_key=${api_key}`)
+
+        axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${champSelectedName}.json?api_key=${api_key}`)
             .then(function (response) {
                 // handle success
                 const obj = response.data.data

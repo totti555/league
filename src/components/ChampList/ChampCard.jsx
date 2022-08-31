@@ -1,5 +1,6 @@
 import './ChampCard.scss'
 import FlecheBas from "../../assets/fleche-bas.png"
+import Plus from "../../assets/plus.png"
 import Links from "../../assets/family.png"
 import Family from "../../assets/Links/Family.png"
 import Friends from "../../assets/Links/Friends.png"
@@ -293,15 +294,17 @@ const ChampMemo = ({ champ }) => {
                 <div className='display-world-animation'>
                     <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
                     <p className='title text-memo'>{champ.world}</p>
+                    <hr className='hr-color hr-bot hr-top' />
                 </div>
 
 
                 <div className='display-world-animation'>
                     <div>
-                        <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
-                        <a onClick={() => { toComponentB(champ) }}>Component B</a>
+                        <a onClick={() => { toComponentB(champ) }}>
+                        <img src={require(`../../assets/plus.png`)} className="date-logo" alt="Champion world" width="30px" height="30px"></img>
+                        </a>
                     </div>
-                    <p className='title text-memo'>{champ.world}</p>
+                    <p className='title text-memo'>See more</p>
                 </div>
 
 
