@@ -74,21 +74,31 @@ const AboutUs = () => {
         <>
             <div className="home-content bg-black text-white">
                 <h1 className="text-white">Coming soon</h1>
-                {champion.name && (<div>
-                    <div>
+                {champion.name &&
+                    (<div>
+                        <div>
 
 
-                        {champion.name}
-                    </div>
-                    <div>
+                            {champion.name}
+                        </div>
+                        <div>
 
 
 
-                        {
-                            champSpells(champion)
-                        }
-                    </div>
-                </div>)}
+                            {
+                                champion.spells.map((s) =>
+                                (
+                                    <div key={s.id}>
+                                        <p>{s.name}</p>
+                                        <p>{s.id}</p>
+                                        <p dangerouslySetInnerHTML={{ __html: s.description }} />
+                                    </div>
+                                )
+                                )
+
+                            }
+                        </div>
+                    </div>)}
             </div>
 
 
