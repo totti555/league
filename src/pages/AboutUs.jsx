@@ -7,6 +7,7 @@ import ChampStats from "../components/Champ/ChampStats";
 import ChampItemsList from "../components/Champ/ChampItemsList";
 import ChampItemDetails from "../components/Champ/ChampItemDetails";
 import ChampStuff from "../components/Champ/ChampStuff";
+import ChampLinks from "../components/Champ/ChampLinks";
 
 
 
@@ -17,6 +18,7 @@ const AboutUs = () => {
     const [selectedItem, setSelectedItem] = useState([]);
     const [selectedStuff, setStuff] = useState([]);
     const [itemsBuff, setItemsBuff] = useState([]);
+    const [selectedKey, setKey] = useState(145);
 
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
@@ -31,6 +33,7 @@ const AboutUs = () => {
         const axios = require('axios').default;
         // champKey = location.state ? location.state.key : 145;
         champKey = findChampKey ? findChampKey.key : 145;
+        setKey(champKey);
         const data = champList.filter((champ) => champ.key == champKey);
         const champSelected = data[0];
 
@@ -111,7 +114,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampStats champion={champion} itemsBuff={itemsBuff} />
+                            {/* <ChampStats champion={champion} itemsBuff={itemsBuff} /> */}
 
                             {
                                 /**
@@ -120,7 +123,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
+                            {/* <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} /> */}
 
                             {
                                 /**
@@ -129,7 +132,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
+                            {/* <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} /> */}
 
                             {
                                 /**
@@ -138,7 +141,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampItemsList setSelectedItem={setSelectedItem} />
+                            {/* <ChampItemsList setSelectedItem={setSelectedItem} /> */}
 
 
 
@@ -149,6 +152,8 @@ const AboutUs = () => {
                                     * TODO : Component + SCSS
                                 */
                             }
+
+                            <ChampLinks selectedKey={selectedKey} champion={champion} />
 
                             {
                                 /**
