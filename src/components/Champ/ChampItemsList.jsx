@@ -14,7 +14,6 @@ const ChampItems = (props) => {
                 // handle success
                 const obj = response.data.data;
                 const data = Object.values(obj);
-                console.log(data);
                 setItemsList(data);
 
             })

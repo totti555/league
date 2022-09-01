@@ -16,6 +16,7 @@ const AboutUs = () => {
     const [champion, setChampion] = useState([]);
     const [selectedItem, setSelectedItem] = useState([]);
     const [selectedStuff, setStuff] = useState([]);
+    const [itemsBuff, setItemsBuff] = useState([]);
 
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
@@ -59,8 +60,7 @@ const AboutUs = () => {
             })
             .then(function () {
                 // always executed
-                console.log('??')
-                console.log(champion);
+
             });
     }
 
@@ -111,7 +111,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            {/* <ChampStats champion={champion} /> */}
+                            <ChampStats champion={champion} itemsBuff={itemsBuff} />
 
                             {
                                 /**
@@ -120,7 +120,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} />
+                            <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
 
                             {
                                 /**
