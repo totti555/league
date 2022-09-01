@@ -1,6 +1,6 @@
 import "../style/AboutUs.scss";
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useParams } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
 import ChampStats from "../components/Champ/ChampStats";
@@ -13,12 +13,18 @@ const AboutUs = () => {
     const location = useLocation();
     const [champion, setChampion] = useState([]);
     const api_key = process.env.REACT_APP_API_KEY;
+    let { champName } = useParams();
 
     const champDetails = async () => {
+        console.log("route");
+        console.log(champName);
+        const findChampKey = champList.find((champ)=> champName == champ.name);
+        console.log(findChampKey);
         let champKey;
         let name;
         const axios = require('axios').default;
-        champKey = location.state ? location.state.key : 145;
+        // champKey = location.state ? location.state.key : 145;
+        champKey = findChampKey ? findChampKey.key : 145;
         const data = champList.filter((champ) => champ.key == champKey);
         const champSelected = data[0];
 

@@ -1,8 +1,9 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link,Routes,Route } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import "./Layout.scss";
 import Menu from "../assets/Home/menu.svg";
 import { useState } from "react";
+import AboutUs from "../pages/AboutUs";
 
 function Layout({ children }) {
 
@@ -57,6 +58,9 @@ function Layout({ children }) {
           <button className="nav-button">
             <Link to="/look">LOOK</Link>
           </button>
+            <Routes>
+            <Route path="about_us/:champName" element={<AboutUs />} />
+          </Routes>
         </div>
         <div className="me-5 text-white welcome"> Welcome, Thomas !</div>
 
