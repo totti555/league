@@ -82,7 +82,7 @@ const ChampStuff = (props) => {
                             <img src={require(`../../assets/bin.png`)} onClick={() => removeToStuff(selectedStuff[i])} className="delete-item-icon about-icon-gold" alt="Champion world" width="10px" height="10px"></img>
                         </div>
                     </div>) :
-                    <div className='stuff-item border'>
+                    <div className='stuff-item border' key={i}>
                         N
                     </div>
 
