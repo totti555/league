@@ -156,18 +156,18 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                                 <p className='title text-memo'>{linksType}</p>
                                 <div className='border-bottom-links'></div>
                             </div>) :
-                             /Family|Sister|Brother/.test(linksType) ?
-                             (<div className='display-links'>
-                                 <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
-                                 <p className='title text-memo'>{linksType}</p>
-                                 <div className='border-bottom-links'></div>
-                             </div>) :
-                            /(Ennemy)/.test(linksType) ?
+                            /Family|Sister|Brother/.test(linksType) ?
                                 (<div className='display-links'>
-                                    <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
+                                    <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
                                     <p className='title text-memo'>{linksType}</p>
                                     <div className='border-bottom-links'></div>
                                 </div>) :
+                                /(Ennemy)/.test(linksType) ?
+                                    (<div className='display-links'>
+                                        <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
+                                        <p className='title text-memo'>{linksType}</p>
+                                        <div className='border-bottom-links'></div>
+                                    </div>) :
                                     /Boyfriend|Girlfriend/.test(linksType) ?
                                         (<div className='display-links'>
                                             <img className="card-icon" src={Heart} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
@@ -195,7 +195,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                         </div>) : null
 
                 } */}
-                {/* <div class="border-bottom-links"></div> */}
+                {/* <div className="border-bottom-links"></div> */}
             </div>)
             }
             <div className='champ-name'>
@@ -308,7 +308,7 @@ const ChampMemo = ({ champ }) => {
                 <div className='display-world-animation'>
                     <div>
                         <a onClick={() => { toComponentB(champ) }}>
-                        <img src={require(`../../assets/plus.png`)} className="date-logo" alt="Champion world" width="30px" height="30px"></img>
+                            <img src={require(`../../assets/plus.png`)} className="date-logo" alt="Champion world" width="30px" height="30px"></img>
                         </a>
                     </div>
                     <p className='title text-memo'>See more</p>

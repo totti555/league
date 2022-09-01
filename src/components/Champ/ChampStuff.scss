@@ -1,0 +1,19 @@
+.stuff-item {
+    position: relative;
+    height: 32px;
+    width: 32px;
+
+    .delete-item-icon {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        z-index: 10;
+        opacity: 0;
+    }
+}
+
+.item-card:hover {
+    .delete-item-icon {
+        opacity: 1;
+    }
+}

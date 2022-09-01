@@ -6,6 +6,7 @@ import ChampSpells from "../components/Champ/ChampSpells";
 import ChampStats from "../components/Champ/ChampStats";
 import ChampItemsList from "../components/Champ/ChampItemsList";
 import ChampItemDetails from "../components/Champ/ChampItemDetails";
+import ChampStuff from "../components/Champ/ChampStuff";
 
 
 
@@ -114,6 +115,15 @@ const AboutUs = () => {
 
                             {
                                 /**
+                                    * *Champ Inventory div
+                                    * TODO : Component + SCSS
+                                */
+                            }
+
+                            <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} />
+
+                            {
+                                /**
                                     * *Champ Item div
                                     * TODO : Component + SCSS
                                 */
@@ -131,12 +141,6 @@ const AboutUs = () => {
                             <ChampItemsList setSelectedItem={setSelectedItem} />
 
 
-                            {
-                                /**
-                                    * *Champ Inventory div
-                                    * TODO : Component + SCSS
-                                */
-                            }
 
                             {
                                 /**
