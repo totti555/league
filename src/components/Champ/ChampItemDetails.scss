@@ -1,0 +1,15 @@
+.item-details {
+    .add-item-icon {
+        position: relative;
+        top: -20px;
+        right: 20px;
+        z-index: 10;
+        opacity: 0;
+    }
+
+    .item-card:hover {
+        .add-item-icon {
+            opacity: 1;
+        }
+    }
+}

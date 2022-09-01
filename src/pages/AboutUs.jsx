@@ -14,6 +14,8 @@ const AboutUs = () => {
     const location = useLocation();
     const [champion, setChampion] = useState([]);
     const [selectedItem, setSelectedItem] = useState([]);
+    const [selectedStuff, setStuff] = useState([]);
+
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
 
@@ -117,7 +119,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampItemDetails selectedItem={selectedItem} />
+                            <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
 
                             {
                                 /**
