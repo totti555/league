@@ -5,6 +5,7 @@ import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
 import ChampStats from "../components/Champ/ChampStats";
 import ChampItemsList from "../components/Champ/ChampItemsList";
+import ChampItemDetails from "../components/Champ/ChampItemDetails";
 
 
 
@@ -12,6 +13,7 @@ const AboutUs = () => {
 
     const location = useLocation();
     const [champion, setChampion] = useState([]);
+    const [selectedItem, setSelectedItem] = useState([]);
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
 
@@ -110,19 +112,22 @@ const AboutUs = () => {
 
                             {
                                 /**
+                                    * *Champ Item div
+                                    * TODO : Component + SCSS
+                                */
+                            }
+
+                            <ChampItemDetails selectedItem={selectedItem} />
+
+                            {
+                                /**
                                     * *Champ Items div
                                     * TODO : Component + SCSS
                                 */
                             }
 
-                            <ChampItemsList />
+                            <ChampItemsList setSelectedItem={setSelectedItem} />
 
-                            {
-                                /**
-                                    * *Champ Item div
-                                    * TODO : Component + SCSS
-                                */
-                            }
 
                             {
                                 /**

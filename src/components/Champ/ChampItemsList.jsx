@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 
 const ChampItems = (props) => {
     const champion = props.champion
+    const setSelectedItem = props.setSelectedItem;
     const [itemsList, setItemsList] = useState([]);
+
 
     const champItems = () => {
         const axios = require('axios').default;
@@ -41,6 +43,10 @@ const ChampItems = (props) => {
         return itemsTypesArr.includes(i) ? true : false
     }
 
+    const handleClickItem = (item) => {
+        setSelectedItem(item);
+    }
+
 
 
     return (
@@ -53,7 +59,8 @@ const ChampItems = (props) => {
                             <p className='small'>{i} :</p>
                             <div className='row'>
                                 {itemsList.map((item, index) =>
-                                    itemIsInclude(item, i) && <div key={index} className="d-flex justify-content-center col-1">
+                                    itemIsInclude(item, i) &&
+                                    <div key={index} className="d-flex justify-content-center col-1" onClick={() => handleClickItem(item)}>
                                         {/* <p className='small'>{item.name}</p> */}
                                         <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="20px"></img>
                                     </div>
