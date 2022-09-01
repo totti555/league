@@ -216,7 +216,14 @@ const ChampMemo = ({ champ }) => {
 
     const navigate = useNavigate();
     const toComponentB = (champ) => {
-        navigate('/about_us', { state: { key: champ.key, name: champ.name } });
+        let name;
+        const exceptionalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
+        if (exceptionalName.includes(champ.name)) {
+            const minName = champ.name.toLowerCase();
+            name = minName.charAt(0).toUpperCase() + minName.slice(1);
+        }
+        else name = champ.name;
+        navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
     }
 
 
