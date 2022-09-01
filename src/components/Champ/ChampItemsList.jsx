@@ -36,6 +36,11 @@ const ChampItems = (props) => {
         return uniqueArr;
     }
 
+    const itemIsInclude = (item, i) => {
+        const itemsTypesArr = item.tags;
+        return itemsTypesArr.includes(i) ? true : false
+    }
+
 
 
     return (
@@ -45,19 +50,19 @@ const ChampItems = (props) => {
                 <div className='container'>
                     {itemsTypes().map((i) => (
                         <div key={i}>
-                            <p className='small'>{i}</p>
+                            <p className='small'>{i} :</p>
+                            <div className='row'>
+                                {itemsList.map((item, index) =>
+                                    itemIsInclude(item, i) && <div key={index} className="d-flex justify-content-center col-1">
+                                        {/* <p className='small'>{item.name}</p> */}
+                                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="20px"></img>
+                                    </div>
+                                )}
+                            </div>
 
                         </div>)
                     )}
 
-                    <div className='row'>
-                        {itemsList.map((item, index) =>
-                            <div key={index} className="d-flex justify-content-center col-1">
-                                {/* <p className='small'>{item.name}</p> */}
-                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="20px"></img>
-                            </div>
-                        )}
-                    </div>
 
 
                 </div>
