@@ -1,6 +1,6 @@
 import "../style/AboutUs.scss";
 import React, { useState, useEffect } from 'react';
-import { useLocation,useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
 import ChampStats from "../components/Champ/ChampStats";
@@ -18,7 +18,7 @@ const AboutUs = () => {
     const champDetails = async () => {
         console.log("route");
         console.log(champName);
-        const findChampKey = champList.find((champ)=> champName == champ.name);
+        const findChampKey = champList.find((champ) => champName == champ.name);
         console.log(findChampKey);
         let champKey;
         let name;
@@ -97,7 +97,7 @@ const AboutUs = () => {
                                     * TODO : SCSS
                                 */
                             }
-                            <ChampSpells champion={champion} />
+                            {/* <ChampSpells champion={champion} /> */}
 
                             {
                                 /**
@@ -106,7 +106,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampStats champion={champion} />
+                            {/* <ChampStats champion={champion} /> */}
 
                             {
                                 /**
