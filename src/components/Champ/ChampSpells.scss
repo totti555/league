@@ -2,10 +2,14 @@
     color: lightgray;
 
     background-color: rgb(23, 32, 42, 0.8);
+    /**
+    * !Depreciated
+    */
+    height: 450px;
 
     .spell-content {
-        background-color: #27273D;
-        opacity: 0.8;
+        background-color: rgb(39, 39, 61, 0.8);
+
 
         .spell-title {
             font-size: 14px;

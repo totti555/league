@@ -9,6 +9,7 @@ import ChampItemDetails from "../components/Champ/ChampItemDetails";
 import ChampStuff from "../components/Champ/ChampStuff";
 import ChampLinks from "../components/Champ/ChampLinks";
 import ChampCard from "../components/ChampList/ChampCard";
+import ChampLevel from "../components/Champ/ChampLevel";
 
 
 
@@ -21,6 +22,9 @@ const AboutUs = () => {
     const [itemsBuff, setItemsBuff] = useState([]);
     const [selectedKey, setKey] = useState(145);
     const [champCard, setChampCard] = useState([]);
+    const [level, setLevel] = useState(1);
+    const [increaseLevel, setIncreaseLevel] = useState(false);
+    const [decreaseLevel, setDecreaseLevel] = useState(true);
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -86,22 +90,6 @@ const AboutUs = () => {
                 {champion.name &&
                     (
                         <div>
-                            {
-                                /**
-                                    * *Champ Name div
-                                    * TODO : Include photo + SCSS
-                                */
-                                console.log(champion)
-                            }
-                            <div className="champ-header">
-                                <div className="d-flex justify-content-start">
-                                    <div className="d-flex flex-column">
-                                        <p className="champ-name text-white">{champion.name}</p>
-                                        <p className="champ-subtitle">{champion.title}</p>
-                                    </div>
-                                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='48px'></img>
-                                </div>
-                            </div>
 
                             {
                                 /**
@@ -110,7 +98,31 @@ const AboutUs = () => {
                                 */
                             }
                             <div className="row">
-                                <ChampSpells champion={champion} />
+                                <div className="col-8">
+                                    {
+                                        /**
+                                            * *Champ Name div
+                                            * TODO : Include photo + SCSS
+                                        */
+                                        console.log(champion)
+                                    }
+                                    <div className="champ-header border mb-2">
+                                        <div className="d-flex justify-content-between header-content">
+                                            <div className="d-flex justify-content-start">
+                                                <div className="position-relative">
+                                                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
+                                                    <span className="champ-level">{level}</span>
+                                                </div>
+                                                <div className="d-flex flex-column ms-5">
+                                                    <p className="champ-name text-white">{champion.name}</p>
+                                                    <p className="champ-subtitle">{champion.title}</p>
+                                                </div>
+                                            </div>
+                                            <ChampLevel setDecreaseLevel={setDecreaseLevel} setIncreaseLevel={setIncreaseLevel} level={level} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
+                                        </div>
+                                    </div>
+                                    <ChampSpells champion={champion} />
+                                </div>
 
                                 {
                                     /**
@@ -122,17 +134,17 @@ const AboutUs = () => {
                                 <div className="col-4">
                                     <div className="d-flex justify-content-center">
                                         {champCard && <ChampCard champ={champCard} className='m-0' />}
+                                        {
+                                            /**
+                                                * *Champ Stats div
+                                                * TODO : SCSS
+                                            */
+                                        }
                                     </div>
+                                    <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} />
                                 </div>
-                                {
-                                    /**
-                                        * *Champ Stats div
-                                        * TODO : SCSS
-                                    */
-                                }
                             </div>
 
-                            <ChampStats champion={champion} itemsBuff={itemsBuff} />
 
                             {
                                 /**

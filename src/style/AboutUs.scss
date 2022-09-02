@@ -10,6 +10,8 @@
 }
 
 .champ-header {
+    background-color: rgb(23, 32, 42, 0.8);
+
     p {
         margin-bottom: 0px;
     }
@@ -17,6 +19,16 @@
     .champ-subtitle {
         font-size: 12px;
         color: lightgray
+    }
+
+    .header-content {
+        background-color: rgb(39, 39, 61, 0.8);
+    }
+
+    .champ-level {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
     }
 }
 
