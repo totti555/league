@@ -57,15 +57,15 @@ const ChampItems = (props) => {
                         <div key={i}>
                             <p className='small'>{i} :</p>
                             <div className='row '>
-                                <div>
+                               
                                 {itemsList.map((item, index) =>
                                     itemIsInclude(item, i) &&
-                                    <div key={index} className="d-flex justify-content-start col-1" onClick={() => handleClickItem(item)}>
+                                    <div key={index} className="d-flex justify-content-start col-1 p-0 my-2" onClick={() => handleClickItem(item)}>
                                         {/* <p className='small'>{item.name}</p> */}
                                         <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
                                     </div>
                                 )}
-                            </div>
+                           
                             </div>
                         </div>)
                     )}
