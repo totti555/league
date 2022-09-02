@@ -25,6 +25,7 @@ const AboutUs = () => {
     const [level, setLevel] = useState(1);
     const [increaseLevel, setIncreaseLevel] = useState(false);
     const [decreaseLevel, setDecreaseLevel] = useState(true);
+    const [currentChampLinks, setCurrentChampLinks] = useState([]);
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -34,6 +35,8 @@ const AboutUs = () => {
         console.log("route");
         console.log(champName);
         const findChampKey = champList.find((champ) => champName == champ.name);
+        console.log("bizarree", findChampKey);
+        setCurrentChampLinks(findChampKey.linksWith);
         console.log(findChampKey);
         let champKey;
         let name;
@@ -42,6 +45,7 @@ const AboutUs = () => {
         champKey = findChampKey ? findChampKey.key : 145;
         setKey(champKey);
         const data = champList.filter((champ) => champ.key == champKey);
+
         const champSelected = data[0];
         setChampCard(champSelected);
 
@@ -162,18 +166,19 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
-
-
-
                             {
                                 /**
                                     * *Champ Items div
                                     * TODO : Component + SCSS
                                 */
                             }
+                            <div className='container'>
+                                <ChampItemsList setSelectedItem={setSelectedItem} />
+                                <hr></hr>
+                                <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
+                            </div>
 
-                            <ChampItemsList setSelectedItem={setSelectedItem} />
+
 
 
 
@@ -185,7 +190,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampLinks selectedKey={selectedKey} champion={champion} />
+                            <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
 
 
 

@@ -1,15 +1,52 @@
-.item-details {
-    .add-item-icon {
-        position: relative;
-        top: -20px;
-        right: 20px;
-        z-index: 10;
-        opacity: 0;
+.champ-item {
+    background-color: rgb(23, 32, 42, 0.8);
+    width: auto;
+    height: auto;
+
+    .item-title {
+        font-size: 14px;
+        font-weight: bold;
     }
 
-    .item-card:hover {
+    .item-content {
+        background-color: rgb(39, 39, 61, 0.6);
+        margin-left: 25%;
+        margin-right: 25%;
+
         .add-item-icon {
-            opacity: 1;
+            position: relative;
+            top: -20px;
+            right: 20px;
+            z-index: 10;
+            opacity: 0;
         }
+
+        .item-card:hover {
+            .add-item-icon {
+                opacity: 1;
+            }
+        }
+
+        .item-description {
+            maintext {
+                bottom: 20px;
+            }
+
+
+
+
+        }
+
+        attention {
+            font-weight: bold;
+            // display: none !important;
+        }
+
+        .hide-text {
+            display: none;
+        }
+
+
     }
+
 }

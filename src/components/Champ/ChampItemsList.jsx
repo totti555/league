@@ -24,12 +24,22 @@ const ChampItems = (props) => {
             })
             .then(function () {
                 // always executed
+                console.log(itemsList.length)
+                if (itemsList.length)
+                    setSelectedItem(itemsList[0])
             });
     }
 
     useEffect(() => {
         champItems();
+
     }, []);
+
+    useEffect(() => {
+        if (itemsList.length) {
+            setSelectedItem(itemsList[0])
+        }
+    }, [itemsList])
 
     const itemsTypes = () => {
         const itemsTypes = itemsList.map((item) => item.tags);

@@ -73,17 +73,17 @@ const ChampStuff = (props) => {
     }, [selectedStuff]);
 
     return (
-        <div className='d-flex justify-content-start'>
-            Stuff :
+        <div className='d-flex justify-content-start champ-stuff py-1 '>
+            Stuff
             {Array.from(Array(5)).map((_, i) =>
                 selectedStuff[i] ?
-                    (<div className='stuff-item border' key={i}>
+                    (<div className='stuff-item mx-1 border ' key={i}>
                         <div className='item-card h-auto'>
-                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedStuff[i].image.full}`} alt="stuff-item" onClick={() => handleClickItem(selectedStuff[i])} width="32px"></img>
+                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedStuff[i].image.full}`} alt="stuff-item" onClick={() => handleClickItem(selectedStuff[i])} width="48px"></img>
                             <img src={require(`../../assets/bin.png`)} onClick={() => removeToStuff(selectedStuff[i])} className="delete-item-icon about-icon-gold" alt="Champion world" width="10px" height="10px"></img>
                         </div>
                     </div>) :
-                    <div className='stuff-item border' key={i}>
+                    <div className='stuff-item mx-1 border' key={i}>
                         N
                     </div>
 
