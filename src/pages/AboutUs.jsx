@@ -81,7 +81,7 @@ const AboutUs = () => {
     return (
 
         <>
-            <div className="home-content bg-black text-white">
+            <div className="home-content text-white" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}` }}>
                 {/* <h1 className="text-white">Coming soon</h1> */}
                 {champion.name &&
                     (
@@ -110,7 +110,7 @@ const AboutUs = () => {
                                 */
                             }
                             <div className="row">
-                                <ChampSpells champion={champion}  />
+                                <ChampSpells champion={champion} />
 
                                 {
                                     /**
@@ -121,7 +121,7 @@ const AboutUs = () => {
                                 }
                                 <div className="col-4">
                                     <div className="d-flex justify-content-center">
-                                    {champCard && <ChampCard champ={champCard} className='m-0' />}
+                                        {champCard && <ChampCard champ={champCard} className='m-0' />}
                                     </div>
                                 </div>
                                 {

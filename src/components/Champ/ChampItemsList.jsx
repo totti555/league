@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './ChampItemsList.scss'
 
 const ChampItems = (props) => {
     const champion = props.champion
@@ -39,7 +40,7 @@ const ChampItems = (props) => {
 
     const itemIsInclude = (item, i) => {
         const itemsTypesArr = item.tags;
-        return itemsTypesArr.includes(i) ? true : false
+        return (itemsTypesArr.includes(i) && item.inStore !== false) ? true : false
     }
 
     const handleClickItem = (item) => {
@@ -49,23 +50,25 @@ const ChampItems = (props) => {
 
 
     return (
-        <div className="champ-items border col-8">
+        <div className="champ-items border">
             Items
             {itemsList.length && (
-                <div className='container'>
+                <div>
                     {itemsTypes().map((i) => (
                         <div key={i}>
                             <p className='small'>{i} :</p>
-                            <div className='row '>
-                               
-                                {itemsList.map((item, index) =>
-                                    itemIsInclude(item, i) &&
-                                    <div key={index} className="d-flex justify-content-start col-1 p-0 my-2" onClick={() => handleClickItem(item)}>
-                                        {/* <p className='small'>{item.name}</p> */}
-                                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
-                                    </div>
-                                )}
-                           
+                            <div className='position-relative'>
+                                <div className='d-flex flex-wrap '>
+
+                                    {itemsList.map((item, index) =>
+                                        itemIsInclude(item, i) &&
+                                        <div key={index} className=" p-0 my-1 mx-1" onClick={() => handleClickItem(item)}>
+                                            {/* <p className='small'>{item.name}</p> */}
+                                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
+                                        </div>
+                                    )}
+
+                                </div>
                             </div>
                         </div>)
                     )}

@@ -1,14 +1,26 @@
 .champ-spells {
     color: lightgray;
 
-    .spell-title {
-        font-size: 14px;
-        font-weight: bold;
+    background-color: rgb(23, 32, 42, 0.8);
 
-    }
+    .spell-content {
+        background-color: #27273D;
+        opacity: 0.8;
 
-    .spell-description {
-        font-size: 10px;
-        
+        .spell-title {
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        .spell-description {
+            font-size: 10px;
+
+        }
+
+        .spell-cooldown {
+            font-size: 10px;
+        }
+
     }
 }

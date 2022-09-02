@@ -36,6 +36,7 @@ const ChampStuff = (props) => {
                 }
 
             })
+            console.log('stuff', selectedStuff)
             console.log('resultat');
             console.log(firstEnt);
             setItemsBuff(firstEnt);
