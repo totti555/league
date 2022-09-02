@@ -4,7 +4,7 @@ const ChampSpells = (props) => {
     const champion = props.champion;
 
     return (
-        <div className="champ-spells ">
+        <div className="champ-spells col-8 border ">
             <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} />
             {
                 champion.spells.map((s) =>
@@ -27,8 +27,8 @@ const Spells = (props) => {
     const isPassive = props.isPassive
 
     return (
-        <div className="d-flex justify-content-start" >
-            <div className="spell-img">
+        <div className="d-flex justify-content-start mb-2" >
+            <div className="spell-img d-flex align-items-center ms-2">
                 {isPassive ?
                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${image}`} width='48px'></img>
                     :
@@ -36,9 +36,9 @@ const Spells = (props) => {
                 }
             </div>
 
-            <div>
+            <div className='ms-5'>
                 <p className="spell-title font-weight-bold">{name}</p>
-                <p className="spell-description" dangerouslySetInnerHTML={{ __html: description }} />
+                <p className="spell-description m-0" dangerouslySetInnerHTML={{ __html: description }} />
             </div>
         </div>
     )

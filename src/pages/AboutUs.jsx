@@ -8,6 +8,7 @@ import ChampItemsList from "../components/Champ/ChampItemsList";
 import ChampItemDetails from "../components/Champ/ChampItemDetails";
 import ChampStuff from "../components/Champ/ChampStuff";
 import ChampLinks from "../components/Champ/ChampLinks";
+import ChampCard from "../components/ChampList/ChampCard";
 
 
 
@@ -19,6 +20,8 @@ const AboutUs = () => {
     const [selectedStuff, setStuff] = useState([]);
     const [itemsBuff, setItemsBuff] = useState([]);
     const [selectedKey, setKey] = useState(145);
+    const [champCard, setChampCard] = useState([]);
+
 
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
@@ -36,6 +39,7 @@ const AboutUs = () => {
         setKey(champKey);
         const data = champList.filter((champ) => champ.key == champKey);
         const champSelected = data[0];
+        setChampCard(champSelected);
 
         const exceptionalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
         if (exceptionalName.includes(champSelected.name)) {
@@ -78,7 +82,7 @@ const AboutUs = () => {
 
         <>
             <div className="home-content bg-black text-white">
-                <h1 className="text-white">Coming soon</h1>
+                {/* <h1 className="text-white">Coming soon</h1> */}
                 {champion.name &&
                     (
                         <div>
@@ -105,16 +109,30 @@ const AboutUs = () => {
                                     * TODO : SCSS
                                 */
                             }
-                            {/* <ChampSpells champion={champion} /> */}
+                            <div className="row">
+                                <ChampSpells champion={champion}  />
 
-                            {
-                                /**
-                                    * *Champ Stats div
-                                    * TODO : SCSS
-                                */
-                            }
+                                {
+                                    /**
+                                        * *Champ Card div
+                                        * ? this component already exists
+                                        * TODO : Component + SCSS
+                                    */
+                                }
+                                <div className="col-4">
+                                    <div className="d-flex justify-content-center">
+                                    {champCard && <ChampCard champ={champCard} className='m-0' />}
+                                    </div>
+                                </div>
+                                {
+                                    /**
+                                        * *Champ Stats div
+                                        * TODO : SCSS
+                                    */
+                                }
+                            </div>
 
-                            {/* <ChampStats champion={champion} itemsBuff={itemsBuff} /> */}
+                            <ChampStats champion={champion} itemsBuff={itemsBuff} />
 
                             {
                                 /**
@@ -123,7 +141,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            {/* <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} /> */}
+                            <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
 
                             {
                                 /**
@@ -132,7 +150,9 @@ const AboutUs = () => {
                                 */
                             }
 
-                            {/* <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} /> */}
+                            <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
+
+
 
                             {
                                 /**
@@ -141,7 +161,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            {/* <ChampItemsList setSelectedItem={setSelectedItem} /> */}
+                            <ChampItemsList setSelectedItem={setSelectedItem} />
 
 
 
@@ -155,13 +175,6 @@ const AboutUs = () => {
 
                             <ChampLinks selectedKey={selectedKey} champion={champion} />
 
-                            {
-                                /**
-                                    * *Champ Card div
-                                    * ? this component already exists
-                                    * TODO : Component + SCSS
-                                */
-                            }
 
 
                         </div>

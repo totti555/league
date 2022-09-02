@@ -49,23 +49,24 @@ const ChampItems = (props) => {
 
 
     return (
-        <div className="champ-items">
+        <div className="champ-items border col-8">
             Items
             {itemsList.length && (
                 <div className='container'>
                     {itemsTypes().map((i) => (
                         <div key={i}>
                             <p className='small'>{i} :</p>
-                            <div className='row'>
+                            <div className='row '>
+                                <div>
                                 {itemsList.map((item, index) =>
                                     itemIsInclude(item, i) &&
-                                    <div key={index} className="d-flex justify-content-center col-1" onClick={() => handleClickItem(item)}>
+                                    <div key={index} className="d-flex justify-content-start col-1" onClick={() => handleClickItem(item)}>
                                         {/* <p className='small'>{item.name}</p> */}
-                                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="20px"></img>
+                                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
                                     </div>
                                 )}
                             </div>
-
+                            </div>
                         </div>)
                     )}
 
