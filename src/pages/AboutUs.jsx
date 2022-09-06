@@ -11,6 +11,7 @@ import ChampLinks from "../components/Champ/ChampLinks";
 import ChampCard from "../components/ChampList/ChampCard";
 import ChampLevel from "../components/Champ/ChampLevel";
 import ChampHeader from "../components/Champ/ChampHeader";
+import ChampSearch from "../components/Champ/ChampSearch";
 
 
 
@@ -124,6 +125,7 @@ const AboutUs = () => {
                                     */
                                 }
                                 <div className="mx-5">
+                                    <ChampSearch />
                                     <div className="d-flex justify-content-center ">
                                         {champCard && <ChampCard champ={champCard} className='' />}
                                         {
