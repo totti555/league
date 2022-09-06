@@ -5,6 +5,7 @@ const ChampItems = (props) => {
     const champion = props.champion
     const setSelectedItem = props.setSelectedItem;
     const [itemsList, setItemsList] = useState([]);
+    const [searchItem, setItemName] = useState('');
 
 
     const champItems = () => {
@@ -57,22 +58,50 @@ const ChampItems = (props) => {
         setSelectedItem(item);
     }
 
+    function handleChangeSearch(e) {
+        setItemName(e.target.value)
+
+    }
+
+    const isItemFind = (itemsList) => {
+        const data = itemsList.toLowerCase().includes(searchItem.toLowerCase());
+        return data ? true : false;
+    }
+
+    // const isItemFindInCategory = (category) => {
+    //     console.log(category);
+
+    //     const itemInCategory = itemsList.map((c) => c.tags == category);
+    //     console.log('category', itemInCategory);
+    // }
+
 
 
     return (
         <div className="champ-items border p-3">
             <div>
+
                 <p className='entity-title'>Items</p>
                 {itemsList.length && (
                     <div>
+
+                        <div className="d-flex justify-content-between">
+                            <div className="d-flex form__group field">
+                                <input type="input" onChange={handleChangeSearch} value={searchItem} className="form__field" placeholder="Search your champ" name="name" id='name' />
+                                <label htmlFor="name" className="form__label">Search <span className="label-visible">your item</span></label>
+                            </div>
+                            {/* <img src={Search} className="search-icon"></img> */}
+                        </div>
                         {itemsTypes().map((i) => (
                             <div key={i} className='items-content my-2'>
-                                <p className='items-type'>{i} :</p>
+
+                                {!searchItem.length &&
+                                    (<p className='items-type'>{i} :</p>)}
                                 <div className='position-relative '>
                                     <div className='d-flex flex-wrap mx-2 '>
 
                                         {itemsList.map((item, index) =>
-                                            itemIsInclude(item, i) &&
+                                            (itemIsInclude(item, i) && (isItemFind(item.name) || !searchItem)) &&
                                             <div key={index} className=" p-0 my-1 mx-1" onClick={() => handleClickItem(item)}>
                                                 {/* <p className='small'>{item.name}</p> */}
                                                 <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>

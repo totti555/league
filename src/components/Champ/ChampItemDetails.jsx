@@ -116,7 +116,7 @@ const ChampItemDetails = (props) => {
     return (
         <div className="border d-flex justify-content-center champ-item p-3">
             {selectedItem.name ?
-                <div className="item-content   ">
+                <div className="item-content">
                     <div className="text-center mb-3">
                         <p className='entity-title'>{selectedItem.name}</p>
                         <div className='item-card'>
