@@ -37,7 +37,7 @@ const Spells = (props) => {
                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${image}`} width='48px' height="48px"></img>
                 }
                 <div className='ms-2'>
-                    <p className="spell-title font-weight-bold mb-1">{name}</p>
+                    <p className="entity-title font-weight-bold mb-1">{name}</p>
                     <p className='spell-cooldown small mb-0'>10 / 15/ 20</p>
                 </div>
 

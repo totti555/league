@@ -60,33 +60,35 @@ const ChampItems = (props) => {
 
 
     return (
-        <div className="champ-items border">
-            Items
-            {itemsList.length && (
-                <div>
-                    {itemsTypes().map((i) => (
-                        <div key={i}>
-                            <p className='small'>{i} :</p>
-                            <div className='position-relative'>
-                                <div className='d-flex flex-wrap mx-2 '>
+        <div className="champ-items border p-3">
+            <div>
+                <p className='entity-title'>Items</p>
+                {itemsList.length && (
+                    <div>
+                        {itemsTypes().map((i) => (
+                            <div key={i} className='items-content my-2'>
+                                <p className='items-type'>{i} :</p>
+                                <div className='position-relative '>
+                                    <div className='d-flex flex-wrap mx-2 '>
 
-                                    {itemsList.map((item, index) =>
-                                        itemIsInclude(item, i) &&
-                                        <div key={index} className=" p-0 my-1 mx-1" onClick={() => handleClickItem(item)}>
-                                            {/* <p className='small'>{item.name}</p> */}
-                                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
-                                        </div>
-                                    )}
+                                        {itemsList.map((item, index) =>
+                                            itemIsInclude(item, i) &&
+                                            <div key={index} className=" p-0 my-1 mx-1" onClick={() => handleClickItem(item)}>
+                                                {/* <p className='small'>{item.name}</p> */}
+                                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
+                                            </div>
+                                        )}
 
+                                    </div>
                                 </div>
-                            </div>
-                        </div>)
-                    )}
+                            </div>)
+                        )}
 
 
 
-                </div>
-            )}
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

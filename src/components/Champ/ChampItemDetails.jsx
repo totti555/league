@@ -118,7 +118,7 @@ const ChampItemDetails = (props) => {
             {selectedItem.name ?
                 <div className="item-content   ">
                     <div className="text-center mb-3">
-                        <p className='item-title'>{selectedItem.name}</p>
+                        <p className='entity-title'>{selectedItem.name}</p>
                         <div className='item-card'>
                             <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedItem.image.full}`}></img>
                             <img src={require(`../../assets/plus.png`)} onClick={() => addToStuff(selectedItem)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
