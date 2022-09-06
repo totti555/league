@@ -174,7 +174,7 @@ const AboutUs = () => {
                                     * TODO : Component + SCSS
                                 */
                             }
-                            <div className='container'>
+                            <div className='d-flex justify-content-between second-block'>
                                 <ChampItemsList setSelectedItem={setSelectedItem} />
                                 <hr></hr>
                                 <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />

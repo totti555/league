@@ -68,7 +68,7 @@ const ChampItems = (props) => {
                         <div key={i}>
                             <p className='small'>{i} :</p>
                             <div className='position-relative'>
-                                <div className='d-flex flex-wrap '>
+                                <div className='d-flex flex-wrap mx-2 '>
 
                                     {itemsList.map((item, index) =>
                                         itemIsInclude(item, i) &&

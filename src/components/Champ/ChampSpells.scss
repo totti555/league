@@ -1,15 +1,22 @@
 .champ-spells {
     color: lightgray;
 
+    .champ-spells-overflow {
+        max-height: 600px;
+        overflow-y: auto;
+
+    }
+
     // background-color: rgb(23, 32, 42, 0.8);
     /**
     * !Depreciated
     */
-    max-width: 70rem;
+    // max-width: 70rem;
     // max-height: 28.125rem;
 
     .spell-content {
         background-color: rgba(35, 38, 97, 0.8);
+
 
 
         .spell-title {
@@ -28,11 +35,5 @@
             font-size: 16px;
         }
 
-    }
-}
-
-.home-content {
-    .first-block {
-        background-color: rgb(23, 32, 42, 0.8);
     }
 }

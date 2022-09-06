@@ -1,17 +1,19 @@
 .champ-item {
     background-color: rgb(23, 32, 42, 0.8);
-    width: auto;
-    height: auto;
+    min-width: 300px;
+
+    margin-left: 20px;
 
     .item-title {
-        font-size: 14px;
+        font-size: 20px;
         font-weight: bold;
     }
 
     .item-content {
-        background-color: rgb(39, 39, 61, 0.6);
-        margin-left: 25%;
-        margin-right: 25%;
+        background-color: rgba(35, 38, 97, 0.8);
+        max-height: 400px;
+        overflow-y: auto;
+
 
         .add-item-icon {
             position: relative;
