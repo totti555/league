@@ -10,6 +10,7 @@ import ChampStuff from "../components/Champ/ChampStuff";
 import ChampLinks from "../components/Champ/ChampLinks";
 import ChampCard from "../components/ChampList/ChampCard";
 import ChampLevel from "../components/Champ/ChampLevel";
+import ChampHeader from "../components/Champ/ChampHeader";
 
 
 
@@ -111,21 +112,7 @@ const AboutUs = () => {
                                     console.log(champion)
                                 }
                                 <div>
-                                    <div className="champ-header border mb-2">
-                                        <div className="d-flex justify-content-between header-content flex-wrap">
-                                            <div className="d-flex justify-content-start">
-                                                <div className="position-relative">
-                                                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
-                                                    <span className="champ-level">{level}</span>
-                                                </div>
-                                                <div className="d-flex flex-column ms-5">
-                                                    <p className="champ-name text-white">{champion.name}</p>
-                                                    <p className="champ-subtitle">{champion.title}</p>
-                                                </div>
-                                            </div>
-                                            <ChampLevel setDecreaseLevel={setDecreaseLevel} setIncreaseLevel={setIncreaseLevel} level={level} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
-                                        </div>
-                                    </div>
+                                    <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
                                     <ChampSpells champion={champion} />
                                 </div>
 
