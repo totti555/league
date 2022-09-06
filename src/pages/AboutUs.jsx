@@ -13,7 +13,16 @@ import ChampLevel from "../components/Champ/ChampLevel";
 import ChampHeader from "../components/Champ/ChampHeader";
 import ChampSearch from "../components/Champ/ChampSearch";
 
-
+{
+    /**
+         * *View to display the info of one champion
+         * CSS file : About.scss
+         * WORK IN PROGRESS / All doesn't work !!!
+         * Components : 1st part => ChampHeader, ChampSearch, ChampStats, ChampSpells
+         *              2nd part => ChampItemsList, ChampItemDetails
+         *              3rd part => ChampLinks
+     */
+}
 
 const AboutUs = () => {
 
