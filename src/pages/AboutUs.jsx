@@ -101,17 +101,18 @@ const AboutUs = () => {
                                     * TODO : SCSS
                                 */
                             }
-                            <div className="row">
-                                <div className="col-8">
-                                    {
-                                        /**
-                                            * *Champ Name div
-                                            * TODO : Include photo + SCSS
-                                        */
-                                        console.log(champion)
-                                    }
+
+                            <div className="d-flex justify-content-between first-block">
+                                {
+                                    /**
+                                        * *Champ Name div
+                                        * TODO : Include photo + SCSS
+                                    */
+                                    console.log(champion)
+                                }
+                                <div>
                                     <div className="champ-header border mb-2">
-                                        <div className="d-flex justify-content-between header-content">
+                                        <div className="d-flex justify-content-between header-content flex-wrap">
                                             <div className="d-flex justify-content-start">
                                                 <div className="position-relative">
                                                     <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
@@ -135,9 +136,9 @@ const AboutUs = () => {
                                         * TODO : Component + SCSS
                                     */
                                 }
-                                <div className="col-4">
-                                    <div className="d-flex justify-content-center">
-                                        {champCard && <ChampCard champ={champCard} className='m-0' />}
+                                <div className="mx-5">
+                                    <div className="d-flex justify-content-center ">
+                                        {champCard && <ChampCard champ={champCard} className='' />}
                                         {
                                             /**
                                                 * *Champ Stats div
@@ -148,6 +149,7 @@ const AboutUs = () => {
                                     <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} />
                                 </div>
                             </div>
+
 
 
                             {

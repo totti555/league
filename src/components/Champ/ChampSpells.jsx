@@ -5,7 +5,7 @@ const ChampSpells = (props) => {
 
     return (
         <div className="champ-spells border ps-3">
-            <div className='align-self-center'>
+            <div className='align-self-center mt-2'>
                 <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} />
                 {
                     champion.spells.map((s) =>
@@ -29,7 +29,7 @@ const Spells = (props) => {
     const isPassive = props.isPassive
 
     return (
-        <div className="mb-2 spell-content" >
+        <div className="mb-2 spell-content mx-3" >
             <div className="spell-img d-flex justify-content-start ms-2">
                 {isPassive ?
                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${image}`} width='48px' height="48px"></img>
