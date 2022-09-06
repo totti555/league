@@ -34,10 +34,10 @@ const ChampLevel = (props) => {
     }
 
     return (
-        <div className='d-flex justify-content-center'>
+        <div className='align-self-center wrap '>
             {/* <p>Level {level}</p> */}
-            <button onClick={() => addLevel(level)} disabled={increaseLevel}>+</button>
-            <button onClick={() => removeLevel(level)} disabled={decreaseLevel}>-</button>
+            <button className="button-filter button-level" onClick={() => addLevel(level)} disabled={increaseLevel}>+</button>
+            <button className="button-filter button-level " onClick={() => removeLevel(level)} disabled={decreaseLevel}>-</button>
         </div>
     )
 }

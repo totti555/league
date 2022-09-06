@@ -22,7 +22,7 @@
     }
 
     .header-content {
-        background-color: rgb(39, 39, 61, 0.8);
+        background-color: rgba(35, 38, 97, 0.8);
     }
 
     .champ-level {
@@ -30,6 +30,15 @@
         bottom: 0px;
         right: 0px;
     }
+
+    .button-level {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        padding: 8px;
+    }
+
 }
 
 .about-icon-gold {

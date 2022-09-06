@@ -12,8 +12,8 @@ const ChampHeader = (props) => {
 
 
     return (
-        <div className="champ-header border mb-2">
-            <div className="d-flex justify-content-between header-content flex-wrap">
+        <div className="champ-header border mb-2 p-3">
+            <div className="d-flex justify-content-between header-content flex-wrap p-2">
                 <div className="d-flex justify-content-start">
                     <div className="position-relative">
                         <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
