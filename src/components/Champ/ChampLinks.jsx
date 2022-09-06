@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { champList } from "../../datas/lolChamp";
+import './ChampLinks.scss'
 
 const ChampLinks = (props) => {
     const selectedKey = props.selectedKey;
@@ -27,15 +28,27 @@ const ChampLinks = (props) => {
 
 
     return (
-        <div>
-            Links with :
-            {getLinks().map((champ) =>
-                <div>
-                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="mx-2"></img>
-                    {console.log(currentChampLinks)}
-                    <p>{currentChampLinks[champ.name]}</p>
+        <div className=" mb-5 champ-links border p-3  ">
+            <div className="links-content">
+                <p className="entity-title"> Links with </p>
+                <div className=" d-flex flex-wrap ">
+
+                    {getLinks().map((champ, index) =>
+
+                        <div className="d-flex align-items-center flex-column mx-3">
+                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="mx-2"></img>
+                            {
+                                /**
+                                * !Depreciated
+                                * Syntax should be improve
+                                */
+                            }
+                            <p className="small links-value">{Object.values(currentChampLinks[0])[index]}</p>
+                        </div>
+
+                    )}
                 </div>
-            )}
+            </div>
         </div>
     )
 }

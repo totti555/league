@@ -282,7 +282,7 @@ export const champList = [
         image: Ashe,
         type: ["Marksman", 'Support'],
         release: '2009-02-21',
-        linksWith: [{ Tryndamere: 'Boyfriend', Gragas: 'Friends', Sejuani: 'Friends / Ennemy', Lissandra: 'Ennemy' }]
+        linksWith: [{ Tryndamere: 'Boyfriend', Gragas: 'Friends', Sejuani: 'Friends\nEnnemy', Lissandra: 'Ennemy' }]
     },
     {
         name: 'AurelionSol',
@@ -306,7 +306,7 @@ export const champList = [
         image: Azir,
         type: ["Mage", 'Marksman'],
         release: '2014-09-16',
-        linksWith: [{ Xerath: 'Friends / Apprentice', Renekton: 'Ennemy' }]
+        linksWith: [{ Xerath: 'Friends\nApprentice', Renekton: 'Ennemy' }]
     },
     {
         name: 'Bard',
@@ -354,7 +354,7 @@ export const champList = [
         image: Brand,
         type: ["Mage"],
         release: '2011-04-12',
-        linksWith: [{ Ryze: 'Friends / Ennemy' }]
+        linksWith: [{ Ryze: 'Friends\nEnnemy' }]
     },
     {
         name: 'Braum',
@@ -378,7 +378,7 @@ export const champList = [
         image: Caitlyn,
         type: ["Marksman"],
         release: '2011-01-04',
-        linksWith: [{ Jinx: 'Sister / Ennemy', Caitlyn: 'Friends' }]
+        linksWith: [{ Jinx: 'Sister\nEnnemy', Caitlyn: 'Friends' }]
     },
     {
         name: 'Camille',
@@ -731,7 +731,7 @@ export const champList = [
         image: JarvanIV,
         type: ['Tank', "Fighter"],
         release: '2011-03-01',
-        linksWith: [{ Garen: 'Friends', Shyvana: 'Friends', Xin_Zhao: 'Allie / Mentor', Quinn: 'Allie', Sion: 'Ennemy' }]
+        linksWith: [{ Garen: 'Friends', Shyvana: 'Friends', Xin_Zhao: 'Allie\nMentor', Quinn: 'Allie', Sion: 'Ennemy' }]
     },
     {
         name: 'Jax',
@@ -780,7 +780,7 @@ export const champList = [
         image: Jinx,
         type: ["Marksman"],
         release: '2013-10-10',
-        linksWith: [{ Vi: 'Sister / Ennemy', Ziggs: 'Friend', Caitlyn: 'Ennemy', Ekko: 'Potential friend' }]
+        linksWith: [{ Vi: 'Sister\nEnnemy', Ziggs: 'Friend', Caitlyn: 'Ennemy', Ekko: 'Potential friend' }]
     },
     {
         name: 'KaiSa',
@@ -792,7 +792,7 @@ export const champList = [
         image: Kaisa,
         type: ["Marksman"],
         release: '2018-03-07',
-        linksWith: [{ Kassadin: 'Father / Ennemy', Malzahar: 'Ennemy' }]
+        linksWith: [{ Kassadin: 'Father\nEnnemy', Malzahar: 'Ennemy' }]
     },
     {
         name: 'Kalista',
@@ -804,7 +804,7 @@ export const champList = [
         image: Kalista,
         type: ["Marksman"],
         release: '2014-11-20',
-        linksWith: [{ Viego: 'Allie / Ennemy', Hecarim: 'Ennemy' }]
+        linksWith: [{ Viego: 'Allie\nEnnemy', Hecarim: 'Ennemy' }]
     },
     {
         name: 'Karma',
@@ -840,7 +840,7 @@ export const champList = [
         image: Kassadin,
         type: ['Assassin', 'Mage'],
         release: '2009-06-12',
-        linksWith: [{ Kaisa: 'Daughter / Ennemy', Malzahar: 'Ennemy' }]
+        linksWith: [{ Kaisa: 'Daughter\nEnnemy', Malzahar: 'Ennemy' }]
     },
     {
         name: 'Katarina',
@@ -996,7 +996,7 @@ export const champList = [
         image: Lissandra,
         type: ['Mage'],
         release: '2013-04-30',
-        linksWith: [{ Trundle: 'Friends / Allie', Ashe: 'Ennemy', Anivia: 'Ennemy', Sejuani: 'Ennemy', Velkoz: 'Ennemy', Volibear: 'Ennemy' }]
+        linksWith: [{ Trundle: 'Friends\nAllie', Ashe: 'Ennemy', Anivia: 'Ennemy', Sejuani: 'Ennemy', Velkoz: 'Ennemy', Volibear: 'Ennemy' }]
     },
     {
         name: 'Lucian',
@@ -1247,7 +1247,7 @@ export const champList = [
         image: Ornn,
         type: ['Tank', 'Fighter'],
         release: '2017-08-23',
-        linksWith: [{ Anivia: 'Family', Volibear: 'Family / Ennemy' }]
+        linksWith: [{ Anivia: 'Family', Volibear: 'Family\nEnnemy' }]
     },
     {
         name: 'Pantheon',
@@ -1427,7 +1427,7 @@ export const champList = [
         image: Ryze,
         type: ["Mage", 'Fighter'],
         release: '2009-02-21',
-        linksWith: [{ Brand: 'Friends / Ennemy' }]
+        linksWith: [{ Brand: 'Friends\nEnnemy' }]
     },
     {
         name: 'Samira',
@@ -1451,7 +1451,7 @@ export const champList = [
         image: Sejuani,
         type: ['Tank'],
         release: '2012-01-17',
-        linksWith: [{ Udyr: 'Potential Family', Olaf: 'Friends', Ashe: 'Friends / Ennemy', Lissandra: 'Ennemy' }]
+        linksWith: [{ Udyr: 'Potential Family', Olaf: 'Friends', Ashe: 'Friends\nEnnemy', Lissandra: 'Ennemy' }]
     },
     {
         name: 'Senna',
@@ -1507,7 +1507,7 @@ export const champList = [
         image: Shen,
         type: ["Tank"],
         release: '2010-03-24',
-        linksWith: [{ Zed: 'Family / Ennemy', Akali: 'Friends', Shen: 'Friends', Jhin: 'Ennemy' }]
+        linksWith: [{ Zed: 'Family\nEnnemy', Akali: 'Friends', Shen: 'Friends', Jhin: 'Ennemy' }]
     },
     {
         name: 'Shyvana',
@@ -1705,7 +1705,7 @@ export const champList = [
         image: Trundle,
         type: ["Fighter", 'Tank'],
         release: '2010-12-01',
-        linksWith: [{ Lissandra: 'Friends / Allie' }]
+        linksWith: [{ Lissandra: 'Friends\nAllie' }]
     },
     {
         name: 'Tryndamere',
@@ -1826,7 +1826,7 @@ export const champList = [
         image: Vi,
         type: ["Fighter"],
         release: '2012-12-19',
-        linksWith: [{ Jinx: 'Sister / Ennemy', Caitlyn: 'Friends', Ekko: 'Potential Friends' }]
+        linksWith: [{ Jinx: 'Sister\nEnnemy', Caitlyn: 'Friends', Ekko: 'Potential Friends' }]
     },
     {
         name: 'Viego',
@@ -1837,7 +1837,7 @@ export const champList = [
         image: Viego,
         type: ["Assassin"],
         release: '2021-01-21',
-        linksWith: [{ Hecarim: 'Allie / Ennemy', Kalista: 'Allie / Ennemy', Gwen: 'Ebnnemy', Maokai: 'Ennemy', Yorick: 'Ennemy' }]
+        linksWith: [{ Hecarim: 'Allie\nEnnemy', Kalista: 'Allie\nEnnemy', Gwen: 'Ebnnemy', Maokai: 'Ennemy', Yorick: 'Ennemy' }]
     },
     {
         name: 'Viktor',
@@ -1870,7 +1870,7 @@ export const champList = [
         image: Volibear,
         type: ["Fighter"],
         release: '2011-11-29',
-        linksWith: [{ Ornn: 'Family / Ennemy', Lissandra: 'Ennemy', Udyr: 'Ennemy' }]
+        linksWith: [{ Ornn: 'Family\nEnnemy', Lissandra: 'Ennemy', Udyr: 'Ennemy' }]
     },
     {
         name: 'Warwick',
@@ -1881,7 +1881,7 @@ export const champList = [
         image: Warwick,
         type: ["Fighter"],
         release: '2009-02-21',
-        linksWith: [{ Singed: 'Ennemy / Mentor' }]
+        linksWith: [{ Singed: 'Ennemy\nMentor' }]
     },
     {
         name: 'Wukong',
@@ -1914,7 +1914,7 @@ export const champList = [
         image: Xerath,
         type: ["Mage"],
         release: '2011-10-05',
-        linksWith: [{ Azir: 'Friends / Teacher / Ennemy', Nasus: 'Ennemy', Renekton: 'Ennemy' }]
+        linksWith: [{ Azir: 'Friends\nTeacher\nEnnemy', Nasus: 'Ennemy', Renekton: 'Ennemy' }]
     },
     {
         name: 'XinZhao',
@@ -1936,7 +1936,7 @@ export const champList = [
         image: Yasuo,
         type: ['Fighter', "Assassin"],
         release: '2013-12-13',
-        linksWith: [{ Yone: 'Brother / Ennemy', Talliyah: 'Mentor' }]
+        linksWith: [{ Yone: 'Brother\nEnnemy', Talliyah: 'Mentor' }]
     },
     {
         name: 'Yone',
@@ -1947,7 +1947,7 @@ export const champList = [
         image: Yone,
         type: ["Assassin"],
         release: '2020-08-06',
-        linksWith: [{ Yasuo: 'Brother / Ennemy' }]
+        linksWith: [{ Yasuo: 'Brother\nEnnemy' }]
     },
     {
         name: 'Yorick',
@@ -1991,7 +1991,7 @@ export const champList = [
         image: Zed,
         type: ["Assassin"],
         release: '2012-11-13',
-        linksWith: [{ Shen: 'Family / Ennemy', Velkoz: 'Ennemy', Xayah: 'Ennemy' }]
+        linksWith: [{ Shen: 'Family\nEnnemy', Velkoz: 'Ennemy', Xayah: 'Ennemy' }]
     },
     {
         name: 'Zeri',

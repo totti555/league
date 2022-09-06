@@ -192,7 +192,9 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
+                            <div className="third-block">
+                                <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
+                            </div>
 
 
 
