@@ -19,7 +19,7 @@ const ChampSearch = () => {
             var str = text.innerHTML;
             let textToReplace = `${research.toUpperCase()}`;
             var re = new RegExp(textToReplace, "g");
-            str = str.replace(re, `<span style="color:#72DE38;">${research.toUpperCase()}</span>`)
+            str = str.replace(re, `<span style="color:#ECB823;">${research.toUpperCase()}</span>`)
             document.getElementById(`updated${id}`).innerHTML = str;
         }
 
@@ -49,6 +49,7 @@ const ChampSearch = () => {
         // }
         // else name = champ.name;
         navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
+        setSearchChamp('');
     }
 
     const champName = (champ) => {
@@ -77,7 +78,7 @@ const ChampSearch = () => {
                 <div className="champ-search-result border pt-2 pb-2">
                     {champsFound.map((champ) =>
                         <div key={champ.id} >
-                            <div class="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>
+                            <div className="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>
                                 <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champName(champ)}.png`} width='48px' className="ms-2"></img>
                                 <div className="d-flex flex-column align-self-center ms-2">
                                     <p id={`content${champ.id}`} className="m-0 hide-text font-weight-bold small">{champ.name.toUpperCase()}</p>
