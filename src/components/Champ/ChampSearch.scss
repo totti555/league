@@ -4,7 +4,7 @@
     overflow-y: auto;
     z-index: 10;
     background-color: rgb(23, 32, 42, 0.8);
-    right: 28px;
+    right: 0px;
     left: 0px;
 
     .research-result {
@@ -12,6 +12,17 @@
     }
 
     .research-result:first-letter {
+        text-transform: uppercase;
+    }
+
+    .subtitle {
+        font-style: italic;
+        background: -webkit-linear-gradient(0.5turn, #ECB823 0%, white 25%, #ECB823 50%, white 75%, #ECB823 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle::first-letter {
         text-transform: uppercase;
     }
 }
@@ -29,6 +40,7 @@
 input {
     background-color: rgba(35, 38, 97, 0.8);
     color: white;
+    width: 100%;
 }
 
 .champ-search-separator {

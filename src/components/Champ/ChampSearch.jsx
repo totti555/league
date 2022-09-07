@@ -7,6 +7,8 @@ const ChampSearch = () => {
 
     const [searchChamp, setSearchChamp] = useState('');
     const [champsFound, setChampBySearch] = useState([]);
+    const [allChamps, setAllChamps] = useState([]);
+    const api_key = process.env.REACT_APP_API_KEY;
 
     function onChange(e) {
         setSearchChamp(e.target.value);
@@ -36,6 +38,7 @@ const ChampSearch = () => {
     useEffect(() => {
         const championsFound = champList.filter((champ) => champ.name.toLowerCase().includes(searchChamp.toLowerCase()));
         setChampBySearch(championsFound);
+        getAllChamps();
     }, [searchChamp]);
 
     const navigate = useNavigate();
@@ -50,6 +53,23 @@ const ChampSearch = () => {
         // else name = champ.name;
         navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
         setSearchChamp('');
+    }
+
+    const getAllChamps = () => {
+        const axios = require('axios').default;
+        axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion.json?api_key=${api_key}`)
+            .then(function (response) {
+                // handle success
+                setAllChamps(response.data.data);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+
+            });
     }
 
     const champName = (champ) => {
@@ -83,7 +103,7 @@ const ChampSearch = () => {
                                 <div className="d-flex flex-column align-self-center ms-2">
                                     <p id={`content${champ.id}`} className="m-0 hide-text font-weight-bold small">{champ.name.toUpperCase()}</p>
                                     <p id={`updated${champ.id}`} className="m-0 research-result"></p>
-                                    <p className="small m-0">Blabla</p>
+                                    {allChamps && <p className="small m-0 subtitle">{allChamps[champName(champ)].title}</p>}
                                 </div>
                             </div>
                             <hr className="champ-search-separator" />
