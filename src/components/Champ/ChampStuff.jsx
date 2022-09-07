@@ -36,9 +36,6 @@ const ChampStuff = (props) => {
                 }
 
             })
-            console.log('stuff', selectedStuff)
-            console.log('resultat');
-            console.log(firstEnt);
             setItemsBuff(firstEnt);
             // const test3 = test.map((item) => {
             //     if (firstEnt !== item) {

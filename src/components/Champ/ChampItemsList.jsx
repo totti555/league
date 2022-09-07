@@ -25,7 +25,6 @@ const ChampItems = (props) => {
             })
             .then(function () {
                 // always executed
-                console.log(itemsList.length)
                 if (itemsList.length)
                     setSelectedItem(itemsList[0])
             });

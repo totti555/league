@@ -78,7 +78,6 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
     */
 
     function resetChampLinks() {
-        console.log("A tester : est ce qu'on reset vraiment ?");
         handleClickLinks(!displayLinks); // ca va juste cacher celui de la carte et pas les autres
         setCurrentChampLinks(null); // reset champ links
         setChampList(champList);

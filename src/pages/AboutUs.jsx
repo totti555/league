@@ -43,12 +43,10 @@ const AboutUs = () => {
     let { champName } = useParams();
 
     const champDetails = async () => {
-        console.log("route");
-        console.log(champName);
+
         const findChampKey = champList.find((champ) => champName == champ.name);
-        console.log("bizarree", findChampKey);
+        console.log("findChampKey", findChampKey);
         setCurrentChampLinks(findChampKey.linksWith);
-        console.log(findChampKey);
         let champKey;
         let name;
         const axios = require('axios').default;

@@ -40,7 +40,6 @@ const ChampStats = (props) => {
             <p className="stats-title font-weight-bold mb-1">Stats</p>
 
             <div className='d-flex justify-content-start stats-content'>
-                {console.log("cc", itemsBuff)}
                 <div>
                     <p>Power : 0</p>
                     <p>Armor : {Math.round((armor + (level * champion.stats.armorperlevel)) * 100) / 100}</p>

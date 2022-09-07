@@ -17,8 +17,6 @@ const Types = ({ type, updateType, checked, setChecked, types }) => {
 
     const handleChangeType = (event) => {
         var updatedTypeList = [...checked];
-        console.log("updatedTypeList");
-        console.log(updatedTypeList);
         if (event.target.checked) {
             updatedTypeList = [...checked, event.target.value];
         } else {
