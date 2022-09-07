@@ -93,7 +93,7 @@ const AboutUs = () => {
 
     useEffect(() => {
         champDetails();
-    }, []);
+    }, [champName]);
 
 
 
@@ -119,12 +119,12 @@ const AboutUs = () => {
                                         * *Champ Name div
                                         * TODO : Include photo + SCSS
                                     */
-                                    console.log(champion)
+
                                 }
-                                <div>
+                                {/* <div>
                                     <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
                                     <ChampSpells champion={champion} />
-                                </div>
+                                </div> */}
 
                                 {
                                     /**
@@ -172,11 +172,11 @@ const AboutUs = () => {
                                     * TODO : Component + SCSS
                                 */
                             }
-                            <div className='d-flex justify-content-between second-block'>
+                            {/* <div className='d-flex justify-content-between second-block'>
                                 <ChampItemsList setSelectedItem={setSelectedItem} />
                                 <hr></hr>
                                 <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
-                            </div>
+                            </div> */}
 
 
 
@@ -190,9 +190,9 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <div className="third-block">
+                            {/* <div className="third-block">
                                 <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
-                            </div>
+                            </div> */}
 
 
 

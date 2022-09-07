@@ -1,11 +1,33 @@
 .champ-search-result {
     position: absolute;
     max-height: 200px;
-    overflow-y: auto
+    overflow-y: auto;
+    z-index: 10;
+    background-color: rgb(23, 32, 42, 0.8);
+    right: 28px;
+    left: 0px;
 }
 
 .champ-search-content {
-    top: 0px;
-    left: 0px;
-    right: -50px
+    background-color: rgba(35, 38, 97, 0.8);
+}
+
+.champ-search-content:hover {
+    background-color: rgba(51, 56, 145, 0.8);
+
+}
+
+
+input {
+    background-color: rgba(35, 38, 97, 0.8);
+    color: white;
+}
+
+.champ-search-separator {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.champ-input {
+    position: relative;
 }
