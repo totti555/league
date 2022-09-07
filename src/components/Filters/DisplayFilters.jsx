@@ -1,5 +1,5 @@
 
-import FlecheBas from "../../assets/fleche-bas.png"
+import FlecheBas from "../../assets/Common/fleche-bas.png"
 import "./DisplayFilters.scss"
 
 const DisplayFilters = (props) => {

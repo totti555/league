@@ -5,7 +5,7 @@ import { champList } from "../datas/lolChamp";
 import { useState } from 'react'
 import '../style/Look.scss'
 import DisplayFilters from "../components/Filters/DisplayFilters";
-import FlecheBas from "../assets/fleche-bas.png"
+import FlecheBas from "../assets/Common/fleche-bas.png"
 
 
 const Look = (props) => {

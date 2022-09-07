@@ -4,8 +4,8 @@ import Worlds from "./Worlds";
 import './FiltersList.scss'
 import { useState } from 'react'
 import DisplayFilters from "./DisplayFilters";
-import Search from "../../assets/search.svg"
-import Okay from "../../assets/okay.png"
+import Search from "../../assets/Common/search.svg"
+import Okay from "../../assets/Common/okay.png"
 import ChampFunctions from "./ChampFunctions";
 
 
