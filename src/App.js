@@ -13,6 +13,7 @@ function App() {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
+    document.title = 'List of Legends'
   }, []);
   return (
     <div className="App">
