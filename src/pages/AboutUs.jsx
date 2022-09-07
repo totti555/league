@@ -63,6 +63,7 @@ const AboutUs = () => {
             const minName = champSelected.name.toLowerCase();
             name = minName.charAt(0).toUpperCase() + minName.slice(1);
         }
+        else if (name = 'Wukong') name = 'MonkeyKing';
         else name = champSelected.name;
 
 
