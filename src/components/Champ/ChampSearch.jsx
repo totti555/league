@@ -14,13 +14,9 @@ const ChampSearch = () => {
     }
 
     const changeColor = (research, id) => {
-        console.log("parametre fonction", research);
         if (document.getElementById(`content${id}`) != null) {
-
             var text = document.getElementById(`content${id}`);
-
             var str = text.innerHTML;
-            let toto;
             let textToReplace = `${research.toUpperCase()}`;
             var re = new RegExp(textToReplace, "g");
             str = str.replace(re, `<span style="color:#72DE38;">${research.toUpperCase()}</span>`)
@@ -29,6 +25,12 @@ const ChampSearch = () => {
 
 
     }
+
+    useEffect(() => {
+        for (let i = 1; i < 161; i++) {
+            changeColor(searchChamp, i)
+        }
+    });
 
 
     useEffect(() => {
@@ -61,7 +63,6 @@ const ChampSearch = () => {
                             <div class="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>
                                 <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="ms-2"></img>
                                 <div className="d-flex flex-column align-self-center ms-2">
-                                    {changeColor(searchChamp, champ.id)}
                                     <p id={`content${champ.id}`} className="m-0 hide-text font-weight-bold small">{champ.name.toUpperCase()}</p>
                                     <p id={`updated${champ.id}`} className="m-0"></p>
                                     <p className="small m-0">Blabla</p>
