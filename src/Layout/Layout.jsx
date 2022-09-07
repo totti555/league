@@ -53,7 +53,7 @@ function Layout({ children }) {
             <Link to="/">HOME</Link>
           </button>
           <button className="nav-button">
-            <Link to="/about_us">ABOUT US</Link>
+            <Link to="/about_us/Kaisa">ABOUT US</Link>
           </button>
           <button className="nav-button">
             <Link to="/look">LOOK</Link>
