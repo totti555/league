@@ -51,6 +51,19 @@ const ChampSearch = () => {
         navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
     }
 
+    const champName = (champ) => {
+        let name;
+        /**
+         * TODO : Problem with Wukong and Kogmaw
+        */
+        const exceptionalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
+        if (exceptionalName.includes(champ.name)) {
+            const minName = champ.name.toLowerCase();
+            return name = minName.charAt(0).toUpperCase() + minName.slice(1);
+        }
+        else return name = champ.name;
+    }
+
 
     return (
         <div className="champ-input">
@@ -61,7 +74,7 @@ const ChampSearch = () => {
                     {champsFound.map((champ) =>
                         <div key={champ.id} >
                             <div class="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>
-                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="ms-2"></img>
+                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champName(champ)}.png`} width='48px' className="ms-2"></img>
                                 <div className="d-flex flex-column align-self-center ms-2">
                                     <p id={`content${champ.id}`} className="m-0 hide-text font-weight-bold small">{champ.name.toUpperCase()}</p>
                                     <p id={`updated${champ.id}`} className="m-0"></p>
