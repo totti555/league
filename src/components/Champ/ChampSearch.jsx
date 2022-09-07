@@ -27,7 +27,7 @@ const ChampSearch = () => {
     }
 
     useEffect(() => {
-        for (let i = 1; i < 161; i++) {
+        for (let i = 1; i < 162; i++) {
             changeColor(searchChamp, i)
         }
     });
@@ -56,10 +56,14 @@ const ChampSearch = () => {
         /**
          * TODO : Problem with Wukong and Kogmaw
         */
-        const exceptionalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
+        const exceptionalName = ['BelVeth', 'KaiSa', 'ChoGath'];
+        const wukong = 'MonkeyKing';
         if (exceptionalName.includes(champ.name)) {
             const minName = champ.name.toLowerCase();
             return name = minName.charAt(0).toUpperCase() + minName.slice(1);
+        }
+        else if (champ.name == 'Wukong') {
+            return name = wukong
         }
         else return name = champ.name;
     }
@@ -77,7 +81,7 @@ const ChampSearch = () => {
                                 <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champName(champ)}.png`} width='48px' className="ms-2"></img>
                                 <div className="d-flex flex-column align-self-center ms-2">
                                     <p id={`content${champ.id}`} className="m-0 hide-text font-weight-bold small">{champ.name.toUpperCase()}</p>
-                                    <p id={`updated${champ.id}`} className="m-0"></p>
+                                    <p id={`updated${champ.id}`} className="m-0 research-result"></p>
                                     <p className="small m-0">Blabla</p>
                                 </div>
                             </div>

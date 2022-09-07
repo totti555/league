@@ -68,7 +68,23 @@ const AboutUs = () => {
 
         // const champSelectedName = champSelected.name ? champSelected.name : 'Kaisa';
 
+        // axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion.json?api_key=${api_key}`)
+        //     .then(function (response) {
+        //         // handle success
+        //         // const obj = response.data.data
+        //         // const data = Object.values(obj);
+        //         // setChampion(data[0]);
+        //         console.log(response.data.data)
 
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .then(function () {
+        //         // always executed
+
+        //     });
 
         axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${name}.json?api_key=${api_key}`)
             .then(function (response) {

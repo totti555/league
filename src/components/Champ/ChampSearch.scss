@@ -6,6 +6,14 @@
     background-color: rgb(23, 32, 42, 0.8);
     right: 28px;
     left: 0px;
+
+    .research-result {
+        text-transform: lowercase;
+    }
+
+    .research-result:first-letter {
+        text-transform: uppercase;
+    }
 }
 
 .champ-search-content {
