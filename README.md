@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# List of Legends projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Home page : Presentation of the website
+Look page : You can filter the different champions by filters like the role, the post, the world, the links and you can order them by name, by release date. 
+About page : You can seee all the datas about one champion (spells, stats, links, region, world, post,...). You can also create your own stuff and increase your champ level to see the different stats. 
 
 ## Available Scripts
 
