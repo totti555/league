@@ -128,7 +128,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <div className="first-block">
+                            <div className="first-block p-4">
                                 {
                                     /**
                                         * *Champ Name div

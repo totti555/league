@@ -1,10 +1,25 @@
 .champ-spells {
-    color: lightgray;
+
+
+    h2 {
+        letter-spacing: 3px;
+        font-style: italic;
+    }
 
     .champ-spells-overflow {
-        max-height: 600px;
+        max-height: 200px;
         overflow-y: auto;
 
+    }
+
+    .select-spells {
+        width: 160px;
+        margin: auto;
+    }
+
+    video {
+        width: 90%;
+        margin: auto;
     }
 
     // background-color: rgb(23, 32, 42, 0.8);
@@ -16,6 +31,7 @@
 
     .spell-content {
         background-color: rgba(35, 38, 97, 0.8);
+        color: lightgray;
 
 
 

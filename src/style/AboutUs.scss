@@ -78,7 +78,8 @@
 
 
 .first-block {
-    background-color: rgb(23, 32, 42, 0.6);
+    // background-color: rgb(23, 32, 42, 0.6);
+    background-color: black;
     display: flex;
 }
 
@@ -113,6 +114,13 @@
 
         h2 {
             font-size: 24px !important;
+        }
+    }
+
+    .champ-spells {
+        h2 {
+            font-size: 40px !important;
+            margin: 0px !important;
         }
     }
 }
