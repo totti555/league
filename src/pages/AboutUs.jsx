@@ -103,12 +103,24 @@ const AboutUs = () => {
     return (
 
         <>
-            <div className="home-content text-white" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}` }}>
+            <div className="home-content text-white" >
                 {/* <h1 className="text-white">Coming soon</h1> */}
                 {champion.name &&
                     (
                         <div>
+                            {/* <div className="position-relative">
+                                <img
+                                    alt="Champ banner"
+                                    src={process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}
+                                    width="100%"
+                                ></img>
+                                <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
 
+                            </div> */}
+                            <div className="about-background" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}`, backgroundSize: "cover" }}>
+                                <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} champCard={champCard} />
+
+                            </div>
                             {
                                 /**
                                     * *Champ Spells div
@@ -125,7 +137,7 @@ const AboutUs = () => {
 
                                 }
                                 <div className="col-xl-9 col-md-8 col-sm-7 col-vsm">
-                                    <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
+                                    {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
                                     <ChampSpells champion={champion} />
                                 </div>
 
@@ -137,7 +149,7 @@ const AboutUs = () => {
                                     */
                                 }
                                 <div className="col-xl-3 col-md-4 col-sm-5 col-vsm">
-                                    <ChampSearch setChampion={setChampion}/>
+                                    <ChampSearch setChampion={setChampion} />
                                     <div className="d-flex justify-content-center ">
                                         {champCard && <ChampCard champ={champCard} className='' />}
                                         {
@@ -177,11 +189,11 @@ const AboutUs = () => {
                             }
                             <div className='second-block'>
                                 <div className="col-xl-10 col-md-9 col-sm-8 col-vsm">
-                                <ChampItemsList setSelectedItem={setSelectedItem} />
+                                    <ChampItemsList setSelectedItem={setSelectedItem} />
                                 </div>
                                 {/* <hr></hr> */}
                                 <div className="col-xl-2 col-md-3 col-sm-4 col-vsm">
-                                <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
+                                    <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
                                 </div>
                             </div>
 

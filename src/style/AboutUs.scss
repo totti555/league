@@ -10,7 +10,17 @@
 }
 
 .champ-header {
-    background-color: rgb(23, 32, 42, 0.8);
+    // background-color: rgb(23, 32, 42, 0.8);
+    // position: absolute;
+    // bottom: -8px;
+    // top: 50%;
+    // right: 0px;
+    // left: 0px;
+    // z-index: 5;
+    padding-top: 450px !important;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0, 1) 60%);
+
+
 
     p {
         margin-bottom: 0px;
@@ -21,9 +31,9 @@
         color: lightgray
     }
 
-    .header-content {
-        background-color: rgba(35, 38, 97, 0.8);
-    }
+    // .header-content {
+    //     background-color: rgba(35, 38, 97, 0.8);
+    // }
 
     .champ-level {
         position: absolute;
@@ -38,6 +48,16 @@
         height: auto;
         padding: 8px;
     }
+
+    .title {
+        letter-spacing: 5px;
+        font-style: italic;
+    }
+
+    h2::first-letter {
+        text-transform: uppercase;
+    }
+
 
 }
 
@@ -61,14 +81,29 @@
 @media (min-width: 0px) and (max-width : 575px) {
     .second-block {
         //This should work for Normal desktops(15 to 18 inch) only.
-       display: block !important;
+        display: block !important;
     }
+
     .col-vsm {
         min-width: 100% !important;
     }
 
     .first-block {
         display: block !important;
+    }
+
+    .champ-header {
+        height: 300px !important;
+        padding-top: 150px !important;
+
+        h1 {
+            font-size: 48px !important;
+            margin: 0px !important;
+        }
+
+        h2 {
+            font-size: 24px !important;
+        }
     }
 }
 
@@ -83,4 +118,8 @@
 .entity-title {
     font-size: 20px;
     font-weight: bold;
+}
+
+.champ-background {
+    background-size: cover;
 }
