@@ -160,7 +160,7 @@ const AboutUs = () => {
                                             */
                                         }
                                     </div>
-                                    <div style={{ backgroundImage: `url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
+                                    <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
                                         <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} />
                                     </div>
                                 </div>

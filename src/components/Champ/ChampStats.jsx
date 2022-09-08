@@ -36,10 +36,10 @@ const ChampStats = (props) => {
 
 
     return (
-        <div className="champ-stats m-2">
-            <p className="stats-title font-weight-bold mb-1">Stats</p>
-
-            <div className='d-flex justify-content-start stats-content'>
+        <div className="champ-stats p-2">
+            <h2 className="title">STATS :</h2>
+            <hr/>
+            <div className='d-flex justify-content-around stats-content mt-5'>
                 <div>
                     <p>Power : 0</p>
                     <p>Armor : {Math.round((armor + (level * champion.stats.armorperlevel)) * 100) / 100}</p>
