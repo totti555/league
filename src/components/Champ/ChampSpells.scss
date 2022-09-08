@@ -1,5 +1,9 @@
 .champ-spells {
+    .background-spells {
 
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.2) 50%,
+                rgba(0, 0, 0, 0.7) 90%);
+    }
 
     h2 {
         letter-spacing: 3px;
@@ -13,7 +17,7 @@
     }
 
     .select-spells {
-        width: 160px;
+        width: 165px;
         margin: auto;
     }
 
@@ -52,4 +56,19 @@
         }
 
     }
+
+    .gradient-border {
+        // border animated : 
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: padding-box;
+        /* for Safari */
+        background-clip: padding-box;
+        /* for IE9+, Firefox 4+, Opera, Chrome */
+
+    }
+
+
+
+
+
 }

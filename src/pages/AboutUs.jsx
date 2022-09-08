@@ -138,7 +138,7 @@ const AboutUs = () => {
                                 }
                                 <div className="col-xl-9 col-md-8 col-sm-7 col-vsm">
                                     {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
-                                    <ChampSpells champion={champion} />
+                                    <ChampSpells champion={champion} championCard={champCard} />
                                 </div>
 
                                 {
