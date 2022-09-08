@@ -7,7 +7,7 @@ const ChampSpells = (props) => {
 
 
     return (
-        <div className="champ-spells border mb-2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
+        <div className="champ-spells mb-2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
             <div className='background-spells ps-3 pe-3 '>
                 <h2 className="title">SPELLS :</h2>
                 {console.log(champion.spells)}

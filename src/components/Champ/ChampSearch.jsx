@@ -55,7 +55,7 @@ const ChampSearch = (props) => {
         // }
         // else name = champ.name;
         navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
-       
+
         setSearchChamp('');
     }
 
@@ -96,16 +96,16 @@ const ChampSearch = (props) => {
 
     return (
         <div className="champ-input">
-          
-                <div className="d-flex justify-content-center">
-                    <div className="position-relative">
-                        <input type='text' onChange={onChange}></input>
-                        <img src={Search} className="search-icon"></img>
-                    </div>
+
+            <div className="">
+                <div className="position-relative">
+                    <input type="input" onChange={onChange} value={searchChamp} className="form__field" placeholder="Search champ" name="name" id='name' />
+                    <img src={Search} className="search-icon"></img>
                 </div>
-          
+            </div>
+
             {(searchChamp && champsFound) &&
-                <div className="champ-search-result border pt-2 pb-2">
+                <div className="champ-search-result pt-2 pb-2">
                     {champsFound.map((champ) =>
                         <div key={champ.id} >
                             <div className="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>
