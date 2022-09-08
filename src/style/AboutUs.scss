@@ -49,13 +49,23 @@
         padding: 8px;
     }
 
-    .title {
+    h1 {
         letter-spacing: 5px;
         font-style: italic;
     }
 
     h2::first-letter {
         text-transform: uppercase;
+    }
+
+    .vertical-hr {
+        border: none;
+        height: 38px;
+        width: 1px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
 

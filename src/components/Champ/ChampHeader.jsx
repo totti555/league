@@ -20,12 +20,49 @@ const ChampHeader = (props) => {
                     <h2>{champion.title}</h2>
                 </div>
                 <div className="d-flex justify-content-between">
-                    <div className="position-relative">
+                    <div className="position-relative me-4">
                         <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
                         <span className="champ-level">{level}</span>
                     </div>
                     <div className="align-self-center">
-                        I / I / I / I / I
+                        <div className="d-flex ">
+                            <div className='display-world-animation d-flex'>
+                                {champCard.role.map((role) => (
+                                    <div key={role} className='text-center' >
+                                        <img src={require(`../../assets/Post/${role}.png`)} alt="Champion post" width="38px" height="38px"></img>
+                                        <p className="title text-memo small" key={role}>{role}</p>
+                                    </div>
+                                ))}
+                                <hr className="vertical-hr"></hr>
+                            </div>
+
+                            <div className='display-world-animation d-flex'>
+                                {champCard.type.map((type) => (
+                                    <div key={type} className='text-center' >
+                                        <img src={require(`../../assets/Type/${type}.png`)} alt="Champion post" width="38px" height="38px"></img>
+                                        <p className="title text-memo small " key={type}>{type}</p>
+                                    </div>
+                                ))}
+                                <hr className="vertical-hr"></hr>
+                            </div>
+
+                            <div className='display-world-animation'>
+                                <div className='text-center'>
+                                    <img src={require(`../../assets/Region/${champCard.world}.png`)} alt="Champion world" width="38px" height="38px"></img>
+                                    <p className='title text-memo'>{champCard.world}</p>
+                                    {/* <hr className="vertical-hr"></hr> */}
+                                </div>
+                            </div>
+
+                            {/* <div className='display-world-animation d-flex'>
+                                <img src={require(`../../assets/Damages-Types/${champCard.damages_type}.png`)} alt="Champion post" width="38px" height="38px"></img>
+                                <p className="title text-memo" key={champCard.damages_type}>{champCard.damages_type}</p>
+                                <hr className="vertical-hr"></hr>
+                            </div> */}
+
+
+                            {/* I / I / I / I / I */}
+                        </div>
                     </div>
                 </div>
             </div>
