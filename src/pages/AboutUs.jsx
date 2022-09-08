@@ -12,6 +12,7 @@ import ChampCard from "../components/ChampList/ChampCard";
 import ChampLevel from "../components/Champ/ChampLevel";
 import ChampHeader from "../components/Champ/ChampHeader";
 import ChampSearch from "../components/Champ/ChampSearch";
+import Stats from '../assets/Common/epees-croisees.png'
 
 {
     /**
@@ -159,7 +160,9 @@ const AboutUs = () => {
                                             */
                                         }
                                     </div>
-                                    <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} />
+                                    <div style={{ backgroundImage: `url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
+                                        <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} />
+                                    </div>
                                 </div>
                             </div>
 

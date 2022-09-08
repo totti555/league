@@ -141,3 +141,7 @@
 .champ-background {
     background-size: cover;
 }
+
+.background-img-stats {
+    filter: invert(88%) sepia(41%) saturate(2527%) hue-rotate(338deg) brightness(95%) contrast(95%);
+}

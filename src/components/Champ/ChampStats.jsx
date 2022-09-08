@@ -36,7 +36,7 @@ const ChampStats = (props) => {
 
 
     return (
-        <div className="champ-stats m-2 border">
+        <div className="champ-stats m-2">
             <p className="stats-title font-weight-bold mb-1">Stats</p>
 
             <div className='d-flex justify-content-start stats-content'>
