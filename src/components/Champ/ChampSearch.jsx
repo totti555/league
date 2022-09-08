@@ -2,13 +2,16 @@ import { useEffect, useState } from "react"
 import { champList } from "../../datas/lolChamp.jsx";
 import './ChampSearch.scss'
 import { useNavigate } from "react-router-dom";
+import Search from "../../assets/Common/search.svg"
 
-const ChampSearch = () => {
+const ChampSearch = (props) => {
 
     const [searchChamp, setSearchChamp] = useState('');
     const [champsFound, setChampBySearch] = useState([]);
     const [allChamps, setAllChamps] = useState([]);
     const api_key = process.env.REACT_APP_API_KEY;
+
+    const setChampion = props.setChampion;
 
     function onChange(e) {
         setSearchChamp(e.target.value);
@@ -52,6 +55,7 @@ const ChampSearch = () => {
         // }
         // else name = champ.name;
         navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
+       
         setSearchChamp('');
     }
 
@@ -92,8 +96,14 @@ const ChampSearch = () => {
 
     return (
         <div className="champ-input">
-
-            <input type='text' onChange={onChange}></input>
+          
+                <div className="d-flex justify-content-center">
+                    <div className="position-relative">
+                        <input type='text' onChange={onChange}></input>
+                        <img src={Search} className="search-icon"></img>
+                    </div>
+                </div>
+          
             {(searchChamp && champsFound) &&
                 <div className="champ-search-result border pt-2 pb-2">
                     {champsFound.map((champ) =>

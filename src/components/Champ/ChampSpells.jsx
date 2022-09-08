@@ -4,7 +4,7 @@ const ChampSpells = (props) => {
     const champion = props.champion;
 
     return (
-        <div className="champ-spells border ps-3">
+        <div className="champ-spells border ps-3 mb-2">
             <div className='align-self-center mt-2 champ-spells-overflow'>
                 <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} />
                 {

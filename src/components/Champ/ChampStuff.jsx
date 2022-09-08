@@ -70,6 +70,7 @@ const ChampStuff = (props) => {
     }, [selectedStuff]);
 
     return (
+        <div className='d-flex justify-content-center'>
         <div className='champ-stuff p-2'>
             <p className='entity-title'> Stuff : </p>
             <div className='d-flex justify-content-between stuff-content '>
@@ -90,6 +91,7 @@ const ChampStuff = (props) => {
 
                 }
             </div>
+        </div>
         </div>
     )
 }

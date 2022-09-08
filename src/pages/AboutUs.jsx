@@ -44,6 +44,8 @@ const AboutUs = () => {
 
     const champDetails = async () => {
 
+        console.log('On est cense entre lq');
+
         const findChampKey = champList.find((champ) => champName == champ.name);
         console.log("findChampKey", findChampKey);
         setCurrentChampLinks(findChampKey.linksWith);
@@ -63,7 +65,9 @@ const AboutUs = () => {
             const minName = champSelected.name.toLowerCase();
             name = minName.charAt(0).toUpperCase() + minName.slice(1);
         }
-        else if (name = 'Wukong') name = 'MonkeyKing';
+        else if (name == 'Wukong') {
+            name = 'MonkeyKing';
+        }
         else name = champSelected.name;
 
 
@@ -112,7 +116,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <div className="d-flex justify-content-between first-block">
+                            <div className="first-block">
                                 {
                                     /**
                                         * *Champ Name div
@@ -120,10 +124,10 @@ const AboutUs = () => {
                                     */
 
                                 }
-                                {/* <div>
+                                <div className="col-xl-9 col-md-8 col-sm-7 col-vsm">
                                     <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
                                     <ChampSpells champion={champion} />
-                                </div> */}
+                                </div>
 
                                 {
                                     /**
@@ -132,8 +136,8 @@ const AboutUs = () => {
                                         * TODO : Component + SCSS
                                     */
                                 }
-                                <div className="mx-5">
-                                    <ChampSearch />
+                                <div className="col-xl-3 col-md-4 col-sm-5 col-vsm">
+                                    <ChampSearch setChampion={setChampion}/>
                                     <div className="d-flex justify-content-center ">
                                         {champCard && <ChampCard champ={champCard} className='' />}
                                         {
@@ -171,11 +175,15 @@ const AboutUs = () => {
                                     * TODO : Component + SCSS
                                 */
                             }
-                            {/* <div className='d-flex justify-content-between second-block'>
+                            <div className='second-block'>
+                                <div className="col-xl-10 col-md-9 col-sm-8 col-vsm">
                                 <ChampItemsList setSelectedItem={setSelectedItem} />
-                                <hr></hr>
+                                </div>
+                                {/* <hr></hr> */}
+                                <div className="col-xl-2 col-md-3 col-sm-4 col-vsm">
                                 <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
-                            </div> */}
+                                </div>
+                            </div>
 
 
 
@@ -189,9 +197,9 @@ const AboutUs = () => {
                                 */
                             }
 
-                            {/* <div className="third-block">
+                            <div className="third-block">
                                 <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
-                            </div> */}
+                            </div>
 
 
 

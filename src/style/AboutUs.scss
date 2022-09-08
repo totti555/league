@@ -53,12 +53,31 @@
 
 .first-block {
     background-color: rgb(23, 32, 42, 0.6);
+    display: flex;
 }
 
 .second-block {
+    display: flex;
     background-color: rgb(23, 32, 42, 0.6);
     padding: 16px;
 }
+
+@media (min-width: 0px) and (max-width : 575px) {
+    .second-block {
+        //This should work for Normal desktops(15 to 18 inch) only.
+       display: block !important;
+    }
+    .col-vsm {
+        min-width: 100% !important;
+    }
+
+    .first-block {
+        display: block !important;
+    }
+}
+
+
+
 
 .third-block {
     background-color: rgb(23, 32, 42, 0.6);
