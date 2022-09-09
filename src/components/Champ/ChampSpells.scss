@@ -21,7 +21,9 @@
     h3 {
         letter-spacing: 3px;
         font-style: italic;
+        font-size: 28px !important;
     }
+
 
     hr {
         z-index: 5;
@@ -73,13 +75,17 @@
 
         .spell-letter {
             position: absolute;
+            top: 0px;
+            /* position the top  edge of the element at the middle of the parent */
             right: 0px;
-            top: -30px;
+            /* position the left edge of the element at the middle of the parent */
 
-            text-overflow: clip;
-            font-size: 64px;
-            color: rgb(102, 99, 99, 0.8);
+
+            /* This is a shorthand of
+                                                 translateX(-50%) and translateY(-50%) */
+
             z-index: 2;
+            opacity: 0.1;
 
         }
 
@@ -93,6 +99,18 @@
         background-clip: padding-box;
         /* for IE9+, Firefox 4+, Opera, Chrome */
 
+    }
+
+
+
+
+    @media (min-width: 0px) and (max-width : 575px) {
+        .champ-spells {
+            h3 {
+                font-size: 28px !important;
+                margin: 0px !important;
+            }
+        }
     }
 
 

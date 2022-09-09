@@ -1,4 +1,5 @@
 import './ChampSpells.scss'
+import Q from '../../assets/Spells/q.png'
 
 const ChampSpells = (props) => {
     const champion = props.champion;
@@ -32,19 +33,19 @@ const ChampSpells = (props) => {
                             <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_W1.webm" type="video/webm"></source>
                         </video>
                     </div>
-                    <hr className='mb-5' />
+                    <hr />
                     <div className='align-self-center mt-2 champ-spells-overflow'>
-                        <h3 className='title'>PASSIVE:</h3>
+                        {/* <h3 className='title'>PASSIVE:</h3> */}
                         <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter='P' />
-                        <hr />
-                        <h3 className='title'>SPELLS:</h3>
+
+                        {/* <h3 className='title'>SPELLS:</h3> */}
                         {
                             champion.spells.map((s, index) =>
 
                             (
                                 <div key={s.id}>
                                     <Spells image={s.image.full} name={s.name} description={s.description} isPassive={false} letter={spellsLetters[index]} />
-                                    <hr />
+
                                 </div>
                             ))
                         }
@@ -67,7 +68,11 @@ const Spells = (props) => {
     const letter = props.letter;
 
     return (
-        <div className="mb-2 spell-content mx-3" >
+        <div className="my-1 spell-content  mx-3" >
+            <div className='spell-letter'>
+                {/* {letter} */}
+                <img src={Q} width='126px'></img>
+            </div>
             <div className="spell-img d-flex justify-content-start ms-2">
                 {isPassive ?
                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${image}`} width='48px' height="48px"></img>
@@ -80,11 +85,12 @@ const Spells = (props) => {
                 </div>
 
             </div>
-            <span className='spell-letter'>{letter}</span>
 
-            <div className='ms-1 mt-2'>
+
+            <div className='ms-1 mt-2 position-relative'>
                 <p className="spell-description m-0" dangerouslySetInnerHTML={{ __html: description }} />
             </div>
+            <hr />
         </div>
     )
 }
