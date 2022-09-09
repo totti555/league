@@ -1,10 +1,15 @@
 import './ChampSpells.scss'
-import Q from '../../assets/Spells/q.png'
+import Q from '../../assets/Spells/a.png'
+import W from '../../assets/Spells/q.png'
+import E from '../../assets/Spells/e.png'
+import R from '../../assets/Spells/r.png'
+import P from '../../assets/Spells/p.png'
+
 
 const ChampSpells = (props) => {
     const champion = props.champion;
     const championCard = props.championCard
-    const spellsLetters = ['Q', 'W', 'E', 'R']
+    const spellsLetters = [Q, W, E, R]
 
 
     return (
@@ -36,7 +41,7 @@ const ChampSpells = (props) => {
                     <hr />
                     <div className='align-self-center mt-2 champ-spells-overflow'>
                         {/* <h3 className='title'>PASSIVE:</h3> */}
-                        <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter='P' />
+                        <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter={P} />
 
                         {/* <h3 className='title'>SPELLS:</h3> */}
                         {
@@ -71,7 +76,7 @@ const Spells = (props) => {
         <div className="my-1 spell-content  mx-3" >
             <div className='spell-letter'>
                 {/* {letter} */}
-                <img src={Q} width='126px'></img>
+                <img src={letter} width='126px'></img>
             </div>
             <div className="spell-img d-flex justify-content-start ms-2">
                 {isPassive ?
