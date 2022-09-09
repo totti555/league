@@ -7,6 +7,9 @@ const ChampItems = (props) => {
     const setSelectedItem = props.setSelectedItem;
     const [itemsList, setItemsList] = useState([]);
     const [searchItem, setItemName] = useState('');
+    const setStuff = props.setStuff;
+    const selectedStuff = props.selectedStuff;
+    const selectedItem = props.selectedItem;
 
 
     const champItems = () => {
@@ -76,6 +79,10 @@ const ChampItems = (props) => {
     //     console.log('category', itemInCategory);
     // }
 
+    const addToStuff = (item) => {
+        setStuff([...selectedStuff, item]);
+    }
+
 
 
     return (
@@ -104,9 +111,10 @@ const ChampItems = (props) => {
 
                                         {itemsList.map((item, index) =>
                                             (itemIsInclude(item, i) && (isItemFind(item.name) || !searchItem)) &&
-                                            <div key={index} className=" p-0 my-1 mx-1" onClick={() => handleClickItem(item)}>
+                                            <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
                                                 {/* <p className='small'>{item.name}</p> */}
                                                 <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
+                                                <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
                                             </div>
                                         )}
 
