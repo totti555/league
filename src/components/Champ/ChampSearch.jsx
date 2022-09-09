@@ -41,8 +41,12 @@ const ChampSearch = (props) => {
     useEffect(() => {
         const championsFound = champList.filter((champ) => champ.name.toLowerCase().includes(searchChamp.toLowerCase()));
         setChampBySearch(championsFound);
-        getAllChamps();
+
     }, [searchChamp]);
+
+    useEffect(() => {
+        getAllChamps();
+    })
 
     const navigate = useNavigate();
     const goToOtherChamp = (champ) => {
