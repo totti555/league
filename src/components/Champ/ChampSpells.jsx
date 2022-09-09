@@ -15,8 +15,8 @@ const ChampSpells = (props) => {
 
                     <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
                         {
-                            champion.spells.map((s) =>
-                                <div className='m-2'>
+                            champion.spells.map((s, index) =>
+                                <div className='m-2' key={index}>
                                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px"></img>
                                 </div>
                             )

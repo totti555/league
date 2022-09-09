@@ -28,10 +28,10 @@ const ChampLinks = (props) => {
 
 
     return (
-        <div className=" mb-5 champ-links border p-3  ">
+        <div className=" mb-5 champ-links p-3  ">
             <div className="links-content">
-                <p className="entity-title"> Links with </p>
-                <div className=" d-flex flex-wrap ">
+                <h2 className="title"> LINKS WITH : </h2>
+                <div className=" d-flex flex-wrap mt-3">
 
                     {getLinks().map((champ, index) =>
 

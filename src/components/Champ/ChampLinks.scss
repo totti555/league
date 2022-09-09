@@ -1,5 +1,8 @@
 .champ-links {
-    background-color: rgb(23, 32, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: padding-box;
+    /* for Safari */
+    background-clip: padding-box;
 
     .links-content {
         // background-color: rgba(35, 38, 97, 0.8);
@@ -8,5 +11,19 @@
     .links-value {
         text-align: center;
         white-space: pre-wrap
+    }
+
+    h2 {
+        letter-spacing: 3px;
+        font-style: italic;
+    }
+}
+
+@media (min-width: 0px) and (max-width : 575px) {
+    .champ-links {
+        h2 {
+            font-size: 40px !important;
+            margin: 0px !important;
+        }
     }
 }

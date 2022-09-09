@@ -92,8 +92,10 @@ const ChampStuff = (props) => {
 
                         }
                     </div>
+                    <hr className='mb-0' ></hr>
                 </div>
             </div>
+
         </div>
     )
 }

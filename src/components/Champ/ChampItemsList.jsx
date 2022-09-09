@@ -92,6 +92,7 @@ const ChampItems = (props) => {
                             </div>
                             {/* <img src={Search} className="search-icon"></img> */}
                         </div>
+                        <hr ></hr>
                         {itemsTypes().map((i) => (
                             <div key={i} className='items-content my-2'>
 

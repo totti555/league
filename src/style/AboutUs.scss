@@ -87,7 +87,8 @@
 
 .second-block {
     display: flex;
-    background-color: rgb(23, 32, 42, 0.8);
+    // background-color: rgb(23, 32, 42, 0.8);
+    background-image: linear-gradient(to bottom, rgba(23, 32, 42, 0.8) 85%, rgb(0, 0, 0, 1));
     padding: 16px;
 
 }
@@ -132,8 +133,12 @@
 
 
 .third-block {
-    background-color: rgb(23, 32, 42, 0.6);
+    background-color: black;
     padding: 16px;
+}
+
+.fourth-block {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgb(23, 32, 42, 0.8));
 }
 
 .entity-title {

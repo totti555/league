@@ -1,10 +1,18 @@
 .champ-item {
-    background-color: rgb(23, 32, 42, 0.8);
+
     // min-width: 300px;
     min-height: 400px;
     height: 400px;
     overflow-y: auto;
-   
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+
+
+
+
+
+
     // margin-left: 20px;
 
     .item-title {
@@ -13,7 +21,7 @@
     }
 
     .item-content {
-        background-color: rgba(35, 38, 97, 0.8);
+        // background-color: rgba(35, 38, 97, 0.8);
         max-height: 400px;
         overflow-y: auto;
         width: 100%;
@@ -52,7 +60,27 @@
             display: none;
         }
 
+        h3 {
+            letter-spacing: 3px;
+            font-style: italic;
+        }
+
 
     }
 
+}
+
+.background-img-item {
+    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgb(0, 0, 0, 0) 60%) !important;
+    background: no-repeat center center;
+
+}
+
+@media (min-width: 0px) and (max-width : 575px) {
+    .item-content {
+        h3 {
+            font-size: 18px !important;
+            margin: 0px !important;
+        }
+    }
 }

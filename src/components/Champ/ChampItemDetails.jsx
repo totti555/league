@@ -1,5 +1,6 @@
 import './ChampItemDetails.scss'
 import { useEffect } from 'react';
+import Vendor from '../../assets/Common/vendor.jpg'
 
 const ChampItemDetails = (props) => {
 
@@ -114,27 +115,28 @@ const ChampItemDetails = (props) => {
     }
 
     return (
-        <div className="border d-flex justify-content-center champ-item p-3">
-            {selectedItem.name ?
-                <div className="item-content">
-                    <div className="text-center mb-3">
-                        <p className='entity-title'>{selectedItem.name}</p>
-                        <div className='item-card'>
-                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedItem.image.full}`}></img>
-                            <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(selectedItem)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
+        <div className='background-img-item' style={{ backgroundImage: `linear-gradient(to bottom, rgba(24, 32, 42, 1) 5%, rgb(0, 0, 0, 0.4) 50%,rgba(23, 32, 42, 1) 95%),url(${Vendor})`, backgroundSize: "cover" }}>
+            <div className="d-flex justify-content-center champ-item p-3" >
+                {selectedItem.name ?
+                    <div className="item-content">
+                        <div className="text-center mb-3">
+                            <h3 className='title pb-3'>{selectedItem.name}</h3>
+                            <div className='item-card'>
+                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedItem.image.full}`}></img>
+                                <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(selectedItem)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
+                            </div>
                         </div>
+
+                        <p dangerouslySetInnerHTML={{ __html: selectedItem.description }} id="content" className='hide-text item-description'></p>
+                        <p dangerouslySetInnerHTML={{ __html: selectedItem.description }} id="updated" ></p>
+
+
+
                     </div>
-
-                    <p dangerouslySetInnerHTML={{ __html: selectedItem.description }} id="content" className='hide-text item-description'></p>
-                    <p dangerouslySetInnerHTML={{ __html: selectedItem.description }} id="updated" ></p>
-
-
-
-                </div>
-                :
-                <div className="default-details">Selectionner un item</div>
-            }
-
+                    :
+                    <div className="default-details">Selectionner un item</div>
+                }
+            </div>
         </div>
     )
 }

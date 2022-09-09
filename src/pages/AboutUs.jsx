@@ -182,6 +182,7 @@ const AboutUs = () => {
                             <div className='fourth-block'>
                                 <div className="col-12">
                                     <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
+
                                 </div>
                             </div>
                             {
@@ -200,8 +201,8 @@ const AboutUs = () => {
                             <div className='second-block'>
                                 <div className="col-xl-10 col-md-9 col-sm-8 col-vsm">
                                     <ChampItemsList setSelectedItem={setSelectedItem} />
+                                    <hr className="mt-5 mb-5"></hr>
                                 </div>
-                                {/* <hr></hr> */}
                                 <div className="col-xl-2 col-md-3 col-sm-4 col-vsm">
                                     <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
                                 </div>
@@ -220,6 +221,7 @@ const AboutUs = () => {
                             }
 
                             <div className="third-block">
+                                <hr className="mt-3 mb-5"></hr>
                                 <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
                             </div>
 
