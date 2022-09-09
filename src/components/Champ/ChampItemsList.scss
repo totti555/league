@@ -2,13 +2,38 @@
     // width: 1000px;
     max-height: 400px;
     overflow-y: auto;
+    // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0, 1) 60%);
 
     .items-content {
-        background-color: rgba(35, 38, 97, 0.8);
+        // background-color: rgba(35, 38, 97, 0.8);
     }
 
     .items-type {
         font-weight: bold;
         font-size: 16px;
+    }
+
+    h2 {
+        letter-spacing: 3px;
+        font-style: italic;
+    }
+
+    h3 {
+        letter-spacing: 3px;
+        font-style: italic;
+    }
+}
+
+@media (min-width: 0px) and (max-width : 575px) {
+    .champ-items {
+        h2 {
+            font-size: 40px !important;
+            margin: 0px !important;
+        }
+
+        h2 {
+            font-size: 40px !important;
+            margin: 0px !important;
+        }
     }
 }

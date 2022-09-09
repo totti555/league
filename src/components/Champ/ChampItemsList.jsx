@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './ChampItemsList.scss'
+import Vendor from '../../assets/Common/vendor.jpg'
 
 const ChampItems = (props) => {
     const champion = props.champion
@@ -77,10 +78,10 @@ const ChampItems = (props) => {
 
 
     return (
-        <div className="champ-items border p-3">
+        <div className="champ-items">
             <div>
 
-                <p className='entity-title'>Items</p>
+                <h2 className='title'>ITEMS :</h2>
                 {itemsList.length && (
                     <div>
 
@@ -95,7 +96,7 @@ const ChampItems = (props) => {
                             <div key={i} className='items-content my-2'>
 
                                 {!searchItem.length &&
-                                    (<p className='items-type'>{i} :</p>)}
+                                    (<h3 className='title'>{i.replace(/([A-Z])/g, ' $1').toUpperCase()} :</h3>)}
                                 <div className='position-relative '>
                                     <div className='d-flex flex-wrap mx-2 '>
 

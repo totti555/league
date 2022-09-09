@@ -13,6 +13,8 @@ import ChampLevel from "../components/Champ/ChampLevel";
 import ChampHeader from "../components/Champ/ChampHeader";
 import ChampSearch from "../components/Champ/ChampSearch";
 import Stats from '../assets/Common/epees-croisees.png'
+import Vendor from '../assets/Common/vendor.jpg'
+
 
 {
     /**
