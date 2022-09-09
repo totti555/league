@@ -36,9 +36,9 @@ const ChampStats = (props) => {
 
 
     return (
-        <div className="champ-stats p-2">
+        <div className="champ-stats p-4">
             <h2 className="title">STATS :</h2>
-            <hr/>
+            <hr />
             <div className='d-flex justify-content-around stats-content mt-5'>
                 <div>
                     <p>Power : 0</p>

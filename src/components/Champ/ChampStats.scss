@@ -1,7 +1,9 @@
 .champ-stats {
     font-size: 16px;
-   
+
     padding-bottom: 100px;
+
+
 
     .stats-title {
         font-size: 14px;
@@ -11,7 +13,7 @@
     .stats-content {
         // background-color: rgb(39, 39, 61, 0.8);
         padding-bottom: 150px;
-        
+
     }
 
     h2 {
@@ -19,14 +21,14 @@
         font-style: italic;
     }
 
-   
+
 }
 
 @media (min-width: 0px) and (max-width : 575px) {
     .champ-stats {
         h2 {
-        font-size: 40px !important;
-        margin: 0px !important;
+            font-size: 40px !important;
+            margin: 0px !important;
+        }
     }
-}
 }

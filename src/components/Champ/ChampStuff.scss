@@ -1,15 +1,25 @@
 .champ-stuff {
-    background-color: rgb(23, 32, 42, 0.8);
-    width: 350px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgb(23, 32, 42, 0.8));
+
+
+    .champ-content {
+
+        width: 350px;
+    }
+
+
 
     .stuff-content {
-        background-color: rgba(35, 38, 97, 0.8);
+        // background-color: black
     }
 
     .stuff-item {
-        background-color: rgb(39, 39, 61, 0.6);
+        background-color: black;
         position: relative;
-        border-color: rgb(39, 39, 61);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: padding-box;
+        /* for Safari */
+        background-clip: padding-box;
         height: 50px;
         width: 50px;
 
@@ -20,11 +30,39 @@
             z-index: 10;
             opacity: 0;
         }
+
+        .empty {
+            position: absolute;
+            font-size: 10px;
+            color: darkgray;
+            top: 50%;
+            /* position the top  edge of the element at the middle of the parent */
+            left: 50%;
+            /* position the left edge of the element at the middle of the parent */
+            transform: translate(-50%, -50%);
+            /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+        }
+    }
+
+    h2 {
+        letter-spacing: 3px;
+        font-style: italic;
     }
 }
+
+
 
 .item-card:hover {
     .delete-item-icon {
         opacity: 1;
+    }
+}
+
+@media (min-width: 0px) and (max-width : 575px) {
+    .champ-stuff {
+        h2 {
+            font-size: 40px !important;
+            margin: 0px !important;
+        }
     }
 }

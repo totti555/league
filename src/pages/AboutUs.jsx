@@ -129,7 +129,8 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <div className="first-block p-4">
+                            <div className="first-block">
+
                                 {
                                     /**
                                         * *Champ Name div
@@ -137,7 +138,7 @@ const AboutUs = () => {
                                     */
 
                                 }
-                                <div className="col-xl-9 col-md-8 col-sm-7 col-vsm">
+                                <div className="col-xl-9 col-md-8 col-sm-7 col-vsm p-3">
                                     {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
                                     <ChampSpells champion={champion} championCard={champCard} />
                                 </div>
@@ -150,15 +151,17 @@ const AboutUs = () => {
                                     */
                                 }
                                 <div className="col-xl-3 col-md-4 col-sm-5 col-vsm">
-                                    <ChampSearch setChampion={setChampion} />
-                                    <div className="d-flex justify-content-center ">
-                                        {champCard && <ChampCard champ={champCard} className='' />}
-                                        {
-                                            /**
-                                                * *Champ Stats div
-                                                * TODO : SCSS
-                                            */
-                                        }
+                                    <div className="p-3">
+                                        <ChampSearch setChampion={setChampion} />
+                                        <div className="d-flex justify-content-center">
+                                            {champCard && <ChampCard champ={champCard} />}
+                                            {
+                                                /**
+                                                    * *Champ Stats div
+                                                    * TODO : SCSS
+                                                */
+                                            }
+                                        </div>
                                     </div>
                                     <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
                                         <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} />
@@ -174,9 +177,11 @@ const AboutUs = () => {
                                     * TODO : Component + SCSS
                                 */
                             }
-
-                            <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
-
+                            <div className='fourth-block'>
+                                <div className="col-12">
+                                    <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
+                                </div>
+                            </div>
                             {
                                 /**
                                     * *Champ Item div
@@ -217,8 +222,8 @@ const AboutUs = () => {
                             </div>
 
 
-
                         </div>
+
                     )}
             </div>
 
