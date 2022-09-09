@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { champList } from "../../datas/lolChamp";
 import './ChampLinks.scss'
 
 const ChampLinks = (props) => {
+    const [linksResult, setLinksResult] = useState([]);
     const selectedKey = props.selectedKey;
     const champion = props.champion;
     const champCard = props.champCard;
@@ -23,8 +24,12 @@ const ChampLinks = (props) => {
         // Links with the champ datas
         const result = duplicates;
         console.log("result", result);
-        return result;
+        setLinksResult(result);
     }
+
+    useEffect(() => {
+        getLinks();
+    }, [champCard]);
 
 
     return (
@@ -33,9 +38,9 @@ const ChampLinks = (props) => {
                 <h2 className="title"> LINKS WITH : </h2>
                 <div className=" d-flex flex-wrap mt-3">
 
-                    {getLinks().map((champ, index) =>
+                    {linksResult && linksResult.map((champ, index) =>
 
-                        <div className="d-flex align-items-center flex-column mx-3">
+                        <div className="d-flex align-items-center flex-column mx-3" key={index}>
                             <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="mx-2"></img>
                             {
                                 /**

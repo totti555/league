@@ -40,8 +40,8 @@ const ChampSpells = (props) => {
                         champion.spells.map((s, index) =>
 
                         (
-                            <div>
-                                <Spells image={s.image.full} name={s.name} description={s.description} isPassive={false} key={s.id} letter={spellsLetters[index]} />
+                            <div key={s.id}>
+                                <Spells image={s.image.full} name={s.name} description={s.description} isPassive={false} letter={spellsLetters[index]} />
                                 <hr />
                             </div>
                         ))
@@ -76,7 +76,7 @@ const Spells = (props) => {
                 </div>
 
             </div>
-            <span class='spell-letter'>{letter}</span>
+            <span className='spell-letter'>{letter}</span>
 
             <div className='ms-1 mt-2'>
                 <p className="spell-description m-0" dangerouslySetInnerHTML={{ __html: description }} />

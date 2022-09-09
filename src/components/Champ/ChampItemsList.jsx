@@ -10,6 +10,7 @@ const ChampItems = (props) => {
 
 
     const champItems = () => {
+        console.log('champItems');
         const axios = require('axios').default;
         const api_key = process.env.REACT_APP_API_KEY;
         axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/item.json`)
