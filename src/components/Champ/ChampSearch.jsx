@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { champList } from "../../datas/lolChamp.jsx";
 import './ChampSearch.scss'
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,7 @@ const ChampSearch = (props) => {
     const [searchChamp, setSearchChamp] = useState('');
     const [champsFound, setChampBySearch] = useState([]);
     const [allChamps, setAllChamps] = useState([]);
+    const [displayInput, setdisplayInput] = useState([]);
     const api_key = process.env.REACT_APP_API_KEY;
 
     const setChampion = props.setChampion;
@@ -37,6 +38,10 @@ const ChampSearch = (props) => {
         }
     });
 
+    useEffect(() => {
+        getAllChamps();
+    }, [])
+
 
     useEffect(() => {
         const championsFound = champList.filter((champ) => champ.name.toLowerCase().includes(searchChamp.toLowerCase()));
@@ -44,9 +49,6 @@ const ChampSearch = (props) => {
 
     }, [searchChamp]);
 
-    useEffect(() => {
-        getAllChamps();
-    })
 
     const navigate = useNavigate();
     const goToOtherChamp = (champ) => {
@@ -97,19 +99,44 @@ const ChampSearch = (props) => {
         else return name = champ.name;
     }
 
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef);
+
+
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+            /**
+             * Alert if clicked on outside of element
+             */
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setSearchChamp('');
+                }
+            }
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                // Unbind the event listener on clean up
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
 
     return (
         <div className="champ-input">
 
             <div className="">
                 <div className="position-relative">
-                    <input type="input" onChange={onChange} value={searchChamp} className="form__field" placeholder="Search champ" name="name" id='name' />
+                    <form autocomplete="off">
+                        <input type="input" onChange={onChange} value={searchChamp} className="form__field" placeholder="Search champ" name="name" id='name' />
+                    </form>
                     <img src={Search} className="search-icon"></img>
                 </div>
             </div>
 
             {(searchChamp && champsFound) &&
-                <div className="champ-search-result pt-2 pb-2">
+                <div className="champ-search-result pt-2 pb-2" ref={wrapperRef}>
                     {champsFound.map((champ) =>
                         <div key={champ.id} >
                             <div className="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>

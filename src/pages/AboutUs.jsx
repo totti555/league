@@ -46,9 +46,6 @@ const AboutUs = () => {
     let { champName } = useParams();
 
     const champDetails = async () => {
-
-        console.log('On est cense entre lq');
-
         const findChampKey = champList.find((champ) => champName == champ.name);
         console.log("findChampKey", findChampKey);
         setCurrentChampLinks(findChampKey.linksWith);
