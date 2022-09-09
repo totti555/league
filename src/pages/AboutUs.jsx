@@ -48,6 +48,7 @@ const AboutUs = () => {
     const champDetails = async () => {
         const findChampKey = champList.find((champ) => champName == champ.name);
         console.log("findChampKey", findChampKey);
+        if (findChampKey)
         setCurrentChampLinks(findChampKey.linksWith);
         let champKey;
         let name;

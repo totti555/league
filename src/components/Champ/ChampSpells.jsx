@@ -76,7 +76,7 @@ const Spells = (props) => {
         <div className="my-1 spell-content  mx-3" >
             <div className='spell-letter'>
                 {/* {letter} */}
-                <img src={letter} width='126px'></img>
+                <img src={letter} width='98px'></img>
             </div>
             <div className="spell-img d-flex justify-content-start ms-2">
                 {isPassive ?

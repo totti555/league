@@ -30,8 +30,8 @@ const ChampItems = (props) => {
             })
             .then(function () {
                 // always executed
-                if (itemsList.length)
-                    setSelectedItem(itemsList[0])
+                // if (itemsList.length)
+                //     setSelectedItem(itemsList[0])
             });
     }
 
@@ -42,7 +42,8 @@ const ChampItems = (props) => {
 
     useEffect(() => {
         if (itemsList.length) {
-            setSelectedItem(itemsList[0])
+            console.log(itemsList);
+            setSelectedItem(itemsList[115])
         }
     }, [itemsList])
 

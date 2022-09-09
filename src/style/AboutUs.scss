@@ -88,7 +88,7 @@
 .second-block {
     display: flex;
     // background-color: rgb(23, 32, 42, 0.8);
-    background-image: linear-gradient(to bottom, rgba(23, 32, 42, 0.8) 85%, rgb(0, 0, 0, 1));
+    background-image: linear-gradient(to bottom, rgba(23, 32, 42, 0.8) 85%, rgb(23, 32, 42, 0.8));
     padding: 16px;
 
 }
@@ -133,7 +133,7 @@
 
 
 .third-block {
-    background-color: black;
+    background-image: linear-gradient(to bottom, rgba(23, 32, 42, 0.8) 5%, rgb(0, 0, 0, 1));
     padding: 16px;
 }
 
