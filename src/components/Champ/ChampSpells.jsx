@@ -4,12 +4,34 @@ import W from '../../assets/Spells/q.png'
 import E from '../../assets/Spells/e.png'
 import R from '../../assets/Spells/r.png'
 import P from '../../assets/Spells/p.png'
+import { useEffect, useState } from 'react'
 
 
 const ChampSpells = (props) => {
     const champion = props.champion;
-    const championCard = props.championCard
-    const spellsLetters = [Q, W, E, R]
+    const championCard = props.championCard;
+    const spellsLetterImg = [Q, W, E, R];
+    const spellsLetter = ['Q', 'W', 'E', 'R'];
+    const [formattedKey, setFormattedKey] = useState('');
+    const [letter, setLetter] = useState('Q')
+
+
+    const getVideos = (champion) => {
+
+        var key = champion.key + "";
+        while (key.length < 4) key = "0" + key;
+        setFormattedKey(key);
+    }
+
+    const spellSelected = (letter) => {
+        let myVid = document.getElementById('video');
+        setLetter(letter);
+        myVid.load();
+    }
+
+    useEffect(() => {
+        getVideos(champion);
+    }, [champion]);
 
 
     return (
@@ -18,13 +40,12 @@ const ChampSpells = (props) => {
             {
                 (champion && championCard) && (<div className='background-spells ps-3 pe-3 '>
                     <h2 className="title">SPELLS :</h2>
-                    {console.log(champion.spells)}
                     <div className='select-spells '>
 
                         <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
                             {
                                 champion.spells.map((s, index) =>
-                                    <div className='m-2' key={index}>
+                                    <div className='m-2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
                                         <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px"></img>
                                     </div>
                                 )
@@ -32,25 +53,28 @@ const ChampSpells = (props) => {
                         </div>
 
                     </div>
+
                     <hr />
-                    <div className='spell-video d-flex justify-content-center'>
-                        <video autoPlay muted loop className='video'>
-                            <source src="https://d28xe8vt774jo5.cloudfront.net/champion-abilities/0084/ability_0084_W1.webm" type="video/webm"></source>
-                        </video>
-                    </div>
+                    {formattedKey &&
+                        <div className='spell-video d-flex justify-content-center'>
+                            <video autoPlay muted loop className='video' id='video'>
+                                <source src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
+                            </video>
+                        </div>
+                    }
                     <hr />
                     <div className='align-self-center mt-2 champ-spells-overflow'>
                         {/* <h3 className='title'>PASSIVE:</h3> */}
-                        <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter={P} />
-
+                        <div onClick={() => spellSelected('P')}>
+                            <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter={P} />
+                        </div>
                         {/* <h3 className='title'>SPELLS:</h3> */}
                         {
                             champion.spells.map((s, index) =>
 
                             (
-                                <div key={s.id}>
-                                    <Spells image={s.image.full} name={s.name} description={s.description} isPassive={false} letter={spellsLetters[index]} />
-
+                                <div key={s.id} onClick={() => spellSelected(spellsLetter[index])}>
+                                    <Spells image={s.image.full} name={s.name} description={s.description} isPassive={false} letter={spellsLetterImg[index]} />
                                 </div>
                             ))
                         }

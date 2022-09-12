@@ -49,7 +49,7 @@ const AboutUs = () => {
         const findChampKey = champList.find((champ) => champName == champ.name);
         console.log("findChampKey", findChampKey);
         if (findChampKey)
-        setCurrentChampLinks(findChampKey.linksWith);
+            setCurrentChampLinks(findChampKey.linksWith);
         let champKey;
         let name;
         const axios = require('axios').default;
@@ -150,7 +150,7 @@ const AboutUs = () => {
                                         * TODO : Component + SCSS
                                     */
                                 }
-                                <div className="col-xl-3 col-md-4 col-sm-5 col-vsm">
+                                <div className="col-xl-3 col-md-4 col-sm-5 col-vsm align-self-between">
                                     <div className="p-3">
                                         <ChampSearch setChampion={setChampion} />
                                         <div className="d-flex justify-content-center">
