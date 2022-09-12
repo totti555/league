@@ -104,7 +104,7 @@ const AboutUs = () => {
     return (
 
         <>
-            <div className="home-content text-white" >
+            <div className="about-content text-white" >
                 {/* <h1 className="text-white">Coming soon</h1> */}
                 {champion.name &&
                     (

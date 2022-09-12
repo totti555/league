@@ -1,9 +1,10 @@
-import { Outlet, Link,Routes,Route } from "react-router-dom";
+import { Outlet, Link, Routes, Route } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import "./Layout.scss";
 import Menu from "../assets/Home/menu.svg";
 import { useState } from "react";
 import AboutUs from "../pages/AboutUs";
+import { useLocation } from 'react-router-dom';
 
 function Layout({ children }) {
 
@@ -22,6 +23,7 @@ function Layout({ children }) {
   */
 
   const [menu, displayMenu] = useState(false);
+  const location = useLocation();
   function showMenu() {
     displayMenu(!menu);
   }
@@ -58,7 +60,7 @@ function Layout({ children }) {
           <button className="nav-button">
             <Link to="/look">LOOK</Link>
           </button>
-            <Routes>
+          <Routes>
             <Route path="about_us/:champName" element={<AboutUs />} />
           </Routes>
         </div>
@@ -102,9 +104,11 @@ function Layout({ children }) {
         */
       }
 
-      <footer>
-        <Footer />
-      </footer>
+      {!location.pathname.includes('about_us') &&
+        <footer>
+          <Footer />
+        </footer>
+      }
     </div>
   );
 }
