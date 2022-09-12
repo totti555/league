@@ -1,6 +1,12 @@
 import './ChampItemDetails.scss'
 import { useEffect } from 'react';
 import Vendor from '../../assets/Common/vendor.jpg'
+import Armor from '../../assets/Stats/Armor.png'
+import AbilityHaste from '../../assets/Stats/AbilityHaste.png'
+import AttackSpeed from '../../assets/Stats/AttackSpeed.png'
+import Health from '../../assets/Stats/Health.png'
+import Power from '../../assets/Stats/Power.png'
+import Resistance from '../../assets/Stats/Resistance.png'
 
 const ChampItemDetails = (props) => {
 
@@ -27,7 +33,7 @@ const ChampItemDetails = (props) => {
             var text = document.getElementById("content");
 
             var str = text.innerHTML,
-                reg = /Ability Power|Attack Speed|Critical Strike Chance|Mana|Move Speed|Health|Magic Resist|Base Health Regen|Ability Haste/ig; //g is to replace all occurances
+                reg = /Ability Power|Attack Speed|Critical Strike Chance|Mana|Move Speed|Health|Magic Resist|Base Health Regen|Ability Haste|Armor/ig; //g is to replace all occurances
 
             //fixing a bit
             var toStr = String(reg);
@@ -41,7 +47,7 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Ability Power/g, `<span style="color:#5F43DC;">Ability Power</span>`);
+                str = str.replace(/Ability Power/g, `<span style="color:#5F43DC;">Ability Power <img src=${Power}></img></span>`);
             }
 
             if (colors.indexOf("Attack Speed") > -1) {
@@ -49,7 +55,7 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Attack Speed/g, `<span style="color:Orange;"> Attack Speed</span>`);
+                str = str.replace(/Attack Speed/g, `<span style="color:Orange;"> Attack Speed <img src=${AttackSpeed}></img></span></span>`);
             }
 
             if (colors.indexOf("Critical Strike Chance") > -1) {
@@ -73,7 +79,7 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Move Speed/g, `<span style="color:#EFF397;">Move Speed</span>`);
+                str = str.replace(/Move Speed/g, `<span style="color:#EFF397;">Move Speed <img src=${AttackSpeed}></img></span></span>`);
             }
 
             if (colors.indexOf("Magic Resist") > -1) {
@@ -81,7 +87,15 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Magic Resist/g, `<span style="color:DodgerBlue;">Magic Resist</span>`);
+                str = str.replace(/Magic Resist/g, `<span style="color:DodgerBlue;">Magic Resist <img src=${Resistance}></img></span></span>`);
+            }
+
+            if (colors.indexOf("Armor") > -1) {
+                // var goodText = str.substring(0, str.indexOf('</attention> Mana'));
+                // if (goodText) {
+                //     var number = goodText.match(/[0-9]+$/)[0];
+                // }
+                str = str.replace(/Armor/g, `<span style="color:DodgerBlue;">Armor <img src=${Armor}></img></span>`);
             }
 
             if (colors.indexOf("Base Health Regen") > -1) {
@@ -90,7 +104,7 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Base Health Regen/g, `<span style="color:#72DE38;">Base Health Regen</span>`);
+                str = str.replace(/Base Health Regen/g, `<span style="color:#72DE38;">Base Health Regen <img src=${Health}></img></span></span>`);
             }
 
             if (colors.indexOf("Health") > -1) {
@@ -98,7 +112,7 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Health/g, `<span style="color:#72DE38;">Health</span>`);
+                str = str.replace(/Health/g, `<span style="color:#72DE38;">Health <img src=${Health}></img></span></span>`);
             }
 
             if (colors.indexOf("Ability Haste") > -1) {
@@ -106,7 +120,7 @@ const ChampItemDetails = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Ability Haste/g, `<span style="color:grey;">Ability Haste</span>`);
+                str = str.replace(/Ability Haste/g, `<span style="color:grey;">Ability Haste <img src=${AbilityHaste}></img></span></span>`);
             }
 
 
