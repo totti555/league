@@ -1,5 +1,5 @@
 import "../style/AboutUs.scss";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
@@ -40,6 +40,7 @@ const AboutUs = () => {
     const [increaseLevel, setIncreaseLevel] = useState(false);
     const [decreaseLevel, setDecreaseLevel] = useState(true);
     const [currentChampLinks, setCurrentChampLinks] = useState([]);
+    const topRef = useRef(null);
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -118,7 +119,7 @@ const AboutUs = () => {
                                 <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
 
                             </div> */}
-                            <div className="about-background" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}`, backgroundSize: "cover" }}>
+                            <div className="about-background" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}`, backgroundSize: "cover" }} ref={topRef}>
                                 <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} champCard={champCard} />
 
                             </div>
@@ -220,7 +221,7 @@ const AboutUs = () => {
 
                             <div className="third-block">
                                 <hr className="mt-3 mb-5"></hr>
-                                <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} />
+                                <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} topRef={topRef} />
                             </div>
 
 

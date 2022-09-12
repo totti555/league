@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { champList } from "../../datas/lolChamp";
+import { useNavigate } from "react-router-dom";
 import './ChampLinks.scss'
 
 const ChampLinks = (props) => {
@@ -8,6 +9,9 @@ const ChampLinks = (props) => {
     const champion = props.champion;
     const champCard = props.champCard;
     const currentChampLinks = props.currentChampLinks;
+    const topRef = props.topRef;
+
+    const navigate = useNavigate();
 
 
     const getLinks = () => {
@@ -32,17 +36,28 @@ const ChampLinks = (props) => {
             getLinks();
     }, [champCard]);
 
+    function scrollToTop() {
+        topRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    const goToOtherChamp = (champ) => {
+        let name;
+        name = champ.name
+        scrollToTop();
+        navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
+    }
+
 
     return (
         <div className=" mb-5 champ-links p-3  ">
             <div className="links-content">
                 <h2 className="title"> LINKS WITH : </h2>
-                <div className=" d-flex flex-wrap mt-3">
+                <div className=" d-flex flex-wrap mt-3 justify-content-center">
 
                     {champCard.linksWith && linksResult.map((champ, index) =>
 
-                        <div className="d-flex align-items-center flex-column mx-3" key={index}>
-                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="mx-2"></img>
+                        <div className="d-flex align-items-center flex-column mx-3" key={index} onClick={() => goToOtherChamp(champ)}>
+                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='64px' className="mx-2"></img>
                             {
                                 /**
                                 * !Depreciated

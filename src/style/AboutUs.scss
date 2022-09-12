@@ -6,6 +6,11 @@
     left: 0;
     overflow-y: scroll;
     z-index: 2;
+
+    h2 {
+        font-size: 40px !important;
+        margin: 0px !important;
+    }
 }
 
 .champ-header {
