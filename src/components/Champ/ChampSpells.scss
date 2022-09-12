@@ -5,6 +5,18 @@
     /* for Safari */
     background-clip: padding-box;
 
+
+    .spell-header {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: padding-box;
+        /* for Safari */
+        background-clip: padding-box;
+
+        .passive-spell {
+            float: left;
+        }
+    }
+
     .background-spells {
 
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.2) 50%,
@@ -37,7 +49,7 @@
 
     .select-spells {
         width: 165px;
-        margin: auto;
+        // margin: auto;
     }
 
     video {

@@ -48,18 +48,22 @@ const ChampSpells = (props) => {
             {
                 (champion && championCard) && (<div className='background-spells ps-3 pe-3 '>
                     <h2 className="title">SPELLS :</h2>
-                    <div className='select-spells '>
-
-                        <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
-                            {
-                                champion.spells.map((s, index) =>
-                                    <div className='m-2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
-                                        <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px"></img>
-                                    </div>
-                                )
-                            }
+                    <div className='d-flex justify-content-center spell-header'>
+                        <div className='align-self-center mx-2'>
+                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px"></img>
                         </div>
+                        <div className='select-spells '>
 
+                            <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
+                                {
+                                    champion.spells.map((s, index) =>
+                                        <div className='m-2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
+                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px"></img>
+                                        </div>
+                                    )
+                                }
+                            </div>
+                        </div>
                     </div>
 
                     <hr />
