@@ -24,6 +24,40 @@
 
 }
 
+.champ-level {
+    button {
+        background-color: transparent;
+        border: 0px;
+        // width: 64px;
+        // height: 64px;
+
+
+    }
+
+    button:disabled,
+    button[disabled] {
+        opacity: 0.5;
+    }
+
+    .increase-button {
+        transform: rotate(90deg);
+        opacity: 0.8;
+    }
+
+    .increase-button:hover {
+        opacity: 1;
+    }
+
+    .decrease-button {
+        transform: rotate(270deg);
+        opacity: 0.8;
+    }
+
+    .decrease-button:hover {
+        opacity: 1;
+    }
+}
+
 @media (min-width: 0px) and (max-width : 575px) {
     .champ-stats {
         h2 {

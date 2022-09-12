@@ -4,11 +4,6 @@ const ChampHeader = (props) => {
 
     const champion = props.champion;
     const level = props.level;
-    const setDecreaseLevel = props.setDecreaseLevel;
-    const setIncreaseLevel = props.setIncreaseLevel;
-    const increaseLevel = props.increaseLevel;
-    const decreaseLevel = props.decreaseLevel;
-    const setLevel = props.setLevel;
     const champCard = props.champCard;
 
 
@@ -24,8 +19,8 @@ const ChampHeader = (props) => {
                         <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
                         <span className="champ-level">{level}</span>
                     </div>
-                    <div className="align-self-center">
-                        <div className="d-flex ">
+                    <div className="align-self-center header-attributes">
+                        <div className="d-flex  ">
                             <div className='display-world-animation d-flex'>
                                 {champCard.role.map((role) => (
                                     <div key={role} className='text-center' >

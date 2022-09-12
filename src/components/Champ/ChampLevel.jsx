@@ -34,10 +34,18 @@ const ChampLevel = (props) => {
     }
 
     return (
-        <div className='align-self-center wrap '>
+        <div className='d-flex justify-content-center  champ-level '>
             {/* <p>Level {level}</p> */}
-            <button className="button-filter button-level" onClick={() => addLevel(level)} disabled={increaseLevel}>+</button>
-            <button className="button-filter button-level " onClick={() => removeLevel(level)} disabled={decreaseLevel}>-</button>
+            <div className="wtf">
+                <button onClick={() => addLevel(level)} disabled={increaseLevel}>
+                    <img className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} ></img>
+                </button>
+            </div>
+            <div className="wtf2">
+                <button onClick={() => removeLevel(level)} disabled={decreaseLevel}>
+                    <img className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)}></img>
+                </button>
+            </div>
         </div>
     )
 }
