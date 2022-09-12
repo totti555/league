@@ -22,6 +22,8 @@
 
     p {
         margin-bottom: 0px;
+        width: 80px;
+        // line-height: 0.2px;
     }
 
     .champ-subtitle {
@@ -91,7 +93,8 @@
 
 }
 
-@media (min-width: 0px) and (max-width : 575px) {
+// smsm
+@media (min-width: 0px) and (max-width : 1000px) {
     .second-block {
         //This should work for Normal desktops(15 to 18 inch) only.
         display: block !important;
@@ -118,10 +121,8 @@
             font-size: 24px !important;
         }
 
-        .header-attributes {
-            max-width: 300px;
-            overflow-x: auto !important;
-            // overflow: visible !important;
+        .title {
+            font-size: 16px;
         }
     }
 
@@ -162,4 +163,35 @@
     // margin: auto;
     // height: 60%;
     background: no-repeat center center;
+}
+
+
+
+.display-entity-memo {
+    p {
+        opacity: 0;
+        height: 0px;
+    }
+}
+
+.display-entity-memo:hover {
+    p {
+        animation-name: display-entity-memo;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        height: auto;
+    }
+}
+
+
+@keyframes display-entity-memo {
+    0% {
+        opacity: 0;
+        line-height: 0.2px;
+    }
+
+    100% {
+        opacity: 1;
+        line-height: 1rem;
+    }
 }

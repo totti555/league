@@ -14,48 +14,46 @@ const ChampHeader = (props) => {
                     <h1 className="title">{champion.name.toUpperCase()}</h1>
                     <h2>{champion.title}</h2>
                 </div>
-                <div className="d-flex justify-content-between">
-                    <div className="position-relative me-4">
-                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
+                <div className="d-flex justify-content-center  ">
+                    <div className="position-relative me-4 align-self-center">
+                        <img className="" src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
                         <span className="champ-level">{level}</span>
                     </div>
                     <div className="align-self-center header-attributes">
-                        <div className="d-flex  ">
-                            <div className='display-world-animation d-flex'>
+                        <div className="d-flex flex-wrap align-items-center  ">
+                            <div className=' d-flex'>
                                 {champCard.role.map((role) => (
-                                    <div key={role} className='text-center' >
-                                        <img src={require(`../../assets/Post/${role}.png`)} alt="Champion post" width="38px" height="38px"></img>
-                                        <p className="title text-memo small" key={role}>{role}</p>
+                                    <div key={role} className='d-flex display-entity-memo'>
+                                        <div className='text-center' >
+                                            <img src={require(`../../assets/Post/${role}.png`)} alt="Champion post" width="38px" height="38px"></img>
+                                            <p className="title text-memo memo-description " key={role}>{role}</p>
+                                        </div>
+                                        <hr className="vertical-hr"></hr>
                                     </div>
                                 ))}
-                                <hr className="vertical-hr"></hr>
+
                             </div>
 
-                            <div className='display-world-animation d-flex'>
+                            <div className='d-flex'>
                                 {champCard.type.map((type) => (
-                                    <div key={type} className='text-center' >
-                                        <img src={require(`../../assets/Type/${type}.png`)} alt="Champion post" width="38px" height="38px"></img>
-                                        <p className="title text-memo small " key={type}>{type}</p>
+                                    <div className="d-flex display-entity-memo " key={type}>
+                                        <div className='text-center' >
+                                            <img src={require(`../../assets/Type/${type}.png`)} alt="Champion post" width="38px" height="38px"></img>
+                                            <p className="title text-memo memo-description  " key={type}>{type}</p>
+                                        </div>
+                                        <hr className="vertical-hr"></hr>
                                     </div>
                                 ))}
-                                <hr className="vertical-hr"></hr>
+                                {/* <hr className="vertical-hr"></hr> */}
                             </div>
 
-                            <div className='display-world-animation'>
+                            <div className='display-entity-memo'>
                                 <div className='text-center'>
                                     <img src={require(`../../assets/Region/${champCard.world}.png`)} alt="Champion world" width="38px" height="38px"></img>
-                                    <p className='title text-memo'>{champCard.world}</p>
+                                    <p className='title text-memo memo-description'>{champCard.world}</p>
                                     {/* <hr className="vertical-hr"></hr> */}
                                 </div>
                             </div>
-
-                            {/* <div className='display-world-animation d-flex'>
-                                <img src={require(`../../assets/Damages-Types/${champCard.damages_type}.png`)} alt="Champion post" width="38px" height="38px"></img>
-                                <p className="title text-memo" key={champCard.damages_type}>{champCard.damages_type}</p>
-                                <hr className="vertical-hr"></hr>
-                            </div> */}
-
-
                             {/* I / I / I / I / I */}
                         </div>
                     </div>

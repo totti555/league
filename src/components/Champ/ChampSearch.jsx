@@ -128,7 +128,7 @@ const ChampSearch = (props) => {
 
             <div className="">
                 <div className="position-relative">
-                    <form autocomplete="off">
+                    <form autoComplete="off">
                         <input type="input" onChange={onChange} value={searchChamp} className="form__field" placeholder="Search champ" name="name" id='name' />
                         {/* <label htmlFor="name" className="form__label pb-5">Search your champ</label> */}
                     </form>
