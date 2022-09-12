@@ -1,6 +1,13 @@
 import './ChampStats.scss'
 import { useState, useEffect } from 'react'
 import ChampLevel from './ChampLevel';
+import Armor from '../../assets/Stats/Armor.png'
+import AbilityHaste from '../../assets/Stats/AbilityHaste.png'
+import AttackSpeed from '../../assets/Stats/AttackSpeed.png'
+import Health from '../../assets/Stats/Health.png'
+import Power from '../../assets/Stats/Power.png'
+import Resistance from '../../assets/Stats/Resistance.png'
+
 
 
 const ChampStats = (props) => {
@@ -51,20 +58,20 @@ const ChampStats = (props) => {
                 <ChampLevel setDecreaseLevel={setDecreaseLevel} setIncreaseLevel={setIncreaseLevel} level={level} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
                 <div className='d-flex justify-content-around stats-content mt-5'>
                     <div>
-                        <p>Power : 0</p>
-                        <p>Armor : {Math.round((armor + (level * champion.stats.armorperlevel)) * 100) / 100}</p>
+                        <p>Power <span><img src={Power}></img></span> : 0</p>
+                        <p>Armor <span><img src={Armor}></img></span> : {Math.round((armor + (level * champion.stats.armorperlevel)) * 100) / 100}</p>
                         <p>Attack : {Math.round(attackDamage + level * champion.stats.attackdamageperlevel * 100) / 100}</p>
-
-                        <p>Hp : {hp + level * champion.stats.hpperlevel + hpSpells}</p>
+                        <p>Resistance <span><img src={Resistance}></img></span> : 0</p>
+                        <p>Hp <span><img src={Health}></img></span> : {hp + level * champion.stats.hpperlevel + hpSpells}</p>
                         <p>Mana : {mana + level * champion.stats.mpperlevel + manaSpells}</p>
                     </div>
                     <div>
                         <p>Crit : {crit + level * champion.stats.critperlevel}</p>
                         <p>Hp regen : {Math.round((hpRegen + level * champion.stats.hpregenperlevel) * 100) / 100}</p>
                         <p>Move speed : {moveSpeed + speedSpells}</p>
-                        <p>Attack speed : {Math.round((attackSpeed + level * champion.stats.attackspeedperlevel) * 100) / 100}</p>
+                        <p>Attack speed <span><img src={AttackSpeed}></img></span> : {Math.round((attackSpeed + level * champion.stats.attackspeedperlevel) * 100) / 100}</p>
                         <p>Mana Regen : {Math.round((manaRegen + level * champion.stats.mpregenperlevel) * 100) / 100}</p>
-                        <p>Spell block : {Math.round((spellBlock + level * champion.stats.spellblockperlevel + spellBlockSpells) * 100) / 100}</p>
+                        <p>Spell block <span><img src={AbilityHaste}></img></span> : {Math.round((spellBlock + level * champion.stats.spellblockperlevel + spellBlockSpells) * 100) / 100}</p>
                     </div>
                 </div>
             </div>
