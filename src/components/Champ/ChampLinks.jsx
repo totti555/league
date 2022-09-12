@@ -28,7 +28,8 @@ const ChampLinks = (props) => {
     }
 
     useEffect(() => {
-        getLinks();
+        if (champCard.linksWith)
+            getLinks();
     }, [champCard]);
 
 
@@ -38,7 +39,7 @@ const ChampLinks = (props) => {
                 <h2 className="title"> LINKS WITH : </h2>
                 <div className=" d-flex flex-wrap mt-3">
 
-                    {linksResult && linksResult.map((champ, index) =>
+                    {champCard.linksWith && linksResult.map((champ, index) =>
 
                         <div className="d-flex align-items-center flex-column mx-3" key={index}>
                             <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='48px' className="mx-2"></img>
