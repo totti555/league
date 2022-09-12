@@ -13,7 +13,8 @@ const ChampSpells = (props) => {
     const spellsLetterImg = [Q, W, E, R];
     const spellsLetter = ['Q', 'W', 'E', 'R'];
     const [formattedKey, setFormattedKey] = useState('');
-    const [letter, setLetter] = useState('Q')
+    const [letter, setLetter] = useState('Q');
+
 
 
     const getVideos = (champion) => {
@@ -32,6 +33,13 @@ const ChampSpells = (props) => {
     useEffect(() => {
         getVideos(champion);
     }, [champion]);
+
+    useEffect(() => {
+        if (document.getElementById('video') !== null) {
+            let myVid = document.getElementById('video');
+            myVid.load();
+        }
+    })
 
 
     return (
