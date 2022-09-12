@@ -14,27 +14,31 @@ html {
     overflow: scroll;
     overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+    /* Optional: just make scrollbar invisible */
 }
+
 // /* Optional: show position indicator in red */
 // ::-webkit-scrollbar-thumb {
 //     background: #FF0000;
 // }
 
 .home-content {
-    
-   
+
+
     // height: 755px;
     position: fixed;
     font-size: 18px;
-    top:6.063rem;
+    top: 6.063rem;
     bottom: 3.791rem;
     right: 0;
     left: 0;
     overflow-y: scroll;
-    z-index:2;
+    z-index: 2;
 
 
     h1 {
@@ -116,17 +120,17 @@ html {
     //     overflow-y: scroll;
     //     scroll-behavior: smooth;
     // }
-.test {
-    width: 200px;
-    height: 200px;
-    margin: 50px auto;
-    padding-top: 75px;
-    background: #ccc;
-    text-align: center;
-    color: #FFF;
-    font-size: 3em;
-    background-color: #ECB823;
-}
+    .test {
+        width: 200px;
+        height: 200px;
+        margin: 50px auto;
+        padding-top: 75px;
+        background: #ccc;
+        text-align: center;
+        color: #FFF;
+        font-size: 3em;
+        background-color: #ECB823;
+    }
 
 
 
@@ -181,30 +185,27 @@ html {
 
 
 
-@media (min-width: 600px) and (max-width : 800px){
+@media (min-width: 600px) and (max-width : 800px) {
     .home-content {
-        top:4rem;
-        bottom:5.181rem;
+        top: 4rem;
+        bottom: 5.181rem;
     }
 }
 
-@media (min-width: 0px) and (max-width : 350px){
+@media (min-width: 0px) and (max-width : 350px) {
     .home-content {
-        top:3rem;
+        top: 3rem;
         bottom: 3.528rem;
     }
 }
 
-@media (min-width: 350px) and (max-width : 600px){
+@media (min-width: 350px) and (max-width : 600px) {
     .home-content {
-        top:3rem;
+        top: 3rem;
         bottom: 4.079rem;
+
         h1 {
             font-size: 40px;
         }
     }
 }
-
-
-
-
