@@ -41,6 +41,7 @@ const AboutUs = () => {
     const [decreaseLevel, setDecreaseLevel] = useState(true);
     const [currentChampLinks, setCurrentChampLinks] = useState([]);
     const topRef = useRef(null);
+    const [championsSpells, setChampionSpells] = useState([]);
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -82,6 +83,7 @@ const AboutUs = () => {
                 // handle success
                 const obj = response.data.data
                 const data = Object.values(obj);
+                console.log(data[0])
                 setChampion(data[0]);
 
             })
@@ -93,6 +95,50 @@ const AboutUs = () => {
                 // always executed
 
             });
+
+
+        axios.get(`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/${champKey}.json`)
+            .then(function (response) {
+                // handle success
+                const obj = response.data;
+                // setChampion(obj)
+                console.log("new", obj);
+                setChampionSpells(obj)
+                // const data = Object.values(obj);
+                // setChampion(data[0]);
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+
+            });
+
+
+        axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/aatrox/aatrox.bin.json`)
+            .then(function (response) {
+                // handle success
+                const obj = response.data;
+                // setChampion(obj)
+                console.log("data", obj);
+                // setChampionSpells(obj)
+                // const data = Object.values(obj);
+                // setChampion(data[0]);
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+
+            });
+
+
     }
 
 
@@ -141,7 +187,7 @@ const AboutUs = () => {
                                 }
                                 <div className="col-xl-9 col-md-8 col-sm-7 col-vsm p-3">
                                     {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
-                                    <ChampSpells champion={champion} championCard={champCard} />
+                                    <ChampSpells champion={champion} championCard={champCard} championsSpells={championsSpells} />
                                 </div>
 
                                 {
