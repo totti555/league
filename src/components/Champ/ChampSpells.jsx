@@ -5,6 +5,7 @@ import E from '../../assets/Spells/e.png'
 import R from '../../assets/Spells/r.png'
 import P from '../../assets/Spells/p.png'
 import { useEffect, useState } from 'react'
+import MoveSpeed from '../../assets/Stats/Movement_speed.png'
 
 
 const ChampSpells = (props) => {
@@ -132,35 +133,119 @@ const Spells = (props) => {
 
         const data = spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues;
 
-        if (stringLetter === 'W') {
+        console.log('Pour le spell', stringLetter)
 
-            console.log('changement de texte', spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues);
+        console.log('changement de texte', spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues);
 
-            // Base Damage
-            if (data.find((damages) => damages.mName == 'WBaseDamage')) {
-                let str = document.getElementById(`Wspell`).innerHTML;
-                const baseDamageJson = data.find((damages) => damages.mName == 'WBaseDamage');
-                console.log(baseDamageJson);
-                const baseDamage = baseDamageJson.mValues[2];
-                let textToReplace = `${"@" + stringLetter + "Damage@"}`;
-                var re = new RegExp(textToReplace, "g");
-                let res = str.replace(re, baseDamage);
-                document.getElementById(`Wspell`).innerHTML = res;
-            }
-
-            // Slow Duration
-            if (data.find((damages) => damages.mName == 'WSlowDuration')) {
-                let str = document.getElementById(`Wspell`).innerHTML;
-                const slowDamageJson = data.find((damages) => damages.mName == 'WSlowDuration');
-                console.log(slowDamageJson);
-                const slowDamage = slowDamageJson.mValues[2];
-                let textToReplace = `${"@" + stringLetter + "SlowDuration@"}`;
-                var re = new RegExp(textToReplace, "g");
-                let res = str.replace(re, `<span style="color:purple;>${slowDamage}</span>`);
-                document.getElementById(`Wspell`).innerHTML = res;
-            }
-
+        // Base Damage
+        if (data.find((damages) => damages.mName == `${stringLetter}BaseDamage`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const baseDamageJson = data.find((damages) => damages.mName == `${stringLetter}BaseDamage`);
+            console.log(baseDamageJson);
+            const baseDamage = baseDamageJson.mValues[2];
+            let textToReplace = `${"@" + stringLetter + "Damage@"}`;
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, baseDamage);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
         }
+
+        // Slow Duration
+        if (data.find((damages) => damages.mName == `${stringLetter}SlowDuration`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}SlowDuration`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            let textToReplace = `${"@" + stringLetter + "SlowDuration@"}`;
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `<span style="color:purple;">${slowDamage}</span>`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+        //Slow Percentage
+        if (data.find((damages) => damages.mName == `${stringLetter}SlowPercentage`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}SlowPercentage`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            console.log(str);
+            str = str.replace('*', '_');
+            let textToReplace = `${"@" + stringLetter + "SlowPercentage_-100@"}`;
+            console.log('to replace', textToReplace);
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `<span style="color:purple;">${slowDamage * -100}</span>`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+        // SpellVamp
+
+        if (data.find((damages) => damages.mName == `${stringLetter}SpellVamp`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}SpellVamp`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            let textToReplace = `${"@" + stringLetter + "SpellVamp@"}`;
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `${slowDamage}`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+        // Spell Vamp Empowered
+
+        if (data.find((damages) => damages.mName == `${stringLetter}SpellVampEmpowered`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}SpellVampEmpowered`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            let textToReplace = `${"@" + stringLetter + "SpellVampEmpowered@"}`;
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `${slowDamage}`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+        // Minion fear duration 
+
+        if (data.find((damages) => damages.mName == `${stringLetter}MinionFearDuration`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}MinionFearDuration`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            let textToReplace = `${"@" + stringLetter + "MinionFearDuration@"}`;
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `${slowDamage}`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+        // Move speed bonus
+
+
+        if (data.find((damages) => damages.mName == `${stringLetter}MovementSpeedBonus`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}MovementSpeedBonus`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            console.log(str);
+            str = str.replace('*', '_');
+            let textToReplace = `${"@" + stringLetter + "MovementSpeedBonus_100@%"}`;
+            console.log('to replace', textToReplace);
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `<span>${Math.round(slowDamage * -100)}% <img src=${MoveSpeed}></img></span>`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+        // Delay 
+        if (data.find((damages) => damages.mName == `${stringLetter}Duration`)) {
+            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+            const slowDamageJson = data.find((damages) => damages.mName == `${stringLetter}Duration`);
+            console.log(slowDamageJson);
+            const slowDamage = slowDamageJson.mValues[2];
+            let textToReplace = `${"@" + stringLetter + "Duration@"}`;
+            var re = new RegExp(textToReplace, "g");
+            let res = str.replace(re, `${slowDamage}`);
+            document.getElementById(`${stringLetter}spell`).innerHTML = res;
+        }
+
+
+
 
     }
 
