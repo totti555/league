@@ -94,7 +94,7 @@ const ChampSpells = (props) => {
 
                             (
                                 <div key={s.id} onClick={() => spellSelected(spellsLetter[index])}>
-                                    <Spells image={s.image.full} name={s.name} champion={champion} description={s.description} isPassive={false} letter={spellsLetterImg[index]} stringLetter={spellsLetter[index]} tooltip={s.tooltip} setDamages={setDamages} damages={damages} />
+                                    <Spells image={s.image.full} name={s.name} cooldown={s.cooldownBurn} champion={champion} description={s.description} isPassive={false} letter={spellsLetterImg[index]} stringLetter={spellsLetter[index]} tooltip={s.tooltip} setDamages={setDamages} damages={damages} />
                                 </div>
                             ))
                         }
@@ -121,6 +121,7 @@ const Spells = (props) => {
     const setDamages = props.setDamages;
     const damages = props.damages;
     const stringLetter = props.stringLetter;
+    const cooldown = props.cooldown;
 
 
 
@@ -188,7 +189,7 @@ const Spells = (props) => {
                 }
                 <div className='ms-2'>
                     <p className="entity-title font-weight-bold mb-1">{name}</p>
-                    <p className='spell-cooldown small mb-0'>10 / 15 / 20 / 25 / 30</p>
+                    <p className='spell-cooldown small mb-0'>{cooldown}</p>
                 </div>
 
             </div>
