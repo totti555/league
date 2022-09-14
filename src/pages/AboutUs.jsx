@@ -42,6 +42,7 @@ const AboutUs = () => {
     const [currentChampLinks, setCurrentChampLinks] = useState([]);
     const topRef = useRef(null);
     const [championsSpells, setChampionSpells] = useState([]);
+    const [spellDatas, setSpellDatas] = useState([]);
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -124,6 +125,7 @@ const AboutUs = () => {
                 const obj = response.data;
                 // setChampion(obj)
                 console.log("data", obj);
+                setSpellDatas(obj);
                 // setChampionSpells(obj)
                 // const data = Object.values(obj);
                 // setChampion(data[0]);
@@ -187,7 +189,7 @@ const AboutUs = () => {
                                 }
                                 <div className="col-xl-9 col-md-8 col-sm-7 col-vsm p-3">
                                     {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
-                                    <ChampSpells champion={champion} championCard={champCard} championsSpells={championsSpells} />
+                                    <ChampSpells champion={champion} championCard={champCard} championsSpells={championsSpells} spellDatas={spellDatas} />
                                 </div>
 
                                 {

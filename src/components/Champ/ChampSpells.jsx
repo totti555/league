@@ -10,12 +10,14 @@ import { useEffect, useState } from 'react'
 const ChampSpells = (props) => {
     const champion = props.champion;
     const championCard = props.championCard;
+    const spellDatas = props.spellDatas;
     const spellsLetterImg = [Q, W, E, R];
     const spellsLetter = ['Q', 'W', 'E', 'R'];
     const [formattedKey, setFormattedKey] = useState('');
     const [letter, setLetter] = useState('Q');
     const championsSpells = props.championsSpells;
     const [damages, setDamages] = useState([]);
+
 
 
 
@@ -44,11 +46,6 @@ const ChampSpells = (props) => {
         }
 
     })
-
-
-
-
-
 
     return (
 
@@ -84,7 +81,7 @@ const ChampSpells = (props) => {
                     }
                     <hr />
                     <div className='align-self-center mt-2 champ-spells-overflow'>
-                        {championsSpells.spells && <p id='test' dangerouslySetInnerHTML={{ __html: championsSpells.spells[1].dynamicDescription }}></p>}
+                        {/* {championsSpells.spells && <p id='test' dangerouslySetInnerHTML={{ __html: championsSpells.spells[1].dynamicDescription }}></p>} */}
                         {/* <div onClick={() => spellSelected('P')}>
                             <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter={P} tooltip={champion.passive.tooltip} />
                         </div> */}
@@ -94,7 +91,7 @@ const ChampSpells = (props) => {
 
                             (
                                 <div key={s.id} onClick={() => spellSelected(spellsLetter[index])}>
-                                    <Spells image={s.image.full} name={s.name} cooldown={s.cooldownBurn} champion={champion} description={s.description} isPassive={false} letter={spellsLetterImg[index]} stringLetter={spellsLetter[index]} tooltip={s.tooltip} setDamages={setDamages} damages={damages} />
+                                    {championsSpells.spells && <Spells championsSpells={championsSpells} spellDatas={spellDatas} spellId={s.id} image={s.image.full} name={s.name} cooldown={s.cooldownBurn} champion={champion} description={championsSpells.spells[index].dynamicDescription} isPassive={false} letter={spellsLetterImg[index]} stringLetter={spellsLetter[index]} tooltip={s.tooltip} setDamages={setDamages} damages={damages} />}
                                 </div>
                             ))
                         }
@@ -113,7 +110,7 @@ const Spells = (props) => {
     const image = props.image;
     const name = props.name;
     const champion = props.champion;
-    const spellId = 'AatroxW'
+    const spellId = props.spellId;
     const description = props.description;
     const isPassive = props.isPassive;
     const letter = props.letter;
@@ -122,56 +119,32 @@ const Spells = (props) => {
     const damages = props.damages;
     const stringLetter = props.stringLetter;
     const cooldown = props.cooldown;
+    const spellDatas = props.spellDatas;
+    const championsSpells = props.championsSpells;
 
 
 
-    const testSpellDamages = () => {
-        console.log(champion.id);
-        const axios = require('axios').default;
-        axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/${champion.id.toLowerCase()}/${champion.id.toLowerCase()}.bin.json`)
-            .then(function (response) {
-                // handle success
-                const obj = response.data;
-                const spellInitialDamages = response.data[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues;
-                console.log(spellInitialDamages);
-                const damages = spellInitialDamages.find((spell) => spell.mName == 'WBaseDamage');
-                console.log('les degats ????')
-                console.log(damages);
-                setDamages(damages);
 
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-
-            });
-    }
 
     function changeText() {
-        if (damages.mBaseP) {
-            let str = document.getElementById(`${stringLetter}spell`).innerHTML;
-            console.log('changement de texte', damages.mBaseP);
-            let textToReplace = `${"{{ " + stringLetter.toLowerCase() + "damage }}"}`;
-            console.log(textToReplace);
-            var re = new RegExp(textToReplace, "g");
-            let res = str.replaceAll(re, damages.mBaseP);
-            document.getElementById(`${stringLetter}spell`).innerHTML = res;
-        }
+
+        let str = document.getElementById(`${stringLetter}spell`).innerHTML;
+
+        // Base Damage
+        console.log('changement de texte', spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues);
+        let textToReplace = `${"@" + stringLetter + "Damage@"}`;
+        var re = new RegExp(textToReplace, "g");
+        let res = str.replaceAll(re, 'oui');
+        document.getElementById(`${stringLetter}spell`).innerHTML = res;
+
     }
 
     useEffect(() => {
-        if (document.getElementById('Wspell') !== null && damages.mBaseP !== null)
+        if (spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`])
             changeText();
-    }, [damages])
+    }, [spellDatas])
 
-    useEffect(() => {
-        if (champion)
-            testSpellDamages();
 
-    }, [champion.id])
 
 
 
@@ -197,7 +170,7 @@ const Spells = (props) => {
 
             <div className='ms-1 mt-2 position-relative'>
                 {/* <p className="spell-description m-0" dangerouslySetInnerHTML={{ __html: description }} /> */}
-                <p className='spell-description m-0' id={`${stringLetter}spell`} dangerouslySetInnerHTML={{ __html: tooltip }}></p>
+                <p className='spell-description m-0' id={`${stringLetter}spell`} dangerouslySetInnerHTML={{ __html: description }}></p>
             </div>
             <hr />
         </div>
