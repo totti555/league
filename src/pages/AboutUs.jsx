@@ -84,7 +84,7 @@ const AboutUs = () => {
                 // handle success
                 const obj = response.data.data
                 const data = Object.values(obj);
-                console.log(data[0])
+                console.log('donnees officielle', data[0])
                 setChampion(data[0]);
 
             })
@@ -119,11 +119,12 @@ const AboutUs = () => {
             });
 
 
-        axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/aatrox/aatrox.bin.json`)
+        axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/${champName.toLowerCase()}/${champName.toLowerCase()}.bin.json`)
             .then(function (response) {
                 // handle success
                 const obj = response.data;
                 // setChampion(obj)
+                console.log('allo c moii');
                 console.log("data", obj);
                 setSpellDatas(obj);
                 // setChampionSpells(obj)
@@ -139,6 +140,7 @@ const AboutUs = () => {
                 // always executed
 
             });
+
 
 
     }
