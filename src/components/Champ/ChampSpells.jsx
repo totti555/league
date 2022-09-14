@@ -440,6 +440,12 @@ const Spells = (props) => {
                 str = str.replace(/Ability Haste/g, `<span style="color:grey;">Ability Haste <img src=${AbilityHaste}></img></span></span>`);
             }
 
+            if (str.includes(`${champion.name}`)) {
+                let textToReplace = `${champion.name}`;
+                var re = new RegExp(textToReplace, "g");
+                str = str.replace(re, `<span style="font-weight:bold">${champion.name}</span>`);
+            }
+
 
             document.getElementById(`${stringLetter}updatedspell`).innerHTML = str;
         }
