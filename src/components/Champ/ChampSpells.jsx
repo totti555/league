@@ -128,14 +128,39 @@ const Spells = (props) => {
 
     function changeText() {
 
-        let str = document.getElementById(`${stringLetter}spell`).innerHTML;
 
-        // Base Damage
-        console.log('changement de texte', spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues);
-        let textToReplace = `${"@" + stringLetter + "Damage@"}`;
-        var re = new RegExp(textToReplace, "g");
-        let res = str.replaceAll(re, 'oui');
-        document.getElementById(`${stringLetter}spell`).innerHTML = res;
+
+        const data = spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues;
+
+        if (stringLetter === 'W') {
+
+            console.log('changement de texte', spellDatas[`Characters/${champion.id}/Spells/${spellId}Ability/${spellId}`].mSpell.mDataValues);
+
+            // Base Damage
+            if (data.find((damages) => damages.mName == 'WBaseDamage')) {
+                let str = document.getElementById(`Wspell`).innerHTML;
+                const baseDamageJson = data.find((damages) => damages.mName == 'WBaseDamage');
+                console.log(baseDamageJson);
+                const baseDamage = baseDamageJson.mValues[2];
+                let textToReplace = `${"@" + stringLetter + "Damage@"}`;
+                var re = new RegExp(textToReplace, "g");
+                let res = str.replace(re, baseDamage);
+                document.getElementById(`Wspell`).innerHTML = res;
+            }
+
+            // Slow Duration
+            if (data.find((damages) => damages.mName == 'WSlowDuration')) {
+                let str = document.getElementById(`Wspell`).innerHTML;
+                const slowDamageJson = data.find((damages) => damages.mName == 'WSlowDuration');
+                console.log(slowDamageJson);
+                const slowDamage = slowDamageJson.mValues[2];
+                let textToReplace = `${"@" + stringLetter + "SlowDuration@"}`;
+                var re = new RegExp(textToReplace, "g");
+                let res = str.replace(re, `<span style="color:purple;>${slowDamage}</span>`);
+                document.getElementById(`Wspell`).innerHTML = res;
+            }
+
+        }
 
     }
 
