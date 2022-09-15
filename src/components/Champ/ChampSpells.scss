@@ -150,6 +150,10 @@
         font-weight: bold;
     }
 
+    attackspeed {
+        color: #EFF397;
+    }
+
     speed {
         color: #EFF397;
     }
@@ -161,6 +165,18 @@
     scalead {
         color: Orange;
         opacity: 0.8;
+    }
+
+    magicdamage {
+        color: #5F43DC
+    }
+
+    scalemana {
+        color: DodgerBlue;
+    }
+
+    shield {
+        color: rgb(247, 96, 41)
     }
 
     .attack-damage {
