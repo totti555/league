@@ -399,7 +399,7 @@ export const champList = [
         image: Cassiopeia,
         type: ["Mage"],
         release: '2010-12-14',
-        linksWith: [{ Talon: 'Brother', Katarina: 'Sister', Sivir: 'Ennemy' }]
+        linksWith: [{ Katarina: 'Sister', Sivir: 'Ennemy', Talon: 'Brother' }]
     },
     {
         name: 'ChoGath',
