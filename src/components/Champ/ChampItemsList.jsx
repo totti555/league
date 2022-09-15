@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './ChampItemsList.scss'
 import Vendor from '../../assets/Common/vendor.jpg'
+import Search from "../../assets/Common/search.svg"
 
 const ChampItems = (props) => {
     const champion = props.champion
@@ -94,10 +95,13 @@ const ChampItems = (props) => {
                 {itemsList.length && (
                     <div>
 
-                        <div className="d-flex justify-content-between">
-                            <div className="d-flex form__group field">
-                                <input type="input" onChange={handleChangeSearch} value={searchItem} className="form__field" placeholder="Search your champ" name="name" id='name' />
-                                <label htmlFor="name" className="form__label">Search <span className="label-visible">your item</span></label>
+                        <div className="">
+                            <div className="position-relative">
+                                <form autoComplete='off'>
+                                    <input type="input" onChange={handleChangeSearch} value={searchItem} className="form__field" placeholder="Search your champ" name="name" id='name' />
+                                    <label htmlFor="name" className="form__label">Search your item</label>
+                                </form>
+                                <img src={Search} className="search-icon"></img>
                             </div>
                             {/* <img src={Search} className="search-icon"></img> */}
                         </div>

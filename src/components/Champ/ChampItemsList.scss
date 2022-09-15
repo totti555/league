@@ -38,6 +38,14 @@
 
         opacity: 0.8;
     }
+
+    .search-icon {
+        position: absolute;
+        rotate: 90deg;
+        right: 7px;
+        top: 8px;
+        filter: invert(55%) sepia(15%) saturate(1306%) hue-rotate(0deg) brightness(90%) contrast(84%);
+    }
 }
 
 @media (min-width: 0px) and (max-width : 575px) {
