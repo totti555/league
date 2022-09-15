@@ -434,6 +434,7 @@ const Spells = (props) => {
 
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         changeColor();
     }, [champion.id]);
 

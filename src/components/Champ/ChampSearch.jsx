@@ -9,10 +9,7 @@ const ChampSearch = (props) => {
     const [searchChamp, setSearchChamp] = useState('');
     const [champsFound, setChampBySearch] = useState([]);
     const [allChamps, setAllChamps] = useState([]);
-    const [displayInput, setdisplayInput] = useState([]);
     const api_key = process.env.REACT_APP_API_KEY;
-
-    const setChampion = props.setChampion;
 
     function onChange(e) {
         setSearchChamp(e.target.value);
@@ -52,8 +49,6 @@ const ChampSearch = (props) => {
 
     const navigate = useNavigate();
     const goToOtherChamp = (champ) => {
-        let name;
-        name = champ.name
         // const exceptionalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
         // if (exceptionalName.includes(champ.name)) {
         //     const minName = champ.name.toLowerCase();
@@ -93,7 +88,7 @@ const ChampSearch = (props) => {
             const minName = champ.name.toLowerCase();
             return name = minName.charAt(0).toUpperCase() + minName.slice(1);
         }
-        else if (champ.name == 'Wukong') {
+        else if (champ.name === 'Wukong') {
             return name = wukong
         }
         else return name = champ.name;
@@ -132,7 +127,7 @@ const ChampSearch = (props) => {
                         <input type="input" onChange={onChange} value={searchChamp} className="form__field" placeholder="Search champ" name="name" id='name' />
                         <label htmlFor="name" className="form__label">Search your champ</label>
                     </form>
-                    <img src={Search} className="search-icon"></img>
+                    <img alt='search' src={Search} className="search-icon"></img>
                 </div>
             </div>
 
@@ -141,7 +136,7 @@ const ChampSearch = (props) => {
                     {champsFound.map((champ) =>
                         <div key={champ.id} >
                             <div className="champ-search-content d-flex align-self-center" onClick={() => goToOtherChamp(champ)}>
-                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champName(champ)}.png`} width='48px' className="ms-2"></img>
+                                <img alt='champ-icon' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champName(champ)}.png`} width='48px' className="ms-2"></img>
                                 <div className="d-flex flex-column align-self-center ms-2">
                                     <p id={`content${champ.id}`} className="m-0 hide-text font-weight-bold small">{champ.name.toUpperCase()}</p>
                                     <p id={`updated${champ.id}`} className="m-0 research-result"></p>

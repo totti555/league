@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
 import './ChampItemsList.scss'
-import Vendor from '../../assets/Common/vendor.jpg'
 import Search from "../../assets/Common/search.svg"
 
 const ChampItems = (props) => {
-    const champion = props.champion
     const setSelectedItem = props.setSelectedItem;
     const [itemsList, setItemsList] = useState([]);
     const [searchItem, setItemName] = useState('');
     const setStuff = props.setStuff;
     const selectedStuff = props.selectedStuff;
-    const selectedItem = props.selectedItem;
+    // const selectedItem = props.selectedItem;
 
 
     const champItems = () => {
         console.log('champItems');
         const axios = require('axios').default;
-        const api_key = process.env.REACT_APP_API_KEY;
+        // const api_key = process.env.REACT_APP_API_KEY;
         axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/item.json`)
             .then(function (response) {
                 // handle success
@@ -100,7 +98,7 @@ const ChampItems = (props) => {
                                     <input type="input" onChange={handleChangeSearch} value={searchItem} className="form__field" placeholder="Search your champ" name="name" id='name' />
                                     <label htmlFor="name" className="form__label">Search your item</label>
                                 </form>
-                                <img src={Search} className="search-icon"></img>
+                                <img src={Search} alt="search" className="search-icon"></img>
                             </div>
                             {/* <img src={Search} className="search-icon"></img> */}
                         </div>
@@ -118,7 +116,7 @@ const ChampItems = (props) => {
                                                 (itemIsInclude(item, i) && (isItemFind(item.name) || !searchItem)) &&
                                                 <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
                                                     {/* <p className='small'>{item.name}</p> */}
-                                                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
+                                                    <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
                                                     <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
                                                 </div>
                                             )}
