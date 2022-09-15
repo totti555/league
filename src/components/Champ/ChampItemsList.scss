@@ -1,11 +1,11 @@
 .champ-items {
     // width: 1000px;
-    max-height: 400px;
-    overflow-y: auto;
     // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgb(0, 0, 0, 1) 60%);
 
-    .items-content {
+    .overflow-items-list {
         // background-color: rgba(35, 38, 97, 0.8);
+        max-height: 400px;
+        overflow-y: auto;
     }
 
     .items-type {

@@ -94,7 +94,6 @@ const ChampItems = (props) => {
                 <h2 className='title'>ITEMS :</h2>
                 {itemsList.length && (
                     <div>
-
                         <div className="">
                             <div className="position-relative">
                                 <form autoComplete='off'>
@@ -106,27 +105,29 @@ const ChampItems = (props) => {
                             {/* <img src={Search} className="search-icon"></img> */}
                         </div>
                         <hr ></hr>
-                        {itemsTypes().map((i) => (
-                            <div key={i} className='items-content my-2'>
+                        <div className='overflow-items-list'>
+                            {itemsTypes().map((i) => (
+                                <div key={i} className='items-content my-2'>
 
-                                {!searchItem.length &&
-                                    (<h3 className='title'>{i.replace(/([A-Z])/g, ' $1').toUpperCase()} :</h3>)}
-                                <div className='position-relative '>
-                                    <div className='d-flex flex-wrap mx-2 '>
+                                    {!searchItem.length &&
+                                        (<h3 className='title'>{i.replace(/([A-Z])/g, ' $1').toUpperCase()} :</h3>)}
+                                    <div className='position-relative '>
+                                        <div className='d-flex flex-wrap mx-2 '>
 
-                                        {itemsList.map((item, index) =>
-                                            (itemIsInclude(item, i) && (isItemFind(item.name) || !searchItem)) &&
-                                            <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
-                                                {/* <p className='small'>{item.name}</p> */}
-                                                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
-                                                <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
-                                            </div>
-                                        )}
+                                            {itemsList.map((item, index) =>
+                                                (itemIsInclude(item, i) && (isItemFind(item.name) || !searchItem)) &&
+                                                <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
+                                                    {/* <p className='small'>{item.name}</p> */}
+                                                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px"></img>
+                                                    <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
+                                                </div>
+                                            )}
 
+                                        </div>
                                     </div>
-                                </div>
-                            </div>)
-                        )}
+                                </div>)
+                            )}
+                        </div>
 
 
 
