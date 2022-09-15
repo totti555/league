@@ -17,19 +17,36 @@ const ChampStuff = (props) => {
         setStuff(newStuff);
     }
 
+    const sumObjectsByKey = (...objs) => {
+        const res = objs.reduce((a, b) => {
+            for (let k in b) {
+                if (b.hasOwnProperty(k))
+                    a[k] = (a[k] || 0) + b[k];
+            }
+            return a;
+        }, {});
+        console.log('objet additionne', res)
+        return res;
+    }
+
     const champStats = () => {
 
         if (selectedStuff.length) {
             const test = selectedStuff.map((item) =>
                 item.stats);
+            // const cc = sum(selectedStuff[0].stats, selectedStuff[1].stats);
+            // console.log(cc);
 
             let firstEnt = selectedStuff[0].stats;
             let obj;
 
-
+            console.log('selectedStuff', test);
             Array.from(Array(5)).map((_, i) => {
                 if (firstEnt !== test[i]) {
-                    obj = Object.assign({}, firstEnt, test[i]);
+                    const obj = sumObjectsByKey(firstEnt, test[i]);
+                    // console.log('sum obj', obj);
+                    // obj = Object.assign({}, firstEnt, test[i]);
+                    console.log('obj', obj)
                     firstEnt = obj;
                     return firstEnt;
                 }

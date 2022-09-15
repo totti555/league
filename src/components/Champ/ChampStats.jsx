@@ -42,7 +42,7 @@ const ChampStats = (props) => {
     // Add spells
 
     const hpSpells = itemsBuff.FlatHPPoolMod ? itemsBuff.FlatHPPoolMod : 0;
-    const magic = itemsBuff.FlatMagicDamageMod ? itemsBuff.FlatMagicDamageMod : 0;
+    const magicSpells = itemsBuff.FlatMagicDamageMod ? itemsBuff.FlatMagicDamageMod : 0;
     // hp regen
     const speedSpells = itemsBuff.FlatMovementSpeedMod ? itemsBuff.FlatMovementSpeedMod : 0;
     const manaSpells = itemsBuff.FlatMPPoolMod ? itemsBuff.FlatMPPoolMod : 0;
@@ -58,7 +58,7 @@ const ChampStats = (props) => {
                 <ChampLevel setDecreaseLevel={setDecreaseLevel} setIncreaseLevel={setIncreaseLevel} level={level} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
                 <div className='d-flex justify-content-around stats-content mt-5'>
                     <div>
-                        <p>Power <span><img src={Power}></img></span> : 0</p>
+                        <p>Power <span><img src={Power}></img></span> : {magicSpells}</p>
                         <p>Armor <span><img src={Armor}></img></span> : {Math.round((armor + (level * champion.stats.armorperlevel)) * 100) / 100}</p>
                         <p>Attack : {Math.round(attackDamage + level * champion.stats.attackdamageperlevel * 100) / 100}</p>
                         <p>Resistance <span><img src={Resistance}></img></span> : 0</p>
