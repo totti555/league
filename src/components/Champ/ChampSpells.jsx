@@ -121,17 +121,17 @@ const Spells = (props) => {
     const image = props.image;
     const name = props.name;
     const champion = props.champion;
-    const spellId = props.spellId;
+    // const spellId = props.spellId;
     const description = props.description;
     const isPassive = props.isPassive;
     const letter = props.letter;
-    const tooltip = props.tooltip;
-    const setDamages = props.setDamages;
-    const damages = props.damages;
+    // const tooltip = props.tooltip;
+    // const setDamages = props.setDamages;
+    // const damages = props.damages;
     const stringLetter = props.stringLetter;
     const cooldown = props.cooldown;
-    const spellDatas = props.spellDatas;
-    const championsSpells = props.championsSpells;
+    // const spellDatas = props.spellDatas;
+    // const championsSpells = props.championsSpells;
 
 
 
@@ -352,7 +352,7 @@ const Spells = (props) => {
 
             //fixing a bit
             var toStr = String(reg);
-            var color = (toStr.replace('\/g', '|')).substring(1);
+            var color = (toStr.replace('/g', '|')).substring(1);
 
             //split it baby
             var colors = color.split("|");
@@ -462,7 +462,7 @@ const Spells = (props) => {
         <div className="my-1 spell-content  mx-3" >
             <div className='spell-letter'>
                 {/* {letter} */}
-                <img src={letter} width='98px'></img>
+                <img src={letter} alt='letter' width='98px'></img>
             </div>
             <div className="spell-img d-flex justify-content-start ms-2">
                 {isPassive ?

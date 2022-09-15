@@ -1,6 +1,6 @@
 import "../style/AboutUs.scss";
 import React, { useState, useEffect, useRef } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
 import ChampSpells from "../components/Champ/ChampSpells";
 import ChampStats from "../components/Champ/ChampStats";
@@ -9,11 +9,9 @@ import ChampItemDetails from "../components/Champ/ChampItemDetails";
 import ChampStuff from "../components/Champ/ChampStuff";
 import ChampLinks from "../components/Champ/ChampLinks";
 import ChampCard from "../components/ChampList/ChampCard";
-import ChampLevel from "../components/Champ/ChampLevel";
 import ChampHeader from "../components/Champ/ChampHeader";
 import ChampSearch from "../components/Champ/ChampSearch";
 import Stats from '../assets/Common/epees-croisees.png'
-import Vendor from '../assets/Common/vendor.jpg'
 
 
 {
@@ -29,7 +27,6 @@ import Vendor from '../assets/Common/vendor.jpg'
 
 const AboutUs = () => {
 
-    const location = useLocation();
     const [champion, setChampion] = useState([]);
     const [selectedItem, setSelectedItem] = useState([]);
     const [selectedStuff, setStuff] = useState([]);
@@ -48,8 +45,8 @@ const AboutUs = () => {
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
 
-    const champDetails = async () => {
-        const findChampKey = champList.find((champ) => champName == champ.name);
+    const champDetails = () => {
+        const findChampKey = champList.find((champ) => champName === champ.name);
         console.log("findChampKey", findChampKey);
         if (findChampKey)
             setCurrentChampLinks(findChampKey.linksWith);
@@ -59,7 +56,7 @@ const AboutUs = () => {
         // champKey = location.state ? location.state.key : 145;
         champKey = findChampKey ? findChampKey.key : 145;
         setKey(champKey);
-        const data = champList.filter((champ) => champ.key == champKey);
+        const data = champList.filter((champ) => champ.key === champKey);
 
         const champSelected = data[0];
         setChampCard(champSelected);
@@ -69,7 +66,7 @@ const AboutUs = () => {
             const minName = champSelected.name.toLowerCase();
             name = minName.charAt(0).toUpperCase() + minName.slice(1);
         }
-        else if (name == 'Wukong') {
+        else if (name === 'Wukong') {
             name = 'MonkeyKing';
         }
         else name = champSelected.name;

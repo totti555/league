@@ -20,7 +20,6 @@ const ChampStuff = (props) => {
     const champStats = () => {
 
         if (selectedStuff.length) {
-            let stats;
             const test = selectedStuff.map((item) =>
                 item.stats);
 
