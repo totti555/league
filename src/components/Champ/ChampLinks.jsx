@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { champList } from "../../datas/lolChamp";
 import { useNavigate } from "react-router-dom";
+import Angry from '../../assets/Common/angry.png'
 import './ChampLinks.scss'
 
 const ChampLinks = (props) => {
@@ -68,6 +69,8 @@ const ChampLinks = (props) => {
                         </div>
 
                     )}
+                    {console.log(currentChampLinks)}
+                    {!currentChampLinks && <p><span className="me-3"><img src={Angry} alt='angry' width='128px'></img></span>Ce champion n'a pas de liens directs avec d'autres champion !</p>}
                 </div>
             </div>
         </div>
