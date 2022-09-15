@@ -48,13 +48,13 @@ const ChampSpells = (props) => {
         getVideos(champion);
     }, [champion]);
 
-    useEffect(() => {
-        if (document.getElementById('video') !== null) {
-            let myVid = document.getElementById('video');
-            myVid.load();
-        }
+    // useEffect(() => {
+    //     if (document.getElementById('video') !== null) {
+    //         let myVid = document.getElementById('video');
+    //         myVid.load();
+    //     }
 
-    })
+    // })
 
     return (
 
@@ -404,7 +404,7 @@ const Spells = (props) => {
                 // if (goodText) {
                 //     var number = goodText.match(/[0-9]+$/)[0];
                 // }
-                str = str.replace(/Armor/g, `<span style="color:DodgerBlue;">Armor <img src=${Armor}></img></span>`);
+                str = str.replace(/Armor/g, `<span style="color:orangered;">Armor <img src=${Armor}></img></span>`);
             }
 
             if (colors.indexOf("Base Health Regen") > -1) {
