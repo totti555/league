@@ -402,43 +402,22 @@ const Spells = (props) => {
             }
 
             if (colors.indexOf("Armor") > -1) {
-                // var goodText = str.substring(0, str.indexOf('</attention> Mana'));
-                // if (goodText) {
-                //     var number = goodText.match(/[0-9]+$/)[0];
-                // }
                 str = str.replace(/Armor/g, `<span style="color:orangered;">Armor <img src=${Armor}></img></span>`);
             }
 
             if (colors.indexOf("Base Health Regen") > -1) {
-                // var goodText = str.substring(0, str.indexOf('</attention> Base Health Regen'));
-                // console.log("dd", goodText)
-                // if (goodText) {
-                //     var number = goodText.match(/[0-9]+$/)[0];
-                // }
                 str = str.replace(/Base Health Regen/g, `<span style="color:#72DE38;">Base Health Regen <img src=${Health}></img></span></span>`);
             }
 
             if (colors.indexOf("Health") > -1) {
-                // var goodText = str.substring(0, str.indexOf('</attention> Health'));
-                // if (goodText) {
-                //     var number = goodText.match(/[0-9]+$/)[0];
-                // }
                 str = str.replace(/Health/g, `<span style="color:#72DE38;">Health <img src=${Health}></img></span></span>`);
             }
 
             if (colors.indexOf("Move Speed") > -1) {
-                // var goodText = str.substring(0, str.indexOf('</attention> Health'));
-                // if (goodText) {
-                //     var number = goodText.match(/[0-9]+$/)[0];
-                // }
                 str = str.replace(/Move Speed/g, `<span style="color:#EFF397;">Move Speed <img src=${MoveSpeed}></img></span></span>`);
             }
 
             if (colors.indexOf("Ability Haste") > -1) {
-                // var goodText = str.substring(0, str.indexOf('</attention> Ability Haste'));
-                // if (goodText) {
-                //     var number = goodText.match(/[0-9]+$/)[0];
-                // }
                 str = str.replace(/Ability Haste/g, `<span style="color:grey;">Ability Haste <img src=${AbilityHaste}></img></span></span>`);
             }
 

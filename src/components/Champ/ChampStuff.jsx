@@ -25,13 +25,14 @@ const ChampStuff = (props) => {
             }
             return a;
         }, {});
-        console.log('objet additionne', res)
         return res;
     }
 
     const champStats = () => {
-
+        console.log('eetla?')
+        console.log(selectedStuff);
         if (selectedStuff.length) {
+            console.log('Est cee que je passee ici ?')
             const test = selectedStuff.map((item) =>
                 item.stats);
             // const cc = sum(selectedStuff[0].stats, selectedStuff[1].stats);
@@ -79,6 +80,7 @@ const ChampStuff = (props) => {
             // console.log(test2);
 
         }
+        else setItemsBuff([]);
     }
 
     useEffect(() => {

@@ -37,7 +37,7 @@ const ChampStats = (props) => {
     const moveSpeed = champion.stats.movespeed;
     const mana = champion.stats.mp;
     const manaRegen = champion.stats.mpregen;
-    const spellBlock = champion.stats.spellblock;
+    const resistance = champion.stats.spellblock;
 
     // Add spells
 
@@ -46,8 +46,12 @@ const ChampStats = (props) => {
     // hp regen
     const speedSpells = itemsBuff.FlatMovementSpeedMod ? itemsBuff.FlatMovementSpeedMod : 0;
     const manaSpells = itemsBuff.FlatMPPoolMod ? itemsBuff.FlatMPPoolMod : 0;
+    const critSpells = itemsBuff.FlatCritChanceMod ? itemsBuff.FlatCritChanceMod : 0;
+    const armorSpells = itemsBuff.FlatArmorMod ? itemsBuff.FlatArmorMod : 0;
     // Mana Regen
-    const spellBlockSpells = itemsBuff.FlatSpellBlockMod ? itemsBuff.FlatSpellBlockMod : 0;
+    const resistanceSpells = itemsBuff.FlatSpellBlockMod ? itemsBuff.FlatSpellBlockMod : 0;
+    const lifeStealSpells = itemsBuff.PercentLifeStealMod ? itemsBuff.PercentLifeStealMod : 0;
+    const physicalSpells = itemsBuff.FlatPhysicalDamageMod ? itemsBuff.FlatPhysicalDamageMod : 0;
 
 
     return (
@@ -59,19 +63,21 @@ const ChampStats = (props) => {
                 <div className='d-flex justify-content-around stats-content mt-5'>
                     <div>
                         <p>Power <span><img src={Power}></img></span> : {magicSpells}</p>
-                        <p>Armor <span><img src={Armor}></img></span> : {Math.round((armor + (level * champion.stats.armorperlevel)) * 100) / 100}</p>
-                        <p>Attack : {Math.round(attackDamage + level * champion.stats.attackdamageperlevel * 100) / 100}</p>
-                        <p>Resistance <span><img src={Resistance}></img></span> : 0</p>
+                        <p>Armor <span><img src={Armor}></img></span> : {Math.round((armor + armorSpells + (level * champion.stats.armorperlevel)) * 100) / 100}</p>
+                        <p>Attack : {Math.round((attackDamage + physicalSpells + level * champion.stats.attackdamageperlevel) * 100) / 100}</p>
+                        <p>Resistance <span><img src={Resistance}></img></span> : {Math.round((resistance + resistanceSpells + level * champion.stats.spellblockperlevel) * 100) / 100}</p>
                         <p>Hp <span><img src={Health}></img></span> : {hp + level * champion.stats.hpperlevel + hpSpells}</p>
                         <p>Mana : {mana + level * champion.stats.mpperlevel + manaSpells}</p>
                     </div>
                     <div>
-                        <p>Crit : {crit + level * champion.stats.critperlevel}</p>
+                        <p>LifeSteal : {(lifeStealSpells) * 100} %</p>
+                        <p>Crit : {(crit + critSpells + level * champion.stats.critperlevel) * 100} %</p>
+                        {/* Miss Spells */}
                         <p>Hp regen : {Math.round((hpRegen + level * champion.stats.hpregenperlevel) * 100) / 100}</p>
                         <p>Move speed : {moveSpeed + speedSpells}</p>
-                        <p>Attack speed <span><img src={AttackSpeed}></img></span> : {Math.round((attackSpeed + level * champion.stats.attackspeedperlevel) * 100) / 100}</p>
+                        <p>Attack speed <span><img src={AttackSpeed}></img></span> : {(attackSpeed + (level == 1 ? 0 : level * champion.stats.attackspeedperlevel)) * 100} %</p>
+                        {/* Miss Spells */}
                         <p>Mana Regen : {Math.round((manaRegen + level * champion.stats.mpregenperlevel) * 100) / 100}</p>
-                        <p>Spell block <span><img src={AbilityHaste}></img></span> : {Math.round((spellBlock + level * champion.stats.spellblockperlevel + spellBlockSpells) * 100) / 100}</p>
                     </div>
                 </div>
             </div>
