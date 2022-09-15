@@ -61,9 +61,11 @@ const ChampSpells = (props) => {
         <div className="champ-spells mb-2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
             {
                 (champion && championCard) && (<div className='background-spells ps-3 pe-3 '>
-                    <h2 className="title">SPELLS :</h2>
+                    <div className='pt-3'>
+                        <h2 className="title">SPELLS :</h2>
+                    </div>
                     <div className='d-flex justify-content-center spell-header'>
-                        <div className='align-self-center mx-2'>
+                        <div className='align-self-center mx-2' onClick={() => spellSelected('P')}>
                             <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px"></img>
                         </div>
                         <div className='select-spells '>
@@ -91,9 +93,9 @@ const ChampSpells = (props) => {
                     <hr />
                     <div className='align-self-center mt-2 champ-spells-overflow'>
                         {/* {championsSpells.spells && <p id='test' dangerouslySetInnerHTML={{ __html: championsSpells.spells[1].dynamicDescription }}></p>} */}
-                        {/* <div onClick={() => spellSelected('P')}>
-                            <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} isPassive={true} letter={P} tooltip={champion.passive.tooltip} />
-                        </div> */}
+                        <div onClick={() => spellSelected('P')}>
+                            <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} champion={champion} isPassive={true} letter={P} tooltip={champion.passive.tooltip} />
+                        </div>
                         {/* <h3 className='title'>SPELLS:</h3> */}
                         {
                             champion.spells.map((s, index) =>

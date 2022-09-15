@@ -85,7 +85,9 @@ const ChampStuff = (props) => {
                                     </div>
                                 </div>) :
                                 <div className='stuff-item mx-1' key={i}>
-                                    <div className='empty'>Empty</div>
+                                    {/* <div className='empty'>Empty</div> */}
+                                    <img src={require('../../assets/Common/empty-item.png')} alt="stuff-item" width="64px"></img>
+
                                 </div>
 
                         )
