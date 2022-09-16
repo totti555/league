@@ -375,7 +375,7 @@ export const champList = [
         image: Caitlyn,
         type: ["Marksman"],
         release: '2011-01-04',
-        linksWith: [{ Jinx: 'Sister\nEnnemy', Caitlyn: 'Friends' }]
+        linksWith: [{ Jinx: 'Sister\nEnnemy', Vi: 'Friends' }]
     },
     {
         name: 'Camille',

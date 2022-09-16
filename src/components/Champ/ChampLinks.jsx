@@ -3,6 +3,13 @@ import { champList } from "../../datas/lolChamp";
 import { useNavigate } from "react-router-dom";
 import Angry from '../../assets/Common/angry.png'
 import './ChampLinks.scss'
+import Family from "../../assets/Links/Family.png"
+import Friends from "../../assets/Links/Friends.png"
+import Allie from "../../assets/Links/Allie.png"
+import Ennemy from "../../assets/Links/Ennemy.png"
+import Heart from "../../assets/Links/Heart.png"
+import Cross from "../../assets/Links/Cross.png"
+import Mentor from "../../assets/Links/Mentor.png"
 
 const ChampLinks = (props) => {
     const [linksResult, setLinksResult] = useState([]);
@@ -53,12 +60,15 @@ const ChampLinks = (props) => {
         <div className=" mb-5 champ-links p-3  ">
             <div className="links-content">
                 <h2 className="title"> LINKS WITH : </h2>
+                <div className="d-flex justify-content-center mb-5">
+                    <img id='main' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champCard.name}.png`} width='64px' className="mx-2 position-relative"></img>
+                </div>
                 <div className=" d-flex flex-wrap mt-3 justify-content-center">
 
                     {champCard.linksWith && linksResult.map((champ, index) =>
 
                         <div className="d-flex align-items-center flex-column mx-3" key={index} onClick={() => goToOtherChamp(champ)}>
-                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='64px' className="mx-2"></img>
+                            <img id={`div${index}`} src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='64px' className="mx-2  position-relative"></img>
                             {
                                 /**
                                 * !Depreciated
@@ -70,8 +80,9 @@ const ChampLinks = (props) => {
 
                     )}
                     {console.log(currentChampLinks)}
-                    {!currentChampLinks && <p><span className="me-3"><img src={Angry} alt='angry' width='128px'></img></span>Ce champion n'a pas de liens directs avec d'autres champion !</p>}
+                    {!currentChampLinks && <p className="no-links"><span className="me-3"><img src={Angry} alt='angry' width='128px'></img></span>Ce champion n'a pas de liens directs avec d'autres champion !</p>}
                 </div>
+                <p className="sig">{champion.name}</p>
             </div>
         </div>
     )

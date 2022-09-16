@@ -1,8 +1,11 @@
+@import url('http://fonts.cdnfonts.com/css/brittany-signature');
+
 .champ-links {
     border: 1px solid rgba(255, 255, 255, 0.1);
     -webkit-background-clip: padding-box;
     /* for Safari */
     background-clip: padding-box;
+    position: relative;
 
     .links-content {
         // background-color: rgba(35, 38, 97, 0.8);
@@ -18,8 +21,22 @@
         font-style: italic;
     }
 
-    p {
+    .no-links {
         font-size: 18px;
+    }
+
+    .sig {
+        position: absolute;
+        font-family: 'Brittany Signature', sans-serif;
+        font-size: 4rem;
+        right: 100px;
+        top: 120px;
+        -webkit-transform: skewY(-10deg);
+        -moz-transform: skewY(-10deg);
+        -ms-transform: skewY(-10deg);
+        -o-transform: skewY(-10deg);
+        transform: skewY(-10deg);
+        opacity: 0.05;
     }
 }
 
