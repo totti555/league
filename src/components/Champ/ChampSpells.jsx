@@ -66,7 +66,7 @@ const ChampSpells = (props) => {
                     </div>
                     <div className='d-flex justify-content-center spell-header'>
                         <div className='align-self-center mx-2' onClick={() => spellSelected('P')}>
-                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px"></img>
+                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img>
                         </div>
                         <div className='select-spells '>
 
@@ -74,7 +74,7 @@ const ChampSpells = (props) => {
                                 {
                                     champion.spells.map((s, index) =>
                                         <div className='m-2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
-                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px"></img>
+                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px" style={{ cursor: 'pointer' }}></img>
                                         </div>
                                     )
                                 }
@@ -446,9 +446,9 @@ const Spells = (props) => {
             </div>
             <div className="spell-img d-flex justify-content-start ms-2">
                 {isPassive ?
-                    <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${image}`} width='48px' height="48px"></img>
+                    <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${image}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img>
                     :
-                    <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${image}`} width='48px' height="48px"></img>
+                    <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${image}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img>
                 }
                 <div className='ms-2'>
                     <p className="entity-title font-weight-bold mb-1">{name}</p>
