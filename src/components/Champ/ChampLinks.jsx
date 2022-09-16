@@ -75,7 +75,7 @@ const ChampLinks = (props) => {
                                 * Syntax should be improve
                                 */
                             }
-                            {currentChampLinks[0] && <p className="small links-value">{Object.values(currentChampLinks[0])[index]}</p>}
+                            {currentChampLinks[0] && <p className="small links-value">{currentChampLinks[0][champ.name]}</p>}
                         </div>
 
                     )}
