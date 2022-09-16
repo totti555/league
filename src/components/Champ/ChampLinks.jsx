@@ -81,11 +81,11 @@ const ChampLinks = (props) => {
                     var colors = color.split("|");
 
                     if (colors.indexOf("Friends") > -1) {
-                        str = str.replace(/Friends/g, `<span style="color:#5F43DC;">Friends<img src=${Friends} width='24px'></img></span>`);
+                        str = str.replace(/Friends/g, `<span style="color:#51D64A;">Friends <img src=${Friends} width='24px' class='friend-img'></img></span>`);
                     }
 
                     if (colors.indexOf("Ennemy") > -1) {
-                        str = str.replace(/Ennemy/g, `<span style="color:Orange;">Ennemy<img src=${Ennemy} width='24px' class='ennemy-img'></img></span>`);
+                        str = str.replace(/Ennemy/g, `<span style="color:#EA5353">Ennemy <img src=${Ennemy} width='24px' class='ennemy-img'></img></span>`);
                     }
 
                     if (colors.indexOf("Potential Allie") > -1) {
@@ -129,6 +129,11 @@ const ChampLinks = (props) => {
         }
     }
 
+    const exceptionalName = (name) => {
+        if (name === 'KaiSa') return name = 'Kaisa'
+        else return name;
+    }
+
 
 
     return (
@@ -147,7 +152,7 @@ const ChampLinks = (props) => {
                         {champCard.linksWith && linksResult.map((champ, index) =>
 
                             <div className="d-flex align-items-center flex-column mx-3" key={index} onClick={() => goToOtherChamp(champ)}>
-                                <img id={`div${index}`} src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champ.name}.png`} width='64px' className="mx-2  position-relative"></img>
+                                <img id={`div${index}`} src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${exceptionalName(champ.name)}.png`} width='64px' className="mx-2  position-relative"></img>
                                 {
                                     /**
                                     * !Depreciated
