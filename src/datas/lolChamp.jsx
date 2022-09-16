@@ -837,7 +837,7 @@ export const champList = [
         image: Kassadin,
         type: ['Assassin', 'Mage'],
         release: '2009-06-12',
-        linksWith: [{ Kaisa: 'Daughter\nEnnemy', Malzahar: 'Ennemy' }]
+        linksWith: [{ KaiSa: 'Daughter\nEnnemy', Malzahar: 'Ennemy' }]
     },
     {
         name: 'Katarina',
@@ -1052,7 +1052,7 @@ export const champList = [
         image: Malzahar,
         type: ['Mage', 'Assassin'],
         release: '2010-06-01',
-        linksWith: [{ Kogmaw: 'Friends', Kaisa: 'Ennemy', Kassadin: 'Ennemy' }]
+        linksWith: [{ KogMaw: 'Friends', KaiSa: 'Ennemy', Kassadin: 'Ennemy' }]
     },
     {
         name: 'Maokai',

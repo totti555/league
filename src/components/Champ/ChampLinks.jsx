@@ -144,7 +144,6 @@ const ChampLinks = (props) => {
                 <div className="d-flex justify-content-center">
                     <div className=" d-flex flex-wrap mt-3 gradient-border p-3">
 
-
                         {champCard.linksWith && linksResult.map((champ, index) =>
 
                             <div className="d-flex align-items-center flex-column mx-3" key={index} onClick={() => goToOtherChamp(champ)}>
