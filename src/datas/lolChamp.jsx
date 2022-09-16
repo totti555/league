@@ -849,7 +849,7 @@ export const champList = [
         image: Katarina,
         type: ['Assassin', 'Mage'],
         release: '2009-09-19',
-        linksWith: [{ Cassiopeia: 'Sister', Talon: 'Brother', Garen: 'Potential boyfriend', Darius: 'Allie', Swain: 'Allie' }]
+        linksWith: [{ Cassiopeia: 'Sister', Talon: 'Brother', Garen: 'Potential Boyfriend', Darius: 'Allie', Swain: 'Allie' }]
     },
     {
         name: 'Kayle',

@@ -21,8 +21,27 @@
         font-style: italic;
     }
 
+    h3 {
+        letter-spacing: 3px;
+        font-style: italic;
+    }
+
     .no-links {
         font-size: 18px;
+    }
+
+    .hide-links-value {
+        display: none
+    }
+
+    .gradient-border {
+        // border animated : 
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: padding-box;
+        /* for Safari */
+        background-clip: padding-box;
+        /* for IE9+, Firefox 4+, Opera, Chrome */
+
     }
 
     .sig {
@@ -37,6 +56,20 @@
         -o-transform: skewY(-10deg);
         transform: skewY(-10deg);
         opacity: 0.05;
+    }
+
+    .allie-img {
+        filter: invert(73%) sepia(82%) saturate(682%) hue-rotate(175deg) brightness(99%) contrast(105%);
+    }
+
+    .ennemy-img {}
+
+    .lover-img {
+        filter: invert(84%) sepia(96%) saturate(1789%) hue-rotate(277deg) brightness(99%) contrast(106%);
+    }
+
+    .family-img {
+        filter: invert(62%) sepia(45%) saturate(709%) hue-rotate(7deg) brightness(107%) contrast(94%);
     }
 }
 
