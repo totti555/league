@@ -61,6 +61,19 @@
         opacity: 0.05;
     }
 
+    .img-links {
+        animation-name: display-card;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        cursor: pointer;
+    }
+
+    .img-links:hover {
+        animation-name: zoom-card;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
     .allie-img {
         filter: invert(73%) sepia(82%) saturate(682%) hue-rotate(175deg) brightness(99%) contrast(105%);
     }

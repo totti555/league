@@ -151,8 +151,10 @@ const ChampLinks = (props) => {
 
                         {champCard.linksWith && linksResult.map((champ, index) =>
 
-                            <div className="d-flex align-items-center flex-column mx-3" key={index} onClick={() => goToOtherChamp(champ)}>
-                                <img id={`div${index}`} src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${exceptionalName(champ.name)}.png`} width='64px' className="mx-2  position-relative"></img>
+                            <div className="d-flex align-items-center flex-column mx-3" key={index} onClick={() => goToOtherChamp(champ)} >
+
+                                <img id={`div${index}`} src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${exceptionalName(champ.name)}.png`} width='64px' className="mx-2 position-relative img-links"></img>
+
                                 {
                                     /**
                                     * !Depreciated
