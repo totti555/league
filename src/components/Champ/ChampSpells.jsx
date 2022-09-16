@@ -1,6 +1,6 @@
 import './ChampSpells.scss'
-import Q from '../../assets/Spells/a.png'
-import W from '../../assets/Spells/q.png'
+import Q from '../../assets/Spells/q.png'
+import W from '../../assets/Spells/w.png'
 import E from '../../assets/Spells/e.png'
 import R from '../../assets/Spells/r.png'
 import P from '../../assets/Spells/p.png'
