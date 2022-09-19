@@ -271,14 +271,14 @@
         &:placeholder-shown~.form__label {
             // font-size: 1.3rem;
             cursor: text;
-            top: 20px;
+            top: 15px;
             // width: 200px;
         }
     }
 
     .form__label {
         position: absolute;
-        top: -5px;
+        top: -12px;
         display: block;
         transition: 0.2s;
         font-size: 1rem;
@@ -288,7 +288,7 @@
     .form__field:focus {
         ~.form__label {
             position: absolute;
-            top: -5px;
+            top: -12px;
             display: block;
             transition: 0.2s;
             font-size: 1rem;
