@@ -1,6 +1,6 @@
 .filters {
     position: fixed;
-    top:6.063rem;
+    top: 6.063rem;
     bottom: 5.056rem;
     left: 0;
     background-color: black;
@@ -9,7 +9,7 @@
     overflow-y: auto;
     // padding-right: 0px;
     // height: 757px;
-    color: white;   
+    color: white;
 }
 
 .filters-title {
@@ -17,32 +17,32 @@
 }
 
 hr {
-    color:#ECB823;
+    color: #ECB823;
     background-color: #ECB823
 }
 
 
-.content {
+.content-list {
     padding-left: 0px;
     // min-height: 1200px;
     position: fixed;
     left: 0;
     right: 0;
-    top:6.063rem;
+    top: 6.063rem;
     bottom: 5.056rem;
 }
 
 .background-img {
-        
+
     background-size: cover;
- 
+
 
 }
 
 // CSS display or not filters
 
 .hide-filters {
- 
+
     display: none;
 }
 
@@ -52,22 +52,24 @@ hr {
 
 .display-filters {
     position: fixed;
-    animation:display-filters;
+    animation: display-filters;
     padding-top: 20px;
     padding-bottom: 20px;
-    top:50%;
-    z-index:5;
-     background-color: rgba(0, 0, 0, 0.5);
-     border-bottom-right-radius: 110px;  /* 100px of height + 10px of border */
-     border-top-right-radius: 110px; /* 100px of height + 10px of border */
+    top: 50%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom-right-radius: 110px;
+    /* 100px of height + 10px of border */
+    border-top-right-radius: 110px;
+    /* 100px of height + 10px of border */
 
-     img {
-        rotate:90deg;
-     }
+    img {
+        rotate: 90deg;
+    }
 }
 
 .nav-chevron-filters {
-    animation:rotate-icon;
+    animation: rotate-icon;
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
     // rotate: -90deg;
@@ -76,7 +78,7 @@ hr {
 }
 
 .nav-chevron-filters-inverse {
-    animation:rotate-icon-inverse;
+    animation: rotate-icon-inverse;
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
     // rotate: 90deg;
@@ -120,117 +122,129 @@ hr {
 
 .champs-list {
     position: fixed;
-    top:6.063rem;
+    top: 6.063rem;
     bottom: 5.056rem;
     right: 0;
-   
+
     overflow-y: scroll;
-    
+
 }
 
-@media (min-width: 600px) and (max-width : 1100px){
-    .content {
-       button {
-        width: auto;
-       }
+@media (min-width: 600px) and (max-width : 1100px) {
+    .content-list {
+        button {
+            width: auto;
+        }
     }
 }
 
 
-@media (min-width: 600px) and (max-width : 800px){
+@media (min-width: 600px) and (max-width : 800px) {
     .champs-list {
-        top:4rem;
+        top: 4rem;
     }
+
     .filters {
-        top:4rem;
+        top: 4rem;
     }
 }
 
-@media (min-width: 0px) and (max-width : 600px){
+@media (min-width: 0px) and (max-width : 600px) {
     .champs-list {
-        top:3rem;
+        top: 3rem;
     }
+
     .filters {
-    top:3rem;
-}
-.content {
+        top: 3rem;
+    }
 
-    h1 {
-    font-size: 16px !important;
+    .content-list {
+
+        h1 {
+            font-size: 16px !important;
+        }
     }
 }
-}
 
 
 
-@media (min-width: 0px) and (max-width : 600px){
-    .content {
-        top:3rem;
-        bottom:4rem;
+@media (min-width: 0px) and (max-width : 600px) {
+    .content-list {
+        top: 3rem;
+        bottom: 4rem;
+
         h1 {
             font-size: 40px;
         }
     }
 }
 
-@media (min-width: 400px) and (max-width : 750px){
-    .content {
-        top:3rem;
-        bottom:3.954rem;
+@media (min-width: 400px) and (max-width : 750px) {
+    .content-list {
+        top: 3rem;
+        bottom: 3.954rem;
+
         h1 {
             font-size: 40px;
         }
     }
 }
 
-@media (min-width: 600px) and (max-width : 800px){
-    .content {
-        top:3rem;
+@media (min-width: 600px) and (max-width : 800px) {
+    .content-list {
+        top: 3rem;
+
         h1 {
             font-size: 24px;
         }
     }
 }
 
-@media  (min-width: 512px) and (max-width : 600px)  {
+@media (min-width: 512px) and (max-width : 600px) {
     .col-custom-filter {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 50% !important;
-}
-.col-custom-champion {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    width: 50% !important;
-}
-.content {
-    h1 {
-        font-size: 24px;
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 50% !important;
     }
-    button{
-        width:auto;
+
+    .col-custom-champion {
+        //This should work for Normal desktops(15 to 18 inch) only.
+        width: 50% !important;
     }
-}
+
+    .content-list {
+        h1 {
+            font-size: 24px;
+        }
+
+        button {
+            width: auto;
+        }
+    }
 }
 
 
-@media  (min-width: 0px) and (max-width : 512px)  {
+@media (min-width: 0px) and (max-width : 512px) {
     .col-custom-filter {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    min-width: 33.33333% !important;
-}
-.col-custom-champion {
-    //This should work for Normal desktops(15 to 18 inch) only.
-    width: 67.66666% !important;
-}
-.content {
-    h1 {
-        font-size: 24px;
+        //This should work for Normal desktops(15 to 18 inch) only.
+        min-width: 33.33333% !important;
     }
-    p {
-        font-size: 12px;
-    }
-    button{
-        width:auto;
-    }
-}
-}
 
+    .col-custom-champion {
+        //This should work for Normal desktops(15 to 18 inch) only.
+        width: 67.66666% !important;
+    }
+
+    .content-list {
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        button {
+            width: auto;
+        }
+    }
+}
