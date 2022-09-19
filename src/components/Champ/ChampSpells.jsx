@@ -83,7 +83,6 @@ const ChampSpells = (props) => {
                                     </span>
                                 </span>
                             </div>
-                            {/* <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img> */}
                         </div>
                         <div className='select-spells '>
 
@@ -109,10 +108,15 @@ const ChampSpells = (props) => {
 
                     <hr />
                     {formattedKey &&
-                        <div className='spell-video d-flex justify-content-center'>
-                            <video autoPlay muted loop className='video' id='video'>
-                                <source src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
-                            </video>
+                        <div className='d-flex justify-content-center'>
+                            <div className='spell-video'>
+                                <div className='position-relative'>
+                                    <video autoPlay muted loop className='video' id='video'>
+                                        <source src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
+                                    </video>
+                                    <img className='video-letter' src={require(`../../assets/Spells/${letter.toLowerCase()}.png`)} alt='letter' width='98px'></img>
+                                </div>
+                            </div>
                         </div>
                     }
                     <hr />

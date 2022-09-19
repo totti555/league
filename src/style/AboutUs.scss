@@ -137,7 +137,7 @@
         }
 
         .select-spells {
-            width: 166px !important;
+            width: 168px !important;
             // margin: auto;
         }
     }
@@ -157,6 +157,15 @@
             width: 48px !important;
         }
 
+    }
+
+
+}
+
+@media (min-width: 0px) and (max-width : 1630px) {
+    .video-letter {
+        right: 15px !important;
+        width: 64px;
     }
 }
 
