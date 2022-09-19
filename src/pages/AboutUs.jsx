@@ -245,9 +245,9 @@ const AboutUs = () => {
                                 */
                             }
                             <div className='second-block'>
-                                <div className="col-xl-10 col-md-9 col-sm-8 col-vsm">
+                                <div className="col-xl-10 col-md-9 col-sm-8 col-vsm me-2">
                                     <ChampItemsList setSelectedItem={setSelectedItem} selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
-                                    <hr className="mt-5 mb-5"></hr>
+                                    {/* <hr className="mt-5 mb-5"></hr> */}
                                 </div>
                                 <div className="col-xl-2 col-md-3 col-sm-4 col-vsm">
                                     <ChampItemDetails selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
