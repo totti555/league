@@ -65,13 +65,16 @@ const ChampSpells = (props) => {
     }
 
     return (
+        <>
+            <div class="background-image ms-3 me-3  " style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
+            </div>
+            <div class="content champ-spells mb-2">
 
-        <div className="champ-spells mb-2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
-            {
-                (champion && championCard) && (<div className='background-spells ps-3 pe-3 '>
+                {(champion && championCard) && (<div className='background-spells content ps-3 pe-3 '>
                     <div className='pt-3'>
                         <h2 className="title">SPELLS :</h2>
                     </div>
+
                     <div className='d-flex justify-content-center spell-header'>
                         <div className='align-self-center mx-2' onClick={() => spellSelected('P')}>
                             <div className={passiveSelectedColor() ? "btn-border btn-focus" : 'btn-border btn-no-focus'} tabIndex="1">
@@ -85,7 +88,6 @@ const ChampSpells = (props) => {
                             </div>
                         </div>
                         <div className='select-spells '>
-
                             <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
                                 {
                                     champion.spells.map((s, index) =>
@@ -112,7 +114,7 @@ const ChampSpells = (props) => {
                             <div className='spell-video'>
                                 <div className='position-relative'>
                                     <video autoPlay muted loop className='video' id='video'>
-                                        <source src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
+                                        <source src={`https:d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
                                     </video>
                                     <img className='video-letter' src={require(`../../assets/Spells/${letter.toLowerCase()}.png`)} alt='letter' width='98px'></img>
                                 </div>
@@ -137,10 +139,87 @@ const ChampSpells = (props) => {
                         }
 
                     </div>
-                </div>)
-            }
+                </div>)}
 
-        </div>
+            </div>
+        </>
+
+        // <div className="champ-spells  mb-2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
+        //     {
+        //         (champion && championCard) && (<div className='background-spells content ps-3 pe-3 '>
+        //             <div className='pt-3'>
+        //                 <h2 className="title">SPELLS :</h2>
+        //             </div>
+
+        //             <div className='d-flex justify-content-center spell-header'>
+        //                 <div className='align-self-center mx-2' onClick={() => spellSelected('P')}>
+        //                     <div className={passiveSelectedColor() ? "btn-border btn-focus" : 'btn-border btn-no-focus'} tabIndex="1">
+        //                         <span>
+        //                             <span>
+        //                                 <span>
+        //                                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img>
+        //                                 </span>
+        //                             </span>
+        //                         </span>
+        //                     </div>
+        //                 </div>
+        //                 <div className='select-spells '>
+
+        //                     <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
+        //                         {
+        //                             champion.spells.map((s, index) =>
+        //                                 <div className='m-2 test2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
+        //                                     <div className={spellSelectedColor(index) ? "btn-border btn-focus" : 'btn-border btn-no-focus'} tabIndex="1">
+        //                                         <span>
+        //                                             <span>
+        //                                                 <span>
+        //                                                     <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px" style={{ cursor: 'pointer' }}></img>
+        //                                                 </span>
+        //                                             </span>
+        //                                         </span>
+        //                                     </div>
+        //                                 </div>
+        //                             )
+        //                         }
+        //                     </div>
+        //                 </div>
+        //             </div>
+
+        //             <hr />
+        //             {formattedKey &&
+        //                 <div className='d-flex justify-content-center'>
+        //                     <div className='spell-video'>
+        //                         <div className='position-relative'>
+        //                             <video autoPlay muted loop className='video' id='video'>
+        //                                 <source src={`https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
+        //                             </video>
+        //                             <img className='video-letter' src={require(`../../assets/Spells/${letter.toLowerCase()}.png`)} alt='letter' width='98px'></img>
+        //                         </div>
+        //                     </div>
+        //                 </div>
+        //             }
+        //             <hr />
+        //             <div className='align-self-center mt-2 champ-spells-overflow'>
+        //                 {/* {championsSpells.spells && <p id='test' dangerouslySetInnerHTML={{ __html: championsSpells.spells[1].dynamicDescription }}></p>} */}
+        //                 <div onClick={() => spellSelected('P')}>
+        //                     <Spells image={champion.passive.image.full} name={champion.passive.name} description={champion.passive.description} champion={champion} isPassive={true} letter={P} tooltip={champion.passive.tooltip} />
+        //                 </div>
+        //                 {/* <h3 className='title'>SPELLS:</h3> */}
+        //                 {
+        //                     champion.spells.map((s, index) =>
+
+        //                     (
+        //                         <div key={s.id} onClick={() => spellSelected(spellsLetter[index])}>
+        //                             {championsSpells.spells && <Spells championsSpells={championsSpells} spellDatas={spellDatas} spellId={s.id} image={s.image.full} name={s.name} cooldown={s.cooldownBurn} champion={champion} description={s.description} isPassive={false} letter={spellsLetterImg[index]} stringLetter={spellsLetter[index]} tooltip={s.tooltip} setDamages={setDamages} damages={damages} />}
+        //                         </div>
+        //                     ))
+        //                 }
+
+        //             </div>
+        //         </div>)
+        //     }
+
+        // </div>
     )
 }
 

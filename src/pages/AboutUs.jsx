@@ -177,7 +177,7 @@ const AboutUs = () => {
                                 */
                             }
 
-                            <div className="first-block">
+                            <div className="first-block position-relative">
 
                                 {
                                     /**
@@ -186,7 +186,7 @@ const AboutUs = () => {
                                     */
 
                                 }
-                                <div className="col-xl-9 col-md-8 col-sm-7 col-vsm p-3">
+                                <div className="col-xl-9 col-md-8 col-sm-7 col-vsm p-3 position-relative">
                                     {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
                                     <ChampSpells champion={champion} championCard={champCard} championsSpells={championsSpells} spellDatas={spellDatas} />
                                 </div>

@@ -1,3 +1,29 @@
+.background-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background-image: url('https://i.imgur.com/lL6tQfy.png');
+    width: auto;
+    height: 800px;
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+}
+
+.content {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+
+}
+
+
 .champ-spells {
 
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -70,6 +96,8 @@
             opacity: 0.1;
         }
     }
+
+
 
 
 
