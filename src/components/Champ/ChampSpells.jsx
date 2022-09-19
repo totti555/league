@@ -56,6 +56,14 @@ const ChampSpells = (props) => {
 
     // })
 
+    const spellSelectedColor = (index) => {
+        return spellsLetter[index] === letter ? true : false;
+    }
+
+    const passiveSelectedColor = () => {
+        return 'P' === letter ? true : false;
+    }
+
     return (
 
         <div className="champ-spells mb-2" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
@@ -66,15 +74,32 @@ const ChampSpells = (props) => {
                     </div>
                     <div className='d-flex justify-content-center spell-header'>
                         <div className='align-self-center mx-2' onClick={() => spellSelected('P')}>
-                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img>
+                            <div className={passiveSelectedColor() ? "btn-border btn-focus" : 'btn-border btn-no-focus'} tabIndex="1">
+                                <span>
+                                    <span>
+                                        <span>
+                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img>
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            {/* <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/passive/${champion.passive.image.full}`} width='48px' height="48px" style={{ cursor: 'pointer' }}></img> */}
                         </div>
                         <div className='select-spells '>
 
                             <div className='gradient-border d-flex flex-wrap mt-3 mb-3' id="box">
                                 {
                                     champion.spells.map((s, index) =>
-                                        <div className='m-2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
-                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px" style={{ cursor: 'pointer' }}></img>
+                                        <div className='m-2 test2' key={index} onClick={() => spellSelected(spellsLetter[index])}>
+                                            <div className={spellSelectedColor(index) ? "btn-border btn-focus" : 'btn-border btn-no-focus'} tabIndex="1">
+                                                <span>
+                                                    <span>
+                                                        <span>
+                                                            <img className="spell-picture" alt='spell' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/spell/${s.image.full}`} width='64px' height="64px" style={{ cursor: 'pointer' }}></img>
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </div>
                                         </div>
                                     )
                                 }
