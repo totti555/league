@@ -255,7 +255,6 @@ export const champList = [
         image: Annie,
         type: ["Mage"],
         release: '2009-02-21',
-        linksWith: ['']
     },
     {
         name: 'Aphelios',
@@ -303,7 +302,7 @@ export const champList = [
         image: Azir,
         type: ["Mage", 'Marksman'],
         release: '2014-09-16',
-        linksWith: [{ Xerath: 'Friends\nApprentice', Renekton: 'Ennemy' }]
+        linksWith: [{ Sivir: 'Descendant\nFriends', Renekton: 'Friends', Xerath: 'Friends', Nasus: 'Allie' }]
     },
     {
         name: 'Bard',
@@ -315,7 +314,6 @@ export const champList = [
         image: Bard,
         type: ["Support", 'Mage'],
         release: '2015-03-12',
-        linksWith: ['']
     },
     {
         name: 'Belveth',
@@ -327,7 +325,6 @@ export const champList = [
         image: Belveth,
         type: ["Fighter"],
         release: '2022-06-09',
-        linksWith: ['']
     },
     {
         name: 'Blitzcrank',
@@ -339,7 +336,7 @@ export const champList = [
         image: Blitzcrank,
         type: ["Tank", 'Fighter'],
         release: '2009-09-02',
-        linksWith: [{ Viktor: 'Family', Oriana: 'Allie' }]
+        linksWith: [{ Viktor: 'Father', Oriana: 'Allie' }]
     },
     {
         name: 'Brand',
@@ -351,7 +348,7 @@ export const champList = [
         image: Brand,
         type: ["Mage"],
         release: '2011-04-12',
-        linksWith: [{ Ryze: 'Friends\nEnnemy' }]
+        linksWith: [{ Ryze: 'Ennemy\nMentor' }]
     },
     {
         name: 'Braum',
@@ -375,7 +372,7 @@ export const champList = [
         image: Caitlyn,
         type: ["Marksman"],
         release: '2011-01-04',
-        linksWith: [{ Jinx: 'Sister\nEnnemy', Vi: 'Friends' }]
+        linksWith: [{ Jinx: 'Sister\nEnnemy', Vi: 'Potential Girlfriend\nFriends' }]
     },
     {
         name: 'Camille',
@@ -387,7 +384,7 @@ export const champList = [
         image: Camille,
         type: ["Fighter", 'Tank'],
         release: '2016-12-07',
-        linksWith: [{ Jhin: 'Ennemy' }]
+        linksWith: [{ Jhin: 'Ennemy', Renata: '???' }]
     },
     {
         name: 'Cassiopeia',
@@ -411,11 +408,10 @@ export const champList = [
         image: Chogath,
         type: ["Tank", 'Mage'],
         release: '2009-06-26',
-        linksWith: ['']
     },
     {
         name: 'Corki',
-        world: 'Bandle city',
+        world: 'Bandle City',
         id: 22,
         key: 42,
         damages_type: "AP",
@@ -423,7 +419,6 @@ export const champList = [
         image: Corki,
         type: ["Marksman"],
         release: '2009-09-19',
-        linksWith: ['']
 
     },
     {
@@ -436,7 +431,7 @@ export const champList = [
         image: Darius,
         type: ["Fighter", 'Tank'],
         release: '2012-05-23',
-        linksWith: [{ Draven: 'Family', Swain: 'Allie', Katarina: 'Allie', Talon: 'Allie' }]
+        linksWith: [{ Draven: 'Brother', Swain: 'Allie', Katarina: 'Allie', Talon: 'Allie' }]
     },
     {
         name: 'Diana',
@@ -461,7 +456,7 @@ export const champList = [
         image: Draven,
         type: ["Marksman"],
         release: '2012-06-06',
-        linksWith: [{ Darius: 'Family', Swain: '???' }]
+        linksWith: [{ Darius: 'Brother', Swain: '???' }]
     },
     {
         name: 'DrMundo',
@@ -473,7 +468,6 @@ export const champList = [
         image: DrMundo,
         type: ["Fighter", 'Tank'],
         release: '2009-09-02',
-        linksWith: ['']
 
     },
     {
@@ -486,7 +480,7 @@ export const champList = [
         image: Ekko,
         type: ["Assassin", 'Fighter'],
         release: '2015-05-29',
-        linksWith: [{ Jinx: 'Potential Friends', Vi: 'Potential Friends' }]
+        linksWith: [{ Jinx: 'Potential Friends', Vi: 'Potential Friends', Renata: '???' }]
     },
     {
         name: 'Elise',
@@ -498,7 +492,6 @@ export const champList = [
         image: Elise,
         type: ["Mage", 'Fighter'],
         release: '2012-10-26',
-        linksWith: ['']
     },
     {
         name: 'Evelynn',
@@ -522,7 +515,7 @@ export const champList = [
         image: Ezreal,
         type: ["Marksman", 'Mage'],
         release: '2010-03-16',
-        linksWith: [{ Heimerdinger: 'Teacher', Lux: 'Potential girlfriend', Zoe: 'Potential girlfriend' }]
+        linksWith: [{ Heimerdinger: 'Mentor', Lux: 'Potential Girlfriend', Zoe: 'Potential Girlfriend' }]
     },
     {
         name: 'Fiddlesticks',
@@ -534,7 +527,6 @@ export const champList = [
         image: Fiddlesticks,
         type: ["Mage", 'Support'],
         release: '2009-02-21',
-        linksWith: ['']
     },
     {
         name: 'Fiora',
@@ -546,7 +538,6 @@ export const champList = [
         image: Fiora,
         type: ["Fighter", 'Assassin'],
         release: '2012-02-29',
-        linksWith: ['']
     },
     {
         name: 'Fizz',
@@ -558,7 +549,6 @@ export const champList = [
         image: Fizz,
         type: ["Assassin", 'Fighter'],
         release: '2011-11-15',
-        linksWith: ['']
 
     },
     {
@@ -571,7 +561,7 @@ export const champList = [
         image: Galio,
         type: ["Tank", 'Mage'],
         release: '2010-08-10',
-        linksWith: [{ Lux: 'Friend', Sylas: 'Friend' }]
+        linksWith: [{ Lux: 'Friends', Sylas: 'Friends' }]
     },
     {
         name: 'Gangplank',
@@ -583,7 +573,7 @@ export const champList = [
         image: Gangplank,
         type: ["Fighter"],
         release: '2009-08-19',
-        linksWith: [{ Illaoi: 'Ennemy', Graves: 'Ennemy', Swain: 'Ennemy', Zed: 'Ennemy' }]
+        linksWith: [{ Illaoi: 'Girlfriend', Graves: 'Ennemy', Swain: 'Ennemy', Zed: 'Ennemy' }]
 
     },
     {
@@ -596,7 +586,7 @@ export const champList = [
         image: Garen,
         type: ["Fighter", 'Tank'],
         release: '2010-04-27',
-        linksWith: [{ Lux: 'Sister', Katarina: 'Potential girlfriend', Jarvan_IV: 'Friend', Quinn: 'Allie', Xin_Zhao: 'Allie', Nocturne: 'Ennemy' }]
+        linksWith: [{ Lux: 'Sister', JarvanIV: 'Friends', Quinn: 'Allie', XinZhao: 'Allie', Nocturne: 'Ennemy', Katarina: 'Potential Girlfriend' }]
     },
     {
         name: 'Gnar',
@@ -608,7 +598,6 @@ export const champList = [
         image: Gnar,
         type: ["Fighter", 'Tank'],
         release: '2014-08-14',
-        linksWith: ['']
     },
     {
         name: 'Gragas',
@@ -632,7 +621,7 @@ export const champList = [
         image: Graves,
         type: ["Marksman"],
         release: '2011-10-19',
-        linksWith: [{ Twisted_Fate: 'Friends', Gangplank: 'Ennemy', Miss_Fortune: 'Allie' }]
+        linksWith: [{ TwistedFate: 'Friends', Gangplank: 'Ennemy', MissFortune: 'Allie', Nilah: '???' }]
     },
     {
         name: 'Gwen',
@@ -680,7 +669,7 @@ export const champList = [
         image: Illaoi,
         type: ["Fighter", 'Tank'],
         release: '2015-11-24',
-        linksWith: [{ Miss_Fortune: 'Friend', Gangplank: 'Ennemy' }]
+        linksWith: [{ MissFortune: 'Friends', Gangplank: 'Boyfriend', Nilah: '???' }]
     },
     {
         name: 'Irelia',
@@ -716,7 +705,6 @@ export const champList = [
         image: Janna,
         type: ["Support", 'Mage'],
         release: '2009-09-02',
-        linksWith: [{ Ekko: '???' }]
     },
     {
         name: 'JarvanIV',
@@ -728,7 +716,7 @@ export const champList = [
         image: JarvanIV,
         type: ['Tank', "Fighter"],
         release: '2011-03-01',
-        linksWith: [{ Garen: 'Friends', Shyvana: 'Friends', Xin_Zhao: 'Allie\nMentor', Quinn: 'Allie', Sion: 'Ennemy' }]
+        linksWith: [{ Garen: 'Friends', Shyvana: 'Friends', XinZhao: 'Allie\nMentor', Quinn: 'Allie', Sion: 'Ennemy' }]
     },
     {
         name: 'Jax',
@@ -777,7 +765,7 @@ export const champList = [
         image: Jinx,
         type: ["Marksman"],
         release: '2013-10-10',
-        linksWith: [{ Vi: 'Sister\nEnnemy', Ziggs: 'Friend', Caitlyn: 'Ennemy', Ekko: 'Potential friend' }]
+        linksWith: [{ Vi: 'Sister\nEnnemy', Ziggs: 'Friends', Caitlyn: 'Ennemy', Ekko: 'Potential Friends' }]
     },
     {
         name: 'KaiSa',
@@ -861,7 +849,7 @@ export const champList = [
         image: Kayle,
         type: ['Fighter', 'Support'],
         release: '2009-02-21',
-        linksWith: [{ Morgana: 'Family' }]
+        linksWith: [{ Morgana: 'Sister' }]
     },
     {
         name: 'Kayn',
@@ -909,7 +897,6 @@ export const champList = [
         image: Kindred,
         type: ['Marksman'],
         release: '2015-10-14',
-        linksWith: ['']
     },
     {
         name: 'Kled',
@@ -921,7 +908,6 @@ export const champList = [
         image: Kled,
         type: ['Fighter', 'Tank'],
         release: '2016-08-10',
-        linksWith: ['']
     },
     {
         name: 'KogMaw',
@@ -1005,7 +991,7 @@ export const champList = [
         image: Lucian,
         type: ['Marksman'],
         release: '2013-08-22',
-        linksWith: [{ Senna: 'Girlfriend', Thresh: 'Ennemy' }]
+        linksWith: [{ Senna: 'Girlfriend', Thresh: 'Ennemy', Vex: '???' }]
     },
     {
         name: 'Lulu',
@@ -1028,7 +1014,7 @@ export const champList = [
         image: Lux,
         type: ['Mage', 'Support'],
         release: '2010-10-19',
-        linksWith: [{ Garen: 'Brother', Ezreal: 'Potential boyfriend', Galio: 'Friends', Sylas: 'Friends', Zoe: 'Ennemy' }]
+        linksWith: [{ Garen: 'Brother', Ezreal: 'Potential Boyfriend', Galio: 'Friends', Sylas: 'Friends', Zoe: 'Ennemy' }]
     },
     {
         name: 'Malphite',
@@ -1040,7 +1026,6 @@ export const champList = [
         image: Malphite,
         type: ['Tank', 'Fighter'],
         release: '2009-09-02',
-        linksWith: ['']
     },
     {
         name: 'Malzahar',
@@ -1080,7 +1065,7 @@ export const champList = [
     },
     {
         name: 'MissFortune',
-        world: 'Bilgwater',
+        world: 'Bilgewater',
         id: 77,
         key: 21,
         damages_type: "AD",
@@ -1088,7 +1073,7 @@ export const champList = [
         image: Miss_Fortune,
         type: ['Marksman'],
         release: '2010-09-08',
-        linksWith: [{ Illaoi: 'Friend', Twisted_Fate: 'Friend', Graves: 'Allie', Gangplank: 'Ennemy' }]
+        linksWith: [{ Illaoi: 'Friends', TwistedFate: 'Friends', Graves: 'Allie', Gangplank: 'Ennemy' }]
     },
     {
         name: 'Mordekaiser',
@@ -1148,7 +1133,6 @@ export const champList = [
         image: Nautilus,
         type: ['Tank', 'Fighter'],
         release: '2012-02-14',
-        linksWith: ['']
     },
     {
         name: 'Neeko',
@@ -1184,7 +1168,7 @@ export const champList = [
         image: Nilah,
         type: ['Marksman'],
         release: '2022-07-13',
-        linksWith: ['']
+        linksWith: [{ Graves: '???', Illaoi: '???', Viego: '???' }]
     },
     {
         name: 'Nocturne',
@@ -1208,7 +1192,6 @@ export const champList = [
         image: Nunu,
         type: ['Tank', 'Fighter'],
         release: '2009-02-21',
-        linksWith: ['']
     },
     {
         name: 'Olaf',
@@ -1256,7 +1239,7 @@ export const champList = [
         image: Pantheon,
         type: ['Fighter', 'Assassin'],
         release: '2010-02-02',
-        linksWith: [{ Aatrox: 'Ennemy', Aurelion_Sol: 'Ennemy', Zoe: 'Ennemy' }]
+        linksWith: [{ Aatrox: 'Ennemy', AurelionSol: 'Ennemy', Zoe: 'Ennemy' }]
     },
     {
         name: 'Poppy',
@@ -1268,7 +1251,6 @@ export const champList = [
         image: Poppy,
         type: ['Tank', 'Fighter'],
         release: '2010-01-13',
-        linksWith: ['']
     },
     {
         name: 'Pyke',
@@ -1280,7 +1262,6 @@ export const champList = [
         image: Pyke,
         type: ["Support"],
         release: '2018-05-31',
-        linksWith: ['']
     },
     {
         name: 'Qiyana',
@@ -1292,7 +1273,6 @@ export const champList = [
         image: Qiyana,
         type: ['Assassin', "Fighter"],
         release: '2019-06-28',
-        linksWith: ['']
     },
     {
         name: 'Quinn',
@@ -1304,7 +1284,7 @@ export const champList = [
         image: Quinn,
         type: ["Marksman", 'Assassin'],
         release: '2013-03-01',
-        linksWith: [{ Garen: 'Allie', Xin_Zhao: 'Allie' }]
+        linksWith: [{ Garen: 'Allie', XinZhao: 'Allie' }]
     },
     {
         name: 'Rakan',
@@ -1328,7 +1308,6 @@ export const champList = [
         image: Rammus,
         type: ["Tank"],
         release: '2009-07-10',
-        linksWith: ['']
     },
     {
         name: 'RekSai',
@@ -1340,7 +1319,6 @@ export const champList = [
         image: Reksai,
         type: ["Fighter"],
         release: '2014-12-11',
-        linksWith: ['']
     },
     {
         name: 'Rell',
@@ -1364,7 +1342,7 @@ export const champList = [
         image: Renata,
         type: ["Support"],
         release: '2022-02-17',
-        linksWith: ['']
+        linksWith: [{ Camille: 'Ennemy', Ekko: '???', Viktor: '???' }]
     },
     {
         name: 'Renekton',
@@ -1424,7 +1402,7 @@ export const champList = [
         image: Ryze,
         type: ["Mage", 'Fighter'],
         release: '2009-02-21',
-        linksWith: [{ Brand: 'Friends\nEnnemy' }]
+        linksWith: [{ Brand: 'Ennemy\nApprentice' }]
     },
     {
         name: 'Samira',
@@ -1436,7 +1414,6 @@ export const champList = [
         image: Samira,
         type: ["Marksman"],
         release: '2020-09-21',
-        linksWith: ['']
     },
     {
         name: 'Sejuani',
@@ -1460,7 +1437,7 @@ export const champList = [
         image: Senna,
         type: ['Marksman', "Support"],
         release: '2019-11-10',
-        linksWith: [{ Lucian: 'Boyfriend', Tresh: 'Ennemy' }]
+        linksWith: [{ Lucian: 'Boyfriend', Tresh: 'Ennemy', Vex: '???' }]
     },
     {
         name: 'Seraphine',
@@ -1472,7 +1449,6 @@ export const champList = [
         image: Seraphine,
         type: ["Mage", 'Support'],
         release: '2020-10-29',
-        linksWith: ['']
     },
     {
         name: 'Sett',
@@ -1484,7 +1460,6 @@ export const champList = [
         image: Sett,
         type: ["Fighter"],
         release: '2020-01-14',
-        linksWith: ['']
     },
     {
         name: 'Shaco',
@@ -1496,7 +1471,6 @@ export const champList = [
         image: Shaco,
         type: ["Assassin"],
         release: '2009-10-10',
-        linksWith: ['']
     },
     {
         name: 'Shen',
@@ -1580,7 +1554,6 @@ export const champList = [
         image: Sona,
         type: ["Support", 'Mage'],
         release: '2010-09-21',
-        linksWith: ['']
     },
     {
         name: 'Soraka',
@@ -1592,7 +1565,6 @@ export const champList = [
         image: Soraka,
         type: ["Support", 'Mage'],
         release: '2009-02-21',
-        linksWith: ['']
     },
     {
         name: 'Swain',
@@ -1628,7 +1600,6 @@ export const champList = [
         image: Syndra,
         type: ["Mage", 'Support'],
         release: '2021-09-13',
-        linksWith: ['']
     },
     {
         name: 'TahmKench',
@@ -1640,7 +1611,6 @@ export const champList = [
         image: Tahm_Kench,
         type: ["Support", 'Tank'],
         release: '2015-07-09',
-        linksWith: ['']
     },
     {
         name: 'Taliyah',
@@ -1676,7 +1646,6 @@ export const champList = [
         image: Taric,
         type: ['Support', 'Fighter'],
         release: '2009-08-19',
-        linksWith: ['']
     },
     {
         name: 'Teemo',
@@ -1700,7 +1669,7 @@ export const champList = [
         image: Thresh,
         type: ['Support', 'Fighter'],
         release: '2013-01-23',
-        linksWith: [{ Lucian: 'Ennemy', Senna: 'Ennemy' }]
+        linksWith: [{ Lucian: 'Ennemy', Senna: 'Ennemy', Vex: '???' }]
     },
     {
         name: 'Tristana',
@@ -1760,7 +1729,6 @@ export const champList = [
         image: Twitch,
         type: ["Marksman", 'Assassin'],
         release: '2009-05-01',
-        linksWith: ['']
     },
     {
         name: 'Udyr',
@@ -1796,7 +1764,6 @@ export const champList = [
         image: Varus,
         type: ["Marksman", 'Mage'],
         release: '2012-05-08',
-        linksWith: ['']
     },
     {
         name: 'Vayne',
@@ -1844,7 +1811,7 @@ export const champList = [
         image: Vex,
         type: ["Mage"],
         release: '2021-09-23',
-        linksWith: ['???']
+        linksWith: [{ Lucian: '???', Senna: '???', Thresh: '???' }]
     },
     {
         name: 'Vi',
@@ -1856,7 +1823,7 @@ export const champList = [
         image: Vi,
         type: ["Fighter"],
         release: '2012-12-19',
-        linksWith: [{ Jinx: 'Sister\nEnnemy', Caitlyn: 'Friends', Ekko: 'Potential Friends' }]
+        linksWith: [{ Jinx: 'Sister\nEnnemy', Caitlyn: 'Potential Girlfriend\nFriends', Ekko: 'Potential Friends' }]
     },
     {
         name: 'Viego',
@@ -1868,7 +1835,7 @@ export const champList = [
         image: Viego,
         type: ["Assassin"],
         release: '2021-01-21',
-        linksWith: [{ Hecarim: 'Allie\nEnnemy', Kalista: 'Allie\nEnnemy', Gwen: 'Ebnnemy', Maokai: 'Ennemy', Yorick: 'Ennemy' }]
+        linksWith: [{ Hecarim: 'Allie\nEnnemy', Kalista: 'Allie\nEnnemy', Gwen: 'Ebnnemy', Maokai: 'Ennemy', Yorick: 'Ennemy', Nilah: '???' }]
     },
     {
         name: 'Viktor',
@@ -1880,7 +1847,7 @@ export const champList = [
         image: Viktor,
         type: ['Mage'],
         release: '2011-12-29',
-        linksWith: [{ Blitzcrank: 'Family', Jayce: 'Ennemy' }]
+        linksWith: [{ Blitzcrank: 'Son', Jayce: 'Ennemy', Renata: '???' }]
     },
     {
         name: 'Vladimir',
@@ -2024,7 +1991,6 @@ export const champList = [
         image: Zac,
         type: ["Tank"],
         release: '2013-03-29',
-        linksWith: []
     },
     {
         name: 'Zed',
@@ -2071,7 +2037,6 @@ export const champList = [
         image: Zilean,
         type: ["Support", 'Mage'],
         release: '2009-04-18',
-        linksWith: ['']
     },
     {
         name: 'Zoe',
@@ -2095,7 +2060,6 @@ export const champList = [
         image: Zyra,
         type: ["Mage", 'Support'],
         release: '2012-07-24',
-        linksWith: ['']
     },
 ]
 

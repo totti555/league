@@ -297,7 +297,7 @@ const ChampMemo = ({ champ }) => {
                     */
                 }
                 <div className='display-world-animation'>
-                    <img src={require(`../../assets/Region/${champ.world}.png`)} alt="Champion world" width="30px" height="30px"></img>
+                    <img src={require(`../../assets/Region/${champ.world.replace(' ', '_')}.png`)} alt="Champion world" width="30px" height="30px"></img>
                     <p className='title text-memo'>{champ.world}</p>
                     <hr className='hr-color hr-bot hr-top' />
                 </div>

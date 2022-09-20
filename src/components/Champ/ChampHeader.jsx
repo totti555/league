@@ -49,7 +49,7 @@ const ChampHeader = (props) => {
 
                             <div className='display-entity-memo'>
                                 <div className='text-center my-1'>
-                                    <img src={require(`../../assets/Region/${champCard.world}.png`)} alt="Champion world" width="38px" height="38px"></img>
+                                    <img src={require(`../../assets/Region/${champCard.world.replace(' ', '_')}.png`)} alt="Champion world" width="38px" height="38px"></img>
                                     <p className='title text-memo memo-description'>{champCard.world}</p>
                                     {/* <hr className="vertical-hr"></hr> */}
                                 </div>

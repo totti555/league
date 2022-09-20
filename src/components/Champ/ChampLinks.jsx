@@ -8,7 +8,6 @@ import Friends from "../../assets/Links/Friends.png"
 import Allie from "../../assets/Links/Allie.png"
 import Ennemy from "../../assets/Links/Ennemy.png"
 import Lovers from "../../assets/Links/Lover.png"
-import Cross from "../../assets/Links/Cross.png"
 import Mentor from "../../assets/Links/Mentor.png"
 
 const ChampLinks = (props) => {
@@ -44,7 +43,6 @@ const ChampLinks = (props) => {
     }, [champCard]);
 
     useEffect(() => {
-        console.log('jerome')
         changeColor();
     }, [linksResult])
 
@@ -60,18 +58,15 @@ const ChampLinks = (props) => {
     }
 
     const changeColor = () => {
-        // console.log('bah ?', Object.keys(currentChampLinks[0]).length);
-        if (currentChampLinks[0]) {
+        if (currentChampLinks) {
             const linksLength = Object.keys(currentChampLinks[0]).length;
             for (let i = 0; i < linksLength; i++) {
-                console.log(`alors ?`);
                 if (document.getElementById(`links${i}`) != null) {
 
                     var text = document.getElementById(`links${i}`);
-                    console.log(text)
 
                     var str = text.innerHTML,
-                        reg = /Potential Friends|Potential Ennemy|Potential Allie|Friends|Allie|Ennemy|Family|Potential Boyfriend|Potential Girlfriend|Girlfriend|Boyfriend|Sister|Brother/ig; //g is to replace all occurances
+                        reg = /Potential Friends|Potential Ennemy|Potential Allie|Friends|Allie|Ennemy|Family|Father|Daughter|Son|Potential Boyfriend|Potential Girlfriend|Girlfriend|Boyfriend|Sister|Brother/ig; //g is to replace all occurances
 
                     //fixing a bit
                     var toStr = String(reg);
@@ -80,8 +75,16 @@ const ChampLinks = (props) => {
                     //split it baby
                     var colors = color.split("|");
 
+                    if (colors.indexOf("Potential Friends") > -1) {
+                        str = str.replace(/Potential Friends/g, `<span style="color:#51D64A"><em>Potential</em> Friends</span>`);
+                    }
+
                     if (colors.indexOf("Friends") > -1) {
                         str = str.replace(/Friends/g, `<span style="color:#51D64A;">Friends <img src=${Friends} width='24px' class='friend-img'></img></span>`);
+                    }
+
+                    if (colors.indexOf("Potential Ennemy") > -1) {
+                        str = str.replace(/Potential Ennemy/g, `<span style="color:#EA5353"><em>Potential</em> Ennemy</span>`);
                     }
 
                     if (colors.indexOf("Ennemy") > -1) {
@@ -116,6 +119,18 @@ const ChampLinks = (props) => {
 
                     if (colors.indexOf("Sister") > -1) {
                         str = str.replace(/Sister/g, `<span style="color:#ECB823">Sister <img src=${Family} width='20px' class='family-img'></img></span>`);
+                    }
+
+                    if (colors.indexOf("Father") > -1) {
+                        str = str.replace(/Father/g, `<span style="color:#ECB823">Father <img src=${Family} width='20px' class='family-img'></img></span>`);
+                    }
+
+                    if (colors.indexOf("Daughter") > -1) {
+                        str = str.replace(/Daughter/g, `<span style="color:#ECB823">Daughter <img src=${Family} width='20px' class='family-img'></img></span>`);
+                    }
+
+                    if (colors.indexOf("Son") > -1) {
+                        str = str.replace(/Son/g, `<span style="color:#ECB823">Son <img src=${Family} width='20px' class='family-img'></img></span>`);
                     }
 
                     if (colors.indexOf("Brother") > -1) {
@@ -161,7 +176,7 @@ const ChampLinks = (props) => {
                                     * Syntax should be improve
                                     */
                                 }
-                                {currentChampLinks[0] && <div>
+                                {currentChampLinks.length && <div>
                                     <p className="small links-value hide-links-value" id={`links${index}`}>{currentChampLinks[0][champ.name]}</p>
                                     <p className=" links-value mb-0" id={`updatedlinks${index}`}>{currentChampLinks[0][champ.name]}</p>
                                 </div>}
