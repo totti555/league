@@ -3,7 +3,7 @@ import Footer from "../components/Footer/Footer";
 import "./Layout.scss";
 import Menu from "../assets/Home/menu.svg";
 import { useState } from "react";
-import AboutUs from "../pages/AboutUs";
+import AboutChamp from "../pages/AboutChamp";
 import { useLocation } from 'react-router-dom';
 
 function Layout({ children }) {
@@ -55,13 +55,13 @@ function Layout({ children }) {
             <Link to="/">HOME</Link>
           </button>
           <button className="nav-button">
-            <Link to="/about_us/Kaisa">ABOUT US</Link>
+            <Link to="/about_champ/Kaisa">ABOUT US</Link>
           </button>
           <button className="nav-button">
-            <Link to="/look">LOOK</Link>
+            <Link to="/list">LOOK</Link>
           </button>
           {/* <Routes>
-            <Route path="about_us/:champName" element={<AboutUs />} />
+            <Route path="about_champ/:champName" element={<AboutChamp />} />
           </Routes> */}
         </div>
         <div className="me-5 text-white welcome"> Welcome, Thomas !</div>
@@ -82,9 +82,9 @@ function Layout({ children }) {
             <hr className="mt-0" />
             <a href="/">HOME</a>
             <hr />
-            <a href="/about_us">ABOUT US</a>
+            <a href="/about_champ">ABOUT US</a>
             <hr />
-            <a href="/look">LOOK</a>
+            <a href="/list">LOOK</a>
             <hr />
           </div>
         )}
@@ -104,9 +104,9 @@ function Layout({ children }) {
         */
       }
 
-      {/* {location.pathname.includes('look') &&
+      {/* {location.pathname.includes('list') &&
         <footer>
-          <Footer className='footer-look' />
+          <Footer className='footer-list' />
         </footer>
       } */}
     </div>
@@ -122,10 +122,10 @@ function Layout({ children }) {
 //                         <Link to="/">Home</Link>
 //                     </li>
 //                     <li>
-//                         <Link to="/about_us">AboutUs</Link>
+//                         <Link to="/about_champ">AboutChamp</Link>
 //                     </li>
 //                     <li>
-//                         <Link to="/look">Look</Link>
+//                         <Link to="/list">List</Link>
 //                     </li>
 //                 </ul>
 //             </nav>

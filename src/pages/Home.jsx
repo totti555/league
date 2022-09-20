@@ -164,8 +164,8 @@ const Home = () => {
         }
         <p className="last-paragraphe">
           And above all, don't hesitate to <strong>click</strong> on the champions' cards. To do this, go to the{" "}
-          <a href="/Look">
-            <strong className="underline"> Look </strong>
+          <a href="/List">
+            <strong className="underline"> List </strong>
           </a>
           page !
         </p>

@@ -3,16 +3,16 @@ import FiltersList from "../components/Filters/FiltersList";
 import FiltersRecap from "../components/Filters/FiltersRecap";
 import { champList } from "../datas/lolChamp";
 import { useState } from 'react'
-import '../style/Look.scss'
+import '../style/List.scss'
 import DisplayFilters from "../components/Filters/DisplayFilters";
 import FlecheBas from "../assets/Common/fleche-bas.png"
 
 
-const Look = (props) => {
+const List = (props) => {
 
     /**
         * *View to display the champions and the filter lists
-        * CSS file : Look.scss
+        * CSS file : List.scss
         * Components : ChampList, FiltersList, FiltersRecap, DisplayFilters
     */
 
@@ -70,7 +70,7 @@ const Look = (props) => {
     }
 
     /**
-       * *state for the background image of the body for the look page
+       * *state for the background image of the body for the list page
        * img /assets/Background
        * Img by default : /public/Background/Kaisa
        * @param currentChamp
@@ -284,4 +284,4 @@ const Look = (props) => {
     );
 };
 
-export default Look;
+export default List;

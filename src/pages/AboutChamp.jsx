@@ -1,4 +1,4 @@
-import "../style/AboutUs.scss";
+import "../style/AboutChamp.scss";
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
@@ -28,7 +28,7 @@ import { useNavigate } from "react-router-dom";
      */
 }
 
-const AboutUs = () => {
+const AboutChamp = () => {
 
     const [champion, setChampion] = useState([]);
     const [selectedItem, setSelectedItem] = useState([]);
@@ -56,7 +56,7 @@ const AboutUs = () => {
             setCurrentChampLinks(findChampKey.linksWith);
         else {
             console.log('Route not find => redirection to Kaisa default view');
-            navigate("/about_us/Kaisa");
+            navigate("/about_champ/Kaisa");
         }
         let champKey;
         let name;
@@ -291,10 +291,10 @@ const AboutUs = () => {
     )
 }
 
-export default AboutUs;
+export default AboutChamp;
 
 
-// const AboutUs = () => {
+// const AboutChamp = () => {
 
 //     /**
 //         * *View to display

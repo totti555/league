@@ -56,7 +56,7 @@ const ChampLinks = (props) => {
         let name;
         name = champ.name
         scrollToTop();
-        navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
+        navigate(`/about_champ/${champ.name}`, { state: { key: champ.key, name: champ.name } });
     }
 
     const changeColor = () => {

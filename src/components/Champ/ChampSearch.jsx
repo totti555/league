@@ -55,7 +55,7 @@ const ChampSearch = (props) => {
         //     name = minName.charAt(0).toUpperCase() + minName.slice(1);
         // }
         // else name = champ.name;
-        navigate(`/about_us/${champ.name}`, { state: { key: champ.key, name: champ.name } });
+        navigate(`/about_champ/${champ.name}`, { state: { key: champ.key, name: champ.name } });
 
         setSearchChamp('');
     }
