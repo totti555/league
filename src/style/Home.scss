@@ -30,14 +30,13 @@ html {
 .home-content {
 
 
-    // height: 755px;
-    position: fixed;
+    // height: 937px;
+    position: relative;
+    padding: 0px;
     font-size: 18px;
     top: 6.063rem;
-    bottom: 3.791rem;
-    right: 0;
-    left: 0;
-    overflow-y: scroll;
+    // bottom: 3.791rem;
+    bottom: 0;
     z-index: 2;
 
 

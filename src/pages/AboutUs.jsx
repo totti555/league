@@ -11,7 +11,9 @@ import ChampLinks from "../components/Champ/ChampLinks";
 import ChampCard from "../components/ChampList/ChampCard";
 import ChampHeader from "../components/Champ/ChampHeader";
 import ChampSearch from "../components/Champ/ChampSearch";
-import Stats from '../assets/Common/epees-croisees.png'
+import Stats from '../assets/Common/epees-croisees.png';
+import Footer from "../components/Footer/Footer";
+
 
 
 {
@@ -275,6 +277,7 @@ const AboutUs = () => {
                         </div>
 
                     )}
+                <Footer />
             </div>
 
 

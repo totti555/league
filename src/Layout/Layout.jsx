@@ -104,11 +104,11 @@ function Layout({ children }) {
         */
       }
 
-      {!location.pathname.includes('about_us') &&
+      {/* {location.pathname.includes('look') &&
         <footer>
-          <Footer />
+          <Footer className='footer-look' />
         </footer>
-      }
+      } */}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 .filters {
     position: fixed;
     top: 6.063rem;
-    bottom: 5.056rem;
+    bottom: 0;
     left: 0;
     background-color: black;
     // opacity: 0.8;
@@ -29,7 +29,7 @@ hr {
     left: 0;
     right: 0;
     top: 6.063rem;
-    bottom: 5.056rem;
+    bottom: 0;
 }
 
 .background-img {
@@ -123,9 +123,8 @@ hr {
 .champs-list {
     position: fixed;
     top: 6.063rem;
-    bottom: 5.056rem;
+    bottom: 0;
     right: 0;
-
     overflow-y: scroll;
 
 }
@@ -171,7 +170,7 @@ hr {
 @media (min-width: 0px) and (max-width : 600px) {
     .content-list {
         top: 3rem;
-        bottom: 4rem;
+
 
         h1 {
             font-size: 40px;
@@ -182,7 +181,7 @@ hr {
 @media (min-width: 400px) and (max-width : 750px) {
     .content-list {
         top: 3rem;
-        bottom: 3.954rem;
+
 
         h1 {
             font-size: 40px;
