@@ -293,6 +293,51 @@ html {
     filter: invert(55%) sepia(15%) saturate(1306%) hue-rotate(0deg) brightness(90%) contrast(84%);
 }
 
+
+
+.button-champ-list {
+    button {
+        background-color: transparent;
+        border: 0px;
+        // width: 64px;
+        // height: 64px;
+        padding: 0px;
+    }
+
+    button:disabled,
+    button[disabled] {
+        opacity: 0.5;
+    }
+
+    .increase-button {
+        transform: rotate(90deg);
+        opacity: 0.8;
+    }
+
+    .increase-button:hover {
+        opacity: 1;
+    }
+
+    .decrease-button {
+        transform: rotate(270deg);
+        opacity: 0.8;
+    }
+
+    .decrease-button:hover {
+        opacity: 1;
+    }
+
+    .vertical-hr {
+        border: none;
+        height: 100%;
+        width: 1px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
 @keyframes display-card {
     0% {
         transform: scale(1.1);
@@ -418,5 +463,15 @@ html {
 
     .display-name {
         display: none;
+    }
+
+    .button-champ-list {
+        img {
+            width: 24px !important;
+        }
+    }
+
+    .filters-title {
+        height: 52px !important;
     }
 }

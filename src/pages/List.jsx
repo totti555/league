@@ -215,9 +215,8 @@ const List = (props) => {
                 }
 
                 <div className={displayFilters ? 'hide-filters' : 'col-2 col-custom-filter filters pe-0 ps-0'}>
-
-                    <div className="box-shadow ps-3 filters-title">
-                        <h1><span className="title">FILTERS</span></h1>
+                    <div className="box-shadow ps-3 filters-title d-flex ">
+                        <h1 className="mb-0 align-self-center"><span className="title">FILTERS</span></h1>
                     </div>
                     <hr />
                     <div className="list-inline text-center align-items-center h-100">

@@ -141,23 +141,44 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     return (
         <div>
-            <div className="box-shadow px-3 d-flex justify-content-between ">
-                <h1 className="champ-title"><span className="title">CHAMPIONS</span></h1>
-                <div className='d-flex justify-content-center delete-button my-0'>
-                    <div className="wrap">
-                        <button className="button-filter decreasing mx-2" onClick={fetchByNameDecreasing} ><span className="display-name">Name</span><span className='cross'>↗ </span></button>
-                        <button className="button-filter decreasing mx-2" onClick={fetchByNameAscending} ><span className="display-name">Name</span><span className='cross'>↘</span></button>
+            <div className="box-shadow p-0 d-flex justify-content-between ">
+                <h1 className="champ-title align-self-center mb-0 ms-2"><span className="title">CHAMPIONS</span></h1>
+                <div className='d-flex justify-content-center button-champ-list my-0'>
 
-                        <button className="button-filter decreasing mx-2" onClick={fetchByDateAscending} >
-                            <span className="display-name">Date</span><span className='cross'>↗ </span>
-                        </button>
+                    <hr className="vertical-hr"></hr>
 
-                        <button className="button-filter decreasing mx-2" onClick={fetchByDateDecreasing} >
-                            <span className="display-name">Date</span><span className='cross'>↘ </span>
-                        </button>
+                    <div className="d-flex justify-content-start ">
+                        <p className="align-self-center text-white mb-0 title">NAME :</p>
+                        <div className="d-flex flex-column">
+                            <button onClick={fetchByNameAscending}>
+                                <img className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
+                            </button>
+
+                            <button onClick={fetchByNameDecreasing}>
+                                <img className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px'></img>
+                            </button>
+                        </div>
                     </div>
+
+                    <hr className="vertical-hr"></hr>
+
+                    <div className="d-flex justify-content-start ">
+                        <p className="align-self-center text-white mb-0 title">DATE :</p>
+                        <div className="d-flex flex-column">
+                            <button onClick={fetchByDateAscending}>
+                                <img className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
+                            </button>
+
+                            <button onClick={fetchByDateDecreasing}>
+                                <img className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px'></img>
+                            </button>
+                        </div>
+                    </div>
+
+
+
                 </div>
-                <ChampionNumberFound champNumber={champ.length} />
+                {/* <ChampionNumberFound champNumber={champ.length} /> */}
             </div>
             <br />
             <div className="container">

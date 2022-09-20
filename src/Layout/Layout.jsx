@@ -55,10 +55,10 @@ function Layout({ children }) {
             <Link to="/">HOME</Link>
           </button>
           <button className="nav-button">
-            <Link to="/about_champ/Kaisa">ABOUT US</Link>
+            <Link to="/list">LIST</Link>
           </button>
           <button className="nav-button">
-            <Link to="/list">LOOK</Link>
+            <Link to="/about_champ/Kaisa">LEGEND</Link>
           </button>
           {/* <Routes>
             <Route path="about_champ/:champName" element={<AboutChamp />} />
