@@ -141,7 +141,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     return (
         <div>
-            <div className="box-shadow p-0 d-flex justify-content-between ">
+            <div className="box-shadow p-0 d-flex justify-content-between position-relative ">
                 <h1 className="champ-title align-self-center mb-0 ms-2"><span className="title">CHAMPIONS</span></h1>
                 <div className='d-flex justify-content-center button-champ-list my-0'>
 
@@ -151,11 +151,11 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                         <p className="align-self-center text-white mb-0 title">NAME :</p>
                         <div className="d-flex flex-column">
                             <button onClick={fetchByNameAscending}>
-                                <img className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
+                                <img alt='increase-name' className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
                             </button>
 
                             <button onClick={fetchByNameDecreasing}>
-                                <img className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px'></img>
+                                <img alt='decrease-name' className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px'></img>
                             </button>
                         </div>
                     </div>
@@ -166,11 +166,11 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                         <p className="align-self-center text-white mb-0 title">DATE :</p>
                         <div className="d-flex flex-column">
                             <button onClick={fetchByDateAscending}>
-                                <img className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
+                                <img alt='increase-date' className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
                             </button>
 
                             <button onClick={fetchByDateDecreasing}>
-                                <img className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px'></img>
+                                <img alt='decrease-date' className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px'></img>
                             </button>
                         </div>
                     </div>
@@ -178,7 +178,9 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
 
                 </div>
-                {/* <ChampionNumberFound champNumber={champ.length} /> */}
+                <div className="champ-number">
+                    <ChampionNumberFound champNumber={champ.length} />
+                </div>
             </div>
             <br />
             <div className="container">
@@ -225,8 +227,8 @@ const NoChampFound = () => {
 const ChampionNumberFound = (props) => {
     const champNumber = props.champNumber;
     return (
-        <div>
-            {champNumber} found.
+        <div className="text-white small">
+            <p className="small m-0">{champNumber} found</p>
         </div>
     )
 }
