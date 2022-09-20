@@ -13,6 +13,7 @@ import ChampHeader from "../components/Champ/ChampHeader";
 import ChampSearch from "../components/Champ/ChampSearch";
 import Stats from '../assets/Common/epees-croisees.png';
 import Footer from "../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -46,12 +47,17 @@ const AboutUs = () => {
 
     const api_key = process.env.REACT_APP_API_KEY;
     let { champName } = useParams();
+    let navigate = useNavigate();
 
     const champDetails = () => {
         const findChampKey = champList.find((champ) => champName === champ.name);
         console.log("findChampKey", findChampKey);
         if (findChampKey)
             setCurrentChampLinks(findChampKey.linksWith);
+        else {
+            console.log('Route not find => redirection to Kaisa default view');
+            navigate("/about_us/Kaisa");
+        }
         let champKey;
         let name;
         const axios = require('axios').default;
@@ -118,27 +124,27 @@ const AboutUs = () => {
             });
 
 
-        axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/${champName.toLowerCase()}/${champName.toLowerCase()}.bin.json`)
-            .then(function (response) {
-                // handle success
-                const obj = response.data;
-                // setChampion(obj)
-                console.log('allo c moii');
-                console.log("data", obj);
-                setSpellDatas(obj);
-                // setChampionSpells(obj)
-                // const data = Object.values(obj);
-                // setChampion(data[0]);
+        // axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/${champName.toLowerCase()}/${champName.toLowerCase()}.bin.json`)
+        //     .then(function (response) {
+        //         // handle success
+        //         const obj = response.data;
+        //         // setChampion(obj)
+        //         console.log('allo c moii');
+        //         console.log("data", obj);
+        //         setSpellDatas(obj);
+        //         // setChampionSpells(obj)
+        //         // const data = Object.values(obj);
+        //         // setChampion(data[0]);
 
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .then(function () {
+        //         // always executed
 
-            });
+        //     });
 
 
 

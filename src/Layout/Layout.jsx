@@ -60,9 +60,9 @@ function Layout({ children }) {
           <button className="nav-button">
             <Link to="/look">LOOK</Link>
           </button>
-          <Routes>
+          {/* <Routes>
             <Route path="about_us/:champName" element={<AboutUs />} />
-          </Routes>
+          </Routes> */}
         </div>
         <div className="me-5 text-white welcome"> Welcome, Thomas !</div>
 

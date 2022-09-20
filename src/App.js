@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about_us" element={<AboutUs />} />
+            <Route path="about_us/:champName" element={<AboutUs />} />
             <Route path="look" element={<Look />} exact />
             <Route path="*" element={<NoPage />} />
           </Route>
