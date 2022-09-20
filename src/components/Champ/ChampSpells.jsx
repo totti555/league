@@ -66,9 +66,9 @@ const ChampSpells = (props) => {
 
     return (
         <>
-            <div class="background-image ms-3 me-3  " style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
+            <div className="background-image ms-3 me-3  " style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`${championCard.image}`}`, backgroundSize: "cover" }}>
             </div>
-            <div class="content champ-spells mb-2">
+            <div className="content champ-spells mb-2">
 
                 {(champion && championCard) && (<div className='background-spells content ps-3 pe-3 '>
                     <div className='pt-3'>

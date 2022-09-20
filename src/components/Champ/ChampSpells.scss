@@ -11,7 +11,7 @@
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
     -ms-filter: blur(2px);
-    filter: blur(2px);
+    filter: blur(4px);
 }
 
 .content {
@@ -369,6 +369,14 @@
     //   letter-spacing: 0.1em;
     //   text-decoration: none;
     // }
+    body {
+        display: grid;
+        /* generates a block-level grid */
+        align-content: space-between;
+        /* places an even amount of space between each grid item, with no space at the far ends */
+        margin: 0;
+
+    }
 
     $gold: #ECB823;
 
