@@ -121,6 +121,10 @@ const ChampSearch = (props) => {
     return (
         <div className="champ-input">
 
+            <div >
+                <h2 className="title">RESEARCH :</h2>
+            </div>
+
             <div className="">
                 <div className="position-relative">
                     <form autoComplete="off">

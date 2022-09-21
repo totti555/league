@@ -1,17 +1,19 @@
-.background-image {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    display: block;
-    background-image: url('https://i.imgur.com/lL6tQfy.png');
-    width: auto;
-    height: 800px;
-    -webkit-filter: blur(2px);
-    -moz-filter: blur(2px);
-    -o-filter: blur(2px);
-    -ms-filter: blur(2px);
-    filter: blur(4px);
+.about-spells {
+    .background-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        background-image: url('https://i.imgur.com/lL6tQfy.png');
+        width: auto;
+        height: 800px;
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(4px);
+    }
 }
 
 .content {
@@ -208,41 +210,51 @@
     }
 
 
-    // Mixin for shadow button with block sliding up
-    @mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
-        $easing: cubic-bezier(0.4, 0, 0.2, 1);
 
-        position: relative;
+}
 
-        display: inline-block;
-        // padding: 0.5em 2em;
+// Mixin for shadow button with block sliding up
+@mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
+    $easing: cubic-bezier(0.4, 0, 0.2, 1);
 
-        cursor: pointer;
-        overflow: hidden;
+    position: relative;
 
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0;
+    display: inline-block;
+    // padding: 0.5em 2em;
 
-            height: $borderWidth;
-            width: 100%;
+    cursor: pointer;
+    overflow: hidden;
 
-            background-color: $color;
-        }
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
 
-        &:before {
-            top: 0;
-        }
+        height: $borderWidth;
+        width: 100%;
 
-        &:after {
-            bottom: 0;
-        }
+        background-color: $color;
+    }
 
-        &:hover {
+    &:before {
+        top: 0;
+    }
+
+    &:after {
+        bottom: 0;
+    }
+
+    &:hover {
+
+        &>* {
 
             &>* {
+
+                &:before,
+                &:after {
+                    transform: translate3d(0, 0, 0);
+                }
 
                 &>* {
 
@@ -250,16 +262,31 @@
                     &:after {
                         transform: translate3d(0, 0, 0);
                     }
-
-                    &>* {
-
-                        &:before,
-                        &:after {
-                            transform: translate3d(0, 0, 0);
-                        }
-                    }
                 }
             }
+        }
+    }
+
+    &>* {
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+
+            height: 100%;
+            width: $borderWidth;
+
+            background-color: $color;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
         }
 
         &>* {
@@ -268,20 +295,27 @@
             &:after {
                 content: "";
                 position: absolute;
-                top: 0;
+                left: 0;
+                z-index: 9;
 
-                height: 100%;
-                width: $borderWidth;
+                height: $borderWidth;
+                width: 100%;
 
-                background-color: $color;
+                background: -webkit-linear-gradient($hoverColor, white);
             }
 
             &:before {
-                left: 0;
+                top: 0;
+
+                transform: translate3d(-105%, 0, 0);
+                transition: transform $time $easing;
             }
 
             &:after {
-                right: 0;
+                bottom: 0;
+
+                transform: translate3d(105%, 0, 0);
+                transition: transform $time $easing;
             }
 
             &>* {
@@ -290,117 +324,86 @@
                 &:after {
                     content: "";
                     position: absolute;
-                    left: 0;
+                    top: 0;
                     z-index: 9;
 
-                    height: $borderWidth;
-                    width: 100%;
+                    height: 100%;
+                    width: $borderWidth;
 
-                    background: -webkit-linear-gradient($hoverColor, white);
+                    background-color: $hoverColor;
                 }
 
                 &:before {
-                    top: 0;
+                    left: 0;
 
-                    transform: translate3d(-105%, 0, 0);
+                    transform: translate3d(0, 105%, 0);
                     transition: transform $time $easing;
                 }
 
                 &:after {
-                    bottom: 0;
+                    right: 0;
 
-                    transform: translate3d(105%, 0, 0);
+                    transform: translate3d(0, -105%, 0);
                     transition: transform $time $easing;
-                }
-
-                &>* {
-
-                    &:before,
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        z-index: 9;
-
-                        height: 100%;
-                        width: $borderWidth;
-
-                        background-color: $hoverColor;
-                    }
-
-                    &:before {
-                        left: 0;
-
-                        transform: translate3d(0, 105%, 0);
-                        transition: transform $time $easing;
-                    }
-
-                    &:after {
-                        right: 0;
-
-                        transform: translate3d(0, -105%, 0);
-                        transition: transform $time $easing;
-                    }
                 }
             }
         }
     }
+}
 
-    // Start of styling
-    * {
-        box-sizing: border-box;
-    }
+// Start of styling
+* {
+    box-sizing: border-box;
+}
 
-    // body {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   height: 100vh;
-    //   width: 100%;
+// body {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+//   width: 100%;
 
-    //   font-family: "Poppins", sans-serif;
-    //   -webkit-font-smoothing: antialiased;
-    //   background-color: #f2f2f2;
-    // }
+//   font-family: "Poppins", sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   background-color: #f2f2f2;
+// }
 
-    // a {
-    //   font-size: 1.5em;
-    //   text-transform: uppercase;
-    //   letter-spacing: 0.1em;
-    //   text-decoration: none;
-    // }
-    body {
-        display: grid;
-        /* generates a block-level grid */
-        align-content: space-between;
-        /* places an even amount of space between each grid item, with no space at the far ends */
-        margin: 0;
+// a {
+//   font-size: 1.5em;
+//   text-transform: uppercase;
+//   letter-spacing: 0.1em;
+//   text-decoration: none;
+// }
+body {
+    display: grid;
+    /* generates a block-level grid */
+    align-content: space-between;
+    /* places an even amount of space between each grid item, with no space at the far ends */
+    margin: 0;
 
-    }
+}
 
-    $gold: #ECB823;
+$gold: #ECB823;
 
-    $goldwhite: -webkit-linear-gradient(0.5turn, $gold, white);
+$goldwhite: -webkit-linear-gradient(0.5turn, $gold, white);
 
 
-    .btn-border {
-        @include btn-border-slide(#252525, #ECB823, 1px, 0.8s);
-    }
+.btn-border {
+    @include btn-border-slide(#252525, #ECB823, 1px, 0.8s);
+}
 
-    .btn-border:active,
-    .btn-focus {
-        border: 1px solid #ECB823 !important;
-    }
+.btn-border:active,
+.btn-focus {
+    border: 1px solid #ECB823 !important;
+}
 
-    .btn-no-focus {
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        -webkit-background-clip: padding-box;
-        /* for Safari */
-        background-clip: padding-box;
-    }
+.btn-no-focus {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: padding-box;
+    /* for Safari */
+    background-clip: padding-box;
+}
 
-    .test2 {
-        height: 64px;
-    }
-
+.test2 {
+    height: 64px;
 }
