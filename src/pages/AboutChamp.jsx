@@ -71,7 +71,7 @@ const AboutChamp = () => {
         const champSelected = data[0];
         setChampCard(champSelected);
 
-        const exceptionalName = ['BelVeth', 'KaiSa', 'KogMaw', 'ChoGath', 'RekSai'];
+        const exceptionalName = ['BelVeth', 'KaiSa', 'ChoGath'];
         if (exceptionalName.includes(champSelected.name)) {
             const minName = champSelected.name.toLowerCase();
             name = minName.charAt(0).toUpperCase() + minName.slice(1);

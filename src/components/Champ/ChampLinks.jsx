@@ -58,7 +58,7 @@ const ChampLinks = (props) => {
     }
 
     const changeColor = () => {
-        if (currentChampLinks[0]) {
+        if (currentChampLinks && currentChampLinks[0]) {
             const linksLength = Object.keys(currentChampLinks[0]).length;
             for (let i = 0; i < linksLength; i++) {
                 if (document.getElementById(`links${i}`) != null) {

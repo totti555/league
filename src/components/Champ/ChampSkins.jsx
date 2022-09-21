@@ -2,6 +2,7 @@ import ImageGallery from 'react-image-gallery';
 import React, { useState } from 'react';
 import './ChampSkins.scss';
 import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -10,11 +11,17 @@ const ChampSkins = (props) => {
     const champion = props.champion;
     const setBackgroundImg = props.setBackgroundImg;
     const [skinImages, setSkinImages] = useState([]);
+    const location = useLocation();
 
     useEffect(() => {
         getSkinsImages()
 
     }, [champion]);
+
+    useEffect(() => {
+        getSkinsImages();
+
+    }, [location.pathname]);
 
     const getSkinsImages = () => {
         let i;

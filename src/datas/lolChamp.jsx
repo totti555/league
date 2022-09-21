@@ -243,7 +243,7 @@ export const champList = [
         image: Anivia,
         type: ["Mage", "Support"],
         release: '2009-07-10',
-        linksWith: [{ Ornn: 'Family', Lissandra: 'Ennemy' }]
+        linksWith: [{ Ornn: 'Brother', Lissandra: 'Ennemy' }]
     },
     {
         name: 'Annie',
@@ -1156,7 +1156,7 @@ export const champList = [
         image: Nidalee,
         type: ['Assassin', 'Mage'],
         release: '2009-12-17',
-        linksWith: ['Mentor']
+        linksWith: [{ Neeko: 'Potential Girlfriend' }]
     },
     {
         name: 'Nilah',
@@ -1199,7 +1199,7 @@ export const champList = [
         id: 88,
         key: 2,
         damages_type: 'AD',
-        role: ['Fighter', 'Tank'],
+        role: ['Top', 'Jungle'],
         image: Olaf,
         type: ['Tank'],
         release: '2010-06-09',
@@ -1227,7 +1227,7 @@ export const champList = [
         image: Ornn,
         type: ['Tank', 'Fighter'],
         release: '2017-08-23',
-        linksWith: [{ Anivia: 'Family', Volibear: 'Family\nEnnemy' }]
+        linksWith: [{ Anivia: 'Sister', Volibear: 'Brother\nEnnemy' }]
     },
     {
         name: 'Pantheon',
@@ -1354,7 +1354,7 @@ export const champList = [
         image: Renekton,
         type: ["Fighter", 'Tank'],
         release: '2011-01-18',
-        linksWith: [{ Azir: 'Friends', Sivir: 'Friend', Nasus: 'Ennemy', Xerath: 'Ennemy' }]
+        linksWith: [{ Azir: 'Friends', Sivir: 'Friends', Nasus: 'Ennemy', Xerath: 'Ennemy' }]
     },
     {
         name: 'Rengar',
@@ -1378,7 +1378,7 @@ export const champList = [
         image: Riven,
         type: ["Fighter", 'Assassin'],
         release: '2011-09-14',
-        linksWith: [{ Singed: 'Ennemy', Yasuo: 'Potential ennemy' }]
+        linksWith: [{ Singed: 'Ennemy', Yasuo: 'Potential Ennemy' }]
     },
     {
         name: 'Rumble',
@@ -1871,7 +1871,7 @@ export const champList = [
         image: Volibear,
         type: ["Fighter"],
         release: '2011-11-29',
-        linksWith: [{ Ornn: 'Family\nEnnemy', Lissandra: 'Ennemy', Udyr: 'Ennemy' }]
+        linksWith: [{ Ornn: 'Brother\nEnnemy', Anivia: 'Sister', Lissandra: 'Ennemy', Udyr: 'Ennemy' }]
     },
     {
         name: 'Warwick',
