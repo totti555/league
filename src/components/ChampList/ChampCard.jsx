@@ -102,90 +102,91 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             * * champ background image
             * ? text-white class useless ?
         */
-        <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
-            {displayAttributes ? (
-                <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
-            ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
+        <>
+            {champ.name && <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
+                {displayAttributes ? (
+                    <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
+                ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
 
-            {displayAttributes && (<ChampMemo champ={champ} display={displayAttributes} />)}
-
-            {
-
-                /**
-                    * * Img to display or hide links
-                    * ?Display : Selected or Cross img
-                    * Hide : Family img
-                    * ../assets/Links
-                */
-            }
-
-            <div className="family">
-                {
-                    displayLinks ?
-                        (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Cancel" width="25px" height="25px"></img>) :
-                        (
-                            champ.linksWith ?
-                                (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Links" width="30px" height="30px"></img>)
-                                : null
-                        )
-                }
-
-            </div>
-
-            {
-                /**
-                    * * Img according to links
-                    * ../assets/Links
-                */
-            }
-
-            {(<div className='links-type champ-links-memo '>
+                {displayAttributes && (<ChampMemo champ={champ} display={displayAttributes} />)}
 
                 {
-                    /(Friends)/.test(linksType) ?
-                        (<div className='display-links'>
-                            <img className="card-icon" src={Friends} alt="Friend" width="30px" height="30px"></img>
-                            <p className='title text-memo'>{linksType}</p>
-                            <div className='border-bottom-links'></div>
-                        </div>) :
-                        /(Allie)/.test(linksType) ?
-                            (<div className='display-links'>
-                                <img className="card-icon" src={Allie} alt="Allie" width="30px" height="30px"></img>
-                                <p className='title text-memo'>{linksType}</p>
-                                <div className='border-bottom-links'></div>
-                            </div>) :
-                            /Family|Sister|Brother/.test(linksType) ?
-                                (<div className='display-links'>
-                                    <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
-                                    <p className='title text-memo'>{linksType}</p>
-                                    <div className='border-bottom-links'></div>
-                                </div>) :
-                                /(Ennemy)/.test(linksType) ?
-                                    (<div className='display-links'>
-                                        <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
-                                        <p className='title text-memo'>{linksType}</p>
-                                        <div className='border-bottom-links'></div>
-                                    </div>) :
-                                    /Boyfriend|Girlfriend/.test(linksType) ?
-                                        (<div className='display-links'>
-                                            <img className="card-icon" src={Heart} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
-                                            <p className='title text-memo'>{linksType}</p>
-                                            <div className='border-bottom-links'></div>
-                                        </div>) :
-                                        /Mentor|Apprentice/.test(linksType) ?
-                                            (<div className='display-links'>
-                                                <img className="card-icon" src={Mentor} alt="Mentor" width="30px" height="30px"></img>
-                                                <p className='title text-memo'>{linksType}</p>
-                                                <div className='border-bottom-links'></div>
-                                            </div>) : null
-                }
-                {
+
                     /**
-                        * * Add "?" Img if it's potential 
+                        * * Img to display or hide links
+                        * ?Display : Selected or Cross img
+                        * Hide : Family img
                         * ../assets/Links
                     */
                 }
-                {/* {
+
+                <div className="family">
+                    {
+                        displayLinks ?
+                            (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Cancel" width="25px" height="25px"></img>) :
+                            (
+                                champ.linksWith ?
+                                    (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Links" width="30px" height="30px"></img>)
+                                    : null
+                            )
+                    }
+
+                </div>
+
+                {
+                    /**
+                        * * Img according to links
+                        * ../assets/Links
+                    */
+                }
+
+                {(<div className='links-type champ-links-memo '>
+
+                    {
+                        /(Friends)/.test(linksType) ?
+                            (<div className='display-links'>
+                                <img className="card-icon" src={Friends} alt="Friend" width="30px" height="30px"></img>
+                                <p className='title text-memo'>{linksType}</p>
+                                <div className='border-bottom-links'></div>
+                            </div>) :
+                            /(Allie)/.test(linksType) ?
+                                (<div className='display-links'>
+                                    <img className="card-icon" src={Allie} alt="Allie" width="30px" height="30px"></img>
+                                    <p className='title text-memo'>{linksType}</p>
+                                    <div className='border-bottom-links'></div>
+                                </div>) :
+                                /Family|Sister|Brother/.test(linksType) ?
+                                    (<div className='display-links'>
+                                        <img className="card-icon" src={Family} alt="Family" width="30px" height="30px"></img>
+                                        <p className='title text-memo'>{linksType}</p>
+                                        <div className='border-bottom-links'></div>
+                                    </div>) :
+                                    /(Ennemy)/.test(linksType) ?
+                                        (<div className='display-links'>
+                                            <img className="card-icon" src={Ennemy} alt="Ennemy" width="30px" height="30px"></img>
+                                            <p className='title text-memo'>{linksType}</p>
+                                            <div className='border-bottom-links'></div>
+                                        </div>) :
+                                        /Boyfriend|Girlfriend/.test(linksType) ?
+                                            (<div className='display-links'>
+                                                <img className="card-icon" src={Heart} alt="Boyfriend Girlfriend" width="30px" height="30px"></img>
+                                                <p className='title text-memo'>{linksType}</p>
+                                                <div className='border-bottom-links'></div>
+                                            </div>) :
+                                            /Mentor|Apprentice/.test(linksType) ?
+                                                (<div className='display-links'>
+                                                    <img className="card-icon" src={Mentor} alt="Mentor" width="30px" height="30px"></img>
+                                                    <p className='title text-memo'>{linksType}</p>
+                                                    <div className='border-bottom-links'></div>
+                                                </div>) : null
+                    }
+                    {
+                        /**
+                            * * Add "?" Img if it's potential 
+                            * ../assets/Links
+                        */
+                    }
+                    {/* {
                     /(Potential)/.test(linksType) ?
                         (<div className='display-links'>
                             <img className="card-icon" src={Cross} alt="Unknown" width="30px" height="30px"></img>
@@ -193,14 +194,15 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                         </div>) : null
 
                 } */}
-                {/* <div className="border-bottom-links"></div> */}
-            </div>)
-            }
-            <div className='champ-name'>
-                <h3><span className='title'>{nameWithSpace(champ.name)}</span></h3>
-            </div>
+                    {/* <div className="border-bottom-links"></div> */}
+                </div>)
+                }
+                <div className='champ-name'>
+                    <h3><span className='title'>{nameWithSpace(champ.name)}</span></h3>
+                </div>
 
-        </div>
+            </div>}
+        </>
 
     )
 }
