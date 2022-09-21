@@ -5,6 +5,15 @@
     .skins-content {
         width: 90%;
         margin: auto;
+
+        .skin-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            letter-spacing: 2px;
+            font-style: italic;
+            color: #ECB823;
+        }
     }
 
     .image-gallery-description {

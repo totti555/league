@@ -1,13 +1,14 @@
 import ImageGallery from 'react-image-gallery';
 import React, { useState } from 'react';
 import './ChampSkins.scss';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 
 
 const ChampSkins = (props) => {
 
     const champion = props.champion;
+    const setBackgroundImg = props.setBackgroundImg;
     const [skinImages, setSkinImages] = useState([]);
 
     useEffect(() => {
@@ -18,7 +19,6 @@ const ChampSkins = (props) => {
     const getSkinsImages = () => {
         let i;
         let images = [];
-        console.log(champion.skins)
         const skinsNumImg = champion.skins.filter((spell) => spell.num && spell.num !== 0);
 
         for (i = 0; i < skinsNumImg.length; i++) {
@@ -29,9 +29,16 @@ const ChampSkins = (props) => {
             }
             images.push(param);
         }
-
+        setBackgroundImg(images[0].original)
         setSkinImages(images);
+    }
 
+    const refImg = useRef(null);
+    const renderCustomControls = () => {
+        if (refImg.current) {
+            const index = refImg.current.getCurrentIndex();
+            skinImages[index] && setBackgroundImg(skinImages[index].original)
+        }
     }
 
     return (
@@ -48,10 +55,10 @@ const ChampSkins = (props) => {
                         * slideDuration : delay of the transition
                     */
                 }
-                <div className='skins-content'>
+                <div className='skins-content position-relative'>
                     {skinImages && <>
-                        <ImageGallery items={skinImages} showFullscreenButton={false} autoPlay={true} slideInterval={7000} slideDuration={600} />
-                        <div className='skin-name'></div>
+                        <ImageGallery ref={refImg} renderCustomControls={renderCustomControls} items={skinImages} showFullscreenButton={false} autoPlay={true} slideInterval={10000} slideDuration={600} />
+                        <div className='skin-number'>{`${refImg.current ? refImg.current.getCurrentIndex() + 1 : null} `} <strong> / {skinImages.length}</strong></div>
                     </>}
                 </div>
             </div>
