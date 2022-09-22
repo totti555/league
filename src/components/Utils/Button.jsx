@@ -17,7 +17,7 @@ const Button = ({ name, click }) => {
                 <div className="content">
 
                     <div className="button" onClick={() => click()}>
-                        {name}
+                        <span className="title">{name}</span>
                         <span>
                             <svg>
                                 <use xlinkHref="#arrow" href="#arrow"></use>

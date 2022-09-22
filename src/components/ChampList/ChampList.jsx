@@ -141,14 +141,14 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
 
     return (
         <div>
-            <div className="box-shadow p-0 d-flex justify-content-between position-relative ">
-                <h1 className="champ-title align-self-center mb-0 ms-2"><span className="title">CHAMPIONS</span></h1>
+            <div className="box-shadow p-0 d-flex justify-content-between position-relative champ-list bg-black ">
+                <h1 className="champ-title align-self-center mb-0 ms-2"><span className="title">CHAMP</span><span className="title hide-title">IONS</span></h1>
                 <div className='d-flex justify-content-center button-champ-list my-0'>
 
                     <hr className="vertical-hr"></hr>
 
                     <div className="d-flex justify-content-start ">
-                        <p className="align-self-center text-white mb-0 title">NAME :</p>
+                        <p className="align-self-center text-white mb-0 title">NAME</p>
                         <div className="d-flex flex-column">
                             <button onClick={fetchByNameAscending}>
                                 <img alt='increase-name' className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
@@ -163,7 +163,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                     <hr className="vertical-hr"></hr>
 
                     <div className="d-flex justify-content-start ">
-                        <p className="align-self-center text-white mb-0 title">DATE :</p>
+                        <p className="align-self-center text-white mb-0 title">DATE</p>
                         <div className="d-flex flex-column">
                             <button onClick={fetchByDateAscending}>
                                 <img alt='increase-date' className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} width='40px' ></img>
@@ -182,7 +182,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                     <ChampionNumberFound champNumber={champ.length} />
                 </div>
             </div>
-            <br />
+
             <div className="container">
                 <div className="row champ-content">
                     {champ.map((champ) =>

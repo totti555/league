@@ -230,15 +230,14 @@ CORE STYLES
 .button-filter {
     width: 11.25rem;
     height: 2.813rem;
-    font-family: 'Roboto', sans-serif;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
+    font-style: italic;
     font-weight: 500;
     color: white;
-    background-color: black;
-    border: 1px solid white;
-    border-radius: 8px;
+    background-color: rgb(22, 21, 21);
+    border: 1px solid #ECB823;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
     transition: all 0.3s ease 0s;
     cursor: pointer;
@@ -248,8 +247,8 @@ CORE STYLES
 $transition-time: 750ms;
 
 .button-filter:hover {
-    background-color: #ECB823;
-    box-shadow: 0px 15px 20px rgba(218, 172, 23, 0.4);
+    background-color: rgba(218, 172, 23, 0.4);
+    box-shadow: 0px 15px 20px rgba(236, 184, 35, 0.4);
     color: #fff;
     transform: translateY(-7px);
 }

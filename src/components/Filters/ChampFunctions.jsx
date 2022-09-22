@@ -73,7 +73,7 @@ const ChampFunctions = ({ checked, setChecked, champFunctions }) => {
 
             <div className='d-flex justify-content-center delete-button'>
                 <div className="wrap">
-                    <button className="button-filter" onClick={() => handleDeleteChampFunction()}>Delete Functions <span className='cross'>❌</span></button>
+                    <button className="button-filter" onClick={() => handleDeleteChampFunction()}><span className='title'>Delete Functions</span> <span className='cross'>❌</span></button>
                 </div>
             </div>
         </div>

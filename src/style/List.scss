@@ -127,7 +127,7 @@ hr {
     top: 6.063rem;
     bottom: 0;
     right: 0;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 
 }
 
@@ -227,12 +227,12 @@ hr {
 @media (min-width: 0px) and (max-width : 512px) {
     .col-custom-filter {
         //This should work for Normal desktops(15 to 18 inch) only.
-        min-width: 33.33333% !important;
+        min-width: 25% !important;
     }
 
     .col-custom-champion {
         //This should work for Normal desktops(15 to 18 inch) only.
-        width: 67.66666% !important;
+        width: 75% !important;
     }
 
     .content-list {
@@ -253,5 +253,9 @@ hr {
         width: 80% !important;
         font-size: 10px !important;
         letter-spacing: 1px !important;
+    }
+
+    .filters-list-type {
+        margin-left: 10px;
     }
 }
