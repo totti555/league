@@ -104,7 +104,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             * ? text-white class useless ?
         */
         <>
-            {champ.name && <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${location == 'Look' ? champ.image : champCardImg})`, backgroundSize: "cover" }}>
+            {champ.name && <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${location.pathname == '/list' ? champ.image : champCardImg})`, backgroundSize: "cover" }}>
                 {displayAttributes ? (
                     <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
                 ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}
