@@ -10,10 +10,10 @@ import Cross from "../../assets/Links/Cross.png"
 import Mentor from "../../assets/Links/Mentor.png"
 import { useState } from 'react'
 import { champList } from "../../datas/lolChamp";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link, useNavigate, useLocation } from "react-router-dom";
 
 
-const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName }) => {
+const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName, champCardImg }) => {
 
     /**
         * *component to display the champion's cards
@@ -28,6 +28,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
     */
 
     const [displayAttributes, handleClickAttributes] = useState(false);
+    const location = useLocation();
 
     /**
        * *to display/hide the champion links when clicking on the links button
@@ -103,7 +104,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             * ? text-white class useless ?
         */
         <>
-            {champ.name && <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${champ.image})`, backgroundSize: "cover" }}>
+            {champ.name && <div className='champ-card text-white' onClick={() => setCurrentChamp(champ.name)} style={{ backgroundImage: `url(${location == 'Look' ? champ.image : champCardImg})`, backgroundSize: "cover" }}>
                 {displayAttributes ? (
                     <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow bottom" width="30px" height="30px"></img>
                 ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayAttributes(champ.name)} src={FlecheBas} alt="Arrow top" width="30px" height="30px"></img>}

@@ -46,6 +46,7 @@ const AboutChamp = () => {
     const [championsSpells, setChampionSpells] = useState([]);
     const [spellDatas, setSpellDatas] = useState([]);
     const [backgroundImg, setBackgroundImg] = useState('');
+    const [champCardImg, setChampCardImg] = useState('');
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -108,7 +109,7 @@ const AboutChamp = () => {
         axios.get(`http://localhost:8080/getAllChampInfos/${name}`, { mode: 'cors' })
             .then(function (response) {
                 // handle success
-                console.log('backend', response);
+                console.log('backend', response.data);
                 setChampionDetails(response.data);
             })
             .catch(function (error) {
@@ -249,11 +250,11 @@ const AboutChamp = () => {
                                 }
                                 <div className="col-xl-5 col-md-5 col-sm-5 col-vsm align-self-between">
                                     <div className="p-3">
-                                        <ChampSearch setChampion={setChampion} />
+                                        <ChampSearch setChampion={setChampion} champCardImg={champCardImg} />
                                         <br />
                                         <div className="d-flex justify-content-center position-relative">
                                             <div className="card-content">
-                                                {champCard && <ChampCard champ={champCard} />}
+                                                {champCard && <ChampCard champ={champCard} champCardImg={champCardImg} />}
                                             </div>
                                             <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
                                                 <div className="gradient-champ-card"></div>
@@ -267,7 +268,7 @@ const AboutChamp = () => {
                                         </div>
                                     </div>
                                     <div className="position-relative about-skins">
-                                        <ChampSkins champion={champion} setBackgroundImg={setBackgroundImg} />
+                                        {championDetails.id && <ChampSkins champion={championDetails} setBackgroundImg={setBackgroundImg} setChampCardImg={setChampCardImg} />}
                                     </div>
                                     <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
                                         <ChampStats champion={champion} itemsBuff={itemsBuff} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />

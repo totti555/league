@@ -10,6 +10,7 @@ const ChampSkins = (props) => {
 
     const champion = props.champion;
     const setBackgroundImg = props.setBackgroundImg;
+    const setChampCardImg = props.setChampCardImg;
     const [skinImages, setSkinImages] = useState([]);
     const location = useLocation();
 
@@ -26,17 +27,20 @@ const ChampSkins = (props) => {
     const getSkinsImages = () => {
         let i;
         let images = [];
-        const skinsNumImg = champion.skins.filter((spell) => spell.num && spell.num !== 0);
+        const skinsNumImg = champion.skins.filter((spell) => spell.name !== 'Original');
+        console.log(skinsNumImg);
 
         for (i = 0; i < skinsNumImg.length; i++) {
             const param = {
-                original: `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skinsNumImg[i].num}.jpg`,
-                thumbnail: `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skinsNumImg[i].num}.jpg`,
+                original: skinsNumImg[i].splashPath,
+                thumbnail: skinsNumImg[i].splashPath,
+                param: skinsNumImg[i].loadScreenPath,
                 description: skinsNumImg[i].name,
             }
             images.push(param);
         }
-        setBackgroundImg(images[0].original)
+        setBackgroundImg(images[0].original);
+
         setSkinImages(images);
     }
 
@@ -44,7 +48,10 @@ const ChampSkins = (props) => {
     const renderCustomControls = () => {
         if (refImg.current) {
             const index = refImg.current.getCurrentIndex();
-            skinImages[index] && setBackgroundImg(skinImages[index].original)
+            if (skinImages[index]) {
+                setBackgroundImg(skinImages[index].original);
+                setChampCardImg(skinImages[index].param);
+            }
         }
     }
 
