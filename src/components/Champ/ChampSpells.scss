@@ -95,6 +95,15 @@
             right: 15%;
             opacity: 0.1;
         }
+
+        .gradient-video {
+            position: absolute;
+            right: -1px;
+            left: 0;
+            bottom: 0;
+            height: 30%;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 90%);
+        }
     }
 
 

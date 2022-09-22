@@ -117,6 +117,7 @@ const ChampSpells = (props) => {
                                         <source src={`https:d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
                                     </video>
                                     <img className='video-letter' src={require(`../../assets/Spells/${letter.toLowerCase()}.png`)} alt='letter' width='98px'></img>
+                                    <div className='gradient-video'></div>
                                 </div>
                             </div>
                         </div>

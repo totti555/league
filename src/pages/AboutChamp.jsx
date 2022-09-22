@@ -196,7 +196,7 @@ const AboutChamp = () => {
                                     */
 
                                 }
-                                <div className="col-xl-8 col-md-8 col-sm-7 col-vsm p-3 position-relative about-spells">
+                                <div className="col-xl-7 col-md-7 col-sm-7 col-vsm p-3 position-relative about-spells">
                                     {/* <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} /> */}
                                     <ChampSpells champion={champion} championCard={champCard} championsSpells={championsSpells} spellDatas={spellDatas} />
                                 </div>
@@ -208,7 +208,7 @@ const AboutChamp = () => {
                                         * TODO : Component + SCSS
                                     */
                                 }
-                                <div className="col-xl-4 col-md-4 col-sm-5 col-vsm align-self-between">
+                                <div className="col-xl-5 col-md-5 col-sm-5 col-vsm align-self-between">
                                     <div className="p-3">
                                         <ChampSearch setChampion={setChampion} />
                                         <div className="d-flex justify-content-center">
