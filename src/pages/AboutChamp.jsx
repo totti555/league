@@ -211,8 +211,14 @@ const AboutChamp = () => {
                                 <div className="col-xl-5 col-md-5 col-sm-5 col-vsm align-self-between">
                                     <div className="p-3">
                                         <ChampSearch setChampion={setChampion} />
-                                        <div className="d-flex justify-content-center">
-                                            {champCard && <ChampCard champ={champCard} />}
+                                        <br />
+                                        <div className="d-flex justify-content-center position-relative">
+                                            <div className="card-content">
+                                                {champCard && <ChampCard champ={champCard} />}
+                                            </div>
+                                            <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
+                                                <div className="gradient-champ-card"></div>
+                                            </div>
                                             {
                                                 /**
                                                     * *Champ Stats div

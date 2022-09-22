@@ -90,7 +90,7 @@ const ChampStuff = (props) => {
     return (
         <div className='champ-stuff'>
             <div className='d-flex justify-content-center'>
-                <div className='champ-content p-2'>
+                <div className='champ-stuff-content p-2'>
                     <h2 className='title'>STUFF :</h2>
                     <div className='d-flex justify-content-between stuff-content py-2 my-2'>
 

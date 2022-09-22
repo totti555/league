@@ -11,6 +11,40 @@
         font-size: 40px !important;
         margin: 0px !important;
     }
+
+    .champ-card {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+}
+
+.background-champ-card {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    width: auto;
+    height: 30rem;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    width: 100%;
+}
+
+.gradient-champ-card {
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 1) 100%)
+}
+
+.card-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
 }
 
 .champ-header {
@@ -21,7 +55,7 @@
     // right: 0px;
     // left: 0px;
     // z-index: 5;
-    padding-top: 450px !important;
+    padding-top: 500px !important;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0, 1) 90%);
 
     p {
