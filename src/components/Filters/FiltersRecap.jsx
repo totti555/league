@@ -70,74 +70,78 @@ const FiltersRecap = ({ checkedRole, checkedType, checkedWorld, setCheckedRole, 
     return (
         <div>
             <div className='d-flex justify-content-center'>
-                <div className='d-flex justify-content-between px-1'>
+                <div>
+                    <p className="text-white">RESET FILTERS</p>
+                    <div className='d-flex flex-wrap justify-content-center px-1'>
+
+                        {
+                            /**
+                                * *Display badge(s) for the world(s) selected
+                                * @param checkedWorld
+                            */
+                        }
+
+                        {checkedWorld.length ? (
+                            <div>
+                                {checkedWorld.map((t) =>
+                                    (<Badge name={t} handleClose={handleCloseWorld} key={t}></Badge>)
+                                )}
+
+
+                            </div>)
+                            : null}
+
+                        {
+                            /**
+                                * *Display badge(s) for the type(s) selected
+                                * @param checkedType
+                            */
+                        }
+
+                        {checkedType.length ? (
+                            <div>
+                                {checkedType.map((t) =>
+                                    (<Badge name={t} handleClose={handleCloseType} key={t}></Badge>)
+                                )}
+
+
+                            </div>)
+                            : null}
+
+                        {
+                            /**
+                                * *Display badge(s) for the role(s) selected
+                                * @param checkedRole
+                            */
+                        }
+
+                        {checkedRole.length ? (
+                            <div>
+                                {checkedRole.map((t) =>
+                                    (<Badge name={t} handleClose={handleCloseRole} key={t}></Badge>)
+                                )}
+
+                            </div>)
+                            : null}
+
+                    </div>
+
 
                     {
                         /**
-                            * *Display badge(s) for the world(s) selected
-                            * @param checkedWorld
-                        */
+                           * *Button for reset all the selected filters
+                           * @param checkedRole
+                       */
                     }
 
-                    {checkedWorld.length ? (
-                        <div>
-                            {checkedWorld.map((t) =>
-                                (<Badge name={t} handleClose={handleCloseWorld} key={t}></Badge>)
-                            )}
-
-
-                        </div>)
-                        : null}
-
-                    {
-                        /**
-                            * *Display badge(s) for the type(s) selected
-                            * @param checkedType
-                        */
-                    }
-
-                    {checkedType.length ? (
-                        <div>
-                            {checkedType.map((t) =>
-                                (<Badge name={t} handleClose={handleCloseType} key={t}></Badge>)
-                            )}
-
-
-                        </div>)
-                        : null}
-
-                    {
-                        /**
-                            * *Display badge(s) for the role(s) selected
-                            * @param checkedRole
-                        */
-                    }
-
-                    {checkedRole.length ? (
-                        <div>
-                            {checkedRole.map((t) =>
-                                (<Badge name={t} handleClose={handleCloseRole} key={t}></Badge>)
-                            )}
-
-                        </div>)
-                        : null}
-
+                    <div className='d-flex justify-content-center delete-button'>
+                        <div className="wrap">
+                            <button className="button-filter" onClick={() => resetFilters()}><span className='title'>Reset</span><span className='cross'>❌</span></button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-
-            {
-                /**
-                   * *Button for reset all the selected filters
-                   * @param checkedRole
-               */
-            }
-
-            <div className='d-flex justify-content-center delete-button'>
-                <div className="wrap">
-                    <button className="button-filter" onClick={() => resetFilters()}>Reset Filters <span className='cross'>❌</span></button>
-                </div>
-            </div>
-
         </div>
 
     )

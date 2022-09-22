@@ -225,16 +225,21 @@ const List = (props) => {
                                 * *Display FiltersRecap with animation
                             */
                         }
-                        <DisplayFilters displayFilters={canDisplayTags} canDisplay={displayTags} name={'Current filters'} />
-                        {displayTags && (
-                            <FiltersRecap
-                                checkedRole={checkedRole}
-                                setCheckedRole={setCheckedRole} checkedType={checkedType}
-                                setCheckedType={setCheckedType} checkedWorld={checkedWorld}
-                                setCheckedWorld={setCheckedWorld} setChampName={setChampName}
-                            />)}
+                        {/* <DisplayFilters displayFilters={canDisplayTags} canDisplay={displayTags} name={'Current filters'} /> */}
+                        {/* {displayTags && ( */}
+                        {(checkedRole.length || checkedType.length || checkedWorld.length) ?
+                            <>
+                                <FiltersRecap
+                                    checkedRole={checkedRole}
+                                    setCheckedRole={setCheckedRole} checkedType={checkedType}
+                                    setCheckedType={setCheckedType} checkedWorld={checkedWorld}
+                                    setCheckedWorld={setCheckedWorld} setChampName={setChampName}
+                                />
+                                <hr />
+                            </>
+                            : null
+                        }
 
-                        <hr />
 
                         {
                             /**
