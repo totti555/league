@@ -32,6 +32,7 @@ import ChampSkins from "../components/Champ/ChampSkins";
 const AboutChamp = () => {
 
     const [champion, setChampion] = useState([]);
+    const [championDetails, setChampionDetails] = useState([]);
     const [selectedItem, setSelectedItem] = useState([]);
     const [selectedStuff, setStuff] = useState([]);
     const [itemsBuff, setItemsBuff] = useState([]);
@@ -86,7 +87,7 @@ const AboutChamp = () => {
 
 
 
-        axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${name}.json?api_key=${api_key}`)
+        axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${name}.json`)
             .then(function (response) {
                 // handle success
                 const obj = response.data.data
@@ -102,6 +103,20 @@ const AboutChamp = () => {
             .then(function () {
                 // always executed
 
+            });
+
+        axios.get(`http://localhost:8080/getAllChampInfos/${name}`, { mode: 'cors' })
+            .then(function (response) {
+                // handle success
+                console.log('backend', response);
+                setChampionDetails(response.data);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
             });
 
 
@@ -124,6 +139,30 @@ const AboutChamp = () => {
                 // always executed
 
             });
+
+        // axios.get(`http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json?api_key=${api_key}`)
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log('MERAKIANA', response);
+
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .then(function () {
+        //         // always executed
+
+        //     });
+
+        // axios.get(`http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json`, { headers: { Authorization: api_key } })
+        //     .then(response => {
+        //         // If request is good...
+        //         console.log('MERAKIANA', response);
+        //     })
+        //     .catch((error) => {
+        //         console.log('error ' + error);
+        //     });
 
 
         // axios.get(`https://raw.communitydragon.org/12.2/game/data/characters/${champName.toLowerCase()}/${champName.toLowerCase()}.bin.json`)
