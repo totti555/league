@@ -120,6 +120,27 @@
     display: flex;
     background-color: black;
     // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgb(23, 32, 42, 0.8));
+
+    .champ-lore {
+        font-size: 12px;
+        color: grey;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .champ-prices {
+        width: 300px;
+        margin: auto;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
+
+    .champ-real-name {
+        letter-spacing: 3px;
+        font-style: italic;
+        text-align: center;
+
+    }
 }
 
 
@@ -275,7 +296,18 @@
 @media (min-width: 0px) and (max-width : 350px) {
     .about-content {
         top: 3rem;
+
+        .champ-card {
+            width: 12rem;
+            height: 20rem;
+        }
+
+        .champ-prices {
+            width: 250px !important;
+            letter-spacing: 1px;
+        }
     }
+
 }
 
 @media (min-width: 350px) and (max-width : 600px) {

@@ -15,6 +15,10 @@ import Stats from '../assets/Common/epees-croisees.png';
 import Footer from "../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import ChampSkins from "../components/Champ/ChampSkins";
+import BlueEssence from '../assets/Common/blue-essence.png';
+import Rp from '../assets/Common/rp.png';
+import Calendar from '../assets/Common/calendar.png';
+
 
 
 
@@ -252,19 +256,37 @@ const AboutChamp = () => {
                                     <div className="p-3">
                                         <ChampSearch setChampion={setChampion} champCardImg={champCardImg} />
                                         <br />
-                                        <div className="d-flex justify-content-center position-relative">
-                                            <div className="card-content">
-                                                {champCard && <ChampCard champ={champCard} champCardImg={champCardImg} />}
+                                        <div>
+                                            <div className=" d-flex position-relative">
+                                                <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
+                                                    <div className="gradient-champ-card"></div>
+                                                </div>
+                                                {championDetails.id &&
+                                                    <div className="card-content d-flex flex-column">
+                                                        {champCard &&
+                                                            <div className="d-flex justify-content-center"><ChampCard champ={champCard} champCardImg={champCardImg} />
+                                                            </div>}
+
+                                                        <div className="d-flex justify-content-between champ-prices">
+                                                            <p>{championDetails.price.blueEssence} <span><img alt='blue-essence' src={BlueEssence} width='15px'></img></span></p>
+                                                            <p>{championDetails.price.rp} <span><img alt='rp' src={Rp} width='20px'></img></span></p>
+                                                            <p>{championDetails.releaseDate} <span><img alt='date' src={Calendar} className='about-icon-gold' width='20px'></img></span></p>
+                                                        </div>
+
+                                                        <div>
+                                                            <p className="champ-real-name m-0">{championDetails.fullName}</p>
+                                                            <p className="champ-lore m-0">{championDetails.lore}</p>
+                                                        </div>
+                                                    </div>}
+
+
+                                                {
+                                                    /**
+                                                        * *Champ Stats div
+                                                        * TODO : SCSS
+                                                    */
+                                                }
                                             </div>
-                                            <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
-                                                <div className="gradient-champ-card"></div>
-                                            </div>
-                                            {
-                                                /**
-                                                    * *Champ Stats div
-                                                    * TODO : SCSS
-                                                */
-                                            }
                                         </div>
                                     </div>
                                     <div className="position-relative about-skins">
