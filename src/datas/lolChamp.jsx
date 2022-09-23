@@ -1576,7 +1576,7 @@ export const champList = [
         image: Swain,
         type: ["Mage", 'Fighter'],
         release: '2010-10-05',
-        linksWith: { Darius: 'Allie', Katarina: 'Allie', Talon: 'Allie', Gangplank: 'Ennemy', Leblanc: 'Ennemy', Irelia: 'Ennemy', Urgot: 'Ennemy' }
+        linksWith: [{ Darius: 'Allie', Katarina: 'Allie', Talon: 'Allie', Gangplank: 'Ennemy', Leblanc: 'Ennemy', Irelia: 'Ennemy', Urgot: 'Ennemy' }]
     },
     {
         name: 'Sylas',
@@ -1783,7 +1783,7 @@ export const champList = [
         id: 138,
         key: 45,
         damages_type: 'AP',
-        role: ['Mid', "ADC", 'Supp'],
+        role: ['Mid', "ADC", 'Support'],
         image: Veigar,
         type: ["Mage"],
         release: '2009-07-24',

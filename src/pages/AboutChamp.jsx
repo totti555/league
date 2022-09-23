@@ -274,7 +274,7 @@ const AboutChamp = () => {
                                                         </div>
 
                                                         <div>
-                                                            <p className="champ-real-name m-0">{championDetails.fullName}</p>
+                                                            <p className="champ-real-name m-0">{championDetails.fullName ? championDetails.fullName : championDetails.name}</p>
                                                             <p className="champ-lore m-0">{championDetails.lore}</p>
                                                         </div>
                                                     </div>}
