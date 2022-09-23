@@ -56,6 +56,7 @@ const ChampSearch = (props) => {
         // }
         // else name = champ.name;
         navigate(`/about_champ/${champ.name}`, { state: { key: champ.key, name: champ.name } });
+        navigate(0);
 
         setSearchChamp('');
     }
