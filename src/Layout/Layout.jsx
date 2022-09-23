@@ -82,7 +82,7 @@ function Layout({ children }) {
             <hr className="mt-0" />
             <a href="/">HOME</a>
             <hr />
-            <a href="/about_champ">ABOUT US</a>
+            <a href="/about_champ/Kaisa">ABOUT US</a>
             <hr />
             <a href="/list">LOOK</a>
             <hr />
