@@ -122,7 +122,7 @@ const ChampSearch = (props) => {
     return (
         <div className="champ-input">
 
-            <div >
+            <div className="my-2" >
                 <h2 className="title">RESEARCH :</h2>
             </div>
 

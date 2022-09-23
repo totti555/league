@@ -3,7 +3,8 @@
     -webkit-background-clip: padding-box;
     /* for Safari */
     background-clip: padding-box;
-    position: absolute;
+    // absolute better but dont work, go under the background 
+    position: relative;
     max-height: 200px;
     overflow-y: auto;
     z-index: 10;

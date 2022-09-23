@@ -256,7 +256,7 @@ const AboutChamp = () => {
                                     <div className="p-3">
                                         <ChampSearch setChampion={setChampion} champCardImg={champCardImg} />
                                         <br />
-                                        <div>
+                                        <>
                                             <div className=" d-flex position-relative">
                                                 <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
                                                     <div className="gradient-champ-card"></div>
@@ -287,7 +287,7 @@ const AboutChamp = () => {
                                                     */
                                                 }
                                             </div>
-                                        </div>
+                                        </>
                                     </div>
                                     <div className="position-relative about-skins">
                                         {championDetails.id && <ChampSkins champion={championDetails} setBackgroundImg={setBackgroundImg} setChampCardImg={setChampCardImg} />}
