@@ -41,6 +41,9 @@
 
 .card-content {
     position: relative;
+    animation-name: display-spells;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
     top: 0;
     left: 0;
     right: 0;
@@ -141,6 +144,12 @@
         text-align: center;
 
     }
+}
+
+.about-skins {
+    animation-name: display-spells;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
 }
 
 

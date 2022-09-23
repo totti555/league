@@ -54,6 +54,9 @@
 
 .champ-input {
     position: relative;
+    animation-name: display-spells;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
 
     // input {
     //     background-color: rgba(35, 38, 97, 0.8);

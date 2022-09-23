@@ -31,15 +31,14 @@
     /* for Safari */
     background-clip: padding-box;
 
-    animation-name: mounted-spells;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-
     .spell-header {
         border: 1px solid rgba(255, 255, 255, 0.1);
         -webkit-background-clip: padding-box;
         /* for Safari */
         background-clip: padding-box;
+        animation-name: display-spells;
+        animation-duration: 6s;
+        animation-fill-mode: forwards;
 
         .passive-spell {
             float: left;
@@ -91,6 +90,9 @@
         width: 90%;
         // position: relative;
         margin: auto;
+        animation-name: display-spells;
+        animation-duration: 8s;
+        animation-fill-mode: forwards;
 
         .video-letter {
             position: absolute;
@@ -420,12 +422,15 @@ $goldwhite: -webkit-linear-gradient(0.5turn, $gold, white);
     height: 64px;
 }
 
-@keyframes mounted-spells {
+.animation-spells-title {
+    animation-name: display-spells;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes display-spells {
     0% {
         opacity: 0;
-        transition: 500ms linear;
-
-        // line-height: 0.2px;
     }
 
     10% {
@@ -434,12 +439,6 @@ $goldwhite: -webkit-linear-gradient(0.5turn, $gold, white);
 
 
     100% {
-        /* left: 0px; */
-        // margin-left: 0px;
         opacity: 1;
-
-
-
-        // line-height: 1rem;
     }
 }

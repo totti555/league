@@ -72,7 +72,7 @@ const ChampSpells = (props) => {
 
                 {(champion && championCard) && (<div className='background-spells content ps-3 pe-3 '>
                     <div className='pt-3'>
-                        <h2 className="title">SPELLS :</h2>
+                        <h2 className="title animation-spells-title">SPELLS :</h2>
                     </div>
 
                     <div className='d-flex justify-content-center spell-header'>

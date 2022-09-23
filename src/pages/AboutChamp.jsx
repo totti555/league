@@ -268,9 +268,9 @@ const AboutChamp = () => {
                                                             </div>}
 
                                                         <div className="d-flex justify-content-between champ-prices">
-                                                            <p>{championDetails.price.blueEssence} <span><img alt='blue-essence' src={BlueEssence} width='15px'></img></span></p>
-                                                            <p>{championDetails.price.rp} <span><img alt='rp' src={Rp} width='20px'></img></span></p>
-                                                            <p>{championDetails.releaseDate} <span><img alt='date' src={Calendar} className='about-icon-gold' width='20px'></img></span></p>
+                                                            <p>{championDetails.price.blueEssence} <span><img alt='blue-essence' title={`${championDetails.price.blueEssence} Blue essence`} src={BlueEssence} width='15px'></img></span></p>
+                                                            <p>{championDetails.price.rp} <span><img alt='rp' title={`${championDetails.price.rp} RP`} src={Rp} width='20px'></img></span></p>
+                                                            <p>{championDetails.releaseDate} <span><img alt='date' title='Release date' src={Calendar} className='about-icon-gold' width='20px'></img></span></p>
                                                         </div>
 
                                                         <div>
