@@ -487,9 +487,11 @@ html {
 
 
 @media (min-width: 0px) and (max-width : 355px) {
-    .champ-card {
-        width: 12rem;
-        height: 20rem;
+    .champ-content {
+        .champ-card {
+            width: 12rem;
+            height: 20rem;
+        }
     }
 
     .champ-list {

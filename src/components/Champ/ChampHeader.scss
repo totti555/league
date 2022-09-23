@@ -1,0 +1,71 @@
+.champ-header {
+    h1 {
+        font-size: 58px;
+    }
+}
+
+.animation-champ-square {
+    animation-name: display-header-title;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.animation-champ-title {
+    animation-name: display-header;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+
+.animation-entity-1 {
+    animation-name: display-header;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.animation-entity-2 {
+    animation-name: display-header;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.animation-entity-3 {
+    animation-name: display-header;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes display-header {
+    0% {
+        opacity: 0;
+        // margin-left: -100px;
+
+    }
+
+    20% {
+        opacity: 0;
+        // margin-left: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        // margin-left: 0px;
+    }
+}
+
+@keyframes display-header-title {
+    0% {
+        opacity: 0;
+
+    }
+
+    20% {
+        opacity: 0;
+        margin-left: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
