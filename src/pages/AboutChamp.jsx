@@ -67,7 +67,7 @@ const AboutChamp = () => {
     let navigate = useNavigate();
 
     const champDetails = () => {
-        const findChampKey = champList.find((champ) => champName === champ.name);
+        const findChampKey = champList.find((champ) => champName.toLowerCase() === champ.name.toLowerCase());
         console.log("findChampKey", findChampKey);
         if (findChampKey)
             setCurrentChampLinks(findChampKey.linksWith);

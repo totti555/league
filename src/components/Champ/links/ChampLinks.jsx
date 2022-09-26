@@ -177,10 +177,11 @@ const ChampLinks = (props) => {
                                     * Syntax should be improve
                                     */
                                 }
-                                {currentChampLinks.length && <div>
-                                    <p className="small links-value hide-links-value" id={`links${index}`}>{currentChampLinks[0][champ.name]}</p>
-                                    <p className=" links-value mb-0" id={`updatedlinks${index}`}>{currentChampLinks[0][champ.name]}</p>
-                                </div>}
+                                {currentChampLinks.length &&
+                                    <div>
+                                        <p className="small links-value hide-links-value" id={`links${index}`}>{currentChampLinks[0][champ.name]}</p>
+                                        <p className=" links-value mb-0" id={`updatedlinks${index}`}>{currentChampLinks[0][champ.name]}</p>
+                                    </div>}
                             </div>
 
                         )}
