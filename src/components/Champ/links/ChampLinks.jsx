@@ -17,6 +17,7 @@ const ChampLinks = (props) => {
     const champCard = props.champCard;
     const currentChampLinks = props.currentChampLinks;
     const topRef = props.topRef;
+    const [championsList, setChampList] = useState(champList);
 
     const navigate = useNavigate();
 
@@ -147,6 +148,7 @@ const ChampLinks = (props) => {
 
     const exceptionalName = (name) => {
         if (name === 'KaiSa') return name = 'Kaisa'
+        else if (name === 'ChoGath') return name = 'Chogath'
         else return name;
     }
 
@@ -188,6 +190,26 @@ const ChampLinks = (props) => {
                         {!currentChampLinks && <p className="no-links"><span className="me-3"><img src={Angry} alt='angry' width='128px'></img></span>Ce champion n'a pas de liens directs avec d'autres champion !</p>}
                     </div>
                 </div>
+                {championsList.length &&
+                    <div>
+                        <h3 className="title">REGION :</h3>
+                        <div className="d-flex flex-wrap">
+                            {championsList.map((champ) =>
+                                <div>
+
+                                    {
+                                        champ.world === champCard.world &&
+                                        <div>
+                                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${exceptionalName(champ.name)}.png`} width='64px' className="mx-2 position-relative img-links"></img>
+                                        </div>
+                                    }
+                                </div>
+
+
+                            )}
+                        </div>
+                    </div>
+                }
             </div>
             <p className="sig">{champion.name}</p>
 
