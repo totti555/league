@@ -13,7 +13,7 @@ const ChampHeader = (props) => {
             <div>
                 <div className="d-flex flex-column text-center animation-champ-title mb-3">
                     <h1 className="title">{champion.name.toUpperCase()}</h1>
-                    <h2>{champion.title}</h2>
+                    <h2 className="champ-subtitle">{champion.title}</h2>
                 </div>
                 <div className="d-flex justify-content-center mx-2  ">
                     <div className="position-relative me-4 align-self-center animation-champ-square">
