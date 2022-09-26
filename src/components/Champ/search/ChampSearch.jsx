@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from "react"
-import { champList } from "../../datas/lolChamp.jsx";
+import { champList } from "../../../datas/lolChamp.jsx";
 import './ChampSearch.scss'
 import { useNavigate } from "react-router-dom";
-import Search from "../../assets/Common/search.svg"
+import Search from "../../../assets/Common/search.svg"
 
 const ChampSearch = (props) => {
 

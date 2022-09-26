@@ -1,7 +1,7 @@
-import Luden from '../../assets/Common/luden.jpg';
-import Family from '../../assets/Common/family-menu.png';
-import Search from "../../assets/Common/search.svg";
-import FlecheBas from "../../assets/Common/fleche-bas.png"
+import Luden from '../../../assets/Common/luden.jpg';
+import Family from '../../../assets/Common/family-menu.png';
+import Search from "../../../assets/Common/search.svg";
+import FlecheBas from "../../../assets/Common/fleche-bas.png"
 import { useState } from 'react';
 import './ChampSideBar.scss';
 

@@ -1,18 +1,18 @@
 import './ChampSpells.scss'
-import Q from '../../assets/Spells/q.png'
-import W from '../../assets/Spells/w.png'
-import E from '../../assets/Spells/e.png'
-import R from '../../assets/Spells/r.png'
-import P from '../../assets/Spells/p.png'
+import Q from '../../../assets/Spells/q.png'
+import W from '../../../assets/Spells/w.png'
+import E from '../../../assets/Spells/e.png'
+import R from '../../../assets/Spells/r.png'
+import P from '../../../assets/Spells/p.png'
 import { useEffect, useState } from 'react'
-import MoveSpeed from '../../assets/Stats/Movement_speed.png'
-import AttackDamage from '../../assets/Stats/Attack_damage.png'
-import Armor from '../../assets/Stats/Armor.png'
-import AbilityHaste from '../../assets/Stats/AbilityHaste.png'
-import AttackSpeed from '../../assets/Stats/AttackSpeed.png'
-import Health from '../../assets/Stats/Health.png'
-import Power from '../../assets/Stats/Power.png'
-import Resistance from '../../assets/Stats/Resistance.png'
+import MoveSpeed from '../../../assets/Stats/Movement_speed.png'
+import AttackDamage from '../../../assets/Stats/Attack_damage.png'
+import Armor from '../../../assets/Stats/Armor.png'
+import AbilityHaste from '../../../assets/Stats/AbilityHaste.png'
+import AttackSpeed from '../../../assets/Stats/AttackSpeed.png'
+import Health from '../../../assets/Stats/Health.png'
+import Power from '../../../assets/Stats/Power.png'
+import Resistance from '../../../assets/Stats/Resistance.png'
 
 
 
@@ -116,7 +116,7 @@ const ChampSpells = (props) => {
                                     <video autoPlay muted loop className='video' id='video'>
                                         <source src={`https:d28xe8vt774jo5.cloudfront.net/champion-abilities/${formattedKey}/ability_${formattedKey}_${letter}1.webm`} type="video/webm"></source>
                                     </video>
-                                    <img className='video-letter' src={require(`../../assets/Spells/${letter.toLowerCase()}.png`)} alt='letter' width='98px'></img>
+                                    <img className='video-letter' src={require(`../../../assets/Spells/${letter.toLowerCase()}.png`)} alt='letter' width='98px'></img>
                                     <div className='gradient-video'></div>
                                 </div>
                             </div>

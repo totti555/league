@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import './ChampSkins.scss';
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import Rp from '../../assets/Common/rp.png';
-import MythicEssence from '../../assets/Common/mythic-essence.png';
-import Calendar from '../../assets/Common/calendar.png';
+import Rp from '../../../assets/Common/rp.png';
+import MythicEssence from '../../../assets/Common/mythic-essence.png';
+import Calendar from '../../../assets/Common/calendar.png';
 
 
 
@@ -142,11 +142,11 @@ const ChampSkins = (props) => {
                                 }
                                 <p id='skin-rarity' className='mb-0  hide-skin-rarity'>
                                     {skinImages[indexSkins].params.rarity === 'NoRarity' ? 'Common' : skinImages[indexSkins].params.rarity}
-                                    <span><img src={require(`../../assets/Rarity/${skinImages[indexSkins].params.rarity}.png`)} width='20px' alt='rarity' title='Skin rarity'></img></span>
+                                    <span><img src={require(`../../../assets/Rarity/${skinImages[indexSkins].params.rarity}.png`)} width='20px' alt='rarity' title='Skin rarity'></img></span>
                                 </p>
                                 <p id='skin-rarity-updated' className='mb-0'>
                                     {skinImages[indexSkins].params.rarity === 'NoRarity' ? 'Common' : skinImages[indexSkins].params.rarity}
-                                    <span><img src={require(`../../assets/Rarity/${skinImages[indexSkins].params.rarity}.png`)} width='20px' alt='rarity' title='Common rarity'></img></span>
+                                    <span><img src={require(`../../../assets/Rarity/${skinImages[indexSkins].params.rarity}.png`)} width='20px' alt='rarity' title='Common rarity'></img></span>
                                 </p>
                                 {skinImages[indexSkins].params.release !== '0000-00-00' &&
                                     <p className='mb-0'>

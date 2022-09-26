@@ -2,23 +2,23 @@ import "../style/AboutChamp.scss";
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { champList } from "../datas/lolChamp";
-import ChampSpells from "../components/Champ/ChampSpells";
-import ChampStats from "../components/Champ/ChampStats";
-import ChampItemsList from "../components/Champ/ChampItemsList";
-import ChampItemDetails from "../components/Champ/ChampItemDetails";
-import ChampStuff from "../components/Champ/ChampStuff";
-import ChampLinks from "../components/Champ/ChampLinks";
+import ChampSpells from "../components/Champ/spells/ChampSpells";
+import ChampStats from "../components/Champ/stats/ChampStats";
+import ChampItemsList from "../components/Champ/items/ChampItemsList";
+import ChampItemDetails from "../components/Champ/items/ChampItemDetails";
+import ChampStuff from "../components/Champ/items/ChampStuff";
+import ChampLinks from "../components/Champ/links/ChampLinks";
 import ChampCard from "../components/ChampList/ChampCard";
-import ChampHeader from "../components/Champ/ChampHeader";
-import ChampSearch from "../components/Champ/ChampSearch";
+import ChampHeader from "../components/Champ/header/ChampHeader";
+import ChampSearch from "../components/Champ/search/ChampSearch";
 import Stats from '../assets/Common/epees-croisees.png';
 import Footer from "../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
-import ChampSkins from "../components/Champ/ChampSkins";
+import ChampSkins from "../components/Champ/skins/ChampSkins";
 import BlueEssence from '../assets/Common/blue-essence.png';
 import Rp from '../assets/Common/rp.png';
 import Calendar from '../assets/Common/calendar.png';
-import ChampSideBar from "../components/Champ/ChampSideBar";
+import ChampSideBar from "../components/Champ/sidebar/ChampSideBar";
 
 
 

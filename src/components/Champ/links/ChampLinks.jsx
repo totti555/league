@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { champList } from "../../datas/lolChamp";
+import { champList } from "../../../datas/lolChamp";
 import { useNavigate } from "react-router-dom";
-import Angry from '../../assets/Common/angry.png'
+import Angry from '../../../assets/Common/angry.png'
 import './ChampLinks.scss'
-import Family from "../../assets/Links/Family.png"
-import Friends from "../../assets/Links/Friends.png"
-import Allie from "../../assets/Links/Allie.png"
-import Ennemy from "../../assets/Links/Ennemy.png"
-import Lovers from "../../assets/Links/Lover.png"
-import Mentor from "../../assets/Links/Mentor.png"
+import Family from "../../../assets/Links/Family.png"
+import Friends from "../../../assets/Links/Friends.png"
+import Allie from "../../../assets/Links/Allie.png"
+import Ennemy from "../../../assets/Links/Ennemy.png"
+import Lovers from "../../../assets/Links/Lover.png"
+import Mentor from "../../../assets/Links/Mentor.png"
 
 const ChampLinks = (props) => {
     const [linksResult, setLinksResult] = useState([]);

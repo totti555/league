@@ -1,11 +1,11 @@
 import './ChampStats.scss'
 import ChampLevel from './ChampLevel';
-import Armor from '../../assets/Stats/Armor.png'
-import AbilityHaste from '../../assets/Stats/AbilityHaste.png'
-import AttackSpeed from '../../assets/Stats/AttackSpeed.png'
-import Health from '../../assets/Stats/Health.png'
-import Power from '../../assets/Stats/Power.png'
-import Resistance from '../../assets/Stats/Resistance.png'
+import Armor from '../../../assets/Stats/Armor.png'
+import AbilityHaste from '../../../assets/Stats/AbilityHaste.png'
+import AttackSpeed from '../../../assets/Stats/AttackSpeed.png'
+import Health from '../../../assets/Stats/Health.png'
+import Power from '../../../assets/Stats/Power.png'
+import Resistance from '../../../assets/Stats/Resistance.png'
 
 
 

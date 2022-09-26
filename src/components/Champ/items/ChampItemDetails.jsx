@@ -1,12 +1,12 @@
 import './ChampItemDetails.scss'
 import { useEffect } from 'react';
-import Vendor from '../../assets/Common/vendor.jpg'
-import Armor from '../../assets/Stats/Armor.png'
-import AbilityHaste from '../../assets/Stats/AbilityHaste.png'
-import AttackSpeed from '../../assets/Stats/AttackSpeed.png'
-import Health from '../../assets/Stats/Health.png'
-import Power from '../../assets/Stats/Power.png'
-import Resistance from '../../assets/Stats/Resistance.png'
+import Vendor from '../../../assets/Common/vendor.jpg'
+import Armor from '../../../assets/Stats/Armor.png'
+import AbilityHaste from '../../../assets/Stats/AbilityHaste.png'
+import AttackSpeed from '../../../assets/Stats/AttackSpeed.png'
+import Health from '../../../assets/Stats/Health.png'
+import Power from '../../../assets/Stats/Power.png'
+import Resistance from '../../../assets/Stats/Resistance.png'
 
 const ChampItemDetails = (props) => {
 
@@ -137,7 +137,7 @@ const ChampItemDetails = (props) => {
                             <h3 className='title pb-3'>{selectedItem.name}</h3>
                             <div className='item-card' style={{ cursor: 'pointer' }}>
                                 <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedItem.image.full}`}></img>
-                                <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(selectedItem)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
+                                <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(selectedItem)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px"></img>
                             </div>
                         </div>
 

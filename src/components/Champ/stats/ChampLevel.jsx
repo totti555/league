@@ -38,12 +38,12 @@ const ChampLevel = (props) => {
             {/* <p>Level {level}</p> */}
             <div className="wtf">
                 <button onClick={() => addLevel(level)} disabled={increaseLevel}>
-                    <img className="increase-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} ></img>
+                    <img className="increase-button" src={require(`../../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }} ></img>
                 </button>
             </div>
             <div className="wtf2">
                 <button onClick={() => removeLevel(level)} disabled={decreaseLevel}>
-                    <img className="decrease-button" src={require(`../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }}></img>
+                    <img className="decrease-button" src={require(`../../../assets/Common/left_arrow_hover.png`)} style={{ cursor: 'pointer' }}></img>
                 </button>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './ChampItemsList.scss'
-import Search from "../../assets/Common/search.svg"
+import Search from "../../../assets/Common/search.svg"
 
 const ChampItems = (props) => {
     const setSelectedItem = props.setSelectedItem;
@@ -119,7 +119,7 @@ const ChampItems = (props) => {
                                                     <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
                                                         {/* <p className='small'>{item.name}</p> */}
                                                         <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px" style={{ cursor: 'pointer' }}></img>
-                                                        <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
+                                                        <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
                                                     </div>
                                                 )}
 
@@ -139,7 +139,7 @@ const ChampItems = (props) => {
                                             <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
                                                 {/* <p className='small'>{item.name}</p> */}
                                                 <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px" style={{ cursor: 'pointer' }}></img>
-                                                <img src={require(`../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
+                                                <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
                                             </div>
                                         )}
                                     </div>
