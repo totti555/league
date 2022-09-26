@@ -321,6 +321,10 @@
     .about-content {
         top: 4rem;
     }
+
+    .side-bar-menu {
+        top: 4rem !important;
+    }
 }
 
 @media (min-width: 0px) and (max-width : 350px) {
@@ -338,11 +342,31 @@
         }
     }
 
+    .side-bar-menu {
+        top: 3rem !important;
+    }
+
 }
 
 @media (min-width: 350px) and (max-width : 600px) {
     .about-content {
         top: 3rem;
+    }
+
+    .side-bar-menu {
+        top: 3rem !important;
+
+        .icon-gold {
+            right: 0.5rem !important;
+        }
+
+        .menu-content {
+            img {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+        }
     }
 }
 

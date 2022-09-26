@@ -22,7 +22,6 @@ const ChampSkins = (props) => {
     const changeColor = () => {
         if (skinImages) {
             if (document.getElementById(`skin-rarity`) != null) {
-                console.log('On eest la?')
                 var text = document.getElementById('skin-rarity');
 
                 var str = text.innerHTML,
@@ -78,7 +77,6 @@ const ChampSkins = (props) => {
         let images = [];
         let imagesByReleaseDesc;
         const skinsNumImg = champion.skins.filter((spell) => spell.name !== 'Original');
-        console.log(skinsNumImg);
 
         for (i = 0; i < skinsNumImg.length; i++) {
             const param = {

@@ -1,6 +1,6 @@
 import Luden from '../../../assets/Common/luden.jpg';
 import Family from '../../../assets/Common/family-menu.png';
-import Search from "../../../assets/Common/search.svg";
+import Search from "../../../assets/Common/loupe.png";
 import FlecheBas from "../../../assets/Common/fleche-bas.png"
 import { useState } from 'react';
 import './ChampSideBar.scss';
@@ -47,13 +47,22 @@ const ChampSideBar = (props) => {
                 <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayMenu()} src={FlecheBas} title='Hide side bar' alt="Arrow top" width="30px" height="30px"></img>
             ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayMenu()} src={FlecheBas} title='Display side bar' alt="Arrow bottom" width="30px" height="30px"></img>}
             {displayMenu && <div className="d-flex flex-column menu-content">
-                <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} alt='champ-icon' title='Go to champ presentation' onClick={scrollToTop} width='48px'></img>
+
+                <div className='pe-1 ps-1'>
+                    <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} alt='champ-icon' title='Go to champ presentation' onClick={scrollToTop} width='48px'></img>
+                </div>
                 <hr />
-                <img className="luden-icon" src={Luden} onClick={scrollToItems} alt='luden-icon' title='Go to Items' width='48px'></img>
+                <div className='pe-1 ps-1'>
+                    <img className="luden-icon" src={Luden} onClick={scrollToItems} alt='luden-icon' title='Go to Items' width='48px'></img>
+                </div>
                 <hr />
-                <img className="search-icon-menu" src={Search} onClick={scrollToSearchBar} title='Search champ' alt='search-icon-menu' height='48px'></img>
+                <div className='pe-1 ps-1'>
+                    <img className="icon-menu" src={Search} onClick={scrollToSearchBar} title='Search champ' alt='search-icon-menu' width='32px'></img>
+                </div>
                 <hr />
-                <img className="family-icon" src={Family} onClick={scrollToLinks} title='Go to Links' alt='fammily-icon' height='35px' ></img>
+                <div className='pe-1 ps-1'>
+                    <img className="family-icon icon-menu" src={Family} onClick={scrollToLinks} title='Go to Links' alt='fammily-icon' height='32px' ></img>
+                </div>
                 <div class="border-bottom pb-2"></div>
             </div>}
         </div>
