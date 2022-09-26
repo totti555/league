@@ -17,44 +17,7 @@
         margin-top: 40px;
     }
 
-    .side-bar-menu {
-        position: fixed;
-        top: 6.3rem;
-        right: 0px;
-        z-index: 200;
-        padding-top: 50px;
-        text-align: center;
-        border-left: 2px solid;
-        border-image-slice: 1;
-        border-width: 1px;
-        border-image-source: linear-gradient(0.5turn, black, #ECB823 60%) !important;
-        background: rgba(0, 0, 0, 0.8);
 
-        .menu-content {
-            animation-name: display-menu;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-        }
-
-        // filter: grayscale(60%);
-
-        img {
-            cursor: pointer;
-        }
-
-        .search-icon-menu {
-            filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(344deg) brightness(104%) contrast(104%);
-        }
-
-        hr {
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .icon-gold {
-            right: 0.55rem;
-        }
-    }
 }
 
 .background-champ-card {
