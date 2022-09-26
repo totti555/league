@@ -18,6 +18,10 @@ import ChampSkins from "../components/Champ/ChampSkins";
 import BlueEssence from '../assets/Common/blue-essence.png';
 import Rp from '../assets/Common/rp.png';
 import Calendar from '../assets/Common/calendar.png';
+import Luden from '../assets/Common/luden.jpg';
+import Family from '../assets/Common/family-menu.png';
+import Search from "../assets/Common/search.svg";
+import FlecheBas from "../assets/Common/fleche-bas.png"
 
 
 
@@ -47,10 +51,41 @@ const AboutChamp = () => {
     const [decreaseLevel, setDecreaseLevel] = useState(true);
     const [currentChampLinks, setCurrentChampLinks] = useState([]);
     const topRef = useRef(null);
+    const linksRef = useRef(null);
+    const itemsRef = useRef(null);
+    const champRef = useRef(null)
+    const searchRef = useRef(null);
     const [championsSpells, setChampionSpells] = useState([]);
     const [spellDatas, setSpellDatas] = useState([]);
     const [backgroundImg, setBackgroundImg] = useState('');
     const [champCardImg, setChampCardImg] = useState('');
+    const [displayMenu, setDisplayMenu] = useState(true);
+
+    function scrollToLinks() {
+        linksRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToTop() {
+        topRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToChamp() {
+        champRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToItems() {
+        itemsRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+
+    const scrollToSearchBar = async () => {
+        searchRef.current.focus();
+        scrollToChamp();
+    }
+
+    function canDisplayMenu() {
+        setDisplayMenu(!displayMenu);
+    }
+
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -220,9 +255,23 @@ const AboutChamp = () => {
                                 <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
 
                             </div> */}
-                            <div className="about-background" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(${backgroundImg}`, backgroundSize: "cover" }} ref={topRef}>
+                            <div className="about-background position-relative" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(${backgroundImg}`, backgroundSize: "cover" }} ref={topRef}>
                                 <ChampHeader champion={champion} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} champCard={champCard} />
-
+                                <div className="side-bar-menu animation-menu-list">
+                                    {displayMenu ? (
+                                        <img className="icon-gold nav-chevron-animation" onClick={() => canDisplayMenu()} src={FlecheBas} title='Hide side bar' alt="Arrow top" width="30px" height="30px"></img>
+                                    ) : <img className="icon-gold nav-chevron-animation-inverse" onClick={() => canDisplayMenu()} src={FlecheBas} title='Display side bar' alt="Arrow bottom" width="30px" height="30px"></img>}
+                                    {displayMenu && <div className="d-flex flex-column menu-content">
+                                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} alt='champ-icon' title='Go to champ presentation' onClick={scrollToTop} width='48px'></img>
+                                        <hr />
+                                        <img className="luden-icon" src={Luden} onClick={scrollToItems} alt='luden-icon' title='Go to Items' width='48px'></img>
+                                        <hr />
+                                        <img className="search-icon-menu" src={Search} onClick={scrollToSearchBar} title='Search champ' alt='search-icon-menu' height='48px'></img>
+                                        <hr />
+                                        <img className="family-icon" src={Family} onClick={scrollToLinks} title='Go to Links' alt='fammily-icon' height='35px' ></img>
+                                        <div class="border-bottom pb-2"></div>
+                                    </div>}
+                                </div>
                             </div>
                             {
                                 /**
@@ -232,6 +281,7 @@ const AboutChamp = () => {
                             }
 
                             <div className="first-block position-relative">
+
 
                                 {
                                     /**
@@ -252,9 +302,9 @@ const AboutChamp = () => {
                                         * TODO : Component + SCSS
                                     */
                                 }
-                                <div className="col-xl-5 col-md-5 col-sm-5 col-vsm align-self-between">
+                                <div className="col-xl-5 col-md-5 col-sm-5 col-vsm align-self-between" ref={champRef}>
                                     <div className="p-3">
-                                        <ChampSearch setChampion={setChampion} champCardImg={champCardImg} />
+                                        <ChampSearch setChampion={setChampion} champCardImg={champCardImg} searchRef={searchRef} />
                                         <br />
                                         <>
                                             <div className=" d-flex position-relative">
@@ -325,7 +375,7 @@ const AboutChamp = () => {
                                     * TODO : Component + SCSS
                                 */
                             }
-                            <div className='second-block'>
+                            <div className='second-block' ref={itemsRef}>
                                 <div className="col-xl-10 col-md-9 col-sm-8 col-vsm me-2">
                                     <ChampItemsList setSelectedItem={setSelectedItem} selectedItem={selectedItem} setStuff={setStuff} selectedStuff={selectedStuff} />
                                     {/* <hr className="mt-5 mb-5"></hr> */}
@@ -347,7 +397,7 @@ const AboutChamp = () => {
                                 */
                             }
 
-                            <div className="third-block">
+                            <div className="third-block" ref={linksRef}>
                                 <hr className="mt-3 mb-5"></hr>
                                 <ChampLinks selectedKey={selectedKey} champion={champion} champCard={champCard} currentChampLinks={currentChampLinks} topRef={topRef} />
                             </div>

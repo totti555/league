@@ -9,6 +9,7 @@ const ChampSearch = (props) => {
     const [searchChamp, setSearchChamp] = useState('');
     const [champsFound, setChampBySearch] = useState([]);
     const [allChamps, setAllChamps] = useState([]);
+    const searchRef = props.searchRef;
     const api_key = process.env.REACT_APP_API_KEY;
 
     function onChange(e) {
@@ -129,7 +130,7 @@ const ChampSearch = (props) => {
             <div className="">
                 <div className="position-relative">
                     <form autoComplete="off">
-                        <input type="input" onChange={onChange} value={searchChamp} className="form__field" placeholder="Search champ" name="name" id='name' />
+                        <input type="input" onChange={onChange} value={searchChamp} ref={searchRef} className="form__field" placeholder="Search champ" name="name" id='name' />
                         <label htmlFor="name" className="form__label">Search your champ</label>
                     </form>
                     <img alt='search' src={Search} className="search-icon"></img>
