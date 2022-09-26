@@ -130,7 +130,7 @@ const ChampItemDetails = (props) => {
 
     return (
         <div className='background-img-item ' style={{ backgroundImage: `linear-gradient(to bottom, rgba(24, 32, 42, 1) 5%, rgb(0, 0, 0, 0.4) 50%,rgba(23, 32, 42, 1) 95%),url(${Vendor})`, backgroundSize: "cover" }}>
-            <div className="d-flex justify-content-center champ-item p-3" >
+            <div className="d-flex justify-content-center champ-item p-3 mt-3" >
                 {selectedItem.name ?
                     <div className="item-content">
                         <div className="text-center mb-3">

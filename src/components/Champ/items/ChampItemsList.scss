@@ -28,15 +28,19 @@
         top: 0px;
         right: 0px;
         z-index: 10;
-        opacity: 0;
+        display: none;
     }
 
     .item-card:hover {
         .add-item-icon {
-            opacity: 1;
+            display: block;
+            opacity: 0;
+            animation-name: display-add-item-icon;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
         }
 
-        opacity: 0.8;
+        // opacity: 0.8;
     }
 
     .search-icon {
@@ -55,9 +59,19 @@
             margin: 0px !important;
         }
 
-        h2 {
-            font-size: 40px !important;
-            margin: 0px !important;
+        .add-item-icon {
+            height: 15px !important;
+            width: 15px !important;
         }
+    }
+}
+
+@keyframes display-add-item-icon {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

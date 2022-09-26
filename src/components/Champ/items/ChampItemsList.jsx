@@ -116,10 +116,16 @@ const ChampItems = (props) => {
 
                                                 {itemsList.map((item, index) =>
                                                     (itemIsInclude(item, i) && (isItemFind(item.name) || !searchItem)) &&
-                                                    <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
+                                                    <div key={index} className="btn-border p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
                                                         {/* <p className='small'>{item.name}</p> */}
-                                                        <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px" style={{ cursor: 'pointer' }}></img>
-                                                        <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
+                                                        <span>
+                                                            <span>
+                                                                <span>
+                                                                    <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px" style={{ cursor: 'pointer' }}></img>
+                                                                    <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
+                                                                </span>
+                                                            </span>
+                                                        </span>
                                                     </div>
                                                 )}
 
@@ -136,10 +142,16 @@ const ChampItems = (props) => {
                                     <div className='d-flex flex-wrap mx-2 '>
                                         {itemsList.map((item, index) =>
                                             (isItemFind(item.name) && item.inStore !== false) &&
-                                            <div key={index} className=" p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
+                                            <div key={index} className="btn-border p-0 my-1 mx-1 item-card position-relative" onClick={() => handleClickItem(item)}>
                                                 {/* <p className='small'>{item.name}</p> */}
-                                                <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px" style={{ cursor: 'pointer' }}></img>
-                                                <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
+                                                <span>
+                                                    <span>
+                                                        <span>
+                                                            <img alt='item' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${item.image.full}`} width="48px" style={{ cursor: 'pointer' }}></img>
+                                                            <img src={require(`../../../assets/Common/plus.png`)} onClick={() => addToStuff(item)} className="add-item-icon about-icon-gold" alt="Champion world" width="20px" height="20px" style={{ cursor: 'pointer' }}></img>
+                                                        </span>
+                                                    </span>
+                                                </span>
                                             </div>
                                         )}
                                     </div>

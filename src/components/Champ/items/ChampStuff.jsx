@@ -98,13 +98,13 @@ const ChampStuff = (props) => {
                             selectedStuff[i] ?
                                 (<div className='stuff-item mx-1 ' key={i}>
                                     <div className='item-card h-auto'>
-                                        <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedStuff[i].image.full}`} alt="stuff-item" onClick={() => handleClickItem(selectedStuff[i])} width="64px"></img>
+                                        <img className='item-img' src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/item/${selectedStuff[i].image.full}`} alt="stuff-item" onClick={() => handleClickItem(selectedStuff[i])} width="64px"></img>
                                         <img src={require(`../../../assets/Common/bin.png`)} onClick={() => removeToStuff(selectedStuff[i])} className="delete-item-icon about-icon-gold" alt="Champion world" width="10px" height="10px"></img>
                                     </div>
                                 </div>) :
                                 <div className='stuff-item mx-1' key={i}>
                                     {/* <div className='empty'>Empty</div> */}
-                                    <img src={require('../../../assets/Common/empty-item.png')} alt="stuff-item" width="64px"></img>
+                                    <img className='item-img' src={require('../../../assets/Common/empty-item.png')} alt="stuff-item" width="64px"></img>
 
                                 </div>
 
