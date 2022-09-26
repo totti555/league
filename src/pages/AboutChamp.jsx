@@ -366,7 +366,7 @@ const AboutChamp = () => {
                         </div>
 
                     )}
-                <Footer />
+                {champion.name && <Footer />}
             </div>
 
 
