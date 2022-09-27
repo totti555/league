@@ -195,7 +195,7 @@ const ChampLinks = (props) => {
                         <h3 className="title">REGION :</h3>
                         <div className="d-flex flex-wrap">
                             {championsList.map((champ) =>
-                                <div>
+                                <div key={champ.id}>
 
                                     {
                                         champ.world === champCard.world &&

@@ -34,7 +34,7 @@ import ChampSideBar from "../components/Champ/sidebar/ChampSideBar";
      */
 }
 
-const AboutChamp = () => {
+const AboutChamp = (props) => {
 
     const [champion, setChampion] = useState([]);
     const [championDetails, setChampionDetails] = useState([]);
@@ -56,6 +56,7 @@ const AboutChamp = () => {
     const [spellDatas, setSpellDatas] = useState([]);
     const [backgroundImg, setBackgroundImg] = useState('');
     const [champCardImg, setChampCardImg] = useState('');
+    const summoner = props.summoner;
 
 
 
@@ -68,7 +69,7 @@ const AboutChamp = () => {
 
     const champDetails = () => {
         const findChampKey = champList.find((champ) => champName.toLowerCase() === champ.name.toLowerCase());
-        console.log("findChampKey", findChampKey);
+        // console.log("findChampKey", findChampKey);
         if (findChampKey)
             setCurrentChampLinks(findChampKey.linksWith);
         else {
@@ -106,7 +107,7 @@ const AboutChamp = () => {
                 // handle success
                 const obj = response.data.data
                 const data = Object.values(obj);
-                console.log('donnees officielle', data[0])
+                // console.log('donnees officielle', data[0])
                 setChampion(data[0]);
 
             })
@@ -139,7 +140,7 @@ const AboutChamp = () => {
                 // handle success
                 const obj = response.data;
                 // setChampion(obj)
-                console.log("new", obj);
+                // console.log("new", obj);
                 setChampionSpells(obj)
                 // const data = Object.values(obj);
                 // setChampion(data[0]);
@@ -153,6 +154,21 @@ const AboutChamp = () => {
                 // always executed
 
             });
+
+
+        // axios.get(`http://localhost:8080/getSummoner/TottiSkyZz`, { mode: 'cors' })
+        //     .then(function (response) {
+        //         // handle success
+        //         console.log('summoner', response);
+        //         // setChampionDetails(response.data);
+        //     })
+        //     .catch(function (error) {
+        //         // handle error
+        //         console.log(error);
+        //     })
+        //     .then(function () {
+        //         // always executed
+        //     });
 
         // axios.get(`http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json?api_key=${api_key}`)
         //     .then(function (response) {
@@ -211,6 +227,11 @@ const AboutChamp = () => {
     }, [champName]);
 
 
+    useEffect(() => {
+        console.log(summoner)
+    }, [summoner]);
+
+
 
     return (
 
@@ -220,7 +241,9 @@ const AboutChamp = () => {
                 {champion.name &&
                     (
                         <div>
-                            {/* <div className="position-relative">
+                            {
+
+                                /* <div className="position-relative">
                                 <img
                                     alt="Champ banner"
                                     src={process.env.PUBLIC_URL + `/Background/${champCard.name}.jpg`}

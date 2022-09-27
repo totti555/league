@@ -7,12 +7,44 @@ header {
     height: 6.25;
     background-color: black;
     border-bottom: 0.125rem solid #ECB823;
+
+    .title-low-res {
+        display: none;
+    }
+
+    .search-summoner {
+        button {
+            background-color: transparent;
+            border: 0px;
+            // width: 64px;
+            // height: 64px;
+
+
+        }
+
+        button:disabled,
+        button[disabled] {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+    }
+
+    .summoner-level {
+        position: absolute;
+        bottom: 0px;
+        right: 3px;
+        font-size: 10px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .summoner-name {
+        font-size: 10px;
+    }
 }
 
 .phone-icon-menu {
     display: none;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(329deg) brightness(104%) contrast(101%);
-    margin-right: 30px;
 }
 
 .format {
@@ -83,7 +115,7 @@ header {
     }
 }
 
-@media (min-width: 0px) and (max-width : 600px) {
+@media (min-width: 0px) and (max-width : 650px) {
     header {
         //This should work for Normal desktops(15 to 18 inch) only.
         min-height: 3rem;
@@ -103,6 +135,14 @@ header {
 
         .phone-icon-menu {
             display: block;
+        }
+
+        .title-low-res {
+            display: block !important;
+        }
+
+        .title-high-res {
+            display: none !important;
         }
     }
 }

@@ -63,7 +63,7 @@ const ChampSideBar = (props) => {
                 <div className='pe-1 ps-1'>
                     <img className="family-icon icon-menu" src={Family} onClick={scrollToLinks} title='Go to Links' alt='fammily-icon' height='32px' ></img>
                 </div>
-                <div class="border-bottom pb-2"></div>
+                <div className="border-bottom pb-2"></div>
             </div>}
         </div>
     )
