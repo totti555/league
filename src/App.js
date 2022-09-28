@@ -17,7 +17,10 @@ function App() {
   }, []);
 
   const [summonerName, setSummonerName] = useState('');
-  const [summoner, setSummoner] = useState([]);
+  const [summoner, setSummoner] = useState(() => {
+    const localData = localStorage.getItem('summoner');
+    return localData ? JSON.parse(localData) : [];
+  });
 
   return (
     <div className="App">

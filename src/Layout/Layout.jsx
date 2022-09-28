@@ -82,6 +82,13 @@ function Layout(props) {
   }
 
 
+  useEffect(() => {
+    if (summoner.name) {
+      localStorage.setItem('summoner', JSON.stringify(summoner));
+    }
+  }, [summoner.name])
+
+
   return (
     <div>
       {
