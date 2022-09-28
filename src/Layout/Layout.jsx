@@ -1,10 +1,7 @@
-import { Outlet, Link, Routes, Route } from "react-router-dom";
-import Footer from "../components/Footer/Footer";
+import { Outlet, Link } from "react-router-dom";
 import "./Layout.scss";
 import Menu from "../assets/Home/menu.svg";
 import { useState, useRef, useEffect } from "react";
-import AboutChamp from "../pages/AboutChamp";
-import { useLocation } from 'react-router-dom';
 import Search from "../assets/Common/loupe.png";
 
 function Layout(props) {
@@ -24,21 +21,29 @@ function Layout(props) {
   */
 
   const [menu, displayMenu] = useState(false);
+
+  /**
+    * * State + function to display or not the search bar
+    * @param searchBar
+  */
+
   const [searchBar, displaySearchBar] = useState(false);
+
   const summonerName = props.summonerName;
   const setSummoner = props.setSummoner;
   const setSummonerName = props.setSummonerName;
   const summoner = props.summoner;
 
+  /**
+    * * To hide the searchbar if focus out
+  */
 
   const wrapperRef = useRef(null);
   useOutsideAlerter(wrapperRef);
 
   function useOutsideAlerter(ref) {
     useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
+      //Alert if clicked on outside of element
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
           displaySearchBar(false);
@@ -53,7 +58,6 @@ function Layout(props) {
     }, [ref]);
   }
 
-  const location = useLocation();
   function showMenu() {
     displayMenu(!menu);
   }
@@ -62,18 +66,20 @@ function Layout(props) {
     setSummonerName(e.target.value)
   }
 
+  /**
+    * * Return the summoner by the previous name entered by the user
+    * backend to avoid cors error
+  */
+
   const fetchSummonerByName = () => {
     const axios = require('axios').default;
     axios.get(`http://localhost:8080/getSummoner/${summonerName}`, { mode: 'cors' })
       .then(function (response) {
-        // handle success
         console.log('summoner', response);
         setSummoner(response.data);
         displaySearchBar(false);
-        // setChampionDetails(response.data);
       })
       .catch(function (error) {
-        // handle error
         console.log(error);
       })
       .then(function () {
@@ -81,6 +87,9 @@ function Layout(props) {
       });
   }
 
+  /**
+    * * Set summoner in localStorage
+  */
 
   useEffect(() => {
     if (summoner.name) {
@@ -136,6 +145,7 @@ function Layout(props) {
           */
         }
         {
+
           searchBar &&
 
           <div className="search-summoner" ref={wrapperRef}>
@@ -144,16 +154,6 @@ function Layout(props) {
               <img className="icon-menu" src={Search} title='Search champ' alt='search-icon-menu' width='24px'></img>
             </button>
           </div>
-
-          /* <div className="position-relative">
-            <form autoComplete='off'>
-              <input type="input" onChange={handleSummonerNameChange} className="form__field" placeholder="Search summoner" name="name" id='name' />
-              <label htmlFor="name" className="form__label">Search summoner</label>
-            </form>
-            <button onClick={fetchSummonerByName} disabled={!summonerName}>
-              <img src={Search} alt="search-icon-menu" className="search-icon icon-menu " width='24px'></img>
-            </button>
-          </div> */
         }
         <div className="d-flex">
           {!searchBar &&
@@ -168,13 +168,14 @@ function Layout(props) {
           }
           <div className="mx-3 align-self-center">
             <img
-              src={Menu} className="phone-icon-menu" onClick={() => showMenu()}></img>
+              src={Menu} alt='menu' className="phone-icon-menu" onClick={() => showMenu()}></img>
           </div>
+
           {summoner.name &&
 
             <div className="d-flex flex-column">
               <div className="d-flex justify-content-center position-relative">
-                <img className="mt-1 " src={`http://ddragon.leagueoflegends.com/cdn/12.18.1/img/profileicon/${summoner.profileIconId}.png`} width='38px'></img>
+                <img className="mt-1" alt='summoner-profile' src={`http://ddragon.leagueoflegends.com/cdn/12.18.1/img/profileicon/${summoner.profileIconId}.png`} width='38px'></img>
                 <span className="summoner-level text-white">{summoner.summonerLevel}</span>
               </div>
               <span className="summoner-name text-white">{summoner.name}</span>
@@ -202,41 +203,9 @@ function Layout(props) {
 
       <Outlet />
 
-      {
-        /**
-            * *Footer
-        */
-      }
-
-      {/* {location.pathname.includes('list') &&
-        <footer>
-          <Footer className='footer-list' />
-        </footer>
-      } */}
     </div>
   );
 }
 
-// const Header = () => {
-//     return (
-//         <>
-//             <nav>
-//                 <ul>
-//                     <li>
-//                         <Link to="/">Home</Link>
-//                     </li>
-//                     <li>
-//                         <Link to="/about_champ">AboutChamp</Link>
-//                     </li>
-//                     <li>
-//                         <Link to="/list">List</Link>
-//                     </li>
-//                 </ul>
-//             </nav>
-
-//             <Outlet />
-//         </>
-//     )
-// };
 
 export default Layout;
