@@ -10,13 +10,30 @@ import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 function App() {
+
+  /**
+    * *Main page of the website
+    * Initialization
+    * Components : Layout, Home, AboutChamp, List
+  */
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
     document.title = 'List of Legends'
   }, []);
 
+  /**
+    * *state to fetch the summoner by the summoner name
+  */
+
   const [summonerName, setSummonerName] = useState('');
+
+  /**
+    * *state for the summoner 
+    * Specific syntax to use the localStorage to keep the summoner account on F5
+  */
+
   const [summoner, setSummoner] = useState(() => {
     const localData = localStorage.getItem('summoner');
     return localData ? JSON.parse(localData) : [];
