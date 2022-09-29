@@ -8,12 +8,12 @@ import Ennemy from "../../assets/Links/Ennemy.png"
 import Heart from "../../assets/Links/Heart.png"
 import Cross from "../../assets/Links/Cross.png"
 import Mentor from "../../assets/Links/Mentor.png"
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { champList } from "../../datas/lolChamp";
 import { Outlet, Link, useNavigate, useLocation } from "react-router-dom";
 
 
-const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName, champCardImg }) => {
+const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName, champCardImg, summoner }) => {
 
     /**
         * *component to display the champion's cards
@@ -97,6 +97,24 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
             return name;
         }
     }
+
+    useEffect(() => {
+        const axios = require('axios').default;
+
+        axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champ.key}`, { mode: 'cors' })
+            .then(function (response) {
+                // handle success
+                console.log('mastery', response.data);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+
+    }, [summoner.name]);
 
     return (
         /**

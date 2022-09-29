@@ -297,7 +297,7 @@ const AboutChamp = (props) => {
                                                 {championDetails.id &&
                                                     <div className="card-content d-flex flex-column">
                                                         {champCard &&
-                                                            <div className="d-flex justify-content-center"><ChampCard champ={champCard} champCardImg={champCardImg} />
+                                                            <div className="d-flex justify-content-center"><ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} />
                                                             </div>}
 
                                                         <div className="d-flex justify-content-between champ-prices">
