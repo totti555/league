@@ -1,17 +1,79 @@
 .champ-header {
     h1 {
         font-size: 58px;
+        font-weight: 600;
     }
 
+    // h2 {
+    //     font-size: 40px;
+    //     line-height: 10px;
+    // }
+
     .champ-subtitle {
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         font-style: italic;
+    }
+
+    h1 span span {
+        background: -webkit-linear-gradient(0.5turn, #ECB823, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+        animation: move-text-color 0.5s forwards;
+        bottom: -1em;
+        opacity: 0;
+    }
+
+    h2 span span {
+        position: relative;
+        animation: move-subtitle 1s forwards;
+        opacity: 0;
+    }
+
+    h2 {
+        .content-letter-animation {
+            margin-bottom: 50px;
+        }
+    }
+
+    @keyframes move-text-color {
+        75% {
+            bottom: 0.05em;
+            opacity: 0;
+            color: #3E5C76;
+        }
+
+        87% {
+            // bottom: 0.1em;
+            // color: #EC058E;
+        }
+
+        100% {
+            bottom: 0em;
+            opacity: 1;
+            color: #cb3126;
+        }
+    }
+
+    @keyframes move-subtitle {
+        50% {
+            opacity: 0;
+            color: black;
+            letter-spacing: 1px;
+        }
+
+
+        100% {
+            opacity: 1;
+            color: white;
+            letter-spacing: 3px;
+        }
     }
 }
 
 .animation-champ-square {
     animation-name: display-header-title;
-    animation-duration: 1s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
 }
 
@@ -36,7 +98,7 @@
 
 .animation-entity-3 {
     animation-name: display-header;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-fill-mode: forwards;
 }
 
