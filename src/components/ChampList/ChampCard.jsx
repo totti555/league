@@ -8,6 +8,7 @@ import Ennemy from "../../assets/Links/Ennemy.png"
 import Heart from "../../assets/Links/Heart.png"
 import Cross from "../../assets/Links/Cross.png"
 import Mentor from "../../assets/Links/Mentor.png"
+import noMastery from "../../assets/Mastery/no_mastery.png"
 import { useState, useEffect } from 'react'
 import { champList } from "../../datas/lolChamp";
 import { Outlet, Link, useNavigate, useLocation } from "react-router-dom";
@@ -21,6 +22,8 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
         * Components : ChampMemo
         * ? props
     */
+
+    const [summonerMastery, setSummonerMastery] = useState([]);
 
     /**
         * *to display/hide the champion attributes (role, post, function,...) when clicking on the card 
@@ -99,22 +102,25 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
     }
 
     useEffect(() => {
-        const axios = require('axios').default;
+        if (summoner) {
+            const axios = require('axios').default;
 
-        axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champ.key}`, { mode: 'cors' })
-            .then(function (response) {
-                // handle success
-                console.log('mastery', response.data);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
+            axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champ.key}`, { mode: 'cors' })
+                .then(function (response) {
+                    // handle success
+                    console.log('mastery', response.data);
+                    setSummonerMastery(response.data);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
+        }
 
-    }, [summoner.name]);
+    }, [summoner]);
 
     return (
         /**
@@ -140,15 +146,40 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                 }
 
                 <div className="family">
-                    {
-                        displayLinks ?
-                            (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Cancel" width="25px" height="25px"></img>) :
-                            (
-                                champ.linksWith ?
-                                    (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Links" width="30px" height="30px"></img>)
-                                    : null
-                            )
-                    }
+
+
+                    <div className='d-flex'>
+                        <div>
+                            {
+                                displayLinks ?
+                                    (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Cancel" title='Reset links' width="25px" height="25px"></img>) :
+                                    (
+                                        champ.linksWith ?
+                                            (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Links" title='Show links' width="30px" height="30px"></img>)
+                                            : null
+                                    )
+                            }
+                        </div>
+
+                        {
+                            // To Insert when CSS ready
+                            /* {
+                            summoner &&
+                            <div>
+                                {summonerMastery.championLevel ?
+                                    <div>
+                                        <img src={require(`../../assets/Mastery/mastery_${summonerMastery.championLevel}.png`)}
+                                            alt='mastery' title={`M${summonerMastery.championLevel} ${summonerMastery.championPoints} pts`} width='30px'></img>
+                                    </div>
+                                    :
+                                    <div>
+                                        <img src={noMastery} alt='no mastery' title='no mastery'></img>
+                                    </div>
+                                }
+
+                            </div>
+                        } */}
+                    </div>
 
                 </div>
 
