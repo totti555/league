@@ -46,6 +46,7 @@ const List = (props) => {
     const [checkedType, setCheckedType] = useState([]);
 
     const api_key = process.env.API_KEY;
+    const summoner = props.summoner;
 
     /**
        * *state + function to display the filters tags
@@ -281,7 +282,7 @@ const List = (props) => {
                     <ChampList
                         role={role} type={type} world={world}
                         checkedRole={checkedRole} checkedType={checkedType} checkedChampFunction={checkedChampFunction}
-                        checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} setCurrentChamp={setCurrentChamp} />
+                        checkedWorld={checkedWorld} searchResult={searchResult} setChampName={setChampName} setCurrentChamp={setCurrentChamp} summoner={summoner} />
                 </div>
             </div>
         </div>

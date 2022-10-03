@@ -122,6 +122,17 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
 
     }, [summoner]);
 
+
+    const championMasteryLevel = (mastery) => {
+        if (mastery === 1 || mastery === 2 || mastery === 3) {
+            return 4
+        }
+        else
+            return mastery;
+    }
+
+
+
     return (
         /**
             * * champ background image
@@ -145,43 +156,56 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
                     */
                 }
 
-                <div className="family">
 
 
-                    <div className='d-flex'>
-                        <div>
-                            {
-                                displayLinks ?
-                                    (<img onClick={resetChampLinks} className="icon-gold" src={Cross} alt="Cancel" title='Reset links' width="25px" height="25px"></img>) :
-                                    (
-                                        champ.linksWith ?
-                                            (<img onClick={fetchByChampLinks} className="icon-gold" src={Links} alt="Links" title='Show links' width="30px" height="30px"></img>)
-                                            : null
-                                    )
-                            }
-                        </div>
+
+                <div className='icon-left-side'>
+                    <div className='d-flex flex-column'>
+
+                        {
+                            /*
+                            displayLinks ?
+                                (<img onClick={resetChampLinks} src={Cross} alt="Cancel" title='Reset links' width="25px" height="25px"></img>) :
+                                (
+                                    champ.linksWith ?
+                                        (<img onClick={fetchByChampLinks} src={Links} alt="Links" title='Show links' width="30px" height="30px"></img>)
+                                        : null
+                                )
+                                */
+                        }
+
 
                         {
                             // To Insert when CSS ready
-                            /* {
+
                             summoner &&
-                            <div>
+                            <>
                                 {summonerMastery.championLevel ?
-                                    <div>
-                                        <img src={require(`../../assets/Mastery/mastery_${summonerMastery.championLevel}.png`)}
-                                            alt='mastery' title={`M${summonerMastery.championLevel} ${summonerMastery.championPoints} pts`} width='30px'></img>
+                                    <div className='mastery-content'>
+                                        <div className='mastery-icon'>
+                                            <img src={require(`../../assets/Mastery/mastery_${summonerMastery.championLevel}.png`)}
+                                                alt='mastery' title={`M${summonerMastery.championLevel} ${summonerMastery.championPoints} pts`} width='48px'></img>
+                                            <p className='title mastery-points'>{summonerMastery.championPoints}</p>
+                                        </div>
+                                        <img className='mastery-banner' src={require(`../../assets/Mastery/mastery_${championMasteryLevel(summonerMastery.championLevel)}banner.png`)}
+                                            alt='mastery' title={`M${summonerMastery.championLevel} ${summonerMastery.championPoints} pts`} height='64px' width='48px'></img>
                                     </div>
                                     :
                                     <div>
-                                        <img src={noMastery} alt='no mastery' title='no mastery'></img>
+                                        <div className='mastery-icon'>
+                                            <img src={noMastery} alt='no mastery' title='No mastery' width='48px'></img>
+                                            <p className='title'>0pt</p>
+                                        </div>
+                                        <img className='mastery-banner no-mastery' src={require(`../../assets/Mastery/mastery_0banner.png`)}
+                                            alt='no-mastery' title={`No mastery pts`} height='64px' width='48px'></img>
                                     </div>
                                 }
 
-                            </div>
-                        } */}
+                            </>
+                        }
                     </div>
-
                 </div>
+
 
                 {
                     /**

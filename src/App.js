@@ -46,7 +46,7 @@ function App() {
           <Route path="/" element={<Layout summonerName={summonerName} setSummonerName={setSummonerName} setSummoner={setSummoner} summoner={summoner} />}>
             <Route index element={<Home />} />
             <Route path="about_champ/:champName" element={<AboutChamp summoner={summoner} />} />
-            <Route path="list" element={<List />} exact />
+            <Route path="list" element={<List summoner={summoner} />} exact />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
