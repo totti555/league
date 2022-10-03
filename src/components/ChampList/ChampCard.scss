@@ -172,9 +172,11 @@ $gold: #ECB823;
 .container {
     min-width: 100%;
     // height: 660px;
-    // overflow-y: auto;
+    overflow-y: auto;
+    height: 100%;
     /* padding-left: 100px; */
     padding-right: 0px;
+    padding-bottom: 100px;
 }
 
 /* scroll :  */
@@ -263,8 +265,7 @@ html {
 
 .champ-content {
     z-index: 2;
-    overflow-y: auto;
-    height: 800px;
+
 }
 
 .champ-list {

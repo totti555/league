@@ -14,7 +14,7 @@ import { champList } from "../../datas/lolChamp";
 import { Outlet, Link, useNavigate, useLocation } from "react-router-dom";
 
 
-const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName, champCardImg, summoner }) => {
+const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks, currentChampLinks, linksType, setChampName, champCardImg, summoner, summonerMastery }) => {
 
     /**
         * *component to display the champion's cards
@@ -22,8 +22,6 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
         * Components : ChampMemo
         * ? props
     */
-
-    const [summonerMastery, setSummonerMastery] = useState([]);
 
     /**
         * *to display/hide the champion attributes (role, post, function,...) when clicking on the card 
@@ -101,26 +99,17 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
         }
     }
 
-    useEffect(() => {
-        if (summoner) {
-            const axios = require('axios').default;
 
-            axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champ.key}`, { mode: 'cors' })
-                .then(function (response) {
-                    // handle success
-                    console.log('mastery', response.data);
-                    setSummonerMastery(response.data);
-                })
-                .catch(function (error) {
-                    // handle error
-                    console.log(error);
-                })
-                .then(function () {
-                    // always executed
-                });
-        }
 
-    }, [summoner]);
+
+    // useEffect(() => {
+    //     if (summonerMasteries.length) {
+    //         const currentSummonerMastery = summonerMasteries.find((c) => champ.key === c.championId);
+    //         console.log(currentSummonerMastery);
+    //         setSummonerMastery(currentSummonerMastery);
+    //     }
+
+    // }, [summonerMasteries]);
 
 
     const championMasteryLevel = (mastery) => {
@@ -180,7 +169,7 @@ const ChampCard = ({ champ, setCurrentChamp, setChampList, setCurrentChampLinks,
 
                             summoner &&
                             <>
-                                {summonerMastery.championLevel ?
+                                {summonerMastery ?
                                     <div className='mastery-content'>
                                         <div className='mastery-icon'>
                                             <img src={require(`../../assets/Mastery/mastery_${summonerMastery.championLevel}.png`)}

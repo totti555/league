@@ -2,7 +2,7 @@
 import { champList } from "../../datas/lolChamp";
 import './ChampCard.scss'
 import ChampCard from "./ChampCard"
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react'
 import '../Filters/Filters.scss'
 
@@ -29,6 +29,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
   */
 
     const [currentChampLinks, setCurrentChampLinks] = useState(null);
+    const [summonerMasteries, setSummonerMasteries] = useState([]);
 
     /**
         * *to display a div when no champions are found
@@ -138,9 +139,26 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
         setChampList(sortedData);
     }
 
+    useEffect(() => {
+        const axios = require('axios').default;
+        axios.get(`http://localhost:8080/getMasteries/${summoner.id}`, { mode: 'cors' })
+            .then(function (response) {
+                // handle success
+                console.log('mastery', response.data);
+                setSummonerMasteries(response.data);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    }, [summoner])
+
 
     return (
-        <div>
+        <div style={{ height: '100%' }}>
             <div className="box-shadow p-0 d-flex justify-content-between position-relative champ-list bg-black ">
                 <h1 className="champ-title align-self-center mb-0 ms-2"><span className="title">CHAMP</span><span className="title hide-title">IONS</span></h1>
                 <div className='d-flex justify-content-center button-champ-list my-0'>
@@ -196,7 +214,7 @@ const ChampList = ({ role, type, world, checkedRole, checkedType, checkedWorld, 
                                     ? (
                                         // <div className="col-12 col-md-3 col-lg-2 border m-3 champ-card">
                                         <div className="d-flex justify-content-center col-12 col-custom-7 col-custom-6 col-sm-6 col-mid-4 col-lg-4 col-xl-3 col-mid-3 col-xxl-1 col-custom-5 col-custom-4 col-custom-3 col-custom-2 col-custom">
-                                            <ChampCard champ={champ} summoner={summoner} setCurrentChamp={setCurrentChamp} setChampName={setChampName} setChampList={setChampList} currentChampLinks={currentChampLinks} setCurrentChampLinks={setCurrentChampLinks} linksType={currentChampLinks ? currentChampLinks[champ.name] : ''} />
+                                            <ChampCard champ={champ} summoner={summoner} summonerMastery={summonerMasteries.find((c) => champ.key === c.championId)} setCurrentChamp={setCurrentChamp} setChampName={setChampName} setChampList={setChampList} currentChampLinks={currentChampLinks} setCurrentChampLinks={setCurrentChampLinks} linksType={currentChampLinks ? currentChampLinks[champ.name] : ''} />
                                         </div>) : null
                             }
                         </React.Fragment>

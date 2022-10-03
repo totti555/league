@@ -57,6 +57,7 @@ const AboutChamp = (props) => {
     const [backgroundImg, setBackgroundImg] = useState('');
     const [champCardImg, setChampCardImg] = useState('');
     const summoner = props.summoner;
+    const [summonerMastery, setSummonerMastery] = useState([]);
 
 
 
@@ -228,7 +229,24 @@ const AboutChamp = (props) => {
 
 
     useEffect(() => {
-        console.log(summoner)
+
+        const axios = require('axios').default;
+
+        axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champCard.key}`, { mode: 'cors' })
+            .then(function (response) {
+                // handle success
+                console.log('Il faut faire quoi', response.data);
+                setSummonerMastery(response.data);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+
+
     }, [summoner]);
 
 
@@ -294,23 +312,32 @@ const AboutChamp = (props) => {
                                                 <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
                                                     <div className="gradient-champ-card"></div>
                                                 </div>
-                                                {championDetails.id &&
-                                                    <div className="card-content d-flex flex-column">
-                                                        {champCard &&
-                                                            <div className="d-flex justify-content-center"><ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} />
-                                                            </div>}
+                                                <div className="card-content d-flex flex-column">
+                                                    {champCard && summoner.id && summonerMastery.championLevel &&
+                                                        <div className="d-flex justify-content-center">
+                                                            <ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} summonerMastery={summonerMastery} />
+                                                        </div>}
 
-                                                        <div className="d-flex justify-content-between champ-prices">
-                                                            <p>{championDetails.price.blueEssence} <span><img alt='blue-essence' title={`${championDetails.price.blueEssence} Blue essence`} src={BlueEssence} width='15px'></img></span></p>
-                                                            <p>{championDetails.price.rp} <span><img alt='rp' title={`${championDetails.price.rp} RP`} src={Rp} width='20px'></img></span></p>
-                                                            <p>{championDetails.releaseDate} <span><img alt='date' title='Release date' src={Calendar} className='about-icon-gold' width='20px'></img></span></p>
-                                                        </div>
+                                                    {champCard && !summoner.id &&
+                                                        <div className="d-flex justify-content-center">
+                                                            <ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} />
+                                                        </div>}
 
-                                                        <div>
-                                                            <p className="champ-real-name m-0">{championDetails.fullName ? championDetails.fullName : championDetails.name}</p>
-                                                            <p className="champ-lore m-0">{championDetails.lore}</p>
-                                                        </div>
-                                                    </div>}
+                                                    {championDetails.id &&
+                                                        <>
+                                                            <div className="d-flex justify-content-between champ-prices">
+                                                                <p>{championDetails.price.blueEssence} <span><img alt='blue-essence' title={`${championDetails.price.blueEssence} Blue essence`} src={BlueEssence} width='15px'></img></span></p>
+                                                                <p>{championDetails.price.rp} <span><img alt='rp' title={`${championDetails.price.rp} RP`} src={Rp} width='20px'></img></span></p>
+                                                                <p>{championDetails.releaseDate} <span><img alt='date' title='Release date' src={Calendar} className='about-icon-gold' width='20px'></img></span></p>
+                                                            </div>
+
+                                                            <div>
+                                                                <p className="champ-real-name m-0">{championDetails.fullName ? championDetails.fullName : championDetails.name}</p>
+                                                                <p className="champ-lore m-0">{championDetails.lore}</p>
+                                                            </div>
+                                                        </>
+                                                    }
+                                                </div>
 
 
                                                 {
