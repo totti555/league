@@ -6,11 +6,15 @@ import AttackSpeed from '../../../assets/Stats/AttackSpeed.png'
 import Health from '../../../assets/Stats/Health.png'
 import Power from '../../../assets/Stats/Power.png'
 import Resistance from '../../../assets/Stats/Resistance.png'
+import { Radar, RadarChart, PolarGrid, Legend, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { useEffect, useState } from 'react';
+
 
 
 
 const ChampStats = (props) => {
     const champion = props.champion;
+    const championDetails = props.championDetails;
     const itemsBuff = props.itemsBuff;
     const level = props.level;
 
@@ -52,6 +56,55 @@ const ChampStats = (props) => {
     const lifeStealSpells = itemsBuff.PercentLifeStealMod ? itemsBuff.PercentLifeStealMod : 0;
     const physicalSpells = itemsBuff.FlatPhysicalDamageMod ? itemsBuff.FlatPhysicalDamageMod : 0;
 
+    const [championAttributes, setChampionAttributes] = useState([]);
+
+    useEffect(() => {
+
+        if (championDetails.name) {
+            const data = [
+                {
+                    subject: 'Damage',
+                    A: championDetails.attributeRatings.damage,
+                    B: 130,
+                    fullMark: 3,
+                },
+                {
+                    subject: 'Utility',
+                    A: championDetails.attributeRatings.utility,
+                    B: 130,
+                    fullMark: 3,
+                },
+                {
+                    subject: 'Defense',
+                    A: championDetails.attributeRatings.defense,
+                    B: 100,
+                    fullMark: 3,
+                },
+                {
+                    subject: 'Difficulty',
+                    A: championDetails.attributeRatings.difficulty,
+                    B: 90,
+                    fullMark: 3,
+                },
+                {
+                    subject: 'Mobility',
+                    A: championDetails.attributeRatings.mobility,
+                    B: 85,
+                    fullMark: 3,
+                },
+                {
+                    subject: 'Toughness',
+                    A: championDetails.attributeRatings.toughness,
+                    B: 85,
+                    fullMark: 3,
+                },
+            ];
+
+            setChampionAttributes(data);
+        }
+
+    }, [championDetails.name]);
+
 
     return (
         <div className="champ-stats p-4">
@@ -79,6 +132,29 @@ const ChampStats = (props) => {
                         <p>Mana Regen : {Math.round((manaRegen + level * champion.stats.mpregenperlevel) * 100) / 100}</p>
                     </div>
                 </div>
+                {championDetails.id && championAttributes.length &&
+                    <div className='d-flex justify-content-center'>
+                        <RadarChart
+
+                            outerRadius={120}
+                            width={350}
+                            height={300}
+                            data={championAttributes}
+                        >
+                            <PolarGrid />
+                            <PolarAngleAxis dataKey="subject" />
+                            <PolarRadiusAxis domain={[1520]} />
+                            <Radar
+                                name="Mike"
+                                dataKey="A"
+                                stroke="#8884d8"
+                                fill="#8884d8"
+                                fillOpacity={0.6}
+                                shape={2}
+                            />
+                        </RadarChart>
+                    </div>
+                }
             </div>
 
         </div>
