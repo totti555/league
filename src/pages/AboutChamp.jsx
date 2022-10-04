@@ -19,6 +19,7 @@ import BlueEssence from '../assets/Common/blue-essence.png';
 import Rp from '../assets/Common/rp.png';
 import Calendar from '../assets/Common/calendar.png';
 import ChampSideBar from "../components/Champ/sidebar/ChampSideBar";
+import ChampMastery from "../components/Champ/mastery/ChampMastery";
 
 
 
@@ -232,22 +233,24 @@ const AboutChamp = (props) => {
 
         const axios = require('axios').default;
 
-        axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champCard.key}`, { mode: 'cors' })
-            .then(function (response) {
-                // handle success
-                console.log('Il faut faire quoi', response.data);
-                setSummonerMastery(response.data);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
+        if (summoner.id) {
+            axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champCard.key}`, { mode: 'cors' })
+                .then(function (response) {
+                    // handle success
+                    console.log('Summoner mastery  :', response.data);
+                    setSummonerMastery(response.data);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+                .then(function () {
+                    // always executed
+                });
+        }
 
 
-    }, [summoner]);
+    }, [summoner, champCard]);
 
 
 
@@ -307,13 +310,16 @@ const AboutChamp = (props) => {
                                     <div className="p-3">
                                         <ChampSearch setChampion={setChampion} champCardImg={champCardImg} searchRef={searchRef} />
                                         <br />
+                                        {summoner.id && summonerMastery.championLevel &&
+                                            <ChampMastery champion={champion} summoner={summoner} summonerMastery={summonerMastery} />
+                                        }
                                         <>
                                             <div className=" d-flex position-relative">
                                                 <div className="background-champ-card ms-0" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(${`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${champion.skins[0].num}.jpg`}`, backgroundSize: "cover" }}>
                                                     <div className="gradient-champ-card"></div>
                                                 </div>
                                                 <div className="card-content d-flex flex-column">
-                                                    {champCard && summoner.id && summonerMastery.championLevel &&
+                                                    {champCard && summoner && summonerMastery.championLevel &&
                                                         <div className="d-flex justify-content-center">
                                                             <ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} summonerMastery={summonerMastery} />
                                                         </div>}

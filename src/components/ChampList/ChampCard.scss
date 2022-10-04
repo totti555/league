@@ -477,19 +477,18 @@ html {
         line-height: 0px;
         opacity: 0;
     }
-}
 
-.mastery-content:hover {
-    p {
-        animation-name: display-links;
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
+    .mastery-content:hover {
+        p {
+            animation-name: display-links;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
 
-    }
+        }
 
-    .mastery-banner {
-        height: 90px;
-
+        .mastery-banner {
+            height: 90px;
+        }
     }
 }
 

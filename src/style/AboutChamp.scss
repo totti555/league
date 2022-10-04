@@ -146,6 +146,15 @@
         text-align: center;
 
     }
+
+    .gradient-border {
+        // border animated : 
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: padding-box;
+        /* for Safari */
+        background-clip: padding-box;
+        /* for IE9+, Firefox 4+, Opera, Chrome */
+    }
 }
 
 .about-skins {
@@ -387,6 +396,26 @@
                 height: 40px !important;
             }
 
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width : 650px) {
+    .champ-mastery {
+        img {
+            width: 48px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        .pie {
+            width: 45px !important;
+        }
+
+        span {
+            font-size: 10px !important;
         }
     }
 }
