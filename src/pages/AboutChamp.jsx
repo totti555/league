@@ -61,47 +61,60 @@ const AboutChamp = (props) => {
     const [summonerMastery, setSummonerMastery] = useState([]);
 
 
-
-
-
-
     const api_key = process.env.REACT_APP_API_KEY;
+    /**
+         * *to get the pathparam of the selected champ
+         @param champName
+     */
+
     let { champName } = useParams();
     let navigate = useNavigate();
 
     const champDetails = () => {
-        const findChampKey = champList.find((champ) => champName.toLowerCase() === champ.name.toLowerCase());
-        // console.log("findChampKey", findChampKey);
-        if (findChampKey)
-            setCurrentChampLinks(findChampKey.linksWith);
-        else {
-            console.log('Route not find => redirection to Kaisa default view');
-            navigate("/about_champ/Kaisa");
-        }
+        const axios = require('axios').default;
         let champKey;
         let name;
-        const axios = require('axios').default;
-        // champKey = location.state ? location.state.key : 145;
-        champKey = findChampKey ? findChampKey.key : 145;
+        /**
+             * get the key of the selected champ
+             ** key is linked with ddragon datas
+        */
+        const findChampByRouteName = champList.find((champ) => champName.toLowerCase() === champ.name.toLowerCase());
+
+        if (findChampByRouteName) {
+            // set the links of the champion
+            setCurrentChampLinks(findChampByRouteName.linksWith);
+        }
+        else {
+            console.log('Route has been not found => redirection to Kaisa default view');
+            navigate("/about_champ/Kaisa");
+        }
+
+        // 145 : Key of default value (Kai'sa)
+        champKey = findChampByRouteName ? findChampByRouteName.key : 145;
+        // Only usefull for props of ChampLinks 
         setKey(champKey);
-        const data = champList.filter((champ) => champ.key === champKey);
 
-        const champSelected = data[0];
-        setChampCard(champSelected);
+        // init the chammpion card 
+        setChampCard(findChampByRouteName);
 
+        // Some pathparam exception for Belveth, Kaisa, Chogath and Wukong to match with ddragon datas
         const exceptionalName = ['BelVeth', 'KaiSa', 'ChoGath'];
-        if (exceptionalName.includes(champSelected.name)) {
-            const minName = champSelected.name.toLowerCase();
+        if (exceptionalName.includes(findChampByRouteName.name)) {
+            const minName = findChampByRouteName.name.toLowerCase();
             name = minName.charAt(0).toUpperCase() + minName.slice(1);
         }
         else if (name === 'Wukong') {
             name = 'MonkeyKing';
         }
-        else name = champSelected.name;
+        else name = findChampByRouteName.name;
 
 
-        // const champSelectedName = champSelected.name ? champSelected.name : 'Kaisa';
-
+        /**
+            ** get the ddragon datas on the selected champion
+            * champ square assets / champ name / champ subtitle 
+            * ? Should we remove ddragon instead of ccdragon ?
+            @param champion
+        */
 
 
         axios.get(`http://ddragon.leagueoflegends.com/cdn/12.16.1/data/en_US/champion/${name}.json`)
@@ -109,7 +122,7 @@ const AboutChamp = (props) => {
                 // handle success
                 const obj = response.data.data
                 const data = Object.values(obj);
-                // console.log('donnees officielle', data[0])
+                console.log('ddragon datas :', data[0])
                 setChampion(data[0]);
 
             })
@@ -122,10 +135,18 @@ const AboutChamp = (props) => {
 
             });
 
+        /**
+            ** get the meriaki datas on the selected champion
+                * champ lore / champ price (BE / RP) / release / skins infos 
+                * backend call 
+            * 
+            @param championDetails
+        */
+
         axios.get(`http://localhost:8080/getAllChampInfos/${name}`, { mode: 'cors' })
             .then(function (response) {
                 // handle success
-                console.log('backend', response.data);
+                console.log('Meriaki datas :', response.data);
                 setChampionDetails(response.data);
             })
             .catch(function (error) {
@@ -137,16 +158,19 @@ const AboutChamp = (props) => {
             });
 
 
+        /**
+            ** get the ccdragon datas on the selected champion
+                * champ spells
+            * 
+            @param championsSpells
+        */
+
+
         axios.get(`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champions/${champKey}.json`)
             .then(function (response) {
-                // handle success
                 const obj = response.data;
-                // setChampion(obj)
-                // console.log("new", obj);
+                console.log('cdragon datas :', response.data);
                 setChampionSpells(obj)
-                // const data = Object.values(obj);
-                // setChampion(data[0]);
-
             })
             .catch(function (error) {
                 // handle error
@@ -157,20 +181,6 @@ const AboutChamp = (props) => {
 
             });
 
-
-        // axios.get(`http://localhost:8080/getSummoner/TottiSkyZz`, { mode: 'cors' })
-        //     .then(function (response) {
-        //         // handle success
-        //         console.log('summoner', response);
-        //         // setChampionDetails(response.data);
-        //     })
-        //     .catch(function (error) {
-        //         // handle error
-        //         console.log(error);
-        //     })
-        //     .then(function () {
-        //         // always executed
-        //     });
 
         // axios.get(`http://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/champions.json?api_key=${api_key}`)
         //     .then(function (response) {
@@ -223,11 +233,20 @@ const AboutChamp = (props) => {
 
     }
 
+    /**
+        * Init axios requests when pathparam exists
+    */
 
     useEffect(() => {
         champDetails();
     }, [champName]);
 
+
+    /**
+        ** axios request to get the Summoner mastery
+        * backend call
+        @param summonerMastery
+    */
 
     useEffect(() => {
 
