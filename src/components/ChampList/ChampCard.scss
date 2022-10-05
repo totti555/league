@@ -168,6 +168,17 @@ $gold: #ECB823;
 }
 
 
+@keyframes display-mastery-banner {
+    0% {
+        height: 64px;
+    }
+
+    100% {
+        height: 90px;
+    }
+}
+
+
 
 .container {
     min-width: 100%;
@@ -487,7 +498,9 @@ html {
         }
 
         .mastery-banner {
-            height: 90px;
+            animation-name: display-mastery-banner;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
         }
     }
 }
