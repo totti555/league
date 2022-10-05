@@ -87,6 +87,12 @@ function Layout(props) {
       });
   }
 
+  const fetchSummonerByNameWithEnterKey = (event) => {
+    if (event.key === 'Enter') {
+      fetchSummonerByName();
+    }
+  }
+
   /**
     * * Set summoner in localStorage
   */
@@ -149,7 +155,7 @@ function Layout(props) {
           searchBar &&
 
           <div className="search-summoner" ref={wrapperRef}>
-            <input type='text' onChange={handleSummonerNameChange}></input>
+            <input type='text' onChange={handleSummonerNameChange} onKeyDown={fetchSummonerByNameWithEnterKey}></input>
             <button onClick={fetchSummonerByName} disabled={!summonerName}>
               <img className="icon-menu" src={Search} title='Search champ' alt='search-icon-menu' width='24px'></img>
             </button>
