@@ -75,12 +75,6 @@ const ChampStats = (props) => {
                     fullMark: 3,
                 },
                 {
-                    subject: 'Defense',
-                    A: championDetails.attributeRatings.defense,
-                    B: 100,
-                    fullMark: 3,
-                },
-                {
                     subject: 'Difficulty',
                     A: championDetails.attributeRatings.difficulty,
                     B: 90,
@@ -137,18 +131,18 @@ const ChampStats = (props) => {
                         <RadarChart
 
                             outerRadius={120}
-                            width={350}
+                            width={400}
                             height={300}
                             data={championAttributes}
                         >
                             <PolarGrid />
                             <PolarAngleAxis dataKey="subject" />
-                            <PolarRadiusAxis domain={[1520]} />
+                            <PolarRadiusAxis />
                             <Radar
                                 name="Mike"
                                 dataKey="A"
-                                stroke="#8884d8"
-                                fill="#8884d8"
+                                stroke="#ECB823"
+                                fill="#ECB823"
                                 fillOpacity={0.6}
                                 shape={2}
                             />
