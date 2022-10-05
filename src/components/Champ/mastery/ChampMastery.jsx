@@ -9,21 +9,13 @@ const ChampMastery = (props) => {
     const champion = props.champion;
 
     const masteryPercent = (mastery) => {
-        console.log('Checker le nombre d appel');
+        // Checker le nombre d appel
         const total = mastery.championPointsSinceLastLevel + mastery.championPointsUntilNextLevel;
 
         const percentage = Math.round((mastery.championPointsSinceLastLevel * 100) / total);
 
         return percentage;
     }
-
-
-
-
-
-
-
-
     return (
 
         summoner &&

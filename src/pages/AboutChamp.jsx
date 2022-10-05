@@ -233,7 +233,7 @@ const AboutChamp = (props) => {
 
         const axios = require('axios').default;
 
-        if (summoner.id) {
+        if (summoner.id && champCard.key) {
             axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champCard.key}`, { mode: 'cors' })
                 .then(function (response) {
                     // handle success
@@ -250,7 +250,7 @@ const AboutChamp = (props) => {
         }
 
 
-    }, [summoner, champCard]);
+    }, [summoner, champName, champion]);
 
 
 
@@ -324,10 +324,12 @@ const AboutChamp = (props) => {
                                                             <ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} summonerMastery={summonerMastery} />
                                                         </div>}
 
-                                                    {champCard && !summoner.id &&
+                                                    {((champCard && !summoner.id) || (champCard && summoner.id && !summonerMastery.championLevel)) &&
                                                         <div className="d-flex justify-content-center">
                                                             <ChampCard champ={champCard} champCardImg={champCardImg} summoner={summoner} />
                                                         </div>}
+
+
 
                                                     {championDetails.id &&
                                                         <>
