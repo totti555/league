@@ -19,3 +19,22 @@ Correct background for :
     Lee Sin wrong background
     Malphite
     Bug Master Yi Links Wukong
+
+
+
+    List de ban rate : 
+        - prendre mes matchsIds
+        - regarder les details d'un match (faire ca pour  chaque matchId)
+        - const summonerMatch = match.find((match)=> match.puuid === summoner.puuid)
+        - regarder summonnerMatch.win pour le championId : summonerMatch.chaammpionId => stocker en BDD 
+
+
+
+    Base de donnees : 
+        Table CHAMPION 
+                                championId  (int)
+                                championNbWin (int)
+                                championNbBan (int)
+
+Afficher le taux de win d'un champion par jour ?
+                                

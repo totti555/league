@@ -252,6 +252,42 @@ const AboutChamp = (props) => {
 
     }, [summoner, champName, champion]);
 
+    // useEffect(() => {
+    //     const axios = require('axios').default;
+    //     console.log(summoner);
+    //     if (summoner.id) {
+    //         axios.get(`http://localhost:8080/summoner/${summoner.puuid}/matches`, { mode: 'cors' })
+    //             .then(function (response) {
+    //                 // handle success
+    //                 console.log('Summoner matches  :', response.data);
+    //                 // setSummonerMatches()
+    //             })
+    //             .catch(function (error) {
+    //                 // handle error
+    //                 console.log(error);
+    //             })
+    //             .then(function () {
+    //                 // always executed
+    //             });
+
+
+    //         axios.get(`http://localhost:8080/summoner/matches/EUW1_6093332491`, { mode: 'cors' })
+    //             .then(function (response) {
+    //                 // handle success
+    //                 console.log('SUMMONER MATCH  :', response.data);
+    //             })
+    //             .catch(function (error) {
+    //                 // handle error
+    //                 console.log(error);
+    //             })
+    //             .then(function () {
+    //                 // always executed
+    //             });
+    //     }
+
+
+    // }, [summoner]);
+
 
 
     return (
