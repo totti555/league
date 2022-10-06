@@ -59,6 +59,7 @@ const AboutChamp = (props) => {
     const [champCardImg, setChampCardImg] = useState('');
     const summoner = props.summoner;
     const [summonerMastery, setSummonerMastery] = useState([]);
+    const summonerRank = props.summonerRank;
 
 
     const api_key = process.env.REACT_APP_API_KEY;
@@ -367,7 +368,7 @@ const AboutChamp = (props) => {
                                         <ChampSearch setChampion={setChampion} champCardImg={champCardImg} searchRef={searchRef} />
                                         <br />
                                         {summoner.id && summonerMastery.championLevel &&
-                                            <ChampMastery champion={champion} summoner={summoner} summonerMastery={summonerMastery} />
+                                            <ChampMastery champion={champion} summoner={summoner} summonerMastery={summonerMastery} summonerRank={summonerRank} />
                                         }
                                         <>
                                             <div className=" d-flex position-relative">

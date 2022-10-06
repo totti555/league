@@ -7,6 +7,17 @@
         background: rgba(0, 0, 0, 0.5);
     }
 
+    .summoner-rank {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-style: italic;
+    }
+
+    .summoner-rank-lp {
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+
     @property --p {
         syntax: '<number>';
         inherits: true;
@@ -62,6 +73,10 @@
 
     .no-round:after {
         content: none;
+    }
+
+    text {
+        fill: white;
     }
 
     @keyframes p {
