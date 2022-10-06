@@ -256,6 +256,7 @@ const AboutChamp = (props) => {
             axios.get(`http://localhost:8080/getSummoner/${summoner.id}/champion/${champCard.key}`, { mode: 'cors' })
                 .then(function (response) {
                     // handle success
+                    console.log('Summoner :', summoner);
                     console.log('Summoner mastery  :', response.data);
                     setSummonerMastery(response.data);
                 })

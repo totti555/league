@@ -165,7 +165,7 @@ const ChampLinks = (props) => {
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <div className=" d-flex flex-wrap mt-3 gradient-border p-3">
+                    <div className=" d-flex flex-wrap justify-content-center mt-3 gradient-border p-3">
 
                         {champCard.linksWith && linksResult.map((champ, index) =>
 
@@ -192,15 +192,15 @@ const ChampLinks = (props) => {
                 </div>
                 {championsList.length &&
                     <div>
-                        <h3 className="title">REGION :</h3>
-                        <div className="d-flex flex-wrap">
+                        <h3 className="title">{champCard.world.toUpperCase()} :</h3>
+                        <div className="d-flex flex-wrap justify-content-center">
                             {championsList.map((champ) =>
                                 <div key={champ.id}>
 
                                     {
                                         champ.world === champCard.world &&
                                         <div>
-                                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${exceptionalName(champ.name)}.png`} width='64px' className="mx-2 position-relative img-links"></img>
+                                            <img src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${exceptionalName(champ.name)}.png`} width='64px' className="m-2 position-relative img-links"></img>
                                         </div>
                                     }
                                 </div>

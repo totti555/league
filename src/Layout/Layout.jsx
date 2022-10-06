@@ -33,6 +33,7 @@ function Layout(props) {
   const setSummoner = props.setSummoner;
   const setSummonerName = props.setSummonerName;
   const summoner = props.summoner;
+  const setSummonerRank = props.setSummonerRank;
 
   /**
     * * To hide the searchbar if focus out
@@ -83,8 +84,22 @@ function Layout(props) {
         console.log(error);
       })
       .then(function () {
-        // always executed
+        fetchSummonerDetails();
       });
+  }
+
+  const fetchSummonerDetails = () => {
+    const axios = require('axios').default;
+    console.log('cc');
+    axios.get(`http://localhost:8080/summoner/${summoner.id}/rank`, { mode: 'cors' })
+      .then(function (response) {
+        console.log('Summoner rank :', response.data);
+        setSummonerRank(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+
   }
 
   const fetchSummonerByNameWithEnterKey = (event) => {
@@ -100,6 +115,12 @@ function Layout(props) {
   useEffect(() => {
     if (summoner.name) {
       localStorage.setItem('summoner', JSON.stringify(summoner));
+    }
+  }, [summoner.name])
+
+  useEffect(() => {
+    if (summoner.name) {
+      fetchSummonerDetails();
     }
   }, [summoner.name])
 

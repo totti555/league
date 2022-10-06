@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
+
 function App() {
 
   /**
@@ -28,6 +29,7 @@ function App() {
   */
 
   const [summonerName, setSummonerName] = useState('');
+  const [summonerRank, setSummonerRank] = useState([]);
 
   /**
     * *state for the summoner 
@@ -43,9 +45,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout summonerName={summonerName} setSummonerName={setSummonerName} setSummoner={setSummoner} summoner={summoner} />}>
+          <Route path="/" element={<Layout summonerName={summonerName} setSummonerName={setSummonerName} setSummoner={setSummoner} summoner={summoner} setSummonerRank={setSummonerRank} />}>
             <Route index element={<Home />} />
-            <Route path="about_champ/:champName" element={<AboutChamp summoner={summoner} />} />
+            <Route path="about_champ/:champName" element={<AboutChamp summoner={summoner} summonerRank={summonerRank} />} />
             <Route path="list" element={<List summoner={summoner} />} exact />
             <Route path="*" element={<NoPage />} />
           </Route>
