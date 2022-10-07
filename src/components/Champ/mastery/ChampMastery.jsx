@@ -7,14 +7,21 @@ const ChampMastery = (props) => {
     const summoner = props.summoner;
     const champion = props.champion;
     const summonerRank = props.summonerRank;
+    const specialLevel = [5, 6, 7];
 
     const masteryPercent = (mastery) => {
-        // Checker le nombre d appel
-        const total = mastery.championPointsSinceLastLevel + mastery.championPointsUntilNextLevel;
+        // Mastery 1 2 3 4
+        if (!specialLevel.includes(mastery.championLevel)) {
+            const total = mastery.championPoints + mastery.championPointsUntilNextLevel;
 
-        const percentage = Math.round((mastery.championPointsSinceLastLevel * 100) / total);
+            const percentage = Math.round((mastery.championPointsSinceLastLevel * 100) / total);
 
-        return percentage;
+            return percentage;
+        }
+        else {
+            // Mastery 5 6 7
+            return 100;
+        }
     }
 
 
@@ -24,7 +31,7 @@ const ChampMastery = (props) => {
         <div className="champ-mastery gradient-border p-2">
             {summonerRank &&
                 <>
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center summoner-global-infos">
                         <div className="summoner-icon position-relative align-self-center  mx-1">
                             <img alt='summoner-profile' src={`http://ddragon.leagueoflegends.com/cdn/12.18.1/img/profileicon/${summoner.profileIconId}.png`} width='88px'></img>
                             <span className="summoner-level text-white">{summoner.summonerLevel}</span>
@@ -33,7 +40,7 @@ const ChampMastery = (props) => {
                             <h3 className="m-0">{summonerRank[0].summonerName}</h3>
                             <p className="m-0 text-secondary summoner-rank">{summonerRank[0].tier} {summonerRank[0].rank}</p>
                         </div>
-                        <div className="d-flex">
+                        <div className="d-flex summoner-winrate p-2">
                             <div className="pie animate" style={{ '--p': Math.round((summonerRank[0].wins / (summonerRank[0].losses + summonerRank[0].wins)) * 100), '--c': 'green' }}>
                                 <span className='mastery-percentage-points'>{Math.round((summonerRank[0].wins / (summonerRank[0].losses + summonerRank[0].wins)) * 100)}%</span>
                             </div>
@@ -64,7 +71,12 @@ const ChampMastery = (props) => {
 
                     </div>
                     <div className="d-flex">
-                        <p className='title mastery-points align-self-center m-0'>{summonerMastery.championPoints}<span className="title fraction">/{summonerMastery.championPointsSinceLastLevel + summonerMastery.championPointsUntilNextLevel}</span></p>
+                        <p className='title mastery-points align-self-center m-0'>{summonerMastery.championPoints}
+                            {!specialLevel.includes(summonerMastery.championLevel) ?
+                                <span className="title fraction">/{summonerMastery.championPoints + summonerMastery.championPointsUntilNextLevel}</span>
+                                : <span className="title fraction">pts</span>
+                            }
+                        </p>
                         <div className="pie animate" style={{ '--p': masteryPercent(summonerMastery), '--c': '#ECB823' }}>
                             <span className='mastery-percentage-points'>{masteryPercent(summonerMastery)}%</span>
                         </div>

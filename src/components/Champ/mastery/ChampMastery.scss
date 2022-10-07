@@ -13,6 +13,13 @@
         font-style: italic;
     }
 
+    .summoner-global-infos {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-background-clip: padding-box;
+        /* for Safari */
+        background-clip: padding-box;
+    }
+
     .summoner-rank-lp {
         letter-spacing: 2px;
         font-size: 20px;
