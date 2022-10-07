@@ -72,11 +72,20 @@ const ChampMastery = (props) => {
                     </div>
                     <div className="d-flex">
                         <p className='title mastery-points align-self-center m-0'>{summonerMastery.championPoints}
-                            {!specialLevel.includes(summonerMastery.championLevel) ?
-                                <span className="title fraction">/{summonerMastery.championPoints + summonerMastery.championPointsUntilNextLevel}</span>
-                                : <span className="title fraction">pts</span>
+                            {
+                                /**
+                                    *Different displays for mastery 1/2/3/4 and 5/6/7
+                                 */
+                                !specialLevel.includes(summonerMastery.championLevel) ?
+                                    <span className="title fraction">/{summonerMastery.championPoints + summonerMastery.championPointsUntilNextLevel}</span>
+                                    : <span className="title fraction">pts</span>
                             }
                         </p>
+                        {
+                            /**
+                                **Global winrate of the summoner
+                              */
+                        }
                         <div className="pie animate" style={{ '--p': masteryPercent(summonerMastery), '--c': '#ECB823' }}>
                             <span className='mastery-percentage-points'>{masteryPercent(summonerMastery)}%</span>
                         </div>
@@ -84,6 +93,11 @@ const ChampMastery = (props) => {
                 </div>
                 :
                 <div>
+                    {
+                        /**
+                           ** Summoner but NO mastery on this champion
+                         */
+                    }
                     <div className='mastery-icon'>
                         <img src={noMastery} alt='no mastery' title='No mastery' width='48px'></img>
                         <p className='title'>0pt</p>
