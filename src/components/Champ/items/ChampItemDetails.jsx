@@ -17,7 +17,6 @@ const ChampItemDetails = (props) => {
     const addToStuff = (item) => {
         setStuff([...selectedStuff, item]);
     }
-    let isLoading;
     useEffect(() => {
 
         changeColor();
@@ -143,9 +142,6 @@ const ChampItemDetails = (props) => {
 
                         <p dangerouslySetInnerHTML={{ __html: selectedItem.description }} id="content" className='hide-text item-description'></p>
                         <p dangerouslySetInnerHTML={{ __html: selectedItem.description }} id="updated" ></p>
-
-
-
                     </div>
                     :
                     <div className="default-details">Selectionner un item</div>
