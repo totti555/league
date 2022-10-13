@@ -102,6 +102,17 @@ function Layout(props) {
 
   }
 
+  // const fetchTest = () => {
+  //   const axios = require('axios').default;
+  //   axios.get(`http://localhost:8080/test`, { mode: 'cors' })
+  //     .then(function (response) {
+  //       console.log('TEST :', response.data);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     })
+  // }
+
   const fetchSummonerByNameWithEnterKey = (event) => {
     if (event.key === 'Enter') {
       fetchSummonerByName();
