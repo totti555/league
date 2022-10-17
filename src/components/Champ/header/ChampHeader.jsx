@@ -21,8 +21,8 @@ const ChampHeader = (props) => {
                         <img className="" src={`http://ddragon.leagueoflegends.com/cdn/12.16.1/img/champion/${champion.image.full}`} width='64px'></img>
                         <span className="champ-level">{level}</span>
                     </div>
-                    <div className="align-self-center header-attributes">
-                        <div className="d-flex flex-wrap align-items-center animation-entity-3 ">
+                    <div className="d-flex header-attributes">
+                        <div className="d-flex flex-wrap align-self-center animation-entity-3 ">
                             {champCard.role.map((role) => (
                                 <div key={role} className='d-flex display-entity-memo animation-entity-1'>
                                     <div className='text-center my-1 ' >

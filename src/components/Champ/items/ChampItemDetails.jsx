@@ -18,9 +18,7 @@ const ChampItemDetails = (props) => {
         setStuff([...selectedStuff, item]);
     }
     useEffect(() => {
-
         changeColor();
-
     }, [selectedItem]);
 
 
