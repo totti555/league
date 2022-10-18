@@ -417,9 +417,6 @@ const AboutChamp = (props) => {
                                     <div className="position-relative about-skins">
                                         {championDetails.id && <ChampSkins champion={championDetails} setBackgroundImg={setBackgroundImg} setChampCardImg={setChampCardImg} />}
                                     </div>
-                                    <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
-                                        <ChampStats champion={champion} championDetails={championDetails} itemsBuff={itemsBuff} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
-                                    </div>
                                 </div>
                             </div>
 
@@ -432,7 +429,10 @@ const AboutChamp = (props) => {
                                 */
                             }
                             <div className='fourth-block'>
-                                <div className="col-12">
+                                <div className="col-12 ">
+                                    <div style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.8) 70%, rgb(0, 0, 0, 1) 90%),url(${Stats})`, backgroundSize: "cover" }} className='background-img-stats'>
+                                        <ChampStats champion={champion} championDetails={championDetails} itemsBuff={itemsBuff} level={level} setIncreaseLevel={setIncreaseLevel} setDecreaseLevel={setDecreaseLevel} increaseLevel={increaseLevel} decreaseLevel={decreaseLevel} setLevel={setLevel} />
+                                    </div>
                                     <ChampStuff setStuff={setStuff} selectedStuff={selectedStuff} setSelectedItem={setSelectedItem} setItemsBuff={setItemsBuff} />
 
                                 </div>

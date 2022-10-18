@@ -1,4 +1,6 @@
-import './Filters.scss'
+import './Filters.scss';
+import { useEffect, useState } from 'react';
+
 
 
 const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
@@ -8,6 +10,12 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
         * CSS file : Filters.scss
         * ? useless props
     */
+
+    const [pageTitle, setPageTitle] = useState("about");
+
+    useEffect(() => {
+        console.log(pageTitle);
+    }, [pageTitle]);
 
 
     /**
@@ -69,6 +77,13 @@ const Worlds = ({ world, updateWorld, checked, setChecked, worlds }) => {
             <div className='d-flex justify-content-center delete-button'>
                 <div className="wrap">
                     <button className="button-filter" onClick={() => handleDeleteWorld()}><span className='title'>Delete Worlds</span> <span className='cross'>❌</span></button>
+                    <div
+                    >
+                        <span onClick={() => setPageTitle("portfolio")} className="group transition duration-300">
+                            portfolio
+                            <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
