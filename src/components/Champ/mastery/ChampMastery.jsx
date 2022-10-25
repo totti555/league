@@ -13,9 +13,7 @@ const ChampMastery = (props) => {
         // Mastery 1 2 3 4
         if (!specialLevel.includes(mastery.championLevel)) {
             const total = mastery.championPoints + mastery.championPointsUntilNextLevel;
-
-            const percentage = Math.round((mastery.championPointsSinceLastLevel * 100) / total);
-
+            const percentage = Math.round((mastery.championPoints * 100) / total);
             return percentage;
         }
         else {
