@@ -195,7 +195,7 @@ const ChampLinks = (props) => {
                         <h3 className="title">{champCard.world.toUpperCase()} :</h3>
                         <div className="d-flex flex-wrap justify-content-center">
                             {championsList.map((champ) =>
-                                <div key={champ.id}>
+                                champ.key !== champCard.key && <div key={champ.id} onClick={() => goToOtherChamp(champ)}>
 
                                     {
                                         champ.world === champCard.world &&
