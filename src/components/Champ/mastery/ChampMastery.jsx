@@ -3,12 +3,23 @@ import './ChampMastery.scss'
 import React, { useCallback, useState } from "react";
 
 const ChampMastery = (props) => {
+
+    /**
+        * *Summoner profile / Summoner mastery / Summoner rank  
+        * BETA : summoner rank   
+        * SCSS file : ChampMastery.scss
+    */
+
     const summonerMastery = props.summonerMastery;
     const summoner = props.summoner;
     const champion = props.champion;
     const summonerRank = props.summonerRank;
     const specialLevel = [5, 6, 7];
 
+    /**
+        * *mastery progression in %
+        * return 100% for mastery 5 / 6 / 7
+    */
     const masteryPercent = (mastery) => {
         // Mastery 1 2 3 4
         if (!specialLevel.includes(mastery.championLevel)) {
