@@ -12,12 +12,32 @@ import Calendar from '../../../assets/Common/calendar.png';
 
 const ChampSkins = (props) => {
 
+    /**
+        * *To display a carousel of skin with prices, rarity 
+        * * Set the background images and the card images of each champion's skins.  
+        
+        * SCSS file : ChampSkin.scss
+        * Components : ImageGallery (external CSS bookstore for carousel) 
+    */
+
     const champion = props.champion;
     const setBackgroundImg = props.setBackgroundImg;
     const setChampCardImg = props.setChampCardImg;
+
+    /**
+        **get good index of thee image selected by the carousel
+    */
     const [indexSkins, setIndexSkins] = useState(0);
+
+    /**
+        **state to get all the datas for the skinsof the selected champion
+    */
     const [skinImages, setSkinImages] = useState([]);
     const location = useLocation();
+
+    /**
+        **Change color according to skin rarity
+    */
 
     const changeColor = () => {
         if (skinImages) {
@@ -63,14 +83,11 @@ const ChampSkins = (props) => {
     useEffect(() => {
         getSkinsImages();
         changeColor();
+    }, [champion, location.pathname]);
 
-    }, [champion]);
-
-    useEffect(() => {
-        getSkinsImages();
-        changeColor();
-
-    }, [location.pathname]);
+    /**
+        **get all skin images in one object
+    */
 
     const getSkinsImages = () => {
         let i;
@@ -88,16 +105,24 @@ const ChampSkins = (props) => {
             }
             images.push(param);
         }
+        // Get image by the most recent image
         imagesByReleaseDesc = images.reverse();
+        // Set default background image (the most recent)
         setBackgroundImg(imagesByReleaseDesc[0].original);
 
         setSkinImages(imagesByReleaseDesc);
     }
 
+    /**
+        **set dynamic background images according to the carousel display
+    */
+
     const refImg = useRef(null);
     const renderCustomControls = () => {
         if (refImg.current) {
+            // get the index of the image of the carousel
             const index = refImg.current.getCurrentIndex();
+            // set card and background images 
             if (skinImages[index]) {
                 setBackgroundImg(skinImages[index].original);
                 setChampCardImg(skinImages[index].loadScreen);
