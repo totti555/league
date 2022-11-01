@@ -27,11 +27,14 @@ import ChampMastery from "../components/Champ/mastery/ChampMastery";
 {
     /**
          * *View to display the info of one champion
-         * CSS file : About.scss
-         * WORK IN PROGRESS / All doesn't work !!!
-         * Components : 1st part => ChampHeader, ChampSearch, ChampStats, ChampSpells
-         *              2nd part => ChampItemsList, ChampItemDetails
-         *              3rd part => ChampLinks
+         * SCSS file : AboutChamp.scss
+         * WORK IN PROGRESS / BETA
+         * Components : header => ChampHeader, ChampSideBar
+         *              1st part => ChampSpells, ChampSearch, ChampMastery, ChampCard, ChampSkins
+         *              2nd part => ChampStats, ChampStuff
+         *              3rd part => ChampItemsList, ChampItemDetails
+         *              4th part => ChampLinks
+         *              5th part => Footer
      */
 }
 
@@ -55,8 +58,12 @@ const AboutChamp = (props) => {
     const searchRef = useRef(null);
     const [championsSpells, setChampionSpells] = useState([]);
     const [spellDatas, setSpellDatas] = useState([]);
+    /**
+        * Background image and card image for each skins of a champion
+    */
     const [backgroundImg, setBackgroundImg] = useState('');
     const [champCardImg, setChampCardImg] = useState('');
+
     const summoner = props.summoner;
     const [summonerMastery, setSummonerMastery] = useState([]);
     const summonerRank = props.summonerRank;
