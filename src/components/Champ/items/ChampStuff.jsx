@@ -29,11 +29,8 @@ const ChampStuff = (props) => {
     }
 
     const champStats = () => {
-        console.log('eetla?')
-        console.log(selectedStuff);
         if (selectedStuff.length) {
-            console.log('Est cee que je passee ici ?')
-            const test = selectedStuff.map((item) =>
+            const itemStats = selectedStuff.map((item) =>
                 item.stats);
             // const cc = sum(selectedStuff[0].stats, selectedStuff[1].stats);
             // console.log(cc);
@@ -41,44 +38,16 @@ const ChampStuff = (props) => {
             let firstEnt = selectedStuff[0].stats;
             let obj;
 
-            console.log('selectedStuff', test);
+            console.log('selectedStuff :', itemStats);
             Array.from(Array(5)).map((_, i) => {
-                if (firstEnt !== test[i]) {
-                    const obj = sumObjectsByKey(firstEnt, test[i]);
-                    // console.log('sum obj', obj);
-                    // obj = Object.assign({}, firstEnt, test[i]);
-                    console.log('obj', obj)
+                if (firstEnt !== itemStats[i]) {
+                    const obj = sumObjectsByKey(firstEnt, itemStats[i]);
                     firstEnt = obj;
                     return firstEnt;
                 }
 
             })
             setItemsBuff(firstEnt);
-            // const test3 = test.map((item) => {
-            //     if (firstEnt !== item) {
-            //         firstEnt = Object.assign({}, firstEnt, item);
-            //         console.log('cc');
-            //         console.log(firstEnt);
-            //         // stats = firstEnt.shift();
-            //         // console.log(stats);
-            //         return firstEnt;
-
-            //     }
-            // })
-
-
-            // const test2 = test.map((itemStat) => {
-            //     if (itemStat !== firstEnt) {
-
-            //         firstEnt = sum(firstEnt, itemStat);
-            //         console.log('firstEnt');
-            //         console.log(firstEnt);
-            //         return firstEnt
-            //     }
-            // }
-            // );
-            // console.log(test2);
-
         }
         else setItemsBuff([]);
     }
